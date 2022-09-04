@@ -1,6 +1,8 @@
 ---
 title: "Alex Bass"
 image: profile.jpg
+twitter-card: 
+  image: profile.jpg
 about:
   template: trestles
   links:
@@ -21,4 +23,4 @@ Hi! My name is Alex Bass. I work as a data scientist at [Dynata](https://www.dyn
 
 Recently, I find myself doing data analysis and programming projects in my free time. I created this blog as a place to post some of these fun projects I work on off the clock. 
 
-Contact me via any of the links to the left if you want to connect!
+Contact me via any of the links if you want to connect!

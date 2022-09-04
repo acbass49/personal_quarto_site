@@ -9,6 +9,8 @@ listing:
   filter-ui: false
   fields: [title, image, categories, author, date]
 page-layout: article
+twitter-card:
+  image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.7rwHFBYbiza6cNVjC0txKAAAAA%26pid%3DApi&f=1
 title-block-banner: false
 image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.7rwHFBYbiza6cNVjC0txKAAAAA%26pid%3DApi&f=1
 ---
