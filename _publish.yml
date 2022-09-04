@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: f2c4fcdf-7c11-4804-b103-22c0bdb3fff3
+      url: 'https://golden-tapioca-9fde2b.netlify.app'
