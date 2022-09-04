@@ -5,10 +5,13 @@ about:
   template: trestles
   links:
     - icon: github
+      text: github
       href: https://github.com/acbass49
     - icon: linkedin
+      text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
     - icon: twitter
+      text: twitter
       href: https://twitter.com/acbass49
     - icon: envelope
       href: "mailto:acbass49@gmail.com"
