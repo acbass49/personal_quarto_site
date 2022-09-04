@@ -1,0 +1,21 @@
+---
+title: "Alex Bass"
+image: profile.jpg
+about:
+  template: trestles
+  links:
+    - icon: github
+      href: https://github.com/acbass49
+    - icon: linkedin
+      href: https://www.linkedin.com/in/alex-bass-4a7465161/
+    - icon: twitter
+      href: https://twitter.com/acbass49
+    - icon: envelope
+      href: "mailto:acbass49@gmail.com"
+---
+
+Hi! My name is Alex Bass. I work as a data scientist at [Dynata](https://www.dynata.com/), a leading polling and market research firm. Also, I am a graduate student at the [University of Virginia in Data Science](https://datascience.virginia.edu/).
+
+Recently, I find myself doing data analysis and programming projects in my free time. I created this blog as a place to post some of these fun projects I work on off the clock. 
+
+Contact me via any of the links to the left if you want to connect!

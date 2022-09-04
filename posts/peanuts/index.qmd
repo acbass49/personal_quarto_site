@@ -1,0 +1,20 @@
+---
+title: Word Search Puzzle Generator
+date: '2020-07-31'
+categories: [Project, R, Shiny]
+image: /about_files/peanuts.jpg
+title-block-banner: false
+---
+![](/./about_files/peanuts.jpg){fig.align="center"}
+
+The genesis of this project came late night at a restaurant dinner in Charleston. I went out with my family to enjoy one of the delicious seafood locales common to the holy city. Going out with my family is always enjoyable with good conversation and lots of laughs. My parents enjoy taking our family out to eat now because my 4 siblings are mostly college-aged and can behave well in a public setting. However, my youngest brother, Micah, is 7 years old (significantly younger than the rest of my siblings) and isn't as enticed by the adult conversation. Instead, he enjoys playing with toys or coloring when we go out. 
+
+While we were enjoying the boiled peanuts and talking about the menu, Micah was happily trying to solve a word search puzzle on his kids' menu. He seemed really engaged in finding all the words. He got stuck a few times, and I helped him find a few words, but he remained focused on it for a good portion of the night. Looking back, I know, for Micah, usually the kids' menu activities don't get his attention as much as just doodling with crayons does, so thats maybe why the word search puzzle stuck out to me that night. As I was helping him find a few words, I realized I could probably build a simple program to generate a bunch of these for him. He would at least enjoy the first few, right? So, this one's for Micah.
+
+I built the web app below. Try it out! Put in a few words and make one for yourself!
+
+<p align="center"><iframe src="https://acbass49.shinyapps.io/crossword_puzzle/" align=middle; style="border: none; width: 350px; height: 1200px"></iframe></p>
+
+The code I used to generate this puzzle is found [here](https://github.com/acbass49/wordsearch). I will probably write-up a post later detailing the steps I took to program this. Honestly, it was a lot of fun for me.
+
+If you enjoyed the post, shoot me a message on social media or share it.
