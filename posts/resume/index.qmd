@@ -4,6 +4,8 @@ titlegraphic: /about_files/resume_2.png
 date: "2022-09-02"
 categories: [Life Hacks, Quarto]
 image: /about_files/resume_2.png
+twitter-card: 
+    image: /about_files/resume_2.png
 title-block-banner: false
 ---
 

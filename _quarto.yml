@@ -17,6 +17,8 @@ website:
   favicon: graph-up.svg
   twitter-card:
     creator: "@acbass49"
+  site-url: "https://alexbass.me"
+  google-analytics: "UA-194046200-1"
 format:
   html:
     theme: litera
