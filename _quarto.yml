@@ -7,10 +7,8 @@ website:
   page-navigation: true
   navbar:
     left:
-      - href: index.qmd
-        text: About Me
-      - href: content.qmd
-        text: Content
+      - href: blog.qmd
+        text: Blog
       - text: CV
         href: files/cv.pdf
     logo: graph-up.svg
