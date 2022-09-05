@@ -16,7 +16,9 @@ This project started out as me trying to recreate a moving bar chart. I saw them
 In this post, I want to answer these two bullet-points:
 
 * What have US car brand sales looked like since 1996?
+
 * What is the top car brand now and since 1996 in the United States? What brands have sold more over time?
+
 
 *Note: There is a reason I'm using 1996 as my starting point. The data I scraped is partially incomplete. There aren't missing observations after the first data point, but some starting points are much later than when the brand begins selling cars. For example, the first recorded number of sales for Chevrolet in the dataset was in 1996 despite it being founded in 1911. The other brands seemed to begin and end at reasonable times according to my knowledge, and all brands seemed to have full data after 1996. Because of this, I decided to use 1996 as a starting point for the following figures. Even though it feels somewhat arbitrary, 23 years is still a sizable chunk of time to view car sales.*
 
@@ -59,9 +61,13 @@ These two figures become particularly useful if brands appear on the top of both
 As we have looked through the data, we have found a few insights about the car sales market since 1996:
 
 * Ford has consistently sold more cars any other brand since 1996 and remains in the lead in 2019.
+
 * The US recession in 2008-09 had a large impact on the car sales market decreasing yearly car sales as much as 7 million overall, but has recovered since that time.
+
 * Partially because of the recession, today, more brands have more of the market share than in 1996.
+
 * A few brands have seen substantial growth during the last 23 years and now hold a significant portion of the market share. These brands include Nissan, Subaru, and Hyundai.
+
 
 My coding is viewable [here](https://github.com/acbass49/carbrands). I modeled my race chart off of [this post](https://towardsdatascience.com/create-animated-bar-charts-using-r-31d09e5841da?source=userActivityShare-7c3da9a4b5fa-1591814808&_branch_match_id=810285756007782180). 
 
