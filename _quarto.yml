@@ -6,6 +6,7 @@ website:
   open-graph: true
   page-navigation: true
   navbar:
+    search: false
     left:
       - href: blog.qmd
         text: Blog

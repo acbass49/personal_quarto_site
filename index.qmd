@@ -8,7 +8,7 @@ about:
   template: trestles
   links:
     - icon: pencil
-      text: My Blog / Projects
+      text: Blog is here!!
       href: blog.qmd
     - icon: github
       text: Github
