@@ -5,7 +5,7 @@ categories: [Data Journalism, R, Shiny]
 image: /about_files/iu-2.jpeg
 title-block-banner: false
 ---
-![](/./about_files/iu-2.jpeg){fig-align="center"}{width=100%}
+![](/./about_files/iu-2.jpeg){fig-align="center"}{fig-align="center"}
 
 #### Introduction
 In this unprecedented time, America and the world have experienced drastic changes in many aspects of modern day life. In an effort to "flatten the curve" of the coronavirus, American leaders urged for precautionary measures such as closing non-essential businesses, stay-at-home orders, and general social distancing protocol across the country. 
