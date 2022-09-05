@@ -1,11 +1,14 @@
 ---
 title: "Alex Bass"
 image: profile.jpg
+description-meta: Hi - I'm Alex. Check out my blog!
 twitter-card: 
   image: profile.jpg
 about:
   template: trestles
   links:
+    - text: "My Projects / Blog ✍️"
+      href: blog.qmd
     - icon: github
       text: github
       href: https://github.com/acbass49
@@ -15,7 +18,7 @@ about:
     - icon: twitter
       text: twitter
       href: https://twitter.com/acbass49
-    - icon: envelope
+    - text: "Email ✉️"
       href: "mailto:acbass49@gmail.com"
 ---
 

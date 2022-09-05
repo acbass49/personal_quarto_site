@@ -2,7 +2,7 @@
 title: "My Facebook Data... EXPOSED"
 date: '2021-04-10'
 categories: [Data Journalism, R]
-image: /about_files/school_6.jpeg
+image: /about_files/fb_icon
 title-block-banner: false
 ---
 Do you like the title? You can thank all of my click-bait ad consumption for that.
