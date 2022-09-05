@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>alexbass.me - My Content</title>
+<title>alexbass.me - Alex Bass</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,12 +26,9 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./graph-up.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -56,35 +53,6 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-categories','listing-author','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
 <script type="text/javascript">
 
@@ -100,19 +68,20 @@ ga('send', {
 });
 </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="alexbass.me - My Content">
-<meta property="og:image" content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.7rwHFBYbiza6cNVjC0txKAAAAA%26pid%3DApi&amp;f=1">
+<meta property="og:title" content="alexbass.me - Alex Bass">
+<meta property="og:description" content="Hi! My name is Alex Bass. I work as a data scientist at Dynata, a leading polling and market research firm. Also, I am a graduate student at the University of Virginia in Data Science.">
+<meta property="og:image" content="https://alexbass.me/profile.jpg">
 <meta property="og:site-name" content="alexbass.me">
-<meta name="twitter:title" content="alexbass.me - My Content">
-<meta name="twitter:image" content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.7rwHFBYbiza6cNVjC0txKAAAAA%26pid%3DApi&amp;f=1">
+<meta name="twitter:title" content="alexbass.me - Alex Bass">
+<meta name="twitter:description" content="Hi! My name is Alex Bass. I work as a data scientist at Dynata, a leading polling and market research firm. Also, I am a graduate student at the University of Virginia in Data Science.">
+<meta name="twitter:image" content="https://alexbass.me/profile.jpg">
 <meta name="twitter:creator" content="@acbass49">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -128,10 +97,10 @@ ga('send', {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">About Me</a>
+    <a class="nav-link active" href="./index.html" aria-current="page">About Me</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">Content</a>
+    <a class="nav-link" href="./other.html">Content</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./files/cv.pdf">CV</a>
@@ -146,370 +115,47 @@ ga('send', {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="CI/CD">CI/CD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Journalism">Data Journalism <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Life Hacks">Life Hacks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Project">Project <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Survey Research">Survey Research <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
+<div class="quarto-about-trestles">
+  <div class="about-entity">
+    <img src="profile.jpg" class="about-image
+  rounded " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My Content</h1>
+<h1 class="title">Alex Bass</h1>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    
-    
   </div>
-  
-
 </header>
+    <div class="about-links">
+  <a href="https://github.com/acbass49" class="about-link">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">github</span>
+  </a>
+  <a href="https://www.linkedin.com/in/alex-bass-4a7465161/" class="about-link">
+    <i class="bi bi-linkedin"></i>
+     <span class="about-link-text">LinkedIn</span>
+  </a>
+  <a href="https://twitter.com/acbass49" class="about-link">
+    <i class="bi bi-twitter"></i>
+     <span class="about-link-text">twitter</span>
+  </a>
+  <a href="mailto:acbass49@gmail.com" class="about-link">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text"></span>
+  </a>
+</div>
+  </div>
+  <div class="about-contents"><main class="content" id="quarto-document-content">
+<p>Hi! My name is Alex Bass. I work as a data scientist at <a href="https://www.dynata.com/">Dynata</a>, a leading polling and market research firm. Also, I am a graduate student at the <a href="https://datascience.virginia.edu/">University of Virginia in Data Science</a>.</p>
+<p>Recently, I find myself doing data analysis and programming projects in my free time. I created this blog as a place to post some of these <a href="./index.html">fun projects</a> I work on off the clock.</p>
+<p>Contact me via any of the links if you want to connect!</p>
 
 
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Life Hacks,Quarto" data-listing-date-sort="1662091200000" data-listing-file-modified-sort="1662284421526" data-listing-reading-time-sort="2.975">
-<div class="thumbnail">
-<p><a href="./posts/resume/index.html"> <img src="./about_files/resume_2.png" class="thumnail-image"> </a></p>
+</main></div>
 </div>
-<div class="body">
-<a href="./posts/resume/index.html">
-<h3 class="no-anchor listing-title">
-Simple Resume Template with Quarto and LaTeX
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Life Hacks'); return false;">
-Life Hacks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
-Quarto
-</div>
-</div>
-<a href="./posts/resume/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/resume/index.html">
-<div class="listing-date">
-Sep 2, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Project,Data Journalism,Python,Statistics" data-listing-date-sort="1660881600000" data-listing-file-modified-sort="1662265535175" data-listing-reading-time-sort="9.59">
-<div class="thumbnail">
-<p><a href="./posts/bayesian_county/index.html"> <img src="./about_files/school_6.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/bayesian_county/index.html">
-<h3 class="no-anchor listing-title">
-County-Level Analysis of School Shootings
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Project'); return false;">
-Project
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
-Data Journalism
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
-Statistics
-</div>
-</div>
-<a href="./posts/bayesian_county/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/bayesian_county/index.html">
-<div class="listing-date">
-Aug 19, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Survey Research,Data Journalism" data-listing-date-sort="1646283600000" data-listing-file-modified-sort="1662266306298" data-listing-reading-time-sort="6.25">
-<div class="thumbnail">
-<p><a href="./posts/7_facts/index.html"> <img src="https://www.ldstemple.pics/wp-content/uploads/washington-dc-temple-final-sunset-600x600.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/7_facts/index.html">
-<h3 class="no-anchor listing-title">
-7 Facts You May Not Know About Latter-Day Saints
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Survey Research'); return false;">
-Survey Research
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
-Data Journalism
-</div>
-</div>
-<a href="./posts/7_facts/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/7_facts/index.html">
-<div class="listing-date">
-Mar 3, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Project,CI/CD,R" data-listing-date-sort="1636347600000" data-listing-file-modified-sort="1662262285128" data-listing-reading-time-sort="2.095">
-<div class="thumbnail">
-<p><a href="./posts/covid_update/index.html"> <img src="./about_files/covid.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/covid_update/index.html">
-<h3 class="no-anchor listing-title">
-Weekly COVID Email Update
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Project'); return false;">
-Project
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('CI/CD'); return false;">
-CI/CD
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-</div>
-<a href="./posts/covid_update/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/covid_update/index.html">
-<div class="listing-date">
-Nov 8, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Data Journalism,R" data-listing-date-sort="1618027200000" data-listing-file-modified-sort="1662265501215" data-listing-reading-time-sort="3.495">
-<div class="thumbnail">
-<p><a href="./posts/facebook_data/index.html"> <img src="./about_files/school_6.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/facebook_data/index.html">
-<h3 class="no-anchor listing-title">
-My Facebook Data… EXPOSED
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
-Data Journalism
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-</div>
-<a href="./posts/facebook_data/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/facebook_data/index.html">
-<div class="listing-date">
-Apr 10, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Data Journalism,R,Survey Research" data-listing-date-sort="1607490000000" data-listing-file-modified-sort="1662265018779" data-listing-reading-time-sort="7.215">
-<div class="thumbnail">
-<p><a href="./posts/lds_gop/index.html"> <img src="./about_files/iu-3.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/lds_gop/index.html">
-<h3 class="no-anchor listing-title">
-Latter-Day Saints: Growing Pains In The GOP
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
-Data Journalism
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Survey Research'); return false;">
-Survey Research
-</div>
-</div>
-<a href="./posts/lds_gop/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/lds_gop/index.html">
-<div class="listing-date">
-Dec 9, 2020
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Project,Statistics,R" data-listing-date-sort="1600401600000" data-listing-file-modified-sort="1662262767138" data-listing-reading-time-sort="1.855">
-<div class="thumbnail">
-<p><a href="./posts/election_model/index.html"> <img src="././about_files/vote.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/election_model/index.html">
-<h3 class="no-anchor listing-title">
-Presenting…My Election Model!
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Project'); return false;">
-Project
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
-Statistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-</div>
-<a href="./posts/election_model/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/election_model/index.html">
-<div class="listing-date">
-Sep 18, 2020
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="Project,R,Shiny" data-listing-date-sort="1596168000000" data-listing-file-modified-sort="1662263357175" data-listing-reading-time-sort="1.62">
-<div class="thumbnail">
-<p><a href="./posts/peanuts/index.html"> <img src="./about_files/peanuts.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/peanuts/index.html">
-<h3 class="no-anchor listing-title">
-Word Search Puzzle Generator
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Project'); return false;">
-Project
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
-Shiny
-</div>
-</div>
-<a href="./posts/peanuts/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/peanuts/index.html">
-<div class="listing-date">
-Jul 31, 2020
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="Data Journalism,R" data-listing-date-sort="1594353600000" data-listing-file-modified-sort="1662264828952" data-listing-reading-time-sort="6.62">
-<div class="thumbnail">
-<p><a href="./posts/cars/index.html"> <img src="https://media.giphy.com/media/rUE9CTmsYMbbOz2MqD/giphy.gif" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/cars/index.html">
-<h3 class="no-anchor listing-title">
-Ford, Toyota, Honda? Who Takes the Cake?
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
-Data Journalism
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-</div>
-<a href="./posts/cars/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/cars/index.html">
-<div class="listing-date">
-Jul 10, 2020
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="Data Journalism,R,Shiny" data-listing-date-sort="1591675200000" data-listing-file-modified-sort="1662265383418" data-listing-reading-time-sort="6.025">
-<div class="thumbnail">
-<p><a href="./posts/mobility/index.html"> <img src="./about_files/iu-2.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/mobility/index.html">
-<h3 class="no-anchor listing-title">
-Mobility in the COVID-19 Era: Urban vs.&nbsp;Rural
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
-Data Journalism
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
-Shiny
-</div>
-</div>
-<a href="./posts/mobility/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./posts/mobility/index.html">
-<div class="listing-date">
-Jun 9, 2020
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -530,13 +176,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;

@@ -1,6 +1,21 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/other.html",
+    "items": [
+      "/posts/resume/index.html",
+      "/posts/bayesian_county/index.html",
+      "/posts/7_facts/index.html",
+      "/posts/covid_update/index.html",
+      "/posts/facebook_data/index.html",
+      "/posts/lds_gop/index.html",
+      "/posts/election_model/index.html",
+      "/posts/peanuts/index.html",
+      "/posts/cars/index.html",
+      "/posts/mobility/index.html"
+    ]
+  },
+  {
+    "listing": "/content.html",
     "items": [
       "/posts/resume/index.html",
       "/posts/bayesian_county/index.html",

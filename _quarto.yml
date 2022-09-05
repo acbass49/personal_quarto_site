@@ -7,9 +7,9 @@ website:
   page-navigation: true
   navbar:
     left:
-      - href: about.qmd
-        text: About Me
       - href: index.qmd
+        text: About Me
+      - href: content.qmd
         text: Content
       - text: CV
         href: files/cv.pdf

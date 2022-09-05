@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://alexbass.me/posts/covid_update/index.html</loc>
+    <lastmod>2022-09-05T02:15:37.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/election_model/index.html</loc>
+    <lastmod>2022-09-05T02:15:37.641Z</lastmod>
+  </url>
+  <url>
     <loc>https://alexbass.me/posts/resume/index.html</loc>
-    <lastmod>2022-09-04T09:40:21.961Z</lastmod>
+    <lastmod>2022-09-05T02:15:38.071Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/bayesian_county/index.html</loc>
+    <lastmod>2022-09-05T02:15:38.578Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/facebook_data/index.html</loc>
+    <lastmod>2022-09-05T02:15:39.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/7_facts/index.html</loc>
+    <lastmod>2022-09-05T02:15:39.393Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/mobility/index.html</loc>
+    <lastmod>2022-09-05T02:15:39.756Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/peanuts/index.html</loc>
+    <lastmod>2022-09-05T02:15:40.049Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/cars/index.html</loc>
+    <lastmod>2022-09-05T02:15:40.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/lds_gop/index.html</loc>
+    <lastmod>2022-09-05T02:15:40.821Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/index.html</loc>
-    <lastmod>2022-09-04T09:42:06.961Z</lastmod>
+    <lastmod>2022-09-05T02:16:00.439Z</lastmod>
   </url>
   <url>
-    <loc>https://alexbass.me/about.html</loc>
-    <lastmod>2022-09-04T09:59:32.478Z</lastmod>
+    <loc>https://alexbass.me/other.html</loc>
+    <lastmod>2022-09-05T02:16:27.739Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/content.html</loc>
+    <lastmod>2022-09-05T02:16:49.798Z</lastmod>
   </url>
 </urlset>
