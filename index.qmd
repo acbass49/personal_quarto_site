@@ -8,16 +8,16 @@ about:
   template: trestles
   links:
     - icon: pencil
-      text: My Projects / Blog
+      text: My Blog / Projects
       href: blog.qmd
     - icon: github
-      text: github
+      text: Github
       href: https://github.com/acbass49
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
     - icon: twitter
-      text: twitter
+      text: Twitter
       href: https://twitter.com/acbass49
     - icon: envelope
       text: Email
