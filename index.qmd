@@ -7,7 +7,8 @@ twitter-card:
 about:
   template: trestles
   links:
-    - text: "My Projects / Blog ✍️"
+    - icon: pencil
+      text: My Projects / Blog
       href: blog.qmd
     - icon: github
       text: github
@@ -18,7 +19,8 @@ about:
     - icon: twitter
       text: twitter
       href: https://twitter.com/acbass49
-    - text: "Email ✉️"
+    - icon: envelope
+      text: Email
       href: "mailto:acbass49@gmail.com"
 ---
 
