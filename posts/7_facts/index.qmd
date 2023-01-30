@@ -1,7 +1,7 @@
 ---
 title: 7 Facts You May Not Know About Latter-Day Saints
 date: '2022-03-03'
-categories: [Survey Research, Data Journalism]
+categories: [Survey Research, Data Journalism, LDS]
 image: https://www.ldstemple.pics/wp-content/uploads/washington-dc-temple-final-sunset-600x600.jpg
 title-block-banner: false
 ---

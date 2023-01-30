@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/income_myth/index.html",
       "/posts/resume/index.html",
       "/posts/bayesian_county/index.html",
       "/posts/7_facts/index.html",

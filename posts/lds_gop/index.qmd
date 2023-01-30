@@ -1,7 +1,7 @@
 ---
 title: 'Latter-Day Saints: Growing Pains In The GOP'
 date: '2020-12-09'
-categories: [Data Journalism, R, Survey Research]
+categories: [Data Journalism, R, Survey Research, LDS]
 image: /about_files/iu-3.jpeg
 title-block-banner: false
 ---

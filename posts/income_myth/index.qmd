@@ -1,0 +1,25 @@
+---
+title: "Mormon Myths, Demographically"
+date: '2023-01-30'
+categories: [Data Journalism, LDS]
+image: /about_files/fb_icon
+title-block-banner: false
+---
+This post is work in progress. Just writing down some preliminary thoughts.
+
+![](/./about_files/myth0.png){fig-align="center"}
+
+This post is mainly geared toward my Latter - day Saint peers because I think, collectively, we have some misconceptions about what the demographics of the LDS church (within the United States) are. Though I don't have data to back this claim up per say that other people in fact think this, I often hear when speaking with others the claim that although members of the church make up only a small percentage of the population, we are disproportionally wealthy when compared to the general population. More or less, I simply thought this was false after a Pew Research article I read awhile back which I did [find here](https://www.pewresearch.org/religion/2009/07/24/a-portrait-of-mormons-in-the-us/).
+
+Using data from Pew's Religious Landscape study, I looked at the demographics of the LDS and Jewish Population, and I am comparing this with the American Community Survey estimates of the general population. Keep in mind: for this first figure, I used data from 2014 which is now *almost 10 years* ago (yikes that's my high school graduation year). Probably not THAT much has changed in 10 years, but there probably have been some shifts.
+
+![](/./about_files/myth1.png){fig-align="center"}
+
+From this preliminary figure, we can see that (and some of this also noted in the Pew article above) that the LDS actually has a larger middle class than the rest of the population and has a smaller proportion of people in the highest income bracket. In the data I have above, It also shows that the LDS has a higher proportion of low income individuals as well as compared to the general population...
+
+This is what 2014 data looks like, but what about 2021 data? [after analysis, insert this part here]
+
+Eventual goals of the study...
+1. Historic data
+2. With recent data (nationscape), are LDS more or less likely to be in the upper income brackets?
+3. How was this changed over time? (how do I break this up)
