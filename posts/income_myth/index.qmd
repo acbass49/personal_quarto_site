@@ -2,7 +2,9 @@
 title: "Mormon Myths, Demographically"
 date: '2023-01-30'
 categories: [Data Journalism, LDS]
-image: /about_files/myth0
+image: /about_files/myth0.png
+twitter-card: 
+    image: /about_files/myth0.png
 title-block-banner: false
 ---
 This post is work in progress. Just writing down some preliminary thoughts.
