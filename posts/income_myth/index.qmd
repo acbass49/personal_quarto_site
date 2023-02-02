@@ -2,9 +2,9 @@
 title: "Myth of Latter-day Saint Prosperity"
 date: '2023-01-30'
 categories: [Data Journalism, LDS, R]
-image: /about_files/myth0.png
+image: /about_files/LDS_myth_0.png
 twitter-card: 
-    image: /about_files/myth0.png
+    image: /about_files/LDS_myth_0.png
 title-block-banner: false
 ---
 This post is work in progress. Just writing down some preliminary thoughts.
