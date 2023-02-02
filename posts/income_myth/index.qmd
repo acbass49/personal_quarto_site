@@ -1,7 +1,7 @@
 ---
-title: "Mormon Myths, Demographically"
+title: "Myth of Latter-day Saint Prosperity"
 date: '2023-01-30'
-categories: [Data Journalism, LDS]
+categories: [Data Journalism, LDS, R]
 image: /about_files/myth0.png
 twitter-card: 
     image: /about_files/myth0.png
@@ -9,7 +9,7 @@ title-block-banner: false
 ---
 This post is work in progress. Just writing down some preliminary thoughts.
 
-![](/./about_files/LDS_myth_0.png.png){fig-align="center"}
+![](/./about_files/LDS_myth_0.png){fig-align="center"}
 
 This post is mainly geared toward my Latter - day Saint peers because I think, collectively, we have some misconceptions about what the demographics of the LDS church (within the United States) are. Though I don't have data to back this claim up per say that other LDS people in fact think this, I often hear when speaking with others the claim that **although members of the church make up only a small percentage of the population, we are disproportionally wealthy when compared to the general population**. After hearing this claim again yesterday, since I've thought this was false, I decided to look at some data describing this claim. I believe my opinion changed on this awhile back when I read a Pew Research article that provided a demographic profile of Mormons in the US. If anyone is interested in the original article I read, I did find it [here](https://www.pewresearch.org/religion/2009/07/24/a-portrait-of-mormons-in-the-us/).
 
