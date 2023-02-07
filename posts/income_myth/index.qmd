@@ -1,6 +1,6 @@
 ---
 title: "Myth of Latter-day Saint Prosperity"
-date: '2023-02-06'
+date: '2023-02-07'
 categories: [Data Journalism, LDS, R]
 image: /about_files/LDS_myth_0.png
 twitter-card: 
@@ -11,15 +11,15 @@ title-block-banner: false
 
 ### Introduction
 
-As a member of the LDS church, I have grown up hearing the claim *although US Latter-day Saints make up only a small percentage of the population, we are disproportionally wealthy when compared to the US general population*. I assume this is a common misconception, given the amount of times I have heard it, as well as something I believed myself. At some point, I came across an article regarding Mormons in the US. I would just refer you to [that article](https://www.pewresearch.org/religion/2009/07/24/a-portrait-of-mormons-in-the-us/) and you could be on your way, but the data is from 2009 (which is almost 15 years ago now!) What a perfect opportunity for me to grill up some yummy data snacks regarding the breakdown of Latter-day Saints by income and how it has changed over time.
+As a member of the LDS church, I have grown up hearing the claim *although US Latter-day Saints make up only a small percentage of the population, we are disproportionally wealthy when compared to the US general population*. I assume this is a common misconception, given the amount of times I have heard it, as well as something I believed myself. At some point, I came across an article regarding Mormons in the US. I would just refer you to [that article](https://www.pewresearch.org/religion/2009/07/24/a-portrait-of-mormons-in-the-us/) and you could be on your way, but the data is from 2009 - which is almost 15 years ago now! What a perfect opportunity for me to bake up some yummy data snacks regarding the breakdown of Latter-day Saints by household income and how it has changed over time.
 
-### The Meat
+### The Snacks
 
 Using data from a large political survey project of [500,000 Interviews from 2019-2021](https://www.voterstudygroup.org/nationscape), I was able to filter the sample to only Latter-day Saint respondents and ended up with a sample 6,452 members found across the United States. I used the same data source as a previous blog post I wrote up [here](/./posts/lds_gop) if interested.
 
 ![](/./about_files/LDS_myth_1.png){fig-align="center"}
 
-From this figure, we can answer our our first question! We can see that in 2021 the LDS actually has larger lower and middle classes and has a smaller proportion of people in the highest income bracket than the rest of the population. Hopefully, this is enough to convince you that Latter-day Saints being proportionally wealthier is a myth. 
+From this household income figure, we can answer our our first question! In 2021, the LDS actually has larger lower and middle classes and has a smaller proportion of people in the highest income bracket than the rest of the population. Hopefully, this is enough to convince you that Latter-day Saints being proportionally wealthier is a myth. 
 
 I included Jews for the sake of including a group that *actually is* proportionally wealthy, and the gap is large. According to our data, the Jews are *more than twice as likely to be in the top income bracket* than Latter-day Saints.
 
