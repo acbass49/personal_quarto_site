@@ -3,11 +3,12 @@ project:
 
 website:
   title: "alexbass.me"
-  open-graph: true
   page-navigation: true
   navbar:
     search: false
     left:
+      - href: index.qmd
+        text: About
       - href: blog.qmd
         text: Blog
       - text: CV

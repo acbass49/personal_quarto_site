@@ -22,6 +22,9 @@ about:
     - icon: envelope
       text: Email
       href: "mailto:acbass49@gmail.com"
+    - icon: file-text
+      text: CV
+      href: files/cv.pdf
 ---
 
 Hi! My name is Alex Bass. I work as a data scientist at [Dynata](https://www.dynata.com/), a leading polling and market research firm. Also, I am a graduate student at the [University of Virginia in Data Science](https://datascience.virginia.edu/).
