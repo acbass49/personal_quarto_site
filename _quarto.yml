@@ -13,8 +13,6 @@ website:
         text: Blog
       - text: CV
         href: files/cv.pdf
-      - text: Capstone
-        href: files/final_writeup.pdf
     logo: graph-up.svg
   favicon: graph-up.svg
   twitter-card:
