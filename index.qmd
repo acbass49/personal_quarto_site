@@ -27,8 +27,8 @@ about:
       href: files/cv.pdf
 ---
 
-Hi! My name is Alex Bass. I work as a data scientist at [Dynata](https://www.dynata.com/), a leading polling and market research firm. Also, I am a graduate student at the [University of Virginia in Data Science](https://datascience.virginia.edu/).
+Hi! My name is Alex Bass. I work as a data scientist at [Dynata](https://www.dynata.com/), a leading polling and market research firm. Recently, I graduated with my Master's from the [University of Virginia in Data Science](https://datascience.virginia.edu/).
 
-Recently, I find myself doing data analysis and programming projects in my free time. I created this blog as a place to post some of these fun projects I work on off the clock. [Check it out!](blog.qmd)
+I find myself doing data analysis and programming projects in my free time. I created this blog as a place to post some of these fun projects I work on off the clock. [Check it out!](blog.qmd)
 
 Contact me via any of the links if you want to connect 🙂
