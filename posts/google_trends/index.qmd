@@ -2,7 +2,7 @@
 title: "Google Trends Can Measure Discrimination?"
 date: '2023-06-25'
 categories: [Data Journalism]
-image: /about_files/fb_icon
+image: /about_files/byteman
 title-block-banner: false
 ---
 
