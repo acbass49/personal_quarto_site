@@ -41,7 +41,7 @@ So, I made a chart for google search data using statements for "kill [group]" sp
 trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"kill blacks","geo":"US","time":"2004-01-01 2023-06-26"},{"keyword":"kill jews","geo":"US","time":"2004-01-01 2023-06-26"},{"keyword":"kill gays","geo":"US","time":"2004-01-01 2023-06-26"},{"keyword":"kill chinese","geo":"US","time":"2004-01-01 2023-06-26"},{"keyword":"kill muslims","geo":"US","time":"2004-01-01 2023-06-26"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=kill%20blacks,kill%20jews,kill%20gays,kill%20chinese,kill%20muslims&hl=en-US","guestPath":"https://trends.google.com:443/trends/embed/"});
 </script>
 
-*If you are a mobile viewer, the aggregation is by year instead of by month. You can see some of the trends, but the histogram doesn't display referenced in Observation 2 and you can't see the monthly seasonal trends referenced in Observation 3. I recommend you view on desktop if possible.*
+*If you are a mobile viewer, the aggregation is by year instead of by month. You can see some of the trends, but the histogram doesn't display referenced in Observation 2 and you can't see the monthly seasonal trends referenced in Observation 3. I recommend you view on desktop if possible 🙏*
 
 ##### Observation 1:
 
