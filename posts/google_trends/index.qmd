@@ -28,7 +28,7 @@ He proposes that we lie all the time to our friends, neighbors, family, and even
 
 One interesting fact about google searches is people often declare statements/confessions - not questions - on google searches. For example, they might say "I'm pregnant" or "I'm gay." Even dark things like, "I hate myself" or "I wanna kill myself." It really is a gold mine of interesting data that doesn't have filters like words your friend might say to you or how a survey respondent might answer.
 
-In one section of his book, talks about a [paper](https://scholar.google.com/citations?view_op=view_citation&hl=es&user=c17VI7YAAAAJ&citation_for_view=c17VI7YAAAAJ:IjCSPb-OGe4C) linking Google searches for "nigger jokes" and "nigger" to election differences in the US for Obama.
+In his book, he discusses a [paper he wrote](https://scholar.google.com/citations?view_op=view_citation&hl=es&user=c17VI7YAAAAJ&citation_for_view=c17VI7YAAAAJ:IjCSPb-OGe4C) linking Google searches for "nigger jokes" and "nigger" to election differences in the US for Obama.
 
 All of this led my to my own question and query. Perhaps one other avenue in looking for individuals most discriminated against is using google search data like Seth Stephens-Davidowitz.
 
