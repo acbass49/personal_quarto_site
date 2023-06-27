@@ -1,8 +1,10 @@
 ---
 title: "Google Trends Can Measure Discrimination?"
-date: '2023-06-25'
+date: '2023-06-27'
 categories: [Data Journalism]
-image: /about_files/byteman
+image: /about_files/byteman.png
+twitter-card: 
+    image: /about_files/byteman.png
 title-block-banner: false
 ---
 
@@ -18,11 +20,11 @@ A question that social scientists have been asking for a while is... how do you 
 
 * Method 2: Social scientists try to use series of survey questions to detect attitudes towards discrimination of race and gender, but who wants to admit things like being racist or sexist? Even subtle attitude questions about discrimination could be detected by the survey respondent.
 
-If you're like me, these both don't seem like great measures and have plenty of room for error. This is definitely not an exhaustive list of possible measures, but none come to mind that are reliable, accurate, and can be applied to large regions or populations.
+If you're like me, these both don't seem like great measures and have plenty of room for error. This is definitely not an exhaustive list of possible measures, but none come to mind that are reliable, accurate, and can be applied to large regions or populations. If I misssed some, feel free to comment below..
 
 ### Another Measurement
 
-Recently, I read a book by [Seth Stephens-Davidowitz](https://en.wikipedia.org/wiki/Seth_Stephens-Davidowitz) entitled, "[Everybody Lies : Big Data, New Data, And What The Internet Can Tell Us About Who We Really Are.](https://www.amazon.com/Everybody-Lies-Internet-About-Really-ebook/dp/B01AFXZ2F4)" He shares interesting facts and trends from what he calls the "digital truth serum," Google Search data.
+Recently, I read a book by [Seth Stephens-Davidowitz](https://en.wikipedia.org/wiki/Seth_Stephens-Davidowitz) entitled, "[Everybody Lies : Big Data, New Data, And What The Internet Can Tell Us About Who We Really Are.](https://www.amazon.com/Everybody-Lies-Internet-About-Really-ebook/dp/B01AFXZ2F4)" He shares interesting facts and trends from what he calls the "digital truth serum," [Google Search data](https://trends.google.com/trends?geo=US&hl=en-US).
 
 He proposes that we lie all the time to our friends, neighbors, family, and even to ourselves. But, there is one person we don't lie to... **GOOGLE**. Using google trends data, we can see how often people searched a certain term over time and compare it with other searches. While the book overall was interesting and would recommend it to others, I want to focus on one particular part. 
 
@@ -34,14 +36,20 @@ All of this led my to my own question and query. Perhaps one other avenue in loo
 
 So, I made a chart for google search data using statements for "kill [group]" specifically in the US. The results surprised me in several respects.
 
-*Please note that this is the frequency of searches of these exact words. These are not the frequency of searches that contained these words!*
+:::{.callout-tip}
+This is the frequency of searches of these exact words. These are not the frequency of searches that contained these words!
+:::
+
+**
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"></script>
 <script type="text/javascript">
 trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"kill blacks","geo":"US","time":"2004-01-01 2023-06-26"},{"keyword":"kill jews","geo":"US","time":"2004-01-01 2023-06-26"},{"keyword":"kill gays","geo":"US","time":"2004-01-01 2023-06-26"},{"keyword":"kill chinese","geo":"US","time":"2004-01-01 2023-06-26"},{"keyword":"kill muslims","geo":"US","time":"2004-01-01 2023-06-26"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=kill%20blacks,kill%20jews,kill%20gays,kill%20chinese,kill%20muslims&hl=en-US","guestPath":"https://trends.google.com:443/trends/embed/"});
 </script>
 
-*If you are a mobile viewer, the aggregation is by year instead of by month. You can see some of the trends, but the histogram doesn't display referenced in Observation 2 and you can't see the monthly seasonal trends referenced in Observation 3. I recommend you view on desktop if possible 🙏*
+:::{.callout-warning}
+If you are a mobile viewer, the aggregation is by year instead of by month. You can see some of the trends, but the histogram doesn't display referenced in Observation 2 and you can't see the monthly seasonal trends referenced in Observation 3. I recommend you view on desktop if possible 🙏
+:::
 
 ##### Observation 1:
 
@@ -59,13 +67,17 @@ One of the overall takeways I got from this figure is the little histogram to th
 
 This could suggest that Jews and Chinese are more discriminated against today than I previously had thought.
 
+:::{.callout-note}
 If you are a mobile viewer, there is no histogram, but if you imagine taking the average by google search Jews obviously has the highest number, so on.
+:::
 
 ##### Observation 3:
 
 One thing that i find very interesting about this graph is the cyclical pattern of the "kill jews" search. It seems to follow a yearly pattern beginning at a low point in July / August then spiking in April. I don't fully understand why this pattern exists, but perhaps it could be related to Easter - which is in April - when the Jews crucified Jeusu Christ, a central figure in Christian religions (a lot of the US is Christian). This theory wouldn't explain the gradual rising though, so if you have suggestions of why this is the case, please email me or something.
 
+:::{.callout-note}
 If you are a mobile viewer, you'll just have to trust me on this one 🙂.
+:::
 
 ##### Observation 4:
 
@@ -76,3 +88,25 @@ While it does seem the US has more distaste for jews, chinese, and muslims, stil
 This is by no means a perfect measure of discrimination against a group, how many people really are searching for this type of thing? Also, it would be so valuable to see demographic breaks by searches. But concerns aside, I think it is a new and interesting take on measure of discrimination and distaste for a particular group. And perhaps it is a valuable signal because of the spikes we see that correlate with real events that might cause more hate/discrimination for a particular group.
 
 If we believe for a second that it is a good measure, we may consider groups we may not hear about in the news as much as subjects of American discrimination (jews, chinese, and muslimns) more than we give credit for.
+
+Feel free to leave relevant thoughts and comments 🙂
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+    this.page.url = 'https://alexbass.me/posts/google_trends/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'alexcomment1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alexbassc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async></script>

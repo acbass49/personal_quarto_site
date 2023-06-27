@@ -17,6 +17,14 @@ website:
   favicon: graph-up.svg
   twitter-card:
     creator: "@acbass49"
+  page-footer:
+    center: 
+      - text: "About Me"
+        href: index.qmd
+      - text: "👉 My Latest Post 👈"
+        href: posts/google_trends/index.qmd
+      - text: CV
+        href: files/cv.pdf
   site-url: "https://alexbass.me"
   google-analytics: "UA-194046200-1"
 format:

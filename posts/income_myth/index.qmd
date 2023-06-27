@@ -1,6 +1,5 @@
 ---
 title: "Myth of Latter-day Saint Prosperity"
-author: 'Alex Bass'
 date: '2023-02-07'
 categories: [Data Journalism, LDS, R]
 image: /about_files/LDS_myth_0.png
