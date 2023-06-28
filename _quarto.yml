@@ -26,7 +26,10 @@ website:
       - text: CV
         href: files/cv.pdf
   site-url: "https://alexbass.me"
-  google-analytics: "UA-194046200-1"
+  body-header: | 
+    <!-- 100% privacy-first analytics -->
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 format:
   html:
     theme: litera

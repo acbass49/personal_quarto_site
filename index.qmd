@@ -32,7 +32,3 @@ Hi! My name is Alex Bass. I work as a data scientist at [Dynata](https://www.dyn
 I find myself doing data analysis and programming projects in my free time. I created this blog as a place to post some of these fun projects I work on off the clock. [Check it out!](blog.qmd)
 
 Contact me via any of the links if you want to connect 🙂
-
-<!-- 100% privacy-first analytics -->
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
