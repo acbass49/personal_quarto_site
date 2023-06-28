@@ -12,11 +12,11 @@ title-block-banner: false
 
 ### Intro
 
-A question that social scientists have been asking for a while is... how do you measure something like discrimination? How do you measure the intensity of discrimination? Also, is it possible to generalize this to a population. For example, X group is strongly discriminated against in the United States, or X group is strongly discriminated against in the world.
+A few questions that social scientists have been asking for a while are... how do you measure something like discrimination? How do you measure the intensity of discrimination? Also, is it possible to generalize this to a population? For example, X group is strongly discriminated against in the United States, or X group is strongly discriminated against in the world.
 
 ### Measures
 
-* Method 1: You might be able to do this with laws. For example, if there are laws based on race in a community, then discrimination is clear. But in a country like the US, as you go out from a local level, there exist more and more laws, thousands! It seems difficult to go law by law through thousands of laws searching for discrimination. Also, this type of search doesn't account for people who may discriminate against others *outside* the law.
+* Method 1: You might be able to do this with laws. For example, if there are laws based on race in a community, then discrimination is clearer. But in a country like the US, as you go out from a local level, there exist more and more laws, thousands! It seems difficult to go law by law through thousands of laws searching for discrimination. Also, this type of search doesn't account for people who may discriminate against others *outside the law*.
 
 * Method 2: Social scientists try to use series of survey questions to detect attitudes towards discrimination of race and gender, but who wants to admit things like being racist or sexist? Even subtle attitude questions about discrimination could be detected by the survey respondent.
 
@@ -61,9 +61,9 @@ Noticing and researching spikes helps reaffirm our claims about statements. The 
 
 ##### Observation 2:
 
-One of the overall takeways I got from this figure is the little histogram to the left hand side which gives an average relative interest over time score. I'm not sure which group I was expecting to be the highest, but I didn't think it was the "kill jews" search. This search seems to be almost twice as likely as the second higest which is the "kill chinese" score. Followed by the "kill muslims" score, the "kill blacks," and lastly, the "kill gays" score. You can only compared 5 at a time, but I also tried including other groups which were lower than these including "kill whites," "kill christians," and "kill mormons."
+One of the overall takeways I got from this figure is the little histogram to the left hand side which gives an average relative interest overall. I'm not sure which group I was expecting to be the highest, but I didn't think it was the "kill jews" search. This search seems to be almost twice as likely as the second higest which is the "kill chinese" score. Followed by the "kill muslims" score, the "kill blacks," and lastly, the "kill gays" score. You can only compared 5 at a time, but I also tried including other groups which were lower than these including "kill christians," "kill mormons," and a few others. "Kill whites" was similar to "kill muslims" in frequency and followed similar spike patterns to "kill blacks," but on a lesser scale.
 
-This could suggest that Jews and Chinese are more discriminated against today than I previously had thought.
+Looking at the histogram, this suggested to me that Jews and Chinese are perhaps more discriminated against today than I previously had thought.
 
 :::{.callout-note}
 If you are a mobile viewer, there is no histogram, but if you imagine taking the average by google search Jews obviously has the highest number, so on.
@@ -71,7 +71,7 @@ If you are a mobile viewer, there is no histogram, but if you imagine taking the
 
 ##### Observation 3:
 
-One thing that i find very interesting about this graph is the cyclical pattern of the "kill jews" search. It seems to follow a yearly pattern beginning at a low point in July / August then spiking in April. I don't fully understand why this pattern exists, but perhaps it could be related to Easter - which is in April - when the Jews crucified Jeusu Christ, a central figure in Christian religions (a lot of the US is Christian). This theory wouldn't explain the gradual rising though, so if you have suggestions of why this is the case, please email me or something.
+One thing that i find very interesting about this graph is the cyclical pattern of the "kill jews" search. It seems to follow a yearly pattern beginning at a low point in July / August then spiking in April. I don't fully understand why this pattern exists, but perhaps it could be related to Easter - which is in April - when the Jews crucified Jesus Christ, a central figure in Christian religions (a lot of the US is Christian). This theory wouldn't explain the gradual rising though, so if you have suggestions of why this is the case, please email me or something.
 
 :::{.callout-note}
 If you are a mobile viewer, you'll just have to trust me on this one 🙂.
@@ -85,9 +85,9 @@ While it does seem the US has more distaste for jews, chinese, and muslims, stil
 
 This is by no means a perfect measure of discrimination against a group, how many people really are searching for this type of thing? Also, it would be so valuable to see demographic breaks by searches. But concerns aside, I think it is a new and interesting take on measure of discrimination and distaste for a particular group. And perhaps it is a valuable signal because of the spikes we see that correlate with real events that might cause more hate/discrimination for a particular group.
 
-If we believe for a second that it is a good measure, we may consider groups we may not hear about in the news as much as subjects of American discrimination (jews, chinese, and muslimns) more than we give credit for.
+If we believe for a second that it is a good measure, we may consider groups we may not hear about in the news as much as subjects of American discrimination (jews, chinese, and muslims) more than we give credit for.
 
-Feel free to leave relevant thoughts and comments 🙂
+Feel free to leave relevant and thoughtful comments below 🙂
 
 <div id="disqus_thread"></div>
 <script>
