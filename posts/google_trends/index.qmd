@@ -8,7 +8,7 @@ twitter-card:
 title-block-banner: false
 ---
 
-![](/./about_files/byteman.png){fig-align="center"}
+![](/./about_files/byteman.png){fig-align="center"}{.preview-image}
 
 ### Intro
 
