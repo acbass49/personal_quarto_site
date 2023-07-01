@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.SECRETS }}
+        env:
+          GH_TOKEN: ${{ secrets.SECRETS }}
       - name: 'Install Linux'
         run: echo "BUNDLE_EXT=linux-amd64.deb" >> $GITHUB_ENV
         shell: bash
