@@ -3,98 +3,20 @@ name: 'Update Stream Graphs'
 on:
   schedule:
     - cron: "1/5 * * * *"
-
-runs:
-  using: 'composite'
-  steps: 
-    - name: 'Choose which binary to use'
-      run: |
-        # Select correct bundle for OS type
-        case $RUNNER_OS in 
-          "Linux")
-              echo "BUNDLE_EXT=linux-amd64.deb" >> $GITHUB_ENV
-              ;;
-           "macOS")
-              echo "BUNDLE_EXT=macos.pkg" >> $GITHUB_ENV
-              ;;
-           "Windows")
-              echo "BUNDLE_EXT=win.msi" >> $GITHUB_ENV
-              ;;
-            *)
-              echo "$RUNNER_OS not supported"
-              exit 1
-              ;;
-        esac
-      shell: bash
-    - name: 'Download Quarto'
-      id: download-quarto 
-      env: 
-        GITHUB_TOKEN: ${{ github.token }}
-      run: |
-        if [ ${{ runner.os }} != "Windows" ]; then
-          # On Windows scoop will be used so no need to download the release
-          if [ -z "${{inputs.version}}" ]; then
-            # download the latest stable release
-            gh release download --repo github.com/quarto-dev/quarto-cli --pattern ${{ format('*{0}', env.BUNDLE_EXT) }}
-            version=$(curl https://quarto.org/docs/download/_download.json | jq -r '.version')
-            echo "version=${version}" >> $GITHUB_OUTPUT
-          elif [ "${{inputs.version}}" == "LATEST" -o "${{inputs.version}}" == "pre-release" ]; then
-            # get latest pre release version 
-            version=$(curl https://quarto.org/docs/download/_prerelease.json | jq -r '.version')
-            wget https://github.com/quarto-dev/quarto-cli/releases/download/v$version/quarto-$version-${{env.BUNDLE_EXT}}
-            echo "version=${version}" >> $GITHUB_OUTPUT
-          else
-            # download a specific release
-            wget https://github.com/quarto-dev/quarto-cli/releases/download/v${{inputs.version}}/quarto-${{inputs.version}}-${{env.BUNDLE_EXT}}
-            echo "version=${{inputs.version}}" >> $GITHUB_OUTPUT
-          fi
-          echo "installer=$(ls quarto*${{ env.BUNDLE_EXT }})" >> $GITHUB_OUTPUT
-        else
-          : # do nothing for now (https://github.com/quarto-dev/quarto-actions/issues/59 :facepalm:)
-          # FIXME: how to get version information from scoop in windows runners?
-          # send the cderv bat-signal!
-        fi
-      shell: bash
-    - name: 'Install Quarto'
-      run: |
-        # Install quarto
-        [ ${{ runner.os }} != "Windows" ] && installer=${{ steps.download-quarto.outputs.installer }}
-        case $RUNNER_OS in 
-          "Linux")
-              sudo apt install ./$installer
-              ;;
-           "macOS")
-              sudo installer -pkg ./$installer -target '/'
-              ;;
-           "Windows")
-              # can't install msi for now so use scoop
-              if [ -z "${{ inputs.version }}" ]
-              then
-                powershell -File $GITHUB_ACTION_PATH/install-quarto-windows.ps1
-              else
-                powershell -File $GITHUB_ACTION_PATH/install-quarto-windows.ps1 ${{ inputs.version }}
-              fi
-              ;;
-            *)
-              echo "$RUNNER_OS not supported"
-              exit 1
-              ;;
-        esac
-        [ ${{ runner.os }} != "Windows" ] && rm $installer
-        echo "Quarto Installed !"
-      shell: bash
-    - uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.WORKFLOW_GIT_ACCESS_TOKEN }}
-    - name: Update Website
-      run: |
-        git config --global user.name "${{ secrets.USR }}"
-        git config --global user.email "acbass49@gmail.com"
-        git clone "https://github.com/acbass49/personal_quarto_site.git"
-        cd personal_quarto_site
-        quarto render
-        git add .
-        git commit -m "StreamGraph Update"
-        git push
-      shell: bash
-
+jobs:
+  quarto-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          token: ${{ secrets.SECRETS }}
+      - run: |
+          git config --global user.name "${{ secrets.USR }}"
+          git config --global user.email "acbass49@gmail.com"
+          git clone "https://github.com/acbass49/personal_quarto_site.git"
+          cd personal_quarto_site
+          quarto render
+          git add .
+          git commit -m "StreamGraph Update"
+          git push
+        shell: bash
