@@ -1,7 +1,7 @@
 ---
 title: County-Level Analysis of School Shootings
 date: "2022-08-19"
-categories: [Project, Data Journalism, Python, Statistics]
+categories: [Project, Data Journalism, Python, Statistics, Politics]
 image: /about_files/school_6.jpeg
 title-block-banner: false
 ---
