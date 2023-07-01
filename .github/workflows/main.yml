@@ -2,27 +2,29 @@ name: Update Quarto Graph
 
 on:
   schedule:
-    - cron: "1/5 * * * *" # Every Saturday at 11am UTC 0 11 * * 6
+    - cron: "1/5 * * * *"
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job
   Update_stream_graph:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.SECRETS }}
-      
-      # execute Rscript
-      - name: Running script
+      - name: 'Install Linux'
+        run: echo "BUNDLE_EXT=linux-amd64.deb" >> $GITHUB_ENV
+        shell: bash
+      - name: 'Download Quarto'
         run: |
           gh release download --repo github.com/quarto-dev/quarto-cli --pattern ${{ format('*{0}', env.BUNDLE_EXT) }}
-            version=$(curl https://quarto.org/docs/download/_download.json | jq -r '.version')
-            echo "version=${version}" >> $GITHUB_OUTPUT
-          sudo apt install ./$installer
+          version=$(curl https://quarto.org/docs/download/_download.json | jq -r '.version')
+          echo "version=${version}" >> $GITHUB_OUTPUT
+        shell: bash
+      - name: 'Install Quarto'
+        run: sudo apt install ./$installer
+        shell: bash
+      - name: Update Website
+        run: |
           git config --global user.name "${{ secrets.USR }}"
           git config --global user.email "acbass49@gmail.com"
           git clone "https://github.com/acbass49/personal_quarto_site.git"
