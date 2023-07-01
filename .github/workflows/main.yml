@@ -13,7 +13,6 @@ jobs:
         with:
           token: ${{ secrets.SECRETS }}
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-      - run: echo "${{ secrets.USR }}"
       - run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "acbass49@gmail.com"
