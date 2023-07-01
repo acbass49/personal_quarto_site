@@ -23,7 +23,7 @@ jobs:
             version=$(curl https://quarto.org/docs/download/_download.json | jq -r '.version')
             echo "version=${version}" >> $GITHUB_OUTPUT
           sudo apt install ./$installer
-          git config --global user.name "${{ acbass49 }}"
+          git config --global user.name "${{ secrets.USR }}"
           git config --global user.email "acbass49@gmail.com"
           git clone "https://github.com/acbass49/personal_quarto_site.git"
           cd personal_quarto_site
