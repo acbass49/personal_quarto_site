@@ -10,6 +10,7 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           token: ${{ secrets.SECRETS }}
+      - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - run: |
           git config --global user.name "${{ secrets.USR }}"
           git config --global user.email "acbass49@gmail.com"
@@ -17,6 +18,6 @@ jobs:
           cd personal_quarto_site
           quarto render
           git add .
-          git commit -m "StreamGraph Update"
+          git commit -m "StreamGraph Update ${{ steps.date.outputs.date }}"
           git push
         shell: bash
