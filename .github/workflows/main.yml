@@ -16,9 +16,7 @@ jobs:
         shell: bash
       - name: 'Download Quarto'
         run: |
-          gh release download --repo github.com/quarto-dev/quarto-cli --pattern ${{ format('*{0}', env.BUNDLE_EXT) }}
-          version=$(curl https://quarto.org/docs/download/_download.json | jq -r '.version')
-          echo "version=${version}" >> $GITHUB_OUTPUT
+          gh release download --repo github.com/quarto-dev/quarto-cli
         shell: bash
       - name: 'Install Quarto'
         run: sudo apt install ./$installer
