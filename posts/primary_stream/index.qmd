@@ -1,5 +1,5 @@
 ---
-title: "GOP Primary Nomination Trackin with Google Trends"
+title: "GOP Primary Nomination Tracking with Google Trends"
 date: '2023-07-01'
 categories: [Google Trends, Data Journalism, Politics, CICD]
 image: /./about_files/primary.jpg
