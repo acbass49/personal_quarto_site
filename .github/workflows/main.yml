@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: quarto-dev/quarto-actions/setup@v2
         env: 
-          CI_COMMIT_AUTHOR: acbass49
+          CI_COMMIT_AUTHOR: githubActions
         with:
           token: ${{ secrets.SECRETS }}
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
