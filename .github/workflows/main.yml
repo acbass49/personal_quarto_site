@@ -1,9 +1,8 @@
 name: 'Update Stream Graphs'
 
 on:
-  workflow_call:
-#   schedule:
-#     - cron: "1/5 * * * *"
+  schedule:
+    - cron: "1/6 * * * *"
 jobs:
   quarto-rerender:
     runs-on: ubuntu-latest
