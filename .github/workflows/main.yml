@@ -22,4 +22,3 @@ jobs:
           git add .
           git commit -m "StreamGraph Update ${{ steps.date.outputs.date }}"
           git push
-        shell: bash
