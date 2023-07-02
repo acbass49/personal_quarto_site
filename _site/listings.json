@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/primary_stream/index.html",
+      "/posts/presidents_trends/index.html",
       "/posts/google_trends/index.html",
       "/posts/income_myth/index.html",
       "/posts/resume/index.html",
