@@ -24,7 +24,7 @@ For this I wanted to make a stream chart to display these results for two reason
 I plan to keep this chart updated up until the primary election. I guess we'll see how accurate it is in the end 🤷‍♂️.
 
 :::{.callout-note}
-This graph was last updated: `r format(Sys.time(), "%d %b %Y %H:%M:%S")`
+This graph was last updated: `r format(Sys.time(), "%H:%M:%S on %d %b %Y")`
 :::
 
 ```{r}
@@ -76,8 +76,16 @@ ggplot(df, aes(x = as.Date(date), y = hits, fill = keyword)) +
 ```
 
 #### Observation 1
+
+For these charts like other Google Trends data, its helpful to read the spikes. For example, we can see different candidates spiking at different times. Nikki Haley spikes in mid-February then dies down. Trump spiked in April. Ron DeSantis and Tim Scott both spiked in June around the same time.
+
 #### Observation 2
-#### Observation 3
+
+Overall, it seems like Trump is taking the lionshare of hits. DeSantis is the next closest person. Then, after that, the others have few searches relatively.
+
+:::{.callout-tip}
+I expect the graph to look more and more like a funnel as the primary nomination approaches and more people search these candidates, but we'll see. Check back as this will be updated on a daily basis 👀
+:::
 
 ## Comparing aggregator to Google trends
 
