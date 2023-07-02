@@ -2,7 +2,7 @@ name: 'Update Stream Graphs'
 
 on:
   schedule:
-    - cron: "1/5 * * * *"
+    - cron: "* * * * *"
 jobs:
   quarto-linux:
     runs-on: ubuntu-latest
