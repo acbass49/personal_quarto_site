@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: quarto-dev/quarto-actions/setup@v2
-        env: 
-          CI_COMMIT_AUTHOR: githubActions
         with:
           token: ${{ secrets.SECRETS }}
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
