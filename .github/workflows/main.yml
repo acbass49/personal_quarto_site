@@ -7,18 +7,20 @@ jobs:
   quarto-rerender:
     runs-on: ubuntu-latest
     steps:
-      - uses: quarto-dev/quarto-actions/setup@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{ secrets.SECRETS }}
+
+      - uses: quarto-dev/quarto-actions/setup@v2
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - run: |
           git config --global user.name "github_actions"
           git config --global user.email "acbass49@gmail.com"
       - run: |
-          git remote set-url origin https://x-access-token:${{ secrets.SECRETS }}@github.com:acbass49/personal_quarto_site.git
           git clone "git@github.com:acbass49/personal_quarto_site.git"
           cd personal_quarto_site
           quarto render
           git add .
           git commit -m "StreamGraph Update ${{ steps.date.outputs.date }}"
           git push
+#git remote set-url origin https://x-access-token:${{ secrets.SECRETS }}@github.com:acbass49/personal_quarto_site.git
