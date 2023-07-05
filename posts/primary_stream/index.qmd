@@ -5,6 +5,7 @@ categories: [Google Trends, Data Journalism, Politics, CICD]
 image: /./about_files/primary.jpg
 title-block-banner: false
 draft: true
+freeze: true
 ---
 
 ![](/./about_files/primary.jpg){fig-align="center"}
