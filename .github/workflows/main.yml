@@ -7,11 +7,9 @@ jobs:
   quarto-rerender:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: quarto-dev/quarto-actions/setup@v3
         with:
           token: ${{ secrets.SECRETS }}
-
-      - uses: quarto-dev/quarto-actions/setup@v2
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - run: |
           git config --global user.name "github_actions"
