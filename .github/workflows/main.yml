@@ -7,7 +7,7 @@ jobs:
   quarto-rerender:
     runs-on: ubuntu-latest
     steps:
-      - uses: quarto-dev/quarto-actions/setup@v3
+      - uses: quarto-dev/quarto-actions/setup@v2
         with:
           token: ${{ secrets.SECRETS }}
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
