@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-09-02">
-<meta name="description" content="Mostly LaTeX tbh">
+<meta name="dcterms.date" content="2023-07-06">
 
-<title>alexbass.me - Resume Template with Quarto and LaTeX</title>
+<title>alexbass.me - Integrating Simple Analytics with a Quarto Website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,12 +121,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="alexbass.me - Resume Template with Quarto and LaTeX">
+<meta name="twitter:title" content="alexbass.me - Integrating Simple Analytics with a Quarto Website">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://alexbass.me/about_files/resume_2.png">
+<meta name="twitter:image" content="https://alexbass.me/about_files/Simple_Analytics.png">
 <meta name="twitter:creator" content="@acbass49">
-<meta name="twitter:image-height" content="444">
-<meta name="twitter:image-width" content="1454">
+<meta name="twitter:image-height" content="196">
+<meta name="twitter:image-width" content="498">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -171,7 +170,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resume Template with Quarto and LaTeX</h1>
+<h1 class="title">Integrating Simple Analytics with a Quarto Website</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Life Hacks</div>
     <div class="quarto-category">Quarto</div>
@@ -186,7 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 2, 2022</p>
+      <p class="date">July 6, 2023</p>
     </div>
   </div>
     
@@ -195,15 +194,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p><img src="../../about_files/resume_2.png" class="img-fluid"><br>
+<p><img src="../../about_files/Simple_Analytics.png" class="img-fluid"><br>
 <br></p>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<p>I made my first real resume about 7ish years ago. I used the <a href="https://careers.byu.edu/students/hiring-resources/resumes/resume-templates">templates they have at BYU</a>, my alma mater. They are simple, clean, and I love them to this day!</p>
-<p>However, I wanted a way to help streamline my resume. It was getting tedious fidgeting around in the original word doc, exporting as a pdf, and then updating in all the other places I kept it. Additionally, I wanted more control over my resume than Microsoft Word was giving me and a more programmatic approach. All of these thoughts led me to Posit’s relatively new <a href="https://quarto.org/">Quarto</a>. Quarto is a flexible platform that can generate scientific reports and publish in a variety of formats (you can actually make websites with it too). So, I decided to give it a spin.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>As you probably know, Google Analytics has changed and become much more complicated to the dismay of many people (now called <a href="https://support.google.com/analytics/answer/10759417?hl=en&amp;ref_topic=10737980&amp;sjid=3450201576384190158-SA">Google Analytics 4</a>). Recently, There have also been <a href="https://siliconangle.com/2023/07/03/sweden-orders-three-companies-stop-using-google-analytics-privacy-concerns/">government bans over privacy concerns from Google Analytics</a>. I am not extremely knowlegdable about all things data privacy, but really just wanted another analytics platform that was simple and delivered what I needed to track traffic ethically on this website.</p>
 </section>
-<section id="implementation" class="level4">
-<h4 class="anchored" data-anchor-id="implementation">Implementation</h4>
+<section id="enter-simple-analytics" class="level3">
+<h3 class="anchored" data-anchor-id="enter-simple-analytics">Enter Simple Analytics</h3>
 <p>I knew that it would likely be more work up front to create the bare bones structure, but less work on the backend when I would just add a thing or two. And, my hope was that other people interested in this format could use it as well in a few minutes without all the upfront work.</p>
 <p>You can render the document side-by-side as you are writing it up which I found very helpful in whatever program you use to edit it.</p>
 <p><img src="../../about_files/resume_3.png" class="img-fluid"></p>
@@ -217,7 +215,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Overall, I am happy how it turned out and happy to save some time. Feel free to clone/fork <a href="https://github.com/acbass49/CV_Quarto">the repository</a> where I have my resume for your personal use.</p>
 <p>If you would like to clone the repo, copy the code below in the terminal. Then just update the files to have your resume information!</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/acbass49/CV_Quarto.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
 <section id="tips-if-you-try-it" class="level4">
 <h4 class="anchored" data-anchor-id="tips-if-you-try-it">Tips if you try it</h4>
 <ul class="force_font">
@@ -237,6 +234,7 @@ As a bonus, in the repository I have a shell script where you can see what actio
 <p>Feel free to message me with any questions</p>
 
 
+</section>
 </section>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script></main> <!-- /main -->

@@ -1,0 +1,63 @@
+---
+title: Integrating Simple Analytics with a Quarto Website
+titlegraphic: /about_files/Simple_Analytics.png
+date: "2023-07-06"
+categories: [Life Hacks, Quarto]
+image: /about_files/Simple_Analytics.png
+twitter-card: 
+    image: /about_files/Simple_Analytics.png
+title-block-banner: false
+draft: true
+---
+
+![](/about_files/Simple_Analytics.png)  
+<br>
+
+### Introduction
+
+As you probably know, Google Analytics has changed and become much more complicated to the dismay of many people (now called [Google Analytics 4](https://support.google.com/analytics/answer/10759417?hl=en&ref_topic=10737980&sjid=3450201576384190158-SA)). Recently, There have also been [government bans over privacy concerns from Google Analytics](https://siliconangle.com/2023/07/03/sweden-orders-three-companies-stop-using-google-analytics-privacy-concerns/). I am not extremely knowlegdable about all things data privacy, but really just wanted another analytics platform that was simple and delivered what I needed to track traffic ethically on this website.
+
+### Enter Simple Analytics
+
+I knew that it would likely be more work up front to create the bare bones structure, but less work on the backend when I would just add a thing or two. And, my hope was that other people interested in this format could use it as well in a few minutes without all the upfront work.
+
+You can render the document side-by-side as you are writing it up which I found very helpful in whatever program you use to edit it.
+
+![](/about_files/resume_3.png)
+
+You can also render the pdf from the .qmd from the code below.
+
+```zsh
+#In the terminal where the .qmd file is kept, run below to generate pdf:
+quarto render resume_alex.qmd --to pdf
+```
+
+Turned out because I was most interested in the pdf export, I ended up using mostly LaTeX and only some plain Markdown in my Quarto document. Though I haven't experimented with exporting to html, I noticed that I wasn't able to export to word when using custom LaTeX. **My template can only be fully rendered in pdf form which is fine for my interests. But, for those interested in a Microsoft Word or html output, my template may not work for you.**
+
+Finished product below...  (*also check out my cv tab on this website for the pdf; below is just a screenshot*)
+
+![](/about_files/resume_1.png)
+
+How did it turn out? Do you like my resume?
+
+Overall, I am happy how it turned out and happy to save some time. Feel free to clone/fork [the repository](https://github.com/acbass49/CV_Quarto) where I have my resume for your personal use.
+
+If you would like to clone the repo, copy the code below in the terminal. Then just update the files to have your resume information!
+
+```zsh
+git clone https://github.com/acbass49/CV_Quarto.git
+```
+
+
+#### Tips if you try it
+
+<ul class = "force_font">
+<li>I put comments throughout the .qmd document outlining where all the parts of the resume are, so should be able to update text and copy and paste sections as necessary.</li>
+<li>Like I mentioned above, most of this is built with LaTeX, so if you want to further customize, you will want to be googling how to do something in LaTeX. The only part that is in Markdown are the bulleted lists.<br>
+</li>
+<li>I would recommend using RStudio as the tool for working with Quarto (same company built both), but as I use VScode a lot these days, I figured I would give Quarto's VScode plug-in a try. Overall, I really liked the plug-in. Notably, you can render the .qmd document (as docx, pdf, html) in the window next to you which was very helpful. I believe this is the same for RStudio as well.<br>
+</li>
+<li>As a bonus, in the repository I have a shell script where you can see what actions I take to upload the new resume to my personal system and blog, and update the repositories.</li>
+</ul>
+
+Feel free to message me with any questions
