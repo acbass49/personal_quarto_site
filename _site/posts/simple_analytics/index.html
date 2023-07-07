@@ -194,47 +194,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p><img src="../../about_files/Simple_Analytics.png" class="img-fluid"><br>
-<br></p>
+<p><img src="../../about_files/Simple_Analytics.png" class="img-fluid" data-fig-align="center"> <br></p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>As you probably know, Google Analytics has changed and become much more complicated to the dismay of many people (now called <a href="https://support.google.com/analytics/answer/10759417?hl=en&amp;ref_topic=10737980&amp;sjid=3450201576384190158-SA">Google Analytics 4</a>). Recently, There have also been <a href="https://siliconangle.com/2023/07/03/sweden-orders-three-companies-stop-using-google-analytics-privacy-concerns/">government bans over privacy concerns from Google Analytics</a>. I am not extremely knowlegdable about all things data privacy, but really just wanted another analytics platform that was simple and delivered what I needed to track traffic ethically on this website.</p>
+<p>As you probably know, Google Analytics has changed and become more complicated to the dismay of many people (now called <a href="https://support.google.com/analytics/answer/10759417?hl=en&amp;ref_topic=10737980&amp;sjid=3450201576384190158-SA">Google Analytics 4</a>). Recently, There have also been <a href="https://siliconangle.com/2023/07/03/sweden-orders-three-companies-stop-using-google-analytics-privacy-concerns/">government bans over privacy concerns from Google Analytics</a>. I am not extremely knowlegdable about all things data privacy, but really just wanted another analytics platform that was simple and delivered what I needed to track traffic ethically on this website you are on now.</p>
+<p>Also, looking at the <a href="https://quarto.org/docs/websites/website-tools.html#google-analytics">quarto docs</a>, there is a place to initialize google analytics, but does not mention other services. So, I thought I would share this short article as an example of using another service for those who might be interested.</p>
 </section>
-<section id="enter-simple-analytics" class="level3">
-<h3 class="anchored" data-anchor-id="enter-simple-analytics">Enter Simple Analytics</h3>
-<p>I knew that it would likely be more work up front to create the bare bones structure, but less work on the backend when I would just add a thing or two. And, my hope was that other people interested in this format could use it as well in a few minutes without all the upfront work.</p>
-<p>You can render the document side-by-side as you are writing it up which I found very helpful in whatever program you use to edit it.</p>
-<p><img src="../../about_files/resume_3.png" class="img-fluid"></p>
-<p>You can also render the pdf from the .qmd from the code below.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#In the terminal where the .qmd file is kept, run below to generate pdf:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render resume_alex.qmd <span class="at">--to</span> pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Turned out because I was most interested in the pdf export, I ended up using mostly LaTeX and only some plain Markdown in my Quarto document. Though I haven’t experimented with exporting to html, I noticed that I wasn’t able to export to word when using custom LaTeX. <strong>My template can only be fully rendered in pdf form which is fine for my interests. But, for those interested in a Microsoft Word or html output, my template may not work for you.</strong></p>
-<p>Finished product below… (<em>also check out my cv tab on this website for the pdf; below is just a screenshot</em>)</p>
-<p><img src="../../about_files/resume_1.png" class="img-fluid"></p>
-<p>How did it turn out? Do you like my resume?</p>
-<p>Overall, I am happy how it turned out and happy to save some time. Feel free to clone/fork <a href="https://github.com/acbass49/CV_Quarto">the repository</a> where I have my resume for your personal use.</p>
-<p>If you would like to clone the repo, copy the code below in the terminal. Then just update the files to have your resume information!</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/acbass49/CV_Quarto.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="tips-if-you-try-it" class="level4">
-<h4 class="anchored" data-anchor-id="tips-if-you-try-it">Tips if you try it</h4>
-<ul class="force_font">
-<li>
-I put comments throughout the .qmd document outlining where all the parts of the resume are, so should be able to update text and copy and paste sections as necessary.
-</li>
-<li>
-Like I mentioned above, most of this is built with LaTeX, so if you want to further customize, you will want to be googling how to do something in LaTeX. The only part that is in Markdown are the bulleted lists.<br>
-</li>
-<li>
-I would recommend using RStudio as the tool for working with Quarto (same company built both), but as I use VScode a lot these days, I figured I would give Quarto’s VScode plug-in a try. Overall, I really liked the plug-in. Notably, you can render the .qmd document (as docx, pdf, html) in the window next to you which was very helpful. I believe this is the same for RStudio as well.<br>
-</li>
-<li>
-As a bonus, in the repository I have a shell script where you can see what actions I take to upload the new resume to my personal system and blog, and update the repositories.
-</li>
-</ul>
-<p>Feel free to message me with any questions</p>
+<section id="simple-analytics" class="level3">
+<h3 class="anchored" data-anchor-id="simple-analytics">Simple Analytics</h3>
+<p><a href="https://www.simpleanalytics.com/">Simple Analytics</a> was easy to set up and delivers exactly what I wanted to see in a clean dashboard that worked out of the box. There are options to customize specific goals or events of special interest. Also, they have the option of sending a weekly email summary of visiting stats.</p>
+<p>If you have a quarto website, I simply added this excerpt to my <code>_quarto.yml</code> file:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>website:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    body-footer: |</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">&lt;!-- 100% privacy-first analytics --&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;script</span> <span class="er">async</span> <span class="er">defer</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://scripts.simpleanalyticscdn.com/latest.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;noscript&gt;&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://queue.simpleanalyticscdn.com/noscript.gif"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">""</span> <span class="er">referrerpolicy</span><span class="ot">=</span><span class="st">"no-referrer-when-downgrade"</span> <span class="kw">/&gt;&lt;/noscript&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>After this is inserted and you set up an account, it starts automatically tracking everything in your dashboard. Here is an example of what mine looks like:</p>
+<p><img src="../../about_files/simple_analytics2.png" class="img-fluid"></p>
+<p>It has most visitor data fields you might be interested in like Country, pages visited, referral, device type and browser.</p>
+<p>There is a subscription required after a 14 day trial period which is $8 a month with an annual subscription. This may not be worth it to some people, but just sharing a simple solution that I found helpful. I beleive that there is a basic free version after the trial period ends, but not sure what this entails.</p>
+<p>If you would like to see an implementation in my quarto website, feel free to browse my repository <a href="https://github.com/acbass49/personal_quarto_site">here</a> and remember to look for the <code>_quarto.yml</code> file!</p>
+<p>Let me know of thoughts or questions below…</p>
+<div id="disqus_thread">
+
+</div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+    this.page.url = 'https://alexbass.me/posts/simple_analytics/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'simple_analytics'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alexbassc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async=""></script>
 
 
-</section>
 </section>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script></main> <!-- /main -->

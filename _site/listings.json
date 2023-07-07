@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/simple_analytics/index.html",
       "/posts/google_trends/index.html",
       "/posts/income_myth/index.html",
       "/posts/resume/index.html",
