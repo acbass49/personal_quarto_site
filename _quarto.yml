@@ -22,7 +22,7 @@ website:
       - text: "About Me"
         href: index.qmd
       - text: "👉 My Latest Post 👈"
-        href: posts/google_trends/index.qmd
+        href: posts/simple_analytics/index.qmd
       - text: CV
         href: files/cv.pdf
   site-url: "https://alexbass.me"
