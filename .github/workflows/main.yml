@@ -12,9 +12,9 @@ jobs:
           token: ${{ secrets.SECRETS }}
       - name: clone personal site
         run: |
-          git config --global user.name "github_actions"
+          git config --global user.name "github actions"
           git config --global user.email "acbass49@gmail.com"
-          git clone "https://github.com/acbass49/personal_quarto_site.git"
+          git clone "git@github.com:{username}/{repo}.git"
         shell: bash
       - name: re-render site
         run: |
@@ -24,6 +24,7 @@ jobs:
       - name: push new version
         run: |
           cd personal_quarto_site
+          git remote add origin https://${{ secrets.SECRETS }}@github.com/acbass49/personal_quarto_site.git
           git add .
           git commit -m "StreamGraph Update"
           git push
