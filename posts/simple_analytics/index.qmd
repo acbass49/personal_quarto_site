@@ -1,5 +1,5 @@
 ---
-title: Integrating Simple Analytics with a Quarto Website
+title: Alternative to Google Analytics on Quarto Website
 titlegraphic: /about_files/Simple_Analytics.png
 date: "2023-07-06"
 categories: [Life Hacks, Quarto]

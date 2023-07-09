@@ -2,13 +2,13 @@
 title: "GOP Primary Nomination Tracking with Google Trends"
 date: '2023-07-01'
 categories: [Google Trends, Data Journalism, Politics, CICD]
-image: /./about_files/primary.jpg
+image: /./about_files/primary.png
 title-block-banner: false
 draft: true
 freeze: false
 ---
 
-![](/./about_files/primary.jpg){fig-align="center"}
+![](/./about_files/primary.png){fig-align="center"}
 
 ## Introduction
 
@@ -36,7 +36,7 @@ This graph was last updated: `r format(Sys.time(), "%H:%M:%S on %d %b %Y")`
 #| echo: false
 
 library(gtrendsR)
-library(tidyverse)
+library(ggplot2)
 library(ggstream)
 library(showtext)
 font_add_google("Cairo", family = "Cairo")
@@ -61,7 +61,6 @@ ggplot(df, aes(x = as.Date(date), y = hits, fill = keyword)) +
     ggtitle("GOP Primary Race") +
     xlab("Year 2023") +
     ylab("Google Search Hits") +
-    
     theme(
         axis.ticks = element_blank(),
         axis.title = element_text(size = 16, face = "bold"),
