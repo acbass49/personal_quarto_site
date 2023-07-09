@@ -23,6 +23,8 @@ jobs:
         run: R -e 'install.packages("ggplot2")'
       - name: install ggstream
         run: R -e 'install.packages("ggstream")'
+      - name: install rmarkdown
+        run: R -e 'install.packages("rmarkdown")'
       - name: install showtext
         run: R -e 'install.packages("showtext")'
       - name: clone personal site
