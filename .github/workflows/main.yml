@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --global user.name "github actions"
           git config --global user.email "acbass49@gmail.com"
-          git clone "https://github.com/acbass49/personal_quarto_site.git""
+          git clone "https://github.com/acbass49/personal_quarto_site.git"
         shell: bash
       - name: re-render site
         run: |
