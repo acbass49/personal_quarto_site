@@ -20,12 +20,13 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages:
-            any::gtrendsR
+            any::readr
             any::ggplot2
             any::ggstream
             any::rmarkdown
             any::showtext
             any::knitr
+            any::gtrendsR
       - name: clone personal site
         run: |
           git config --global user.name "github actions"
