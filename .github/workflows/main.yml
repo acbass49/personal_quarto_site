@@ -17,16 +17,15 @@ jobs:
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: '4.2.0'
-      - name: install gtrendsR
-        run: R -e 'install.packages("gtrendsR")'
-      - name: install ggplot2
-        run: R -e 'install.packages("ggplot2")'
-      - name: install ggstream
-        run: R -e 'install.packages("ggstream")'
-      - name: install rmarkdown
-        run: R -e 'install.packages("rmarkdown")'
-      - name: install showtext
-        run: R -e 'install.packages("showtext")'
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages:
+            any::gtrendsR
+            any::ggplot2
+            any::ggstream
+            any::rmarkdown
+            any::showtext
+            any::knitr
       - name: clone personal site
         run: |
           git config --global user.name "github actions"
