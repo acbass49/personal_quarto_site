@@ -29,6 +29,6 @@ about:
 
 Hi! My name is Alex Bass. I work as a data scientist at [Dynata](https://www.dynata.com/), a leading polling and market research firm. Recently, I graduated with my Master's from the [University of Virginia in Data Science](https://datascience.virginia.edu/).
 
-I find myself doing data analysis and programming projects in my free time. I created this blog as a place to post some of these fun projects I work on off the clock. [Check it out!](blog.qmd)
+I find myself doing data analysis and programming projects in my free time, so I created this website for a place to [write about data](blog.qmd) and share [projects](projects.qmd) I work on off the clock.
 
-Contact me via any of the links if you want to connect 🙂
+Would love to connect if you have any thoughts or comments on my work. Contact me via any of the links 🙂

@@ -1,12 +1,12 @@
 ---
-title: County-Level Analysis of School Shootings
+title: Bayesian County-Level Analysis of School Shootings
 date: "2022-08-19"
-categories: [Project, Data Journalism, Python, Statistics, Politics]
-image: /about_files/school_6.jpeg
+categories: [Python, Stats, Dataviz]
+image: /about_files/school_7.png
 title-block-banner: false
 ---
 
-![](/about_files/school_6.jpeg){fig-align="center"}
+![](/about_files/school_7.png){fig-align="center"}
 
 #### Introduction
 

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2021-04-10">
+<meta name="dcterms.date" content="2020-07-31">
 
-<title>alexbass.me - My Facebook Data… EXPOSED</title>
+<title>alexbass.me - Word Search Puzzle Generator</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,10 +58,12 @@ ul.task-list{list-style: none;}
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="alexbass.me - My Facebook Data… EXPOSED">
-<meta name="twitter:description" content="Do you like the title? You can thank all of my click-bait ad consumption for that.">
-<meta name="twitter:image" content="https://alexbass.me/about_files/fb_icon">
+<meta name="twitter:title" content="alexbass.me - Word Search Puzzle Generator">
+<meta name="twitter:description" content="The genesis of this project came late night at a restaurant dinner in Charleston. I went out with my family to enjoy one of the delicious seafood locales common to the holy city.">
+<meta name="twitter:image" content="https://alexbass.me/./about_files/word_search_99.png">
 <meta name="twitter:creator" content="@acbass49">
+<meta name="twitter:image-height" content="288">
+<meta name="twitter:image-width" content="272">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -84,13 +86,13 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="../../index.html">About</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../files/cv.pdf">CV</a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../blog.html">Blog</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../projects.html">Projects</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../files/cv.pdf">CV</a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -108,10 +110,10 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My Facebook Data… EXPOSED</h1>
+<h1 class="title">Word Search Puzzle Generator</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Data Journalism</div>
     <div class="quarto-category">R</div>
+    <div class="quarto-category">Shiny</div>
   </div>
   </div>
 
@@ -123,7 +125,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 10, 2021</p>
+      <p class="date">July 31, 2020</p>
     </div>
   </div>
     
@@ -132,68 +134,18 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>Do you like the title? You can thank all of my click-bait ad consumption for that.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/fb_icon.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>As some of you may know, my work is fairly political, so I have developed a habit of staying up to date on news and politics. Recently, social media has made some headlines including talks at congressional hearings, reporters expressing concern over its influence on elections, and some are worrying about censorship. So, amid all of this (and the rest of this post is a much lighter tone than this intro), I wanted to download my personal data from Facebook to show an overview of the role its played in my life since I got an account.</p>
-<section id="read-this" class="level4">
-<h4 class="anchored" data-anchor-id="read-this">👇Read This👇</h4>
-<p>I made 4 figures from MY Facebook data. In my next project, I’m making a web app that lets YOU upload YOUR data and will generate these same figures for YOU. So, be thinking about what these figures would look like for YOUR data.</p>
-<hr>
-</section>
-<section id="figure-1" class="level4">
-<h4 class="anchored" data-anchor-id="figure-1">Figure 1</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/trends.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>Whew Ok. Lets see what’s going on here. Most clearly, my reactions spiked in 2020. My posts also inched up during that time. Wow, I guess the pandemic has increased my social media usage😬, but starting this blog last year probably contributed to this. Another thing, if you look closer, notice that there are no data points for 2015. In 2015, I was on my church service mission for the entire year and didn’t use social media! But, my friends spiked in 2016 accounting for the friends I made during that time and college freshman friends. Also, I moved twice in my 2019 college year and met a lot of people which explains the second friend bump. Hmm I wonder what YOUR graph would look like?👀👀</p>
-<p><em>Note: I aggregated the data by year. So, my 2021 data points are lower than the rest, but this may not be because I have used Facebook less during 2021, but rather there are many days left in this year that haven’t been accounted for.</em></p>
-<hr>
-</section>
-<section id="figure-2" class="level4">
-<h4 class="anchored" data-anchor-id="figure-2">Figure 2</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/emoji.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>Well the “Love” emoji is my most popular from the last year. When I made this graph originally using ALL of my data, I just got a bunch of “Like”s because that was the only reaction available for a long time; hence, I decided to filter the data to the last year only. Hmm perhaps I should try using the care/angry emojis.</p>
-<hr>
-</section>
-<section id="figure-3---best-facebook-friends-wordlcloud" class="level4">
-<h4 class="anchored" data-anchor-id="figure-3---best-facebook-friends-wordlcloud">Figure 3 - Best Facebook Friends Wordlcloud</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/wc.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>Alright, this is what we’re really here for. <strong>The bigger the name, the better friends my method thinks I am to that person.</strong> So for me, Austin Sebaske-Smith and Brandon Archer are my best FB friends, and turns out they are both worthy of that title🥺. If your name isn’t big or on the chart don’t worry, I still care about you too.</p>
-<p><em>How I did this: I gave a certain amount of “friendship points” for each time you reacted to a person, mentioned a person in a comment, posted about a person, etc. Afterwards, I totaled these points for each friend. I then weighted by interaction(if I mentioned you in a post or comment, It could mean more than a simple reaction to a post) and recency.</em></p>
-<hr>
-</section>
-<section id="figure-4" class="level4">
-<h4 class="anchored" data-anchor-id="figure-4">Figure 4</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/sentiment.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>This last chart was a fun add-on for me. Using a simple model, I processed all of my comments and posts and tried to determine which were positive and negative. Thankfully, a lot of my interactions were coded as positive😁. Though I think this is largely due to commenting for friend’s birthdays.</p>
-<p><em>How I did this: there is a whole subsection of data science that is particularly focused on a computer understanding different sentiments in written text. It is called Natural Language Processing. This is fairly new field that has A LOT of room to grow. So there can be low accuracy and many errors. I used a dictionary that has words coded as positive and negative and I matched it my comments and posts for these scores.</em></p>
-<hr>
-</section>
-<section id="closing-thoughts" class="level4">
-<h4 class="anchored" data-anchor-id="closing-thoughts">Closing Thoughts</h4>
-<p>Now my secrets are exposed - Oh well. Thanks for reading:) Shoot me a message or something if you would be interested in the app that generates these graphs for YOU. It might help me have more motivation to finish it.</p>
-<p>My code for this post is <a href="https://github.com/acbass49/FBdataAnalytics">here</a>.</p>
+<p><img src="../.././about_files/peanuts.jpg" class="img-fluid" data-fig.align="center"></p>
+<p>The genesis of this project came late night at a restaurant dinner in Charleston. I went out with my family to enjoy one of the delicious seafood locales common to the holy city. Going out with my family is always enjoyable with good conversation and lots of laughs. My parents enjoy taking our family out to eat now because my 4 siblings are mostly college-aged and can behave well in a public setting. However, my youngest brother, Micah, is 7 years old (significantly younger than the rest of my siblings) and isn’t as enticed by the adult conversation. Instead, he enjoys playing with toys or coloring when we go out.</p>
+<p>While we were enjoying the boiled peanuts and talking about the menu, Micah was happily trying to solve a word search puzzle on his kids’ menu. He seemed really engaged in finding all the words. He got stuck a few times, and I helped him find a few words, but he remained focused on it for a good portion of the night. Looking back, I know, for Micah, usually the kids’ menu activities don’t get his attention as much as just doodling with crayons does, so thats maybe why the word search puzzle stuck out to me that night. As I was helping him find a few words, I realized I could probably build a simple program to generate a bunch of these for him. He would at least enjoy the first few, right? So, this one’s for Micah.</p>
+<p>I built the web app below. Try it out! Put in a few words and make one for yourself!</p>
+<p align="center">
+<iframe src="https://acbass49.shinyapps.io/crossword_puzzle/" align="middle;" style="border: none; width: 350px; height: 1200px">
+</iframe>
+</p>
+<p>The code I used to generate this puzzle is found <a href="https://github.com/acbass49/wordsearch">here</a>. I will probably write-up a post later detailing the steps I took to program this. Honestly, it was a lot of fun for me.</p>
+<p>If you enjoyed the post, shoot me a message on social media or share it.</p>
 
 
-</section>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -302,10 +254,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../index.html">About Me</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../posts/simple_analytics/index.html">👉 My Latest Post 👈</a>
+    <a class="nav-link" href="../../posts/simple_analytics/index.html">Latest Post</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../projects.html">Projects</a>
+    <a class="nav-link" href="../../projects/internet_archive/index.html">Latest Project</a>
   </li>  
 </ul>
       </div>

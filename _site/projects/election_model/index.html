@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2021-11-08">
+<meta name="dcterms.date" content="2020-09-18">
 
-<title>alexbass.me - Weekly COVID Email Update</title>
+<title>alexbass.me - 2020 US Presidential Election Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,12 +58,12 @@ ul.task-list{list-style: none;}
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="alexbass.me - Weekly COVID Email Update">
-<meta name="twitter:description" content="(TL;DR I created a weekly COVID email update. Scroll to the bottom to opt-in🙂)">
-<meta name="twitter:image" content="https://alexbass.me/about_files/covid.png">
+<meta name="twitter:title" content="alexbass.me - 2020 US Presidential Election Model">
+<meta name="twitter:description" content="Last updated November 2, 2020">
+<meta name="twitter:image" content="https://alexbass.me/./about_files/vote_graph.png">
 <meta name="twitter:creator" content="@acbass49">
-<meta name="twitter:image-height" content="748">
-<meta name="twitter:image-width" content="1584">
+<meta name="twitter:image-height" content="456">
+<meta name="twitter:image-width" content="884">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -89,6 +89,9 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="../../blog.html">Blog</a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../projects.html">Projects</a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../files/cv.pdf">CV</a>
   </li>  
 </ul>
@@ -107,10 +110,10 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Weekly COVID Email Update</h1>
+<h1 class="title">2020 US Presidential Election Model</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Project</div>
-    <div class="quarto-category">CI/CD</div>
+    <div class="quarto-category">Dataviz</div>
+    <div class="quarto-category">Stats</div>
     <div class="quarto-category">R</div>
   </div>
   </div>
@@ -123,7 +126,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 8, 2021</p>
+      <p class="date">September 18, 2020</p>
     </div>
   </div>
     
@@ -132,41 +135,34 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="intro" class="level4">
-<h4 class="anchored" data-anchor-id="intro">Intro</h4>
-<p><strong>(TL;DR I created a weekly COVID email update. Scroll to the bottom to opt-in🙂)</strong></p>
-<p>I’m excited to talk about this latest project🎉🎉</p>
-<p>In the past few days, Europe has seen a third wave of COVID-19 surge through and several other countries are reporting higher cases this week (~10% increase!). All of this begs the question of whether COVID in the U.S. will have a <em>third</em> strong wave after the what we’ve seen from the delta variant and with winter coming. Here is a tweet from the World Health Organization detailing some of this:</p>
-<blockquote class="twitter-tweet blockquote" data-conversation="none">
-<p lang="en" dir="ltr">
-"More than 5 million deaths have now been reported, and we know the real number is higher. We are still losing more than 50,000 of our sisters and brothers every week"-<a href="https://twitter.com/DrTedros?ref_src=twsrc%5Etfw"><span class="citation" data-cites="DrTedros">@DrTedros</span></a> <a href="https://twitter.com/hashtag/COVID19?src=hash&amp;ref_src=twsrc%5Etfw">#COVID19</a> <a href="https://t.co/5jlX3sYNbH">pic.twitter.com/5jlX3sYNbH</a>
-</p>
-— World Health Organization (WHO) (<span class="citation" data-cites="WHO">@WHO</span>) <a href="https://twitter.com/WHO/status/1456285168918990851?ref_src=twsrc%5Etfw">November 4, 2021</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><em>Last updated November 2, 2020</em></p>
+<p>There are a lot of election models out there - <a href="https://projects.economist.com/us-2020-forecast/president">the Economist</a>, <a href="https://projects.fivethirtyeight.com/2020-election-forecast/">FiveThirtyEight</a>, and the <a href="https://cookpolitical.com/sites/default/files/2020-09/EC%20Ratings.091720.3.pdf">Cook Political Report</a> to name a few. So what am I doing here?</p>
+<p><img src="../.././about_files/vote.jpg" class="img-fluid" style="width:100.0%"></p>
+<section id="the-problem" class="level4">
+<h4 class="anchored" data-anchor-id="the-problem">The Problem</h4>
+<p>Honestly, I was irritated in blindly trusting other’s models. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information isn’t available. I understand that model-builders may not want to be undermined and critiqued by skeptics where their work may lose credibility to egotistic data lords or others, but even-so I would appreciate more transparency (especially after the 2016 election). Also, I understand that the data that are used may be sensitive information they pay for which is more understandable.</p>
 </section>
-<section id="so-cue-in-my-project.." class="level4">
-<h4 class="anchored" data-anchor-id="so-cue-in-my-project..">So, Cue In My Project..</h4>
-<p>Right when I think I don’t have to worry about COVID anymore, I find myself <em>once again</em> clicking through a website checking case, death, and vaccination rates. Instead of this, I created an <strong>automated email that sends on Saturday mornings with the latest case/death/vaccination data</strong>, so you can be informed with raw data on a weekly check-in basis nationally and for your state.</p>
+<section id="what-i-did" class="level4">
+<h4 class="anchored" data-anchor-id="what-i-did">What I did</h4>
+<p>My goal was to create a model that is based exclusively on <strong>recent quality polling</strong>, and that’s it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can’t possibly recreate the model. <strong>These probabilities are calculated SOLELY from an average of the five latest, quality polls in each state.</strong> Here is my <a href="https://github.com/acbass49/PresidentialPulseChecker/blob/master/Methodology.pdf">methodology</a> and <a href="https://github.com/acbass49/PresidentialPulseChecker">code</a>. Overall, the purpose is to give an educated guess of what would happen if the election were held each week (I plan to update this each day until the election). I mostly did this for an easy way to keep track of the recent polls and pulse check the election map looks at a moments notice.</p>
+<hr>
 </section>
-<section id="email-structure" class="level4">
-<h4 class="anchored" data-anchor-id="email-structure">Email Structure</h4>
-<p>At the beginning of the email, there are a few lines of text saying whether the case rate is increasing/decreasing/staying about the same and what the national and your state’s vaccination rates are.</p>
-<p>Attached to the email are two visualizations showing the data trends across time: one showing national trend, the other showing your state’s trend (they look similar to the figure below 👇)</p>
+<section id="i-present-the-presidential-pulse-checker" class="level4">
+<h4 class="anchored" data-anchor-id="i-present-the-presidential-pulse-checker">I present the Presidential Pulse Checker</h4>
+<p>Latest probabilities: (BEST VIEWING ON DESKTOP. If you are on a mobile device, press on states for more info; otherwise, hover.)</p>
+<iframe width="100%" height="400" frameborder="0" scrolling="no" src="//plotly.com/~acbass49/9.embed">
+</iframe>
+<p>If there were 100 presidential elections today in 100 different worlds like ours, how many would Trump/Biden win?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../.././about_files/national_av.png" class="img-fluid figure-img"></p>
+<p><img src="../.././about_files/simulation_21.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p><em>One note: To get the vaccination rate for each state and nationally, I compared the number vaccinated against the TOTAL population (not just 18+ or 12+). I got the state population numbers from the census, and count is included in the figures for reference. I decided to use the total US population because I think that will eventually be relevant as more age groups are approved for various vaccines. If you are interested in different numbers, I have a link with more information included in the weekly email.</em></p>
-<p>The code is not viewable for this project because of email privacy, but happy to share code snippets for personal inquiries. Thanks for stopping in.</p>
-</section>
-<section id="embedded-survey-form" class="level4">
-<h4 class="anchored" data-anchor-id="embedded-survey-form">Embedded Survey Form</h4>
-<p>If you are interested in receiving this brief weekly update, drop your email in below… <strong>You can only submit after answering both questions!</strong></p>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6j197rbqv4kZHvvH6ZTVC6o9vU4V-hjzO6E4EjKq5VG2U6Q/viewform?embedded=true" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0">
-Loading…
+<p>Daily Tracker: (Percentage of daily simulations won plotted over time; hover for more info)</p>
+<iframe width="100%" height="400" frameborder="0" scrolling="no" src="//plotly.com/~acbass49/11.embed">
 </iframe>
+<p>Links to polling aggregators: <a href="https://projects.fivethirtyeight.com/polls/president-general/national/">FiveThirtyEight</a>, <a href="https://www.realclearpolitics.com/epolls/latest_polls/">RealClearPolitics</a>.</p>
+<p>Thanks for viewing this post. Check back soon for more updates:)</p>
 
 
 </section>
@@ -278,10 +274,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../index.html">About Me</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../posts/simple_analytics/index.html">👉 My Latest Post 👈</a>
+    <a class="nav-link" href="../../posts/simple_analytics/index.html">Latest Post</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../files/cv.pdf">CV</a>
+    <a class="nav-link" href="../../projects/internet_archive/index.html">Latest Project</a>
   </li>  
 </ul>
       </div>

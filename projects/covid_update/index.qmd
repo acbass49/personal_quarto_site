@@ -1,7 +1,7 @@
 ---
 date: '2021-11-08'
-title: Weekly COVID Email Update
-categories: [Project, CI/CD, R]
+title: CI/CD Pipeline of Weekly COVID Email Update
+categories: [CI/CD, R, Dataviz]
 image: /about_files/covid.png
 title-block-banner: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: Word Search Puzzle Generator
 date: '2020-07-31'
-categories: [Project, R, Shiny]
-image: /about_files/peanuts.jpg
+categories: [R, Shiny]
+image: /./about_files/word_search_99.png
 title-block-banner: false
 ---
 ![](/./about_files/peanuts.jpg){fig.align="center"}

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2020-07-31">
+<meta name="dcterms.date" content="2023-05-01">
 
-<title>alexbass.me - Word Search Puzzle Generator</title>
+<title>alexbass.me - Entity Resolution with Gradient Boosted Trees</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,9 +58,9 @@ ul.task-list{list-style: none;}
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="alexbass.me - Word Search Puzzle Generator">
-<meta name="twitter:description" content="The genesis of this project came late night at a restaurant dinner in Charleston. I went out with my family to enjoy one of the delicious seafood locales common to the holy city.">
-<meta name="twitter:image" content="https://alexbass.me/about_files/peanuts.jpg">
+<meta name="twitter:title" content="alexbass.me - Entity Resolution with Gradient Boosted Trees">
+<meta name="twitter:description" content="In 2023, I finished my Master of Science in Data Science at the University of Virginia. I completed a capstone project as part of this program which I will share here.">
+<meta name="twitter:image" content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.UYD4bfYlvuLEuKeKZQfaHAHaFh%26pid%3DApi&amp;f=1&amp;ipt=c80bcabadba4b27deff8fbbfa997ac70a9d22b0dc0d7717f116587ec7c0424c9&amp;ipo=images">
 <meta name="twitter:creator" content="@acbass49">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -87,6 +87,9 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="../../blog.html">Blog</a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../projects.html">Projects</a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../files/cv.pdf">CV</a>
   </li>  
 </ul>
@@ -105,11 +108,11 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Word Search Puzzle Generator</h1>
+<h1 class="title">Entity Resolution with Gradient Boosted Trees</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Project</div>
-    <div class="quarto-category">R</div>
-    <div class="quarto-category">Shiny</div>
+    <div class="quarto-category">Capstone</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Stats</div>
   </div>
   </div>
 
@@ -121,7 +124,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 31, 2020</p>
+      <p class="date">May 1, 2023</p>
     </div>
   </div>
     
@@ -130,18 +133,78 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p><img src="../.././about_files/peanuts.jpg" class="img-fluid" data-fig.align="center"></p>
-<p>The genesis of this project came late night at a restaurant dinner in Charleston. I went out with my family to enjoy one of the delicious seafood locales common to the holy city. Going out with my family is always enjoyable with good conversation and lots of laughs. My parents enjoy taking our family out to eat now because my 4 siblings are mostly college-aged and can behave well in a public setting. However, my youngest brother, Micah, is 7 years old (significantly younger than the rest of my siblings) and isn’t as enticed by the adult conversation. Instead, he enjoys playing with toys or coloring when we go out.</p>
-<p>While we were enjoying the boiled peanuts and talking about the menu, Micah was happily trying to solve a word search puzzle on his kids’ menu. He seemed really engaged in finding all the words. He got stuck a few times, and I helped him find a few words, but he remained focused on it for a good portion of the night. Looking back, I know, for Micah, usually the kids’ menu activities don’t get his attention as much as just doodling with crayons does, so thats maybe why the word search puzzle stuck out to me that night. As I was helping him find a few words, I realized I could probably build a simple program to generate a bunch of these for him. He would at least enjoy the first few, right? So, this one’s for Micah.</p>
-<p>I built the web app below. Try it out! Put in a few words and make one for yourself!</p>
-<p align="center">
-<iframe src="https://acbass49.shinyapps.io/crossword_puzzle/" align="middle;" style="border: none; width: 350px; height: 1200px">
-</iframe>
-</p>
-<p>The code I used to generate this puzzle is found <a href="https://github.com/acbass49/wordsearch">here</a>. I will probably write-up a post later detailing the steps I took to program this. Honestly, it was a lot of fun for me.</p>
-<p>If you enjoyed the post, shoot me a message on social media or share it.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F379-3795218_internet-archive-internet-archive-logo-hd-png-download.png&amp;f=1&amp;nofb=1&amp;ipt=acd73fc9159f640d3781109efd52875190ccfa30cf30ad35219d42600124216c&amp;ipo=images" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In 2023, I finished my Master of Science in Data Science at the University of Virginia. I completed a capstone project as part of this program which I will share here.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is meant to be an overview and summary of the problem in layman’s terms. If a more technical and comprehensive view is desired, please review my <a href="https://github.com/acbass49/wiki2ia">code</a> on github or my <a href="https://github.com/acbass49/wiki2ia/blob/main/Modeling/Final_Writeup.pdf">final project write-up</a>.</p>
+</div>
+</div>
+<p>My project was sponsored by the <a href="https://archive.org/">Internet Archive</a>. Maxwell Jones (my UVA colleague) and I worked with 2 contacts at Internet Archive who gave us guidance throughout the process and provided us internal access to resources. For those who may not know, the Internet Archive is best known for its <a href="https://archive.org/web/">wayback machine</a> - archiving webpages on the internet. As an example, here is what Target.com looked like in March 2, 2000:</p>
+<p><br> <img src="../../about_files/capstone1.png" class="img-fluid"><br>
+<br></p>
+<p>Our project does not deal with the webpages, but focuses on the other resources that the Internet Archive offers - specifically their collection of books (over 7 million as of July 2023). Our contacts wanted to match the books in the Internet Archive to books cited on Wikipedia.</p>
+<p>What are the implications of this? Well, if you were researching a topic and came across a book, you could gain access to a FREE copy of this book given a link to the internet achive in the wikipedia citation of your article. Given the vast collection of books in the Internet Archive, this could be a huge asset to the world providing free resources to everyone visiting Wikipedia.</p>
+</section>
+<section id="so-whats-the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="so-whats-the-problem">So, what’s the problem?</h2>
+<p>Well, all wikipedia citations are not created equal. Some are very descriptive and include things like the <a href="https://en.wikipedia.org/wiki/ISBN">ISBN number</a> that allow clean book matching, but what about other citations which only have the book title and the book author? Also, there are often misspellings and inconsistent abbreviations for book meta data like the author or publisher. Can we provide a match (with confidence) given these cases?</p>
+<p><strong>So in essence the problem is quantifying uncertainty in entity resolution of Internet Archive Books and Wikipeida Citations.</strong> Our algorithm will determine:</p>
+<ol type="1">
+<li>Whether or not a wikipedia citation book match exists in the Internet Archive database.</li>
+<li>Output matches given a high probability threshold.</li>
+</ol>
+</section>
+<section id="analysis-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-pipeline">Analysis Pipeline</h2>
+<p>In order to link the Internet Archive books to wikipedia links, a few things need to happen…</p>
+<ol type="1">
+<li>Need to download and scrape every book citation on Wikipedia and gain access to the database of 7 million books on the Internet Archive (availabe via API).</li>
+<li>Combine these two resources in a way that can be trained.</li>
+<li>Divide into a training and testing set</li>
+<li>Train an algorithm to match books which outputs an accurate match probability</li>
+<li>Implement this algorithm as a function which inputs a wikipedia citation and outputs book matches from the Internet Archive database given a high probability threshold.</li>
+</ol>
+</section>
+<section id="problems-that-came-up-through-the-process" class="level2">
+<h2 class="anchored" data-anchor-id="problems-that-came-up-through-the-process">Problems that came up through the process…</h2>
+<p>These were several hurdles and problems that came up in our path to a workable solution. Please consult <a href="https://github.com/acbass49/wiki2ia/blob/main/Modeling/Final_Writeup.pdf">the paper</a> for these details. Generally, the problems included bias in the training data because of duplicate books stored in the Internet Archive, regularization of a feature space of over 200+, handling missing data among key features, and looking for patterns and applying machine learning methods to improve an initial low recall rate.</p>
+</section>
+<section id="ending-solution" class="level2">
+<h2 class="anchored" data-anchor-id="ending-solution">Ending Solution</h2>
+<p>In the end, we manually created a test set of 800+ observations. We utilitzed the Levenstien distance for text matching and used 3 different methods of matching dependent on EDA of features: full matching, sort matching, and partial matching. We tuned the hyperparameters of the GBT algorithm which naturally accounts for missingness.</p>
+<p><img src="../../about_files/capstone2.png" class="img-fluid"></p>
+<p>We tested several algorithms with 5-fold crossvalidation, but our best model found strong success with a 97.5% test precision rate, a 94% test recall rate, and 99% test accuracy. We fully implemented our solution in python <a href="https://github.com/acbass49/wiki2ia">here</a>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Typically, the training metrics find more success than the test metrics in other data science problems, but in our case there was bias in our training set where many more matches existed in the training set than the data indicated. This was the case because duplicate books existed in the internet archive database with unique links.</p>
+</div>
+</div>
 
 
+</section>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -250,10 +313,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../index.html">About Me</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../posts/simple_analytics/index.html">👉 My Latest Post 👈</a>
+    <a class="nav-link" href="../../posts/simple_analytics/index.html">Latest Post</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../files/cv.pdf">CV</a>
+    <a class="nav-link active" href="../../projects/internet_archive/index.html" aria-current="page">Latest Project</a>
   </li>  
 </ul>
       </div>
