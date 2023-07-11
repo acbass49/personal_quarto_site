@@ -1,15 +1,5 @@
 [
   {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/internet_archive/index.html",
-      "/projects/bayesian_county/index.html",
-      "/projects/covid_update/index.html",
-      "/projects/election_model/index.html",
-      "/projects/peanuts/index.html"
-    ]
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/posts/primary_stream/index.html",
@@ -22,6 +12,16 @@
       "/posts/lds_gop/index.html",
       "/posts/cars/index.html",
       "/posts/mobility/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/internet_archive/index.html",
+      "/projects/bayesian_county/index.html",
+      "/projects/covid_update/index.html",
+      "/projects/election_model/index.html",
+      "/projects/peanuts/index.html"
     ]
   }
 ]
