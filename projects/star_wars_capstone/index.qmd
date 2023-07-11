@@ -1,10 +1,9 @@
 ---
 title: "Star Wars: Political Message Detection & Likeability"
 categories: [Capstone, R, Stats]
-image: /projects/star_wars_capstone/fig1.png
+image: /about_files/sw_fig1.png
 date: "2020-04-25"
 title-block-banner: false
-draft: true
 ---
 
 ![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.denofgeek.com%2Fwp-content%2Fuploads%2F2020%2F03%2Fstar-wars-the-rise-of-skywalker-novelization-review.jpg%3Ffit%3D1679%252C1112&f=1&nofb=1&ipt=0747b3268c49b6162e3d9803e09d2f6246759edc754714653f109d51e570061b&ipo=images){fig-align="center"}
@@ -28,7 +27,7 @@ To find the answer to these questions, I picked a popular movie that had been in
 
 Of the 1000 I surveyed, 361 had seen the movie. Here are some stats about them...
 
-![](/projects/star_wars_capstone/fig2.png)
+![](/about_files/sw_fig2.png)
 
 The individuals who watched Star Wars skewed male, older, and higher income. Given a simple t-test, there was no significant difference in party affiliation, voting in the last election, and education. Of the 361 watching *Star Wars: The Last Jedi*
 80 identified a political message.
@@ -37,13 +36,13 @@ From this point, I wanted to evaluate whether political message detection led to
 
 The second part is digging further into the types of messages that were detected and by what party... 
 
-![](/projects/star_wars_capstone/fig4.png)
+![](/about_files/sw_fig4.png)
 
 From this figure, we see that Republicans were less likely to detect a poltical message than Independents and Democrats. Also, it seems like everyone seemed to detect more democratic messages than republican messages; however, I really need a larger sample to tell because only 7 republicans detected a message.
 
 Perhaps unneccessary, but to get actual estimated probabilities of each person being in this group, I fit a multinomial logistic regression on the dependent variable of the type of political message the respondent detected: Republican, Democrat, or unclear.
 
-![](/projects/star_wars_capstone/fig5.png)
+![](/about_files/sw_fig5.png)
 
 :::{.callout-note}
 No, this graph wasn't made in R. This model was estimated and the figure was made in Stata for those social science folks who can tell by its distinct style 😂

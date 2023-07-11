@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="alexbass.me - Star Wars: Political Message Detection &amp; Likeability">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://alexbass.me/projects/star_wars_capstone/fig1.png">
+<meta name="twitter:image" content="https://alexbass.me/about_files/sw_fig1.png">
 <meta name="twitter:creator" content="@acbass49">
 <meta name="twitter:image-height" content="568">
 <meta name="twitter:image-width" content="912">
@@ -185,14 +185,14 @@ Tip
 <section id="what-i-found" class="level2">
 <h2 class="anchored" data-anchor-id="what-i-found">What I Found…</h2>
 <p>Of the 1000 I surveyed, 361 had seen the movie. Here are some stats about them…</p>
-<p><img src="../../projects/star_wars_capstone/fig2.png" class="img-fluid"></p>
+<p><img src="../../about_files/sw_fig2.png" class="img-fluid"></p>
 <p>The individuals who watched Star Wars skewed male, older, and higher income. Given a simple t-test, there was no significant difference in party affiliation, voting in the last election, and education. Of the 361 watching <em>Star Wars: The Last Jedi</em> 80 identified a political message.</p>
 <p>From this point, I wanted to evaluate whether political message detection led to a decrease in likeability of the film. So, I fit a linear regression model using several demographic variables with the variable of interest using a 10 point scale of likeability as the dependent variable. From this model, I found that it had an effect at the 90% confidence level. The interpretation being… <strong>if a political message was detected by the respondent, my model predicts that person rates it 0.5 points lower on the likeability scale.</strong></p>
 <p>The second part is digging further into the types of messages that were detected and by what party…</p>
-<p><img src="../../projects/star_wars_capstone/fig4.png" class="img-fluid"></p>
+<p><img src="../../about_files/sw_fig4.png" class="img-fluid"></p>
 <p>From this figure, we see that Republicans were less likely to detect a poltical message than Independents and Democrats. Also, it seems like everyone seemed to detect more democratic messages than republican messages; however, I really need a larger sample to tell because only 7 republicans detected a message.</p>
 <p>Perhaps unneccessary, but to get actual estimated probabilities of each person being in this group, I fit a multinomial logistic regression on the dependent variable of the type of political message the respondent detected: Republican, Democrat, or unclear.</p>
-<p><img src="../../projects/star_wars_capstone/fig5.png" class="img-fluid"></p>
+<p><img src="../../about_files/sw_fig5.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
