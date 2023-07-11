@@ -13,7 +13,7 @@ title-block-banner: false
 In 2023, I finished my Master of Science in Data Science at the University of Virginia. I completed a capstone project as part of this program which I will share here. 
 
 :::{.callout-tip}
-This is meant to be an overview and summary of the problem in layman's terms. If a more technical and comprehensive view is desired, please review my [code](https://github.com/acbass49/wiki2ia) on github or my [final project write-up](https://github.com/acbass49/wiki2ia/blob/main/Modeling/Final_Writeup.pdf).
+This is meant to be an overview and summary of the problem in layman's terms. If a more technical and comprehensive view is desired, please review my [code](https://github.com/acbass49/wiki2ia) on github or my [final project write-up](/projects/internet_archive/Final_Writeup.pdf).
 :::
 
 My project was sponsored by the [Internet Archive](https://archive.org/). Maxwell Jones (my UVA colleague) and I worked with 2 contacts at Internet Archive who gave us guidance throughout the process and provided us internal access to resources. For those who may not know, the Internet Archive is best known for its [wayback machine](https://archive.org/web/) - archiving webpages on the internet. As an example, here is what Target.com looked like in March 2, 2000:
@@ -47,7 +47,7 @@ In order to link the Internet Archive books to wikipedia links, a few things nee
 
 ## Problems that came up through the process...
 
-These were several hurdles and problems that came up in our path to a workable solution. Please consult [the paper](https://github.com/acbass49/wiki2ia/blob/main/Modeling/Final_Writeup.pdf) for these details. Generally, the problems included bias in the training data because of duplicate books stored in the Internet Archive, regularization of a feature space of over 200+, handling missing data among key features, and looking for patterns and applying machine learning methods to improve an initial low recall rate.
+These were several hurdles and problems that came up in our path to a workable solution. Please consult [the paper](/projects/internet_archive/Final_Writeup.pdf) for these details. Generally, the problems included bias in the training data because of duplicate books stored in the Internet Archive, regularization of a feature space of over 200+, handling missing data among key features, and looking for patterns and applying machine learning methods to improve an initial low recall rate.
 
 ## Ending Solution
 
