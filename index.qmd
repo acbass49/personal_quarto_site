@@ -10,7 +10,7 @@ about:
     - icon: pencil
       text: Blog
       href: blog.qmd
-    - icon: pie-chart
+    - icon: file-bar-graph
       text: Projects
       href: projects.qmd
     - icon: github
