@@ -1,63 +1,81 @@
 ---
-title: Entity Resolution with Gradient Boosted Trees
-date: "2023-05-01"
-categories: [Capstone, Python, Stats]
-image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.UYD4bfYlvuLEuKeKZQfaHAHaFh%26pid%3DApi&f=1&ipt=c80bcabadba4b27deff8fbbfa997ac70a9d22b0dc0d7717f116587ec7c0424c9&ipo=images
+title: "Star Wars: Political Message Detection & Likeability"
+categories: [Capstone, R, Stats]
+image: /projects/star_wars_capstone/fig1.png
+date: "2020-04-25"
 title-block-banner: false
 draft: true
 ---
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F379-3795218_internet-archive-internet-archive-logo-hd-png-download.png&f=1&nofb=1&ipt=acd73fc9159f640d3781109efd52875190ccfa30cf30ad35219d42600124216c&ipo=images){fig-align="center"}
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.denofgeek.com%2Fwp-content%2Fuploads%2F2020%2F03%2Fstar-wars-the-rise-of-skywalker-novelization-review.jpg%3Ffit%3D1679%252C1112&f=1&nofb=1&ipt=0747b3268c49b6162e3d9803e09d2f6246759edc754714653f109d51e570061b&ipo=images){fig-align="center"}
 
 ## Introduction
 
-In 2023, I finished my Master of Science in Data Science at the University of Virginia. I completed a capstone project as part of this program which I will share here. 
+In 2020, I completed a capstone project for my undergraduate degree in Political Science at BYU. I recieved funding from the Political Science department to field a survey from an online panel (n=1000), [Prolific](https://www.prolific.co/). I was interested in studying..
+
+1. the effect of whether detecting political messages in a film had on the likeability of that film.
+2. whether parties were sensitive to out-party messages. For example, Republicans would more readily recognize Democratic messaging and vice versa.
 
 :::{.callout-tip}
-This is meant to be an overview and summary of the problem in layman's terms. If a more technical and comprehensive view is desired, please review my [code](https://github.com/acbass49/wiki2ia) on github or my [final project write-up](https://github.com/acbass49/wiki2ia/blob/main/Modeling/Final_Writeup.pdf).
+This is meant to be an overview and summary of the research paper. Think of it as a detailed abstract. To view the full paper, click [here.](/projects/star_wars_capstone/Capstone%20Project.pdf)
 :::
 
-My project was sponsored by the [Internet Archive](https://archive.org/). Maxwell Jones (my UVA colleague) and I worked with 2 contacts at Internet Archive who gave us guidance throughout the process and provided us internal access to resources. For those who may not know, the Internet Archive is best known for its [wayback machine](https://archive.org/web/) - archiving webpages on the internet. As an example, here is what Target.com looked like in March 2, 2000:
+## What I Asked in the Survey..
 
-<br/>
-![](/about_files/capstone1.png)   
-<br/>
+To find the answer to these questions, I picked a popular movie that had been in theatres recently, Star Wars: the Rise of Skywalker. Then, I asked questions about whether they saw it, and if so, did they detected any political messages and like the film.
 
-Our project does not deal with the webpages, but focuses on the other resources that the Internet Archive offers - specifically their collection of books (over 7 million as of July 2023). Our contacts wanted to match the books in the Internet Archive to books cited on Wikipedia.
+## What I Found...
 
-What are the implications of this? Well, if you were researching a topic and came across a book, you could gain access to a FREE copy of this book given a link to the internet achive in the wikipedia citation of your article. Given the vast collection of books in the Internet Archive, this could be a huge asset to the world providing free resources to everyone visiting Wikipedia.
+Of the 1000 I surveyed, 361 had seen the movie. Here are some stats about them...
 
-## So, what's the problem?
+![](/projects/star_wars_capstone/fig2.png)
 
-Well, all wikipedia citations are not created equal. Some are very descriptive and include things like the [ISBN number](https://en.wikipedia.org/wiki/ISBN) that allow clean book matching, but what about other citations which only have the book title and the book author? Also, there are often misspellings and inconsistent abbreviations for book meta data like the author or publisher. Can we provide a match (with confidence) given these cases?
+The individuals who watched Star Wars skewed male, older, and higher income. Given a simple t-test, there was no significant difference in party affiliation, voting in the last election, and education. Of the 361 watching *Star Wars: The Last Jedi*
+80 identified a political message.
 
-**So in essence the problem is quantifying uncertainty in entity resolution of Internet Archive Books and Wikipeida Citations.** Our algorithm will determine:
+From this point, I wanted to evaluate whether political message detection led to a decrease in likeability of the film. So, I fit a linear regression model using several demographic variables with the variable of interest using a 10 point scale of likeability as the dependent variable. From this model, I found that it had an effect at the 90% confidence level. The interpretation being... **if a political message was detected by the respondent, my model predicts that person rates it 0.5 points lower on the likeability scale.**
 
-1. Whether or not a wikipedia citation book match exists in the Internet Archive database.
-2. Output matches given a high probability threshold.
+The second part is digging further into the types of messages that were detected and by what party... 
 
-## Analysis Pipeline
+![](/projects/star_wars_capstone/fig4.png)
 
-In order to link the Internet Archive books to wikipedia links, a few things need to happen...
+From this figure, we see that Republicans were less likely to detect a poltical message than Independents and Democrats. Also, it seems like everyone seemed to detect more democratic messages than republican messages; however, I really need a larger sample to tell because only 7 republicans detected a message.
 
-1. Need to download and scrape every book citation on Wikipedia and gain access to the database of 7 million books on the Internet Archive (availabe via API).
-2. Combine these two resources in a way that can be trained.
-3. Divide into a training and testing set
-4. Train an algorithm to match books which outputs an accurate match probability
-5. Implement this algorithm as a function which inputs a wikipedia citation and outputs book matches from the Internet Archive database given a high probability threshold.
+Perhaps unneccessary, but to get actual estimated probabilities of each person being in this group, I fit a multinomial logistic regression on the dependent variable of the type of political message the respondent detected: Republican, Democrat, or unclear.
 
-## Problems that came up through the process...
-
-These were several hurdles and problems that came up in our path to a workable solution. Please consult [the paper](https://github.com/acbass49/wiki2ia/blob/main/Modeling/Final_Writeup.pdf) for these details. Generally, the problems included bias in the training data because of duplicate books stored in the Internet Archive, regularization of a feature space of over 200+, handling missing data among key features, and looking for patterns and applying machine learning methods to improve an initial low recall rate.
-
-## Ending Solution
-
-In the end, we manually created a test set of 800+ observations. We utilitzed the Levenstien distance for text matching and used 3 different methods of matching dependent on EDA of features: full matching, sort matching, and partial matching. We tuned the hyperparameters of the GBT algorithm which naturally accounts for missingness.
-
-![](/about_files/capstone2.png)
-
-We tested several algorithms with 5-fold crossvalidation, but our best model found strong success with a 97.5% test precision rate, a 94% test recall rate, and 99% test accuracy. We fully implemented our solution in python [here](https://github.com/acbass49/wiki2ia).
+![](/projects/star_wars_capstone/fig5.png)
 
 :::{.callout-note}
-Typically, the training metrics find more success than the test metrics in other data science problems, but in our case there was bias in our training set where many more matches existed in the training set than the data indicated. This was the case because duplicate books existed in the internet archive database with unique links.
+No, this graph wasn't made in R. This model was estimated and the figure was made in Stata for those social science folks who can tell by its distinct style 😂
 :::
+
+As you can see from across the board, people more often detect democrat political messages, but it doesn't seem to differ by party. Although, especially for Republicans, the confidence intervals are pretty wide for these estimates.
+
+## Reflections From a Few Years Down the Road...
+
+I worked really hard on this project and am honestly proud of the work I did. However, that doesn't mean that If I were to do it now, I wouldn't change things. Here's what I would change:
+
+1. As much as I love Star Wars, it would be more interesting if the project was generalizable to movies in aggregate. I could have asked about the most recent movie the respondent has seen. I would have gotten more respondents watching movies and been able to make better estimates. It would have also been interesting to dive into what genres of which people are more willing to hear political messages. The tradeoff would be, though, I wouldn't know some fun stats about the demographics of *Star Wars* movie watchers 😂
+2. I would be interested in experiementing with **weighting** in the models and in my stats I reported. This was hardly a representative sample with so many democrats which is typical of online panels. It would have been helpful for me to set **quotas** when fielding to help make it more of a representative sample. These are things I wasn't thinking about at the time, but now dealing with surveys for the past bit at my work, this is where my mind goes.
+
+What do you think? Hopefully, you learned something about Star Wars and politics you didn't know before.
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+    this.page.url = 'https://alexbass.me/projects/star_wars_capstone/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'star_wars_capstone'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alexbassc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async></script>

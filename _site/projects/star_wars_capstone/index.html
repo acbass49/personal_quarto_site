@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-05-01">
+<meta name="dcterms.date" content="2020-04-25">
 
-<title>alexbass.me - Entity Resolution with Gradient Boosted Trees</title>
+<title>alexbass.me - Star Wars: Political Message Detection &amp; Likeability</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,10 +64,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="alexbass.me - Entity Resolution with Gradient Boosted Trees">
+<meta name="twitter:title" content="alexbass.me - Star Wars: Political Message Detection &amp; Likeability">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.UYD4bfYlvuLEuKeKZQfaHAHaFh%26pid%3DApi&amp;f=1&amp;ipt=c80bcabadba4b27deff8fbbfa997ac70a9d22b0dc0d7717f116587ec7c0424c9&amp;ipo=images">
+<meta name="twitter:image" content="https://alexbass.me/projects/star_wars_capstone/fig1.png">
 <meta name="twitter:creator" content="@acbass49">
+<meta name="twitter:image-height" content="568">
+<meta name="twitter:image-width" content="912">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -124,10 +126,10 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Entity Resolution with Gradient Boosted Trees</h1>
+<h1 class="title">Star Wars: Political Message Detection &amp; Likeability</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Capstone</div>
-    <div class="quarto-category">Python</div>
+    <div class="quarto-category">R</div>
     <div class="quarto-category">Stats</div>
   </div>
   </div>
@@ -140,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2023</p>
+      <p class="date">April 25, 2020</p>
     </div>
   </div>
   
@@ -152,12 +154,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F379-3795218_internet-archive-internet-archive-logo-hd-png-download.png&amp;f=1&amp;nofb=1&amp;ipt=acd73fc9159f640d3781109efd52875190ccfa30cf30ad35219d42600124216c&amp;ipo=images" class="img-fluid figure-img"></p>
+<p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.denofgeek.com%2Fwp-content%2Fuploads%2F2020%2F03%2Fstar-wars-the-rise-of-skywalker-novelization-review.jpg%3Ffit%3D1679%252C1112&amp;f=1&amp;nofb=1&amp;ipt=0747b3268c49b6162e3d9803e09d2f6246759edc754714653f109d51e570061b&amp;ipo=images" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In 2023, I finished my Master of Science in Data Science at the University of Virginia. I completed a capstone project as part of this program which I will share here.</p>
+<p>In 2020, I completed a capstone project for my undergraduate degree in Political Science at BYU. I recieved funding from the Political Science department to field a survey from an online panel (n=1000), <a href="https://www.prolific.co/">Prolific</a>. I was interested in studying..</p>
+<ol type="1">
+<li>the effect of whether detecting political messages in a film had on the likeability of that film.</li>
+<li>whether parties were sensitive to out-party messages. For example, Republicans would more readily recognize Democratic messaging and vice versa.</li>
+</ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -168,44 +174,25 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is meant to be an overview and summary of the problem in layman’s terms. If a more technical and comprehensive view is desired, please review my <a href="https://github.com/acbass49/wiki2ia">code</a> on github or my <a href="https://github.com/acbass49/wiki2ia/blob/main/Modeling/Final_Writeup.pdf">final project write-up</a>.</p>
+<p>This is meant to be an overview and summary of the research paper. Think of it as a detailed abstract. To view the full paper, click <a href="../../projects/star_wars_capstone/Capstone Project.pdf">here.</a></p>
 </div>
 </div>
-<p>My project was sponsored by the <a href="https://archive.org/">Internet Archive</a>. Maxwell Jones (my UVA colleague) and I worked with 2 contacts at Internet Archive who gave us guidance throughout the process and provided us internal access to resources. For those who may not know, the Internet Archive is best known for its <a href="https://archive.org/web/">wayback machine</a> - archiving webpages on the internet. As an example, here is what Target.com looked like in March 2, 2000:</p>
-<p><br> <img src="../../about_files/capstone1.png" class="img-fluid"><br>
-<br></p>
-<p>Our project does not deal with the webpages, but focuses on the other resources that the Internet Archive offers - specifically their collection of books (over 7 million as of July 2023). Our contacts wanted to match the books in the Internet Archive to books cited on Wikipedia.</p>
-<p>What are the implications of this? Well, if you were researching a topic and came across a book, you could gain access to a FREE copy of this book given a link to the internet achive in the wikipedia citation of your article. Given the vast collection of books in the Internet Archive, this could be a huge asset to the world providing free resources to everyone visiting Wikipedia.</p>
 </section>
-<section id="so-whats-the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="so-whats-the-problem">So, what’s the problem?</h2>
-<p>Well, all wikipedia citations are not created equal. Some are very descriptive and include things like the <a href="https://en.wikipedia.org/wiki/ISBN">ISBN number</a> that allow clean book matching, but what about other citations which only have the book title and the book author? Also, there are often misspellings and inconsistent abbreviations for book meta data like the author or publisher. Can we provide a match (with confidence) given these cases?</p>
-<p><strong>So in essence the problem is quantifying uncertainty in entity resolution of Internet Archive Books and Wikipeida Citations.</strong> Our algorithm will determine:</p>
-<ol type="1">
-<li>Whether or not a wikipedia citation book match exists in the Internet Archive database.</li>
-<li>Output matches given a high probability threshold.</li>
-</ol>
+<section id="what-i-asked-in-the-survey.." class="level2">
+<h2 class="anchored" data-anchor-id="what-i-asked-in-the-survey..">What I Asked in the Survey..</h2>
+<p>To find the answer to these questions, I picked a popular movie that had been in theatres recently, Star Wars: the Rise of Skywalker. Then, I asked questions about whether they saw it, and if so, did they detected any political messages and like the film.</p>
 </section>
-<section id="analysis-pipeline" class="level2">
-<h2 class="anchored" data-anchor-id="analysis-pipeline">Analysis Pipeline</h2>
-<p>In order to link the Internet Archive books to wikipedia links, a few things need to happen…</p>
-<ol type="1">
-<li>Need to download and scrape every book citation on Wikipedia and gain access to the database of 7 million books on the Internet Archive (availabe via API).</li>
-<li>Combine these two resources in a way that can be trained.</li>
-<li>Divide into a training and testing set</li>
-<li>Train an algorithm to match books which outputs an accurate match probability</li>
-<li>Implement this algorithm as a function which inputs a wikipedia citation and outputs book matches from the Internet Archive database given a high probability threshold.</li>
-</ol>
-</section>
-<section id="problems-that-came-up-through-the-process" class="level2">
-<h2 class="anchored" data-anchor-id="problems-that-came-up-through-the-process">Problems that came up through the process…</h2>
-<p>These were several hurdles and problems that came up in our path to a workable solution. Please consult <a href="https://github.com/acbass49/wiki2ia/blob/main/Modeling/Final_Writeup.pdf">the paper</a> for these details. Generally, the problems included bias in the training data because of duplicate books stored in the Internet Archive, regularization of a feature space of over 200+, handling missing data among key features, and looking for patterns and applying machine learning methods to improve an initial low recall rate.</p>
-</section>
-<section id="ending-solution" class="level2">
-<h2 class="anchored" data-anchor-id="ending-solution">Ending Solution</h2>
-<p>In the end, we manually created a test set of 800+ observations. We utilitzed the Levenstien distance for text matching and used 3 different methods of matching dependent on EDA of features: full matching, sort matching, and partial matching. We tuned the hyperparameters of the GBT algorithm which naturally accounts for missingness.</p>
-<p><img src="../../about_files/capstone2.png" class="img-fluid"></p>
-<p>We tested several algorithms with 5-fold crossvalidation, but our best model found strong success with a 97.5% test precision rate, a 94% test recall rate, and 99% test accuracy. We fully implemented our solution in python <a href="https://github.com/acbass49/wiki2ia">here</a>.</p>
+<section id="what-i-found" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-found">What I Found…</h2>
+<p>Of the 1000 I surveyed, 361 had seen the movie. Here are some stats about them…</p>
+<p><img src="../../projects/star_wars_capstone/fig2.png" class="img-fluid"></p>
+<p>The individuals who watched Star Wars skewed male, older, and higher income. Given a simple t-test, there was no significant difference in party affiliation, voting in the last election, and education. Of the 361 watching <em>Star Wars: The Last Jedi</em> 80 identified a political message.</p>
+<p>From this point, I wanted to evaluate whether political message detection led to a decrease in likeability of the film. So, I fit a linear regression model using several demographic variables with the variable of interest using a 10 point scale of likeability as the dependent variable. From this model, I found that it had an effect at the 90% confidence level. The interpretation being… <strong>if a political message was detected by the respondent, my model predicts that person rates it 0.5 points lower on the likeability scale.</strong></p>
+<p>The second part is digging further into the types of messages that were detected and by what party…</p>
+<p><img src="../../projects/star_wars_capstone/fig4.png" class="img-fluid"></p>
+<p>From this figure, we see that Republicans were less likely to detect a poltical message than Independents and Democrats. Also, it seems like everyone seemed to detect more democratic messages than republican messages; however, I really need a larger sample to tell because only 7 republicans detected a message.</p>
+<p>Perhaps unneccessary, but to get actual estimated probabilities of each person being in this group, I fit a multinomial logistic regression on the dependent variable of the type of political message the respondent detected: Republican, Democrat, or unclear.</p>
+<p><img src="../../projects/star_wars_capstone/fig5.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -216,9 +203,41 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Typically, the training metrics find more success than the test metrics in other data science problems, but in our case there was bias in our training set where many more matches existed in the training set than the data indicated. This was the case because duplicate books existed in the internet archive database with unique links.</p>
+<p>No, this graph wasn’t made in R. This model was estimated and the figure was made in Stata for those social science folks who can tell by its distinct style 😂</p>
 </div>
 </div>
+<p>As you can see from across the board, people more often detect democrat political messages, but it doesn’t seem to differ by party. Although, especially for Republicans, the confidence intervals are pretty wide for these estimates.</p>
+</section>
+<section id="reflections-from-a-few-years-down-the-road" class="level2">
+<h2 class="anchored" data-anchor-id="reflections-from-a-few-years-down-the-road">Reflections From a Few Years Down the Road…</h2>
+<p>I worked really hard on this project and am honestly proud of the work I did. However, that doesn’t mean that If I were to do it now, I wouldn’t change things. Here’s what I would change:</p>
+<ol type="1">
+<li>As much as I love Star Wars, it would be more interesting if the project was generalizable to movies in aggregate. I could have asked about the most recent movie the respondent has seen. I would have gotten more respondents watching movies and been able to make better estimates. It would have also been interesting to dive into what genres of which people are more willing to hear political messages. The tradeoff would be, though, I wouldn’t know some fun stats about the demographics of <em>Star Wars</em> movie watchers 😂</li>
+<li>I would be interested in experiementing with <strong>weighting</strong> in the models and in my stats I reported. This was hardly a representative sample with so many democrats which is typical of online panels. It would have been helpful for me to set <strong>quotas</strong> when fielding to help make it more of a representative sample. These are things I wasn’t thinking about at the time, but now dealing with surveys for the past bit at my work, this is where my mind goes.</li>
+</ol>
+<p>What do you think? Hopefully, you learned something about Star Wars and politics you didn’t know before.</p>
+<div id="disqus_thread">
+
+</div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+    this.page.url = 'https://alexbass.me/projects/star_wars_capstone/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'star_wars_capstone'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alexbassc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async=""></script>
 
 
 </section>
