@@ -63,14 +63,14 @@ ggplot(df, aes(x = as.Date(date), y = hits, fill = keyword)) +
     ylab("Google Search Hits") +
     theme(
         axis.ticks = element_blank(),
-        axis.title = element_text(size = 16, face = "bold"),
+        axis.title = element_text(size = 26, face = "bold"),
         axis.text.y = element_blank(),
-        axis.text.x = element_text(vjust = 2, size = 10, face = "bold"),
+        axis.text.x = element_text(vjust = 2, size = 20, face = "bold"),
         panel.background = element_blank(),
         text = element_text(face = "bold", family = "Cairo"),
-        plot.title = element_text(hjust = .5, size = 20, face = "bold"),
-        legend.title = element_text(face = "bold", size = 14, family = "Cairo"),
-        plot.caption = element_text(hjust = 2.55, size = 8, face = "italic")
+        plot.title = element_text(hjust = .5, size = 30, face = "bold"),
+        legend.title = element_text(face = "bold", size = 24, family = "Cairo"),
+        plot.caption = element_text(hjust = 2.55, size = 18, face = "italic")
     ) + 
     scale_x_date(date_labels="%b",date_breaks = "1 month") + 
     guides(fill=guide_legend(title="Keyword"))
@@ -112,21 +112,21 @@ colors <- df$color[order(df$hits)]
 df |> 
     ggplot() + 
     geom_bar(aes(x = hits, y = reorder(candidate, hits)), stat = "identity", width = 0.8, fill = df$color) +
-    geom_text(aes(x = hits, y = reorder(candidate, hits), label = label), hjust = -.08, family = "Cairo", fontface = "bold", size = 3) + 
+    geom_text(aes(x = hits, y = reorder(candidate, hits), label = label), hjust = -.08, family = "Cairo", fontface = "bold", size = 5) + 
     ggtitle("Share of Web Searches in Last 10 Days") +
     xlab("Percentage of Hits (%)") +
     ylab("Candidate") +
     xlim(0,100) +
     theme(
         axis.ticks = element_blank(),
-        axis.title = element_text(size = 31, face = "bold"),
-        axis.text.y = element_text(face = "bold", size = 29, family = "Cairo", color = colors, margin = margin(r = -15)),
-        axis.text.x = element_text(vjust = 2, size = 25, face = "bold"),
+        axis.title = element_text(size = 26, face = "bold"),
+        axis.text.y = element_text(face = "bold", size = 24, family = "Cairo", color = colors, margin = margin(r = -15)),
+        axis.text.x = element_text(vjust = 2, size = 20, face = "bold"),
         panel.background = element_blank(),
         text = element_text(face = "bold", family = "Cairo"),
-        plot.title = element_text(size = 35, face = "bold"),
-        legend.title = element_text(face = "bold", size = 29, family = "Cairo"),
-        plot.caption = element_text(hjust = 2.55, size = 23, face = "italic")
+        plot.title = element_text(size = 30, face = "bold"),
+        legend.title = element_text(face = "bold", size = 24, family = "Cairo"),
+        plot.caption = element_text(hjust = 2.55, size = 18, face = "italic")
     )
 
 ```
