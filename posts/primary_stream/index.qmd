@@ -58,7 +58,7 @@ cols <- c("cadetblue3", "cornsilk3", "coral", "lightgoldenrod2", "palegreen3")
 ggplot(df, aes(x = as.Date(date), y = hits, fill = keyword)) +
     geom_stream(type = "mirror") + 
     scale_fill_manual(values = cols) + 
-    ggtitle("Candidate Search Popularity Since January 2023") +
+    ggtitle("Search Popularity Since January 2023") +
     xlab("Year 2023") +
     ylab("Google Search Hits") +
     theme(
@@ -68,7 +68,7 @@ ggplot(df, aes(x = as.Date(date), y = hits, fill = keyword)) +
         axis.text.x = element_text(vjust = 2, size = 20, face = "bold"),
         panel.background = element_blank(),
         text = element_text(face = "bold", family = "Cairo"),
-        plot.title = element_text(hjust = .5, size = 30, face = "bold"),
+        plot.title = element_text(size = 30, face = "bold"),
         legend.title = element_text(face = "bold", size = 24, family = "Cairo"),
         plot.caption = element_text(hjust = 2.55, size = 18, face = "italic")
     ) + 
