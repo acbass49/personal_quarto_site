@@ -12,6 +12,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/primary_stream/index.html",
       "/posts/simple_analytics/index.html",
       "/posts/google_trends/index.html",
       "/posts/income_myth/index.html",

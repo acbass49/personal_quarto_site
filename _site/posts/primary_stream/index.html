@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-07-01">
+<meta name="dcterms.date" content="2023-07-11">
 
-<title>alexbass.me - GOP Primary Nomination Tracking with Google Trends</title>
+<title>alexbass.me - Primary Nomination Tracking with Google Trends and Stream Graphs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,12 +58,12 @@ ul.task-list{list-style: none;}
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="alexbass.me - GOP Primary Nomination Tracking with Google Trends">
+<meta name="twitter:title" content="alexbass.me - Primary Nomination Tracking with Google Trends and Stream Graphs">
 <meta name="twitter:description" content="Yes, I guess I’m on a bit of a google trends kick lately. The more I look into searches, the more I’m impressed by the interesting and vast amount of data avaiable.">
-<meta name="twitter:image" content="https://alexbass.me/./about_files/primary.png">
+<meta name="twitter:image" content="https://alexbass.me/./about_files/primary_1.png">
 <meta name="twitter:creator" content="@acbass49">
-<meta name="twitter:image-height" content="622">
-<meta name="twitter:image-width" content="1018">
+<meta name="twitter:image-height" content="394">
+<meta name="twitter:image-width" content="518">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -110,7 +110,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GOP Primary Nomination Tracking with Google Trends</h1>
+<h1 class="title">Primary Nomination Tracking with Google Trends and Stream Graphs</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Google Trends</div>
     <div class="quarto-category">Data Journalism</div>
@@ -127,7 +127,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 1, 2023</p>
+      <p class="date">July 11, 2023</p>
     </div>
   </div>
     
@@ -138,18 +138,22 @@ ul.task-list{list-style: none;}
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../.././about_files/primary.png" class="img-fluid figure-img"></p>
+<p><img src="../.././about_files/primary_1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Yes, I guess I’m on a bit of a google trends kick lately. The more I look into searches, the more I’m impressed by the interesting and vast amount of data avaiable.</p>
-<p>For example, i recently learned that Google Trends is quite effective in predicting large elections <a href="https://journals.sagepub.com/doi/10.1177/0002764220975067">here</a> and <a href="https://www.mdpi.com/2306-5729/7/11/143">here</a>. I even went through the exercise of looking myself at the last 5 US elections. Excluding the 2020 election, the winning candidate had more search volume months leading up to the elections. The trend did not hold for Trump’s last election, but maybe we chalk that up to Trump being a peculiar candidate or 2020 being a peculiar year. I may decide to do an analysis on this later.</p>
+<p>For example, i recently learned that Google Trends is quite effective in predicting large elections <a href="https://journals.sagepub.com/doi/10.1177/0002764220975067">here</a> and <a href="https://www.mdpi.com/2306-5729/7/11/143">here</a>. I even went through the exercise of looking myself at the last 5 US elections. Excluding the 2020 election, the winning candidate had more search volume months leading up to the elections. The trend did not hold for Trump’s last election, but maybe we chalk that up to Trump being a peculiar candidate or 2020 being a peculiar year.</p>
 </section>
 <section id="honing-in-on-the-gop-primary-nomination" class="level2">
 <h2 class="anchored" data-anchor-id="honing-in-on-the-gop-primary-nomination">Honing in on the GOP Primary Nomination</h2>
-<p>My thought was that if Google Trends can be effective for US Presidential Elections, what about Primaries?</p>
-<p>For this I wanted to make a stream chart to display these results for two reasons: 1. You can see the relative importance each candidate has to one another given by vertical distance of each color at a given point in time. 2. You also get a sense of the total search volume of all candidates given by the vertical distance of all colors at a given point in time. I plan to keep this chart updated up until the primary election. I guess we’ll see how accurate it is in the end 🤷‍♂️.</p>
+<p>My thought was that if Google Trends can be effective for US Presidential Elections, what about Primaries? Instead of diving into the past, I thought I would make one tracking the race right now, and dive into the past later.</p>
+<p>To visualize the race, I wanted to make a stream chart for two reasons:</p>
+<ol type="1">
+<li>You can see the relative importance each candidate has to one another given by vertical distance of each color at a given point in time.</li>
+<li>You also get a sense of the total search volume of all candidates given by the vertical distance of all colors at a given point in time. I plan to keep this chart updated up until the primary election. I guess we’ll see how accurate it is in the end 🤷‍♂️.</li>
+</ol>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -160,7 +164,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This graph was last updated: 18:43:14 on 10 Jul 2023</p>
+<p>This graph is updated on a daily basis to provide continuous context to the GOP Primary Election. This graph was last updated: 00:43:07 on 11 Jul 2023</p>
 </div>
 </div>
 <div class="cell">
@@ -190,20 +194,43 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>I expect the graph to look more and more like a funnel as the primary nomination approaches and more people search these candidates, but we’ll see. Check back as this will be updated on a daily basis 👀</p>
+<p>I expect the graph to look more and more like a funnel as the primary nomination approaches and more people search these candidates, but we’ll see 👀</p>
 </div>
 </div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-secondary" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="index_files/figure-html/fig-secondary-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 2: Aggregated Google Trends data of popular GOP Primary candidates in the last 10 days of available Google Search data. It is usually delayed by three days.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This graph is updated on a daily basis to provide continuous context to the GOP Primary Election. This graph was last updated: 00:43:13 on 11 Jul 2023</p>
+</div>
+</div>
+<p>As of the time of me writing this, the bar chart below looks very similar to polling <a href="https://projects.fivethirtyeight.com/polls/president-primary-r/2024/national/">aggregator predictions</a> for the primary elections. Trump and DeSantis are pretty close together at around 40% each of the web search share with the others trailing behind. I expect this to change quickly with the pattern of the news cycle.</p>
 </section>
 </section>
-<section id="comparing-aggregator-to-google-trends" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-aggregator-to-google-trends">Comparing aggregator to Google trends</h2>
-<p>As a bit of validation, aside from spikes in the google trends data (likely due to Trump court shenanigans), it is similar to the 538 polling aggregator. For instance, if you rescale the side bar chart numbers to 100, Trump has 55% of the hits, DeSantis has 25%, Nikki Haley has 10% and the others have 5%.</p>
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"></script>
-<script type="text/javascript">
-trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Donald Trump","geo":"US","time":"2023-02-01 2023-07-01"},{"keyword":"Ron DeSantis","geo":"US","time":"2023-02-01 2023-07-01"},{"keyword":"Mike Pence","geo":"US","time":"2023-02-01 2023-07-01"},{"keyword":"Nikki Haley","geo":"US","time":"2023-02-01 2023-07-01"},{"keyword":"Tim Scott","geo":"US","time":"2023-02-01 2023-07-01"}],"category":0,"property":""}, {"exploreQuery":"date=2023-02-01%202023-07-01&geo=US&q=Donald%20Trump,Ron%20DeSantis,Mike%20Pence,Nikki%20Haley,Tim%20Scott&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
-</script>
-<p><img src="../.././about_files/primary2.png" class="img-fluid"></p>
-<p>For one of my next project before the election, I am planning on building an election model and from my analysis with this google trends data, I am convinced that it could be a useful predictor of an election result in a model.</p>
+<section id="could-google-trends-function-similar-a-polling-aggregator" class="level2">
+<h2 class="anchored" data-anchor-id="could-google-trends-function-similar-a-polling-aggregator">Could Google Trends function similar a polling aggregator?</h2>
+<p>From reading through those two research papers linked above to comparing the primary polling aggregator with the presidential one, it seems plausible that google trends data could function similar to a polling aggregator showing us who the most popular candidates are.</p>
+<p>For one of my next project, I am planning on one of two things:</p>
+<ol type="1">
+<li>Building an election model and from my analysis with this google trends data, I am convinced that it could be a useful predictor of an election result in a model.</li>
+<li>Analyzing how google search trends perform in every congressional election since 2004.</li>
+</ol>
 <p>Feel free to leave share comments/thoughts below 🙂</p>
 <div id="disqus_thread">
 
@@ -338,7 +365,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../index.html">About Me</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../posts/simple_analytics/index.html">Latest Post</a>
+    <a class="nav-link active" href="../../posts/primary_stream/index.html" aria-current="page">Latest Post</a>
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="../../projects/internet_archive/index.html">Latest Project</a>
