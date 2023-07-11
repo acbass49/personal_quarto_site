@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://alexbass.me/posts/resume/index.html</loc>
-    <lastmod>2023-07-10T23:43:21.068Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/income_myth/index.html</loc>
-    <lastmod>2023-07-10T23:43:21.611Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/simple_analytics/index.html</loc>
-    <lastmod>2023-07-10T23:43:22.070Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/facebook_data/index.html</loc>
-    <lastmod>2023-07-10T23:43:22.478Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/7_facts/index.html</loc>
-    <lastmod>2023-07-10T23:43:22.926Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/mobility/index.html</loc>
-    <lastmod>2023-07-10T23:43:23.331Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/google_trends/index.html</loc>
-    <lastmod>2023-07-10T23:43:23.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/cars/index.html</loc>
-    <lastmod>2023-07-10T23:43:24.177Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/lds_gop/index.html</loc>
-    <lastmod>2023-07-10T23:43:24.605Z</lastmod>
+    <loc>https://alexbass.me/projects/election_model/index.html</loc>
+    <lastmod>2023-07-11T01:09:46.045Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects/covid_update/index.html</loc>
-    <lastmod>2023-07-10T23:43:25.010Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/projects/election_model/index.html</loc>
-    <lastmod>2023-07-10T23:43:25.347Z</lastmod>
+    <lastmod>2023-07-11T01:09:45.097Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects/bayesian_county/index.html</loc>
-    <lastmod>2023-07-10T23:43:25.861Z</lastmod>
+    <lastmod>2023-07-11T01:09:44.217Z</lastmod>
   </url>
   <url>
-    <loc>https://alexbass.me/projects/peanuts/index.html</loc>
-    <lastmod>2023-07-10T23:43:26.224Z</lastmod>
+    <loc>https://alexbass.me/posts/income_myth/index.html</loc>
+    <lastmod>2023-07-11T01:09:42.757Z</lastmod>
   </url>
   <url>
-    <loc>https://alexbass.me/projects/internet_archive/index.html</loc>
-    <lastmod>2023-07-10T23:43:26.584Z</lastmod>
+    <loc>https://alexbass.me/posts/mobility/index.html</loc>
+    <lastmod>2023-07-11T01:09:41.633Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/simple_analytics/index.html</loc>
+    <lastmod>2023-07-11T01:09:40.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/7_facts/index.html</loc>
+    <lastmod>2023-07-11T01:09:39.481Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/facebook_data/index.html</loc>
+    <lastmod>2023-07-11T01:09:33.121Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects.html</loc>
-    <lastmod>2023-07-10T23:43:27.019Z</lastmod>
+    <lastmod>2023-07-11T01:09:31.437Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/index.html</loc>
-    <lastmod>2023-07-10T23:43:27.368Z</lastmod>
+    <lastmod>2023-07-11T01:09:30.052Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/blog.html</loc>
-    <lastmod>2023-07-10T23:43:27.861Z</lastmod>
+    <lastmod>2023-07-11T01:09:32.553Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/cars/index.html</loc>
+    <lastmod>2023-07-11T01:09:40.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/resume/index.html</loc>
+    <lastmod>2023-07-11T01:09:41.049Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/lds_gop/index.html</loc>
+    <lastmod>2023-07-11T01:09:42.285Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/google_trends/index.html</loc>
+    <lastmod>2023-07-11T01:09:43.449Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects/peanuts/index.html</loc>
+    <lastmod>2023-07-11T01:09:44.617Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects/internet_archive/index.html</loc>
+    <lastmod>2023-07-11T01:09:45.633Z</lastmod>
   </url>
 </urlset>
