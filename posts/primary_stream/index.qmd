@@ -17,7 +17,7 @@ For example, i recently learned that Google Trends is quite effective in predict
 
 ## Honing in on the GOP Primary Nomination
 
-My thought was that if Google Trends can be effective for US Presidential Elections, what about Primaries? Instead of diving into the past, I thought I would make one tracking the race right now, and dive into the past later.
+My thought was that if Google Trends can be effective for US Presidential Elections, what about Primaries? Instead of diving into the past, I thought I would make one tracking the race right now, and worry about that other stuff later.
 
 To visualize the race, I wanted to make a stream chart for two reasons:
 
@@ -78,7 +78,7 @@ ggplot(df, aes(x = as.Date(date), y = hits, fill = keyword)) +
 
 #### Observation 1
 
-For these charts like other Google Trends data, its helpful to read the spikes. For example, we can see different candidates spiking at different times. Nikki Haley spikes in mid-February then dies down. Trump spiked in April. Ron DeSantis and Tim Scott both spiked in June around the same time.
+For these charts like other Google Trends data, its helpful to read the spikes. For example, we can see different candidates spiking at different times. Nikki Haley spikes in mid-February then dies down. Trump spiked in April. Tim Scott both spiked in June, and Ron DeSantis seems to be growing as of mid-July.
 
 #### Observation 2
 
@@ -134,6 +134,8 @@ df |>
 :::{.callout-note}
 This graph is updated on a daily basis to provide continuous context to the GOP Primary Election. This graph was last updated: `r format(Sys.time(), "%H:%M:%S on %d %b %Y")`
 :::
+
+This graph is provided to give a barometer reading of a candidates *recent* popularity/news coverage. 
 
 As of the time of me writing this, the bar chart below looks very similar to polling [aggregator predictions](https://projects.fivethirtyeight.com/polls/president-primary-r/2024/national/) for the primary elections. Trump and DeSantis are pretty close together at around 40% each of the web search share with the others trailing behind. I expect this to change quickly with the pattern of the news cycle.
 
