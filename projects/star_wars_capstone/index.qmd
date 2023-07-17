@@ -68,10 +68,6 @@ No, this graph wasn't made in R. This model was estimated and the figure was mad
 
 *Hypthesis 2: Partisans are sensitive to out-party messages. For example, Republicans would more readily recognize Democratic messaging and vice versa.* From the data I have, this really wasn't true. It seems that across the board, respondents from all parties generally identified more Democratic messages than otherwise. Having more statistical power would be helpful, but the numbers we have clearly go against my original hypothesis - especially for democrats who identified many more democratice messages than republican ones.
 
-Hypothesis
-
-As you can see from across the board, people more often detect democrat political messages, but it doesn't seem to differ by party. Although, especially for Republicans, the confidence intervals are pretty wide for these estimates.
-
 ## Reflections From a Few Years Down the Road...
 
 I worked really hard on this project and am honestly proud of the work I did. However, that doesn't mean that If I were to do it now, I wouldn't change things. Here's what I would change:
