@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alexbass.me/blog.html</loc>
+<<<<<<< HEAD
     <lastmod>2023-07-17T05:24:14.723Z</lastmod>
   </url>
   <url>
@@ -75,5 +76,80 @@
   <url>
     <loc>https://alexbass.me/index.html</loc>
     <lastmod>2023-07-17T05:24:13.458Z</lastmod>
+=======
+    <lastmod>2023-07-15T12:25:06.215Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects.html</loc>
+    <lastmod>2023-07-15T12:25:04.351Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects/peanuts/index.html</loc>
+    <lastmod>2023-07-15T12:25:02.465Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects/bayesian_county/index.html</loc>
+    <lastmod>2023-07-15T12:25:01.412Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects/covid_update/index.html</loc>
+    <lastmod>2023-07-15T12:25:00.080Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/cars/index.html</loc>
+    <lastmod>2023-07-15T12:24:58.838Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/mobility/index.html</loc>
+    <lastmod>2023-07-15T12:24:57.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/facebook_data/index.html</loc>
+    <lastmod>2023-07-15T12:24:56.188Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/income_myth/index.html</loc>
+    <lastmod>2023-07-15T12:24:55.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/primary_stream/index.html</loc>
+    <lastmod>2023-07-15T12:24:53.459Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/resume/index.html</loc>
+    <lastmod>2023-07-15T12:24:54.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/simple_analytics/index.html</loc>
+    <lastmod>2023-07-15T12:24:55.615Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/7_facts/index.html</loc>
+    <lastmod>2023-07-15T12:24:56.822Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/google_trends/index.html</loc>
+    <lastmod>2023-07-15T12:24:58.197Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/lds_gop/index.html</loc>
+    <lastmod>2023-07-15T12:24:59.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects/election_model/index.html</loc>
+    <lastmod>2023-07-15T12:25:00.575Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects/star_wars_capstone/index.html</loc>
+    <lastmod>2023-07-15T12:25:02.023Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/projects/internet_archive/index.html</loc>
+    <lastmod>2023-07-15T12:25:03.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/index.html</loc>
+    <lastmod>2023-07-15T12:25:04.788Z</lastmod>
+>>>>>>> 5b78118b9b8c9bc8d772d77ce8911a0d797bff84
   </url>
 </urlset>
