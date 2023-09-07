@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/cicd_primary/index.html",
       "/posts/primary_stream/index.html",
       "/posts/simple_analytics/index.html",
       "/posts/google_trends/index.html",
