@@ -43,7 +43,7 @@ font_add_google("Cairo", family = "Cairo")
 showtext_auto()
 
 obj <- gtrends(
-    keyword = c("Donald Trump", "Ron DeSantis", "Mike Pence", "Nikki Haley", "Tim Scott"),
+    keyword = c("Donald Trump", "Ron DeSantis", "Mike Pence", "Nikki Haley", "Vivek Ramaswamy"),
     time = paste("2023-01-01",as.character(Sys.Date())),
     geo = "US",
     onlyInterest = TRUE
