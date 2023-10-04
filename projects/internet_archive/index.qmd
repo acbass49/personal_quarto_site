@@ -2,11 +2,11 @@
 title: Entity Resolution with Gradient Boosted Trees
 date: "2023-05-01"
 categories: [Capstone, Python, Stats]
-image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.UYD4bfYlvuLEuKeKZQfaHAHaFh%26pid%3DApi&f=1&ipt=c80bcabadba4b27deff8fbbfa997ac70a9d22b0dc0d7717f116587ec7c0424c9&ipo=images
+image: /./about_files/ia_tile.jpg
 title-block-banner: false
 ---
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F379-3795218_internet-archive-internet-archive-logo-hd-png-download.png&f=1&nofb=1&ipt=acd73fc9159f640d3781109efd52875190ccfa30cf30ad35219d42600124216c&ipo=images){fig-align="center"}
+![](/./about_files/IA_banner.png){fig-align="center"}
 
 ## Introduction
 
