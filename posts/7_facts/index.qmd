@@ -1,63 +1,9 @@
 ---
-title: 7 Facts You May Not Know About Latter-Day Saints
+title: Automated Report
 date: '2022-03-03'
-categories: [Survey Research, Data Journalism, LDS]
-image: https://www.ldstemple.pics/wp-content/uploads/washington-dc-temple-final-sunset-600x600.jpg
-title-block-banner: false
+fortmat: html
 ---
 
-![](https://www.ldstemple.pics/wp-content/uploads/washington-dc-temple-final-sunset-600x600.jpg){fig-align="center"}
-
-#### Introduction
-
-Recently, I found myself reading a book by [Jana Riess](https://janariess.com) entitled [The Next Mormons](https://www.amazon.com/Next-Mormons-Millennials-Changing-Church/dp/0190885203). It challenged some of my thoughts, and I generally found it interesting, so I wanted to share some thoughts here. Feel free to comment at the bottom of the page in the chat box and share your thoughts too (I just figured out how to add those to the bottom of my posts, so try it out!).
-
-The premise of the book is describing findings from a survey of 1,156 Latter-day Saints and 540 former Latter-day Saints fielded September 8 - November 21, 2016 from an online panel (more methodology [here](https://thenextmormons.org/methodology/) if interested). I have shared data before from a more recent survey with Latter-day Saints, but this survey was unique because it was only a sample of Latter-day Saints and the survey questions were focused only on Latter-day Saints' experiences and specifically Millennials (yeah I know... I found my niche truly as I am a survey-analyst, Millennial, Latter-day Saint). It reads very academic and summarizes both quantitative figures in charts and qualitative in-person interviews in the written text. Although the survey took place what is now almost 5 years ago, I find the content relevant and interesting now. So if the only church numbers you hear are from the Church Audit Report around General Conference time, you may be in the same place as I was.
-
-#### Fact 1 : The percent of Latter-day Saints who have served missions has increased
-
-![](/./about_files/NMS post.001.jpeg){fig-align="center"}
-
-This particular fact wasn't extremely surprising to me - especially the fact that many more millennial women have served missions because of the age change. I think the reason I wanted to point this one out is that I didn't realize that a higher percentage of members in general serve missions nowadays. Keep in mind that the Boomer/Silent generation number includes those who have joined later in life who did not have the opportunity to serve as a young missionary; however, the Boomer/Silent generation may also include those who served later in life which younger Latter-day saints have not had the opportunity to.
-
-##### Fact 2 : There are generational divides on when it is ok to NOT wear garments
-
-![](/./about_files/NMS post.002.jpeg){fig-align="center"}
-
-To me, this is interesting because Millennials are less likely than Boomer/Silents to have exceptions for wearing the garments except for "When ill or when there is a medical reason." This makes enough sense as older groups would be more likely to be in situations where they are ill or when there is a medical reason where as for younger folks the situation may not have come up yet. Another interesting tidbit here is that 1/5 millennials excuse wearing garments when sleeping and on vacation when Boomer/Silents do not which I wasn't necessarily expecting. I was expecting this behavior, but didn't think there would be generational divides.
-
-##### Fact 3 : Less than half of Millennial Latter-day Saints hold current temple recommends
-
-![](/./about_files/NMS post.003.jpeg){fig-align="center"}
-
-There have been portions of my life when I haven't held a temple recommend, but I think my perception here was that most people had temple recommends. If anything, this was comforting to me knowing that not only do many people not have temple recommends currently, but many people have never held a temple recommend. I think I am impressed by the many people who continue to participate in the religion while not having access to the temple which is probably one of the coolest and most unique aspects of the religion. I honestly wish I had access to the data in this case just to see different breaks here. Are there any differences in gender, Utah/nonUtah, convert/grew up in the church?
-
-##### Fact 4 : Having premarital sexual relations are just as likely regardless of age married
-
-![](/./about_files/NMS post.004.jpeg){fig-align="center"}
-
-While access to data for nation wide trends is much more readily available for sexual habits / activity (for example, the CDC collects a bunch of data on this if anyone is interested), it is not so much available for small subgroups like Latter-day Saints. This is especially interesting because premarital sexual experience is considered sinful by the LDS church which may discourage members from sharing these things with others which means that it probably is especially difficult to get a sense of how prevalent these behaviors are among members of the church. For me, this breakdown of premarital sexual experience is not necessarily surprising; however, it is surprising that those who are never married and those who are currently married have nearly the same percentage of people in each group. There is an exception for masturbation which is higher among the Latter-day Saints who have never married.
-
-Latter-day Saints may be cautious reporting these behaviors since they are against church standards, but it is also an anonymous internet-based survey which would eliminate the interviewer effect and create a more open environment for sharing with candidness.
-
-##### Fact 5 : Many more millennial Latter-day saint mothers worked outside the home than Silent/Boomer Mothers
-
-![](/./about_files/NMS post.005.jpeg){fig-align="center"}
-
-This was something that was surprising to me. While this trend is very clear in America - more American women work full-time now than ever before - it is also bleeding over into Latter-day Saint culture as well. More than 1/2 Millennial Latter-day saints grew up with a mother that worked. It would also be interesting to see whether more Latter-day Saint millennial parents were divorced than for other generations, but again, I am only limited to the data that is written about in the book. This is an interesting trend in Latter-day Saint culture and may suggest shifting in what a family means compared to what it was for Silent/Boomers.
-
-##### Fact 6 : Many Latter-day Saints have not returned to the temple for the deceased after own work is done
-
-![](/./about_files/NMS post.006.jpeg){fig-align="center"}
-
-This was also quite interesting to me. When I served my Latter-day Saint mission in Salt Lake City, Utah, I several people who never returned to the temple after receiving their endowments, but I wasn't expecting more than 4 in 10 GenXers and Millennials not returning to the temple. Seeing that more Silent/Boomers have returned to the temple is not surprising as they both have more time to do it (being alive longer), may be retired with more time in the day, and I know many older Latter-day Saint folks who attend the temple regularly.
-
-##### Fact 7 : General demographic profile of a former Latter-day Saint
-
-![](/./about_files/NMS post.007.jpeg){fig-align="center"}
-
-Most of these things were not super interesting to me other than one group. It turns out that those who are less educated are more likely to leave the church. One prominent theory in political science literature is that as a society gets more educated, it will also become less religious and more secular. This trend is clearly seen in Europe, but the US has been interestingly resistant to this trend. And recently researchers are [finding](https://www.wsj.com/articles/theres-no-crisis-of-faith-on-campus-11645714717?st=zkubzj5qwrqf0ti&reflink=desktopwebshare_twitter&fbclid=IwAR0wpySp-wWX73sTW_sGee90_IW30T2TMeMtsimLyzfCXXO2cfbUG53LNHI) that college going Americans aren't necessarily led away from religion. An opposite effect is also found in the Next Mormons Survey where college goers are more likely to stay active.
-
-There were many more interesting facts in the book and I only included a small subset of things I found interesting here, so I would encourage you to check it out if you are interested in the changing landscape of the Church of Jesus Christ of Latter-day Saints in America. She also just funded a kick starter campaign for funding for another survey focused on [former Mormons and why they leave the church](https://www.kickstarter.com/projects/nmswave2/wave-2-of-the-next-mormons-survey?ref=user_menu) which will also be interesting.
-
-Thanks for reading! Please comment below with thoughts 🙂
+```{r}
+#Paste Data Here!
+```

@@ -1,0 +1,14 @@
+{
+  "hash": "9cda973435b5e56f66dbccd3f1990f22",
+  "result": {
+    "markdown": "---\ntitle: Automated Report\ndate: '2022-03-03'\nfortmat: html\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n#Paste Data Here!\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
