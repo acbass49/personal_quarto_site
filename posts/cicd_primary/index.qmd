@@ -14,7 +14,7 @@ execute:
 
 For my friends who use Quarto, perhaps you need to update a particular blog post daily, weekly, or at some other time interval. You could redeploy your site manually every day, but this would be tedious and inefficient. Another option is to use GitHub actions to help you with this task. For high computational tasks using GitHub Actions can cost money, but rendering a small website and running a small script everything is free!
 
-For those curious, this problem has surfaced with two of my previous posts: [my election model](./projects/election_model/index.qmd) and [the google trends primary tracker](./posts/primary_stream/index.qmd). For my election model, I used the tedious, inefficient approach back in 2020, but for the primary tracker, I have implemented an automated approach. Hopefully someone can benefit from this post!
+For those curious, this problem has surfaced with two of my previous posts: [my election model](/./projects/election_model/index.qmd) and [the google trends primary tracker](/./posts/primary_stream/index.qmd). For my election model, I used the tedious, inefficient approach back in 2020 (manually running and updating a repository), but for the primary tracker, I have implemented an automated approach. Hopefully someone can benefit from this post!
 
 :::{.callout-note}
 This is not a post detailing every possible approach to using GitHub Actions and Quarto. This is just my implementation given my stack.

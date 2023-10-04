@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level4">
 <h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
 <p>For my friends who use Quarto, perhaps you need to update a particular blog post daily, weekly, or at some other time interval. You could redeploy your site manually every day, but this would be tedious and inefficient. Another option is to use GitHub actions to help you with this task. For high computational tasks using GitHub Actions can cost money, but rendering a small website and running a small script everything is free!</p>
-<p>For those curious, this problem has surfaced with two of my previous posts: <a href="./projects/election_model/index.qmd">my election model</a> and <a href="./posts/primary_stream/index.qmd">the google trends primary tracker</a>. For my election model, I used the tedious, inefficient approach back in 2020, but for the primary tracker, I have implemented an automated approach. Hopefully someone can benefit from this post!</p>
+<p>For those curious, this problem has surfaced with two of my previous posts: <a href="../../projects/election_model/index.html">my election model</a> and <a href="../../posts/primary_stream/index.html">the google trends primary tracker</a>. For my election model, I used the tedious, inefficient approach back in 2020, but for the primary tracker, I have implemented an automated approach. Hopefully someone can benefit from this post!</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -212,7 +212,7 @@ Note
 </section>
 <section id="insert-code-that-rerenders-in-quarto-document" class="level4">
 <h4 class="anchored" data-anchor-id="insert-code-that-rerenders-in-quarto-document">Insert Code that Rerenders in Quarto Document</h4>
-<p>For this particular project, I wanted to have a daily update of the Google Trends search scores of GOP candidates. So, in my quarto document, i have an Rscript that uses the <code>gtrendsr</code> package to pull the latest data every time the document is rendered. So, to complete our task, we just need the remote environment to simply rerender the site and push to the repository. Here is a snippet of some the code inside the quarto document which grabs the data and creates a figure:</p>
+<p>For this particular project, I wanted to have a daily update of the Google Trends search scores of GOP candidates. So, in my quarto document, i have an Rscript that uses the <code>gtrendsr</code> package to pull the latest data every time the document is rendered. So, to complete our task, we just need the remote environment to simply rerender the site and push to the repository. Here is a snippet of an Rscript in a code chunk inside the quarto document which grabs the data and creates a figure:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtrendsR)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -222,7 +222,7 @@ Note
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">showtext_auto</span>()</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>obj <span class="ot">&lt;-</span> <span class="fu">gtrends</span>(</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">keyword =</span> <span class="fu">c</span>(<span class="st">"Donald Trump"</span>, <span class="st">"Ron DeSantis"</span>, <span class="st">"Mike Pence"</span>, <span class="st">"Nikki Haley"</span>, <span class="st">"Tim Scott"</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">keyword =</span> <span class="fu">c</span>(<span class="st">"Donald Trump"</span>, <span class="st">"Ron DeSantis"</span>, <span class="st">"Mike Pence"</span>, <span class="st">"Nikki Haley"</span>, <span class="st">"Vivek Ramaswamy"</span>),</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">time =</span> <span class="fu">paste</span>(<span class="st">"2023-01-01"</span>,<span class="fu">as.character</span>(<span class="fu">Sys.Date</span>())),</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">geo =</span> <span class="st">"US"</span>,</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">onlyInterest =</span> <span class="cn">TRUE</span></span>
