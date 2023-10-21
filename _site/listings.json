@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/path_to_datascience/index.html",
       "/posts/primary_stream/index.html",
       "/posts/cicd_primary/index.html",
       "/posts/simple_analytics/index.html",
