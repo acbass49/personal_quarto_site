@@ -24,7 +24,7 @@ website:
       - text: "About Me"
         href: index.qmd
       - text: "Latest Post"
-        href: posts/cicd_primary/index.qmd
+        href: posts/path_to_datascience/index.qmd
       - text: Latest Project
         href: projects/internet_archive/index.qmd
   site-url: "https://alexbass.me"
