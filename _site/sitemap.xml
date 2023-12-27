@@ -2,170 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alexbass.me/blog.html</loc>
-<<<<<<< HEAD
-    <lastmod>2023-12-27T17:27:11.187Z</lastmod>
+    <lastmod>2023-12-27T17:35:23.689Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects.html</loc>
-    <lastmod>2023-12-27T17:27:08.996Z</lastmod>
+    <lastmod>2023-12-27T17:35:21.976Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects/peanuts/index.html</loc>
-    <lastmod>2023-12-27T17:27:06.838Z</lastmod>
+    <lastmod>2023-12-27T17:35:20.196Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects/bayesian_county/index.html</loc>
-    <lastmod>2023-12-27T17:27:05.629Z</lastmod>
+    <lastmod>2023-12-27T17:35:19.138Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects/covid_update/index.html</loc>
-    <lastmod>2023-12-27T17:27:04.136Z</lastmod>
+    <lastmod>2023-12-27T17:35:17.874Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/cars/index.html</loc>
-    <lastmod>2023-12-27T17:27:02.704Z</lastmod>
+    <lastmod>2023-12-27T17:35:16.679Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/mobility/index.html</loc>
-    <lastmod>2023-12-27T17:27:00.774Z</lastmod>
+    <lastmod>2023-12-27T17:35:15.328Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/facebook_data/index.html</loc>
-    <lastmod>2023-12-27T17:26:59.107Z</lastmod>
+    <lastmod>2023-12-27T17:35:13.990Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/simple_analytics/index.html</loc>
-    <lastmod>2023-12-27T17:26:57.758Z</lastmod>
+    <lastmod>2023-12-27T17:35:12.734Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/resume/index.html</loc>
-    <lastmod>2023-12-27T17:26:56.604Z</lastmod>
+    <lastmod>2023-12-27T17:35:11.734Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/cicd_primary/index.html</loc>
-    <lastmod>2023-12-27T17:26:41.167Z</lastmod>
+    <lastmod>2023-12-27T17:35:03.790Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/primary_stream/index.html</loc>
-    <lastmod>2023-12-27T17:26:55.997Z</lastmod>
+    <lastmod>2023-12-27T17:35:11.117Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/income_myth/index.html</loc>
-    <lastmod>2023-12-27T17:26:57.150Z</lastmod>
+    <lastmod>2023-12-27T17:35:12.254Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/path_to_datascience/index.html</loc>
-    <lastmod>2023-12-27T17:26:58.404Z</lastmod>
+    <lastmod>2023-12-27T17:35:13.446Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/7_facts/index.html</loc>
-    <lastmod>2023-12-27T17:26:59.977Z</lastmod>
+    <lastmod>2023-12-27T17:35:14.611Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/google_trends/index.html</loc>
-    <lastmod>2023-12-27T17:27:01.723Z</lastmod>
+    <lastmod>2023-12-27T17:35:16.093Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/posts/lds_gop/index.html</loc>
-    <lastmod>2023-12-27T17:27:03.571Z</lastmod>
+    <lastmod>2023-12-27T17:35:17.375Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects/election_model/index.html</loc>
-    <lastmod>2023-12-27T17:27:04.646Z</lastmod>
+    <lastmod>2023-12-27T17:35:18.392Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects/star_wars_capstone/index.html</loc>
-    <lastmod>2023-12-27T17:27:06.343Z</lastmod>
+    <lastmod>2023-12-27T17:35:19.780Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects/internet_archive/index.html</loc>
-    <lastmod>2023-12-27T17:27:07.506Z</lastmod>
+    <lastmod>2023-12-27T17:35:20.765Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/index.html</loc>
-    <lastmod>2023-12-27T17:27:09.470Z</lastmod>
-=======
-    <lastmod>2023-12-26T12:22:50.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/projects.html</loc>
-    <lastmod>2023-12-26T12:22:48.113Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/projects/peanuts/index.html</loc>
-    <lastmod>2023-12-26T12:22:46.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/projects/bayesian_county/index.html</loc>
-    <lastmod>2023-12-26T12:22:45.220Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/projects/covid_update/index.html</loc>
-    <lastmod>2023-12-26T12:22:43.740Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/cars/index.html</loc>
-    <lastmod>2023-12-26T12:22:42.388Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/mobility/index.html</loc>
-    <lastmod>2023-12-26T12:22:40.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/facebook_data/index.html</loc>
-    <lastmod>2023-12-26T12:22:39.130Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/simple_analytics/index.html</loc>
-    <lastmod>2023-12-26T12:22:37.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/resume/index.html</loc>
-    <lastmod>2023-12-26T12:22:36.453Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/cicd_primary/index.html</loc>
-    <lastmod>2023-12-26T12:22:17.962Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/primary_stream/index.html</loc>
-    <lastmod>2023-12-26T12:22:35.775Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/income_myth/index.html</loc>
-    <lastmod>2023-12-26T12:22:37.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/path_to_datascience/index.html</loc>
-    <lastmod>2023-12-26T12:22:38.474Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/7_facts/index.html</loc>
-    <lastmod>2023-12-26T12:22:39.883Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/google_trends/index.html</loc>
-    <lastmod>2023-12-26T12:22:41.620Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/posts/lds_gop/index.html</loc>
-    <lastmod>2023-12-26T12:22:43.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/projects/election_model/index.html</loc>
-    <lastmod>2023-12-26T12:22:44.259Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/projects/star_wars_capstone/index.html</loc>
-    <lastmod>2023-12-26T12:22:46.072Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/projects/internet_archive/index.html</loc>
-    <lastmod>2023-12-26T12:22:47.055Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexbass.me/index.html</loc>
-    <lastmod>2023-12-26T12:22:48.587Z</lastmod>
->>>>>>> 00a169f0a0822c178bbf4bf1896049bee9eec80c
+    <lastmod>2023-12-27T17:35:22.340Z</lastmod>
   </url>
 </urlset>
