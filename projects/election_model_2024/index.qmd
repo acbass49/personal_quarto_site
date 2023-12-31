@@ -5,11 +5,11 @@ categories: [Python, Stats, Dataviz]
 image: ./nail.png
 title-block-banner: false
 date-modified: today
+freeze: false
 execute: 
     echo: false
     warning: false
     output: true
-    freeze: false
 ---
 
 There are a lot of election models out there - [the Economist](https://projects.economist.com/us-2020-forecast/president), [FiveThirtyEight](https://projects.fivethirtyeight.com/2020-election-forecast/), and the [Cook Political Report](https://cookpolitical.com/sites/default/files/2020-09/EC%20Ratings.091720.3.pdf) to name a few. So what am I doing here?
@@ -108,7 +108,7 @@ tracking_data = tracking_data \
     .rename(columns = {'Win Percentage':'Win_Percentage'}) \
     .assign(
         Date = lambda x:pd.to_datetime(x.Date,format='%Y-%m-%d'),
-        Win_Percentage = lambda x:round(x.Win_Percentage*100,2)
+        Win_Percentage = lambda x:round(x.Win_Percentage*100,1)
     )
 
 fig = go.Figure()
