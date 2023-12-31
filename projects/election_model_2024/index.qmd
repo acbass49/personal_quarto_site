@@ -1,0 +1,187 @@
+---
+title: My 2024 Presidential Election Model
+date: "2023-12-31"
+categories: [Python, Stats, Dataviz]
+image: ./nail.png
+title-block-banner: false
+date-modified: today
+execute: 
+    echo: false
+    warning: false
+    output: true
+    freeze: false
+---
+
+There are a lot of election models out there - [the Economist](https://projects.economist.com/us-2020-forecast/president), [FiveThirtyEight](https://projects.fivethirtyeight.com/2020-election-forecast/), and the [Cook Political Report](https://cookpolitical.com/sites/default/files/2020-09/EC%20Ratings.091720.3.pdf) to name a few. So what am I doing here?
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&f=1&ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&ipo=images){width=100%}
+
+```{python}
+# | output: false
+import seaborn as sns
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+import datetime
+
+# Load my Data
+sim_data = pd.read_csv('https://raw.githubusercontent.com/acbass49/Election2024/main/data/simulation_data.csv')
+prob_data = pd.read_csv('https://raw.githubusercontent.com/acbass49/Election2024/main/data/state_probabilities.csv')
+tracking_data = pd.read_csv("https://raw.githubusercontent.com/acbass49/Election2024/main/data/tracking_data.csv")
+
+```
+
+#### The Problem
+
+Well, it may be the start of a tradition at this point since I did one [last presidential election](/./projects/election_model/index.qmd) and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other's models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information isn't available.
+
+#### What I did
+
+My goal was to create a model that is based exclusively on **recent quality polling**, and that's it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can't possibly recreate the model. Since I finished data science school within the last four years, I decided to take a more rigourous approach than last time which I write about [here] and code up [here](https://github.com/acbass49/Election2024). Overall, the purpose is to give an educated guess of what would happen if the election were held each day (I plan to update this each day until the election). I also just like this kinda thing 😂.
+
+-----------------------------------
+
+#### Now for the model...
+
+This first figure represents today's simulation data. Everyday, I simulate the election 50,000 times and visualize the distribution of electoral votes below. The percentage in the graph title below is the probability Trump will win the election if the election were held today.
+
+```{python}
+# | fig-align: center
+# | fig-width: 10
+#calculate win Percentage
+win_perc = sum(sim_data.winner == 'Trump')/sim_data.shape[0]
+
+plot = plt.figure()
+plot.set_figwidth(7)
+plot.set_figheight(5)
+plt.hist(sim_data.query("winner == 'Trump'")[['points']], bins=45, color='red',edgecolor='black')
+plt.hist(sim_data.query("winner == 'Biden'")[['points']], bins=50, color='skyblue',edgecolor='black')
+plt.xlabel('EC Votes Trump Wins')
+plt.ylabel('Simulation Wins')
+plt.title(f'Today Trump Won {round(win_perc*100,2)}% of the Election Simulations')
+plt.legend(["Trump", "Biden"], loc ="upper right", title='Winner')
+plt.show()
+```
+
+:::{.callout-tip}
+Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
+:::
+
+In the figure below, you can see the probability Trump will win each state if the election were held today.
+
+```{python}
+fig = go.Figure(data=go.Choropleth(
+    locations=prob_data['State'], # Spatial coordinates
+    z = prob_data['Trump Win Prob.'].astype(float), # Data to be color-coded
+    locationmode = 'USA-states', # set of locations match entries in `locations`
+    colorscale = 'rdylbu_r',
+    colorbar_title = "Trump Win Prob.<br>By State",
+    marker_line_color='white',
+    hovertext='%'
+))
+
+fig.update_layout(
+    title_text = 'Presidential Election Projections By State (hover chart for more info)',
+    geo_scope='usa', # limite map scope to USA
+)
+config = {'displayModeBar': False, 'scrollZoom': False}
+fig.show(config=config)
+
+```
+
+:::{.callout-tip}
+Watch states like Georgia and Arizona closely which had unexpected results last election. Also, keep an eye on light colored states where the winner is more uncertain!
+:::
+
+This last graph is a daily tracker of the percent of election simulations won over time by candidate. You can view how the win probabilities change as the election cycle churns on.
+
+```{python}
+from datetime import timedelta
+tracking_data = pd.DataFrame({
+    'Candidate':['Trump', 'Trump', 'Trump', 'Biden', 'Biden', 'Biden'],
+    'Win Percentage':[0.10,0.11,0.12,0.90,0.89,0.88],
+    'Date':['2023-12-29', '2023-12-30', '2023-12-31','2023-12-29', '2023-12-30', '2023-12-31']
+})
+
+tracking_data = tracking_data \
+    .rename(columns = {'Win Percentage':'Win_Percentage'}) \
+    .assign(
+        Date = lambda x:pd.to_datetime(x.Date,format='%Y-%m-%d'),
+        Win_Percentage = lambda x:x.Win_Percentage*100
+    )
+
+fig = go.Figure()
+
+fig.add_trace(
+    go.Scatter(
+        x = tracking_data.query('Candidate == "Biden"')['Date'],
+        y = tracking_data.query('Candidate == "Biden"')['Win_Percentage'],
+        name = 'Biden',
+        line_shape='spline'
+    )
+)
+
+fig.add_trace(
+    go.Scatter(
+        x = tracking_data.query('Candidate == "Trump"')['Date'],
+        y = tracking_data.query('Candidate == "Trump"')['Win_Percentage'],
+        name = 'Trump',
+        line_shape='spline'
+    )
+)
+
+fig.update_layout(
+    xaxis=dict(
+        showline=True,
+        showgrid=True,
+        showticklabels=True,
+        linecolor='rgb(204, 204, 204)',
+        linewidth=2,
+        ticks='outside',
+        tickcolor='rgb(204, 204, 204)',
+        tickformat= '%b %d',
+        type='date',
+        dtick= 86400000.0,
+    ),
+    showlegend=True,
+    plot_bgcolor='white',
+    title_text = 'Percent of Simulations Won Over Time (hover chart for more info)',
+    xaxis_range=[tracking_data.Date.min()-timedelta(days=1),tracking_data.Date.max()+timedelta(days=1)],
+    hovermode='x unified',
+    legend_title_text = 'Candidate',
+    margin={"l":100,"r":100,"t":130,"b":130},
+    yaxis_range=[0,100]
+)
+
+fig.update_yaxes(
+    title_text = "Simulations Won(%)",
+    ticksuffix="%"
+)
+
+config = {'displayModeBar': False, 'scrollZoom': False}
+fig.show(config=config)
+
+```
+
+Thanks for viewing this post! Check back soon for more updates. You can see when the data was last modified at the top. Feel free to share thoughts, comments, or your predictions below.
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+    this.page.url = 'https://alexbass.me/posts/election_model_2024/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'election_model_2024'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alexbassc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async></script>
