@@ -4,7 +4,7 @@ date: '2023-10-04'
 categories: [Google Trends, Data Journalism, Politics, CICD]
 image: /./about_files/primary_1.png
 title-block-banner: false
-freeze: false
+freeze: true
 ---
 
 ![](/./about_files/primary_1.png){fig-align="center"}
