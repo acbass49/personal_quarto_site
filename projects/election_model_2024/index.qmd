@@ -38,7 +38,7 @@ Well, it may be the start of a tradition at this point since I did one [last pre
 
 #### What I did
 
-My goal was to create a model that is based exclusively on **recent quality polling**, and that's it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can't possibly recreate the model. **Since I finished data science school within the last four years, I decided to take a more rigourous approach than last time which I write about [here] and code up [here](https://github.com/acbass49/Election2024)**. Overall, the purpose is to give an educated guess of what would happen if the election were held each day. I also just like this kinda thing 😂.
+My goal was to create a model that is based exclusively on **recent quality polling**, and that's it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can't possibly recreate the model. **Since I finished data science school within the last four years, I decided to take a more rigourous approach than last time which I write about [here](./methodology.pdf) and code up [here](https://github.com/acbass49/Election2024)**. Overall, the purpose is to give an educated guess of what would happen if the election were held each day. I also just like this kinda thing 😂.
 
 :::{.callout-note}
 I plan to update the charts below each day until the election. So check back soon!
