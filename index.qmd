@@ -7,15 +7,15 @@ twitter-card:
 about:
   template: trestles
   links:
-    - icon: pencil
-      text: Blog
-      href: blog.qmd
     - icon: code-slash
       text: Projects
       href: projects.qmd
     - icon: github
       text: Github
       href: https://github.com/acbass49
+    - icon: pencil
+      text: Blog
+      href: blog.qmd
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
