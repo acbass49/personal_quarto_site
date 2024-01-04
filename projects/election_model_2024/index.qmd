@@ -101,6 +101,9 @@ fig.show(config=config)
 :::{.callout-tip}
 Watch states like Georgia and Arizona closely which had unexpected results last election. Also, keep an eye on light colored states where the winner is more uncertain!
 :::
+:::{.callout-warning}
+Districts from States using the [congressional district method](https://en.wikipedia.org/wiki/United_States_Electoral_College#Congressional_district_method) are not included on the map, but they are included in the model!
+:::
 
 This last graph is a daily tracker of the percent of election simulations won over time by candidate. You can view how the win probabilities change as the election cycle churns on.
 
