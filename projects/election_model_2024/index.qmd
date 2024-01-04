@@ -1,5 +1,5 @@
 ---
-title: 2024 Presidential Election Model
+title: 2024 US Presidential Election Model
 date: "2023-12-31"
 categories: [Python, Stats, Dataviz]
 image: ./nail.png
