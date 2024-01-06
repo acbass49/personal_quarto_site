@@ -26,7 +26,6 @@ import plotly.graph_objects as go
 import datetime
 
 # Load my Data
-sim_data = pd.read_csv('https://raw.githubusercontent.com/acbass49/Election2024/main/data/simulation_data.csv')
 prob_data = pd.read_csv('https://raw.githubusercontent.com/acbass49/Election2024/main/data/state_probabilities.csv')
 tracking_data = pd.read_csv("https://raw.githubusercontent.com/acbass49/Election2024/main/data/tracking_data.csv")
 
@@ -51,26 +50,10 @@ I plan to update the charts below each day until the election. So check back soo
 This first figure represents today's simulation data. Everyday, I simulate the election 50,000 times and visualize the distribution of electoral votes below. The percentage in the graph title below is the probability Trump will win the election if the election were held today.
 
 :::{.callout-warning}
-This charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device!
+These charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device. For example, the chloropleth map will look small, but you still can hover it!
 :::
 
-```{python}
-# | fig-align: center
-# | fig-width: 10
-#calculate win Percentage
-win_perc = sum(sim_data.winner == 'Trump')/sim_data.shape[0]
-
-plot = plt.figure()
-plot.set_figwidth(6)
-plot.set_figheight(4)
-plt.hist(sim_data.query("winner == 'Trump'")[['points']], bins=45, color='red',edgecolor='black')
-plt.hist(sim_data.query("winner == 'Biden'")[['points']], bins=50, color='skyblue',edgecolor='black')
-plt.xlabel('EC Votes Trump Wins')
-plt.ylabel('Simulation Wins')
-plt.title(f'Today Trump Won {round(win_perc*100,2)}% of the Election Simulations')
-plt.legend(["Trump", "Biden"], loc ="upper right", title='Winner')
-plt.show()
-```
+![](https://github.com/acbass49/Election2024/blob/main/figures/simulations.png?raw=true){width=100%}
 
 :::{.callout-tip}
 Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
@@ -103,7 +86,7 @@ fig.show(config=config)
 :::{.callout-tip}
 Watch states like Georgia and Arizona closely which had unexpected results last election. Also, keep an eye on light colored states where the winner is more uncertain!
 :::
-:::{.callout-warning}
+:::{.callout-note}
 Districts from States using the [congressional district method](https://en.wikipedia.org/wiki/United_States_Electoral_College#Congressional_district_method) are not included on the map, but they are included in the model!
 :::
 
