@@ -79,18 +79,19 @@ Notice that you still see both candidates win some simulations. Even though one 
 In the figure below, you can see the probability Trump will win each state if the election were held today.
 
 ```{python}
+
 fig = go.Figure(data=go.Choropleth(
     locations=prob_data['State'], # Spatial coordinates
     z = prob_data['Trump Win Prob.'].astype(float), # Data to be color-coded
     locationmode = 'USA-states', # set of locations match entries in `locations`
     colorscale = 'rdylbu_r',
-    colorbar_title = "Trump Win Prob.<br>By State",
     marker_line_color='white',
-    hovertext='%'
+    hovertemplate = "State: %{location}<br>Trump Win Probability: %{z}%<extra></extra>",
+    showscale=False
 ))
 
 fig.update_layout(
-    title_text = 'Presidential Election Projections By State (hover chart for more info)',
+    title_text = 'Trump Win Probability By State (hover chart for more info)',
     geo_scope='usa', # limite map scope to USA
 )
 config = {'displayModeBar': False, 'scrollZoom': False}
@@ -162,7 +163,7 @@ fig.update_layout(
     yaxis_range=[0,100],
     annotations = [dict(xref='paper',
         yref='paper',
-        x=1, y=-0.25,
+        x=1, y=-0.3,
         showarrow=False,
         text ='*confidence intervals contains 95% of simulations',
         font=dict(
