@@ -12,7 +12,7 @@ execute:
     output: true
 ---
 
-There are a lot of election models out there - [the Economist](https://projects.economist.com/us-2020-forecast/president), [FiveThirtyEight](https://projects.fivethirtyeight.com/2020-election-forecast/), and the [Cook Political Report](https://cookpolitical.com/sites/default/files/2020-09/EC%20Ratings.091720.3.pdf) to name a few. So what am I doing here?
+There are a lot of election models out there - [fivethirtyeight](https://projects.fivethirtyeight.com/polls/president-general/), [The Cook Political Report](https://www.cookpolitical.com/ratings), and [Decision Desk](https://elections2024.thehill.com/national/biden_trump_general) to name a few. So what am I doing here?
 
 ![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&f=1&ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&ipo=images){width=100%}
 
@@ -41,7 +41,7 @@ Well, it may be the start of a tradition at this point since I did one [last pre
 My goal was to create a model that is based exclusively on **recent quality polling**, and that's it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can't possibly recreate the model. **Since I finished data science school within the last four years, I decided to take a more rigourous approach than last time which I write about [here](./methodology.pdf) and code up [here](https://github.com/acbass49/Election2024)**. Overall, the purpose is to give an educated guess of what would happen if the election were held each day. I also just like this kinda thing 😂.
 
 :::{.callout-note}
-I plan to update the charts below each day until the election. So check back soon!
+I plan to update the charts below each day until the election. So check back soon! You can see when the charts were last updated by looking at the Date Modified information at the top of the webpage.
 :::
 
 -----------------------------------
