@@ -91,7 +91,7 @@ fig = go.Figure(data=go.Choropleth(
 ))
 
 fig.update_layout(
-    title_text = 'Trump Win Probability By State (hover chart for more info)',
+    title_text = 'Trump Win Probability By State<br>(hover chart for more info)',
     geo_scope='usa', # limite map scope to USA
 )
 config = {'displayModeBar': False, 'scrollZoom': False}
@@ -155,7 +155,7 @@ fig.update_layout(
     ),
     showlegend=True,
     plot_bgcolor='white',
-    title_text = 'Percent of Simulations Won Over Time (hover chart for more info)',
+    title_text = 'Percent of Simulations Won Over Time<br>(hover chart for more info)',
     xaxis_range=[tracking_data.Date.min()-timedelta(days=1),tracking_data.Date.max()+timedelta(days=1)],
     hovermode='x unified',
     legend_title_text = 'Candidate',
