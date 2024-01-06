@@ -53,7 +53,7 @@ This first figure represents today's simulation data. Everyday, I simulate the e
 These charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device. For example, the chloropleth map will look small, but you still can hover it!
 :::
 
-![](https://github.com/acbass49/Election2024/blob/main/figures/simulations.png?raw=true){width=100%}
+![](https://github.com/acbass49/Election2024/blob/main/figures/simulations.png?raw=true){width=65% fig-align="center"}
 
 :::{.callout-tip}
 Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
