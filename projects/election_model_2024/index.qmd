@@ -109,17 +109,14 @@ This last graph is a daily tracker of the percent of election simulations won ov
 
 ```{python}
 from datetime import timedelta
-# tracking_data = pd.DataFrame({
-#     'Candidate':['Trump', 'Trump', 'Trump', 'Biden', 'Biden', 'Biden'],
-#     'Win Percentage':[0.10,0.11,0.12,0.90,0.89,0.88],
-#     'Date':['2023-12-29', '2023-12-30', '2023-12-31','2023-12-29', '2023-12-30', '2023-12-31']
-# })
 
 tracking_data = tracking_data \
     .rename(columns = {'Win Percentage':'Win_Percentage'}) \
     .assign(
         Date = lambda x:pd.to_datetime(x.Date,format='%Y-%m-%d'),
-        Win_Percentage = lambda x:round(x.Win_Percentage*100,1)
+        Win_Percentage = lambda x:round(x.Win_Percentage*100,1),
+        LB = lambda x:round(x.LB*100,1),
+        UB = lambda x:round(x.UB*100,1),
     )
 
 fig = go.Figure()
@@ -162,13 +159,56 @@ fig.update_layout(
     hovermode='x unified',
     legend_title_text = 'Candidate',
     margin={"l":100,"r":100,"t":130,"b":130},
-    yaxis_range=[0,100]
+    yaxis_range=[0,100],
+    annotations = [dict(xref='paper',
+        yref='paper',
+        x=1, y=-0.25,
+        showarrow=False,
+        text ='*confidence intervals contains 95% of simulations',
+        font=dict(
+            size=10,
+            ),)]
 )
 
 fig.update_yaxes(
     title_text = "Simulations Won(%)",
     ticksuffix="%"
 )
+
+fig.add_traces([go.Scatter(
+        x = tracking_data.query('Candidate == "Trump"')['Date'], 
+        y = tracking_data.query('Candidate == "Trump"')['UB'],
+        name = "",
+        mode = 'lines', line_color = 'rgba(0,0,0,0)',
+        hoverinfo = 'skip',
+        showlegend = False),
+    go.Scatter(
+        x = tracking_data.query('Candidate == "Trump"')['Date'], 
+        y = tracking_data.query('Candidate == "Trump"')['LB'],
+        name = "",
+        mode = 'lines', line_color = 'rgba(0,0,0,0)',
+        fill='tonexty', fillcolor = 'rgba(255, 0, 0, 0.2)',
+        hoverinfo = 'skip',
+        showlegend = False)])
+
+fig.add_traces([go.Scatter(
+        x = tracking_data.query('Candidate == "Biden"')['Date'], 
+        y = tracking_data.query('Candidate == "Biden"')['UB'],
+        name = "97.5 Win Perc",
+        hovertext = None,
+        showlegend = False,
+        hoverinfo = 'skip',
+        mode = 'lines', line_color = 'rgba(0,0,0,0)'),
+    go.Scatter(
+        x = tracking_data.query('Candidate == "Biden"')['Date'], 
+        y = tracking_data.query('Candidate == "Biden"')['LB'],
+        name = "2.5 Win Perc.",
+        hovertext = None,
+        mode = 'lines', line_color = 'rgba(0,0,0,0)',
+        hovertemplate = '',
+        showlegend = False,
+        hoverinfo = 'skip',
+        fill='tonexty', fillcolor = 'rgba(0, 0, 255, 0.2)')])
 
 config = {'displayModeBar': False, 'scrollZoom': False}
 fig.show(config=config)
