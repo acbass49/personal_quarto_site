@@ -50,7 +50,7 @@ I plan to update the charts below each day until the election. So check back soo
 This first figure represents today's simulation data. Everyday, I simulate the election 50,000 times and visualize the distribution of electoral votes below. The percentage in the graph title below is the probability Trump will win the election if the election were held today.
 
 :::{.callout-warning}
-These charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device. For example, the chloropleth map will look small, but you still can hover it!
+These charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device. For example, the choropleth map will look small, but you still can hover it!
 :::
 
 ![](https://github.com/acbass49/Election2024/blob/main/figures/simulations.png?raw=true){width=75% fig-align="center"}
@@ -150,7 +150,7 @@ fig.update_layout(
         yref='paper',
         x=1, y=-0.3,
         showarrow=False,
-        text ='*confidence intervals contains 95% of simulations',
+        text ='*confidence intervals contain 95% of sample means',
         font=dict(
             size=10,
             ),)]
