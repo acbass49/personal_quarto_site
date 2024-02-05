@@ -1,0 +1,63 @@
+---
+title: "Do I Need A Master's Degree For Data Science?"
+date: '2024-02-04'
+categories: [Life Hacks, Commentary]
+image: ./tile.png
+title-block-banner: false
+draft: true
+---
+
+![](./tile.png){fig-align="center"}
+
+In March of 2021, after researching for quite some time, I decided to do a Master's in Data Science. A little over two years later, I recieved mine from the University of Virginia. My hope in this article is to help readers decide whether a Master's Degree is right for them in the field of data science and share my personal experience - now having completed mine.
+
+I'll break my comments into two main sections:
+1. My experience and tips in deciding to do a Master's Degree
+2. My experience and tips in choosing a program
+3. Other refelections and notes
+
+### My experience deciding to go back to school
+
+This path is unique to every person, of course. But, I'll walk you through my logic in making the decision.
+
+**Money** : This bit depends on the program you choose, but still will generally require a monetary sacrifice (at least of my US friends.) I was fortunate enough to attend a low cost private institution (about $5k a year in tuition) for my undergrad. Working through school and with help from my parents, I graduated without debt. Because I didn't have debt, I was more willing to spend money on more school just over a year after my undergrad. This however won't be the case with everyone especially if you already have mounds of debt from undergrad - perhaps seeking another degree can take a backseat after you have more of a hold on finances. 
+
+**Time Commitment** : This also depends on the program you choose. Because I knew that I wouldn't recieve help from my parents for my Master's Degree, I wanted the option to work full-time while attending school part-time. This was a trade-off as I had to sacrifice many nights and weekends over a two year period, but I also graduated without any debt because I was able to work through it. But, regardless of your program and how flexible it is, getting a master's degree is a time commitment. You need to take set aside time to take X credits no matter how long you spread it out.
+
+**Field Value** : How valuable will this be for my career if completed? I think this depends on each individual situation. For example, someone with an undergrad STEM degree may have an easier time breaking into data science than someone with a social science degree. Therefore, a master's degree in data science would be more valuable for the person with a degree in a social science field than with a degree in a STEM field. 
+
+However, if you are already working as a data scientist, it probably doesn't matter what degree you had in your undergrad at this point because experience generally is seen as more valuable than education when getting jobs. 
+
+**Educational Value** : I believe the act of learning is instrisically valuable, and I think degrees help you learn. Certainly you don't need a degree to learn about a subject, but if you are a person that benefits from professors with answers and a structured curriculum, I think the learning opportunity from a degree is instrisically valuable. If you are not that person, there are so many online courses and online resources for learning everything about data science. It is a field that can be learned in self-study. For me, I wanted more exposure to the field of data science in a structured, comprehensive curriculum. I feel like I recieved this!
+
+:::{.callout-tip}
+A master's degree in Data Science is especially valuable to those who have never worked in data science before and do not have a STEM degree in undergrad. I found myself in this position which made a master's degree very valuable for me in my opinion.
+:::
+
+### My experience choosing a program
+
+
+
+### Reflections and Notes
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+    this.page.url = 'https://alexbass.me/posts/masters_degree/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'masters_degree'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alexbassc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async></script>
