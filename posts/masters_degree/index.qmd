@@ -66,7 +66,7 @@ My program was fully online. In truth, it was one the best online programs I cou
 
 ##### Tip 3:
 
-It can be helpful to just search around on LinkedIn and see the pathes that current Data Scientist's took to get where they are. Often, they do not have a Master's Degree in Data Science, but have a degree in Phyisics or Computer Science or some other STEM field. In my opinion, most STEM degrees are seen as mostly equally viable as data science job candidates. So, if you are more interested in studying another STEM topic but working in Data Science, go study that topic and you can still get a job in DS!
+It can be helpful to just search around on LinkedIn and see the paths that current Data Scientist's took to get where they are. Often, they do not have a Master's Degree in Data Science, but have a degree in Phyisics or Computer Science or some other STEM field. In my opinion, most STEM degrees are seen as mostly equally viable in data science job candidates. So, if you are more interested in studying another STEM topic but working in Data Science, go study that topic and you can still get a job in DS!
 
 ### Conclusion
 
