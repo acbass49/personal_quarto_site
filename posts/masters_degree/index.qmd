@@ -4,12 +4,11 @@ date: '2024-02-08'
 categories: [Life Hacks, Commentary]
 image: https://www.lecole.edu.pk/wp-content/uploads/2021/01/Education-Pic.jpg
 title-block-banner: false
-draft: false
 ---
 
 ![](./tile.png){fig-align="center"}
 
-In March of 2021, after researching for quite some time, I decided to do a Master's in Data Science. A little over two years later, I recieved my MS is Data Science from the University of Virginia. I hope to provide readers with some insight into benefits (and drawbacks) of pursing a Master's Degree in the data science field.
+In March of 2021, after researching for quite some time, I decided to do a Master's in Data Science. A little over two years later, I recieved my MS in Data Science from the University of Virginia. I hope to provide readers with some insight into benefits (and drawbacks) of pursuing a Master's Degree in the data science field.
 
 I'll break up my thoughts into three main sections:
 
@@ -19,7 +18,7 @@ I'll break up my thoughts into three main sections:
 
 ### My experience deciding to go back to school
 
-This path is unique to every person, of course. I think it worth it to note that talk is [most data scientists have at least a master's degree](https://www.zippia.com/data-scientist-jobs/education/?src=chatbot_popout_displayed), but it is not necessarily required. This is at least according to a few links I found googling around; but also matches my personal experience as all of my data scientist collegues at my current workplace have a master's or a PHD. Regardless, I'll walk you through my logic in making my own decision.
+This path is unique to every person, of course. it's worth noting that talk is [most data scientists have at least a master's degree](https://www.zippia.com/data-scientist-jobs/education/?src=chatbot_popout_displayed), but it is not necessarily required. This is at least according to a few links I found googling around; but also matches my personal experience as all of my data scientist collegues at my current workplace have a master's or a PHD. Regardless, I'll walk you through my logic in making my own decision.
 
 **Money** : This bit depends on the program you choose, but still will generally require a monetary sacrifice (at least of my US friends.) I was fortunate enough to attend a low cost private institution (about $5k a year in tuition) for my undergrad. Working through school and with help from my parents, I graduated without debt. Because I didn't have debt, I was more willing to spend money on a Master's degree a year after my undergrad. This however won't be the case with everyone, especially if you aren't interested in more debt or want more of a break from school. 
 
