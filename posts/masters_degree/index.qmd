@@ -1,6 +1,6 @@
 ---
 title: "Do I Need A Master's Degree For Data Science?"
-date: '2024-02-04'
+date: '2024-02-08'
 categories: [Life Hacks, Commentary]
 image: ./tile.png
 title-block-banner: false
@@ -9,7 +9,7 @@ draft: true
 
 ![](./tile.png){fig-align="center"}
 
-In March of 2021, after researching for quite some time, I decided to do a Master's in Data Science. A little over two years later, I recieved mine from the University of Virginia. My hope in this article is to help readers decide whether a Master's Degree is right for them in the field of data science and share my personal experience - now having completed mine.
+In March of 2021, after researching for quite some time, I decided to do a Master's in Data Science. A little over two years later, I recieved my MS is Data Science from the University of Virginia. My hope in this article is to help readers decide whether a Master's Degree is right for them in the field of data science and share my personal experience - now having completed mine.
 
 I'll break my comments into two main sections:
 1. My experience and tips in deciding to do a Master's Degree
@@ -20,9 +20,9 @@ I'll break my comments into two main sections:
 
 This path is unique to every person, of course. But, I'll walk you through my logic in making the decision.
 
-**Money** : This bit depends on the program you choose, but still will generally require a monetary sacrifice (at least of my US friends.) I was fortunate enough to attend a low cost private institution (about $5k a year in tuition) for my undergrad. Working through school and with help from my parents, I graduated without debt. Because I didn't have debt, I was more willing to spend money on more school just over a year after my undergrad. This however won't be the case with everyone especially if you already have mounds of debt from undergrad - perhaps seeking another degree can take a backseat after you have more of a hold on finances. 
+**Money** : This bit depends on the program you choose, but still will generally require a monetary sacrifice (at least of my US friends.) I was fortunate enough to attend a low cost private institution (about $5k a year in tuition) for my undergrad. Working through school and with help from my parents, I graduated without debt. Because I didn't have debt, I was more willing to spend money on more school just over a year after my undergrad. This however won't be the case with everyone especially if you aren't interested in any more debt or want more of a break from school. 
 
-**Time Commitment** : This also depends on the program you choose. Because I knew that I wouldn't recieve help from my parents for my Master's Degree, I wanted the option to work full-time while attending school part-time. This was a trade-off as I had to sacrifice many nights and weekends over a two year period, but I also graduated without any debt because I was able to work through it. But, regardless of your program and how flexible it is, getting a master's degree is a time commitment. You need to take set aside time to take X credits no matter how long you spread it out.
+**Time Commitment** : This also depends on the program you choose. Because I knew that I wouldn't recieve help from my parents for my Master's Degree, I wanted the option to work full-time while attending school part-time to offset the cost. This was a trade-off as I had to sacrifice many nights and weekends over a two year period, but I also graduated without any debt because I was able to work full-time through it. But, regardless of your program and how flexible it is, getting a master's degree is a time commitment. You need to take set aside X time to take Y credits no matter how long you spread it out.
 
 **Field Value** : How valuable will this be for my career if completed? I think this depends on each individual situation. For example, someone with an undergrad STEM degree may have an easier time breaking into data science than someone with a social science degree. Therefore, a master's degree in data science would be more valuable for the person with a degree in a social science field than with a degree in a STEM field. 
 
@@ -36,10 +36,41 @@ A master's degree in Data Science is especially valuable to those who have never
 
 ### My experience choosing a program
 
+I looked into and researched several different programs. Here are some of the things I looked for:
 
+**Focus** : As you start looking into this, you'll notice that there are broad programs and more focused ones. I would say that typically a master's degree is considered more broad than a PHD which is designed to hone in on one very specific piece in a field. But even among master's degrees you see more broad ones: [MS in Data Science](https://datascience.virginia.edu/degrees/msds-residential) (this was my program) or [Analytics](https://pe.gatech.edu/degrees/analytics) or [Information](https://www.ischool.berkeley.edu/programs/mids) and then you have [MS in Data Analytics and Public Policy](https://advanced.jhu.edu/academics/graduate/ms-data-analytics-policy/) or [MS in Computer Vision ](https://www.ri.cmu.edu/education/academic-programs/master-of-science-computer-vision/) or [MS in Quantitative Social Science](https://www.gsas.columbia.edu/content/quantitative-methods-social-sciences). 
+
+Evidentally, you can expect the broad ones to cover broader topics and the other ones to take a stronger focus on one part of data science. But, the reality of data science is... **it's a super broad field with applications in most other fields.** There are NLP data scientists, biology data scientist, public health data scientists, political data scientists, robotics data scientists, marketing data scientists, sports data scientists, and on and on. While subject knowledge is important in each of these applications of data science, often the methods are more similar than different. If you are convinced that you will only be in one corner of data science, perhaps it would be better to do a focused one, but for me, I was interested in exploring the field more so than choosing a corner.
+
+**Cost** Price varies significantly from $10,000 total to +$100,000. My personal program ended up costing $40,000, but my salary more than doubled from the start to the end of the program, and the salary differential fully covered the cost of the program and more!
+
+**Technical Prerequisites** Different programs are geared towards different crowds. Some will have no or very few prerequisites. Personally, these programs worried me because I assumed that programs with few prereqs would not cover topics in the technical depth I desired. I didn't want a bunch of classes just covering things I already learned in my undergrad. I really wanted to learn afterall! 
+
+My specific program had 4 prerequisites at the time: Calculus I & II, Linear Algebra, and Programming in Python. I had already taken Calculus in school, but ended up taking community classes for Linear Algebra and Programming in Python.
+
+**Technical Depth of Program** For those committed to a degree, I highly encourage you to look through the required courses in the program. Often, you can also find summaries and even syllubus' for the classes in the program. A lot of programs that did not have prereqs also did not seem to have technical depth in classes. What drew me to my program was there was classes on all the topics I was interested in Deep Learning, Bayesian Machine Learning, NLP, and also more engineering components such as Spark/Big Data and Data Structures & Algorithims.
+
+Looking back at my program, I am very pleased with the courses I took. I learned so much in most of them and was exposed to so many interesting things from computer vision to NLP to CS search algorithms that I had no idea about with my Political Science background. 
 
 ### Reflections and Notes
 
+##### Tip 1:
+
+Of everything, the thing I most wish I payed more attention to is the program outcomes. Answering questions like, where do the alumni work? Does my program feed into specific companies? This is a HUGE advantage of certain programs. For example, UVA feeds into Capital One and has strong contacts and connections there for graduates. If you were interested in working at Captial One, my program would be a great choice!
+
+If I were to do everything over again, I'm not sure I would change anything. But, if I did, I would apply to certain programs that have strong big tech connections such as Berkeley, University of Washington, and several california schools. I may consider Georgia Tech's program which has a strong reputation and only $10,000 for the total tuition cost.
+
+##### Tip 2:
+
+My program was fully online. In truth, it was one the best online programs I could hope for. My cohort was ~30 students that I stuck with throughout the program. There were numerous group projects and assignments and I got to know most all students in my cohort. With the relatively small class sizes, I also felt like I got to know several of my professors. Having said all of this, I felt like I had a better experience and developed better connections in my undergrad which was in-person. For these reasons, if I were to do it again, I would try to find and in-person program. Obviously, this may not be possible for everyone - some may want to work or are unable to relocate - but, I do think in-person provides a richer academic experience.
+
+##### Tip 3:
+
+It can be helpful to just search around on LinkedIn and see the pathes that Data Scientist's took to get where they are. Often, they do not have a Master's Degree in Data Science, but have a degree in Phyisics or Computer Science or some other STEM field. In my opinion, most STEM degrees are seen as mostly equally viable for job candidates. So, if you are more interested in studying another STEM topic but working in Data Science, go study that topic and you can still get a job in DS!
+
+### Conclusion
+
+Anyways, this is all I have. I sincerely hope that this could help someone on their path whether deciding whether to get more education or picking a progam. Please feel free to reach out if you want to chat about any of this or comment below as well. Its a lot of money and a big time commitment, so eager to share my thoughts to those who will listen 😂.
 
 
 <div id="disqus_thread"></div>
