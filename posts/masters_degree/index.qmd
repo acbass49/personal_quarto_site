@@ -4,7 +4,7 @@ date: '2024-02-08'
 categories: [Life Hacks, Commentary]
 image: ./tile.png
 title-block-banner: false
-draft: true
+draft: false
 ---
 
 ![](./tile.png){fig-align="center"}

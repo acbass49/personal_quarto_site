@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alexbass.me/blog.html</loc>
-    <lastmod>2024-02-07T05:00:36.237Z</lastmod>
+    <lastmod>2024-02-07T05:24:29.658Z</lastmod>
   </url>
   <url>
     <loc>https://alexbass.me/projects.html</loc>
@@ -87,5 +87,9 @@
   <url>
     <loc>https://alexbass.me/index.html</loc>
     <lastmod>2024-02-06T12:24:29.208Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexbass.me/posts/masters_degree/index.html</loc>
+    <lastmod>2024-02-07T05:24:27.789Z</lastmod>
   </url>
 </urlset>
