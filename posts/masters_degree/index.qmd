@@ -18,7 +18,7 @@ I'll break my comments into two main sections:
 
 ### My experience deciding to go back to school
 
-This path is unique to every person, of course. But, I'll walk you through my logic in making the decision.
+This path is unique to every person, of course. I think it worth it to note that talk is [most data scientists have at least a master's degree](https://www.zippia.com/data-scientist-jobs/education/?src=chatbot_popout_displayed), but it is not necessarily required. This is at least according to a few links I found googling around; which also matches my personal experience as all of my data scientist collegues at my current workplace have a master's or a PHD. Regardless, I'll walk you through my logic in making my own decision.
 
 **Money** : This bit depends on the program you choose, but still will generally require a monetary sacrifice (at least of my US friends.) I was fortunate enough to attend a low cost private institution (about $5k a year in tuition) for my undergrad. Working through school and with help from my parents, I graduated without debt. Because I didn't have debt, I was more willing to spend money on more school just over a year after my undergrad. This however won't be the case with everyone especially if you aren't interested in any more debt or want more of a break from school. 
 
