@@ -58,19 +58,13 @@ Looking back at my program, I am very pleased with the courses I took. I learned
 
 ### Reflections and Notes
 
-##### Tip 1:
-
-Of everything, I wish I payed more attention to program outcomes. Answering questions like, where do the alumni work? Does my program feed into specific companies? This is a HUGE advantage of certain programs. For example, UVA feeds into Capital One and has strong contacts and connections there for graduates. If you were interested in working at Captial One, my program would be a great choice!
+**Tip 1:** Of everything, I wish I payed more attention to program outcomes. Answering questions like, where do the alumni work? Does my program feed into specific companies? This is a HUGE advantage of certain programs. For example, UVA feeds into Capital One and has strong contacts and connections there for graduates. If you were interested in working at Captial One, my program would be a great choice!
 
 If I were to do everything over again, I'm not sure I would change anything. But, if I did, I would apply to certain programs that have strong big tech connections such as Berkeley, University of Washington, and several california schools. I may consider Georgia Tech's program which has a strong reputation and only $10,000 for the total tuition cost.
 
-##### Tip 2:
+**Tip 2:** My program was fully online. In truth, it was one the best online programs I could hope for. My cohort was ~30 students that I stuck with throughout the program. There were numerous group projects and assignments and I got to know the students in my cohort. With the relatively small class sizes, I also felt like I got to know several of my professors. Having said all of this, I felt like I had a better experience and developed better connections in my undergrad which was in-person. For these reasons, if I were to do it again, I would try to find an in-person program. Obviously, this may not be possible for everyone - some may want to work or are unable to relocate - but, I do think in-person provides a richer academic experience.
 
-My program was fully online. In truth, it was one the best online programs I could hope for. My cohort was ~30 students that I stuck with throughout the program. There were numerous group projects and assignments and I got to know the students in my cohort. With the relatively small class sizes, I also felt like I got to know several of my professors. Having said all of this, I felt like I had a better experience and developed better connections in my undergrad which was in-person. For these reasons, if I were to do it again, I would try to find an in-person program. Obviously, this may not be possible for everyone - some may want to work or are unable to relocate - but, I do think in-person provides a richer academic experience.
-
-##### Tip 3:
-
-It can be helpful to just search around on LinkedIn and see the paths that current Data Scientist's took to get where they are. Often, they do not have a Master's Degree in Data Science, but have a degree in Phyisics or Computer Science or some other STEM field. In my opinion, most STEM degrees are seen as mostly equally viable in data science job candidates. So, if you are more interested in studying another STEM topic but working in Data Science, go study that topic and you can still get a job in DS!
+**Tip 3:** It can be helpful to just search around on LinkedIn and see the paths that current Data Scientist's took to get where they are. Often, they do not have a Master's Degree in Data Science, but have a degree in Phyisics or Computer Science or some other STEM field. In my opinion, most STEM degrees are seen as mostly equally viable in data science job candidates. So, if you are more interested in studying another STEM topic but working in Data Science, go study that topic and you can still get a job in DS!
 
 ### Conclusion
 
