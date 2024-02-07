@@ -24,7 +24,7 @@ website:
       - text: "About Me"
         href: index.qmd
       - text: "Latest Post"
-        href: posts/path_to_datascience/index.qmd
+        href: posts/masters_degree/index.qmd
       - text: Latest Project
         href: projects/election_model_2024/index.qmd
   site-url: "https://alexbass.me"
