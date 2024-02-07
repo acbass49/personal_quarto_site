@@ -6,7 +6,7 @@ image: https://www.lecole.edu.pk/wp-content/uploads/2021/01/Education-Pic.jpg
 title-block-banner: false
 ---
 
-![](./tile.png){fig-align="center"}
+![](https://www.lecole.edu.pk/wp-content/uploads/2021/01/Education-Pic.jpg){fig-align="center"}
 
 In March of 2021, after researching for quite some time, I decided to do a Master's in Data Science. A little over two years later, I recieved my MS in Data Science from the University of Virginia. I hope to provide readers with some insight into benefits (and drawbacks) of pursuing a Master's Degree in the data science field.
 
@@ -31,6 +31,8 @@ However, if you are already working as a data scientist, it probably doesn't mat
 **Educational Value** : I believe the act of learning is instrisically valuable, and I think degrees help you learn. Certainly you don't need a degree to learn about a subject, but if you are a person that benefits from professors with answers and a structured curriculum, I think the learning opportunity from a degree is instrisically valuable. If you are not that person, there are so many online courses and online resources for learning everything about data science. It is a field that can be learned in self-study. For me, I wanted more exposure to the field of data science in a structured, comprehensive curriculum, which I recieved!
 
 **Decision:** At the time, I decided to go forward with a masters because I had the time, the means, and a gap in my knowledge. I also beleived that this degree would help my professional career which it did. From the start to the end of the program, I went from data analyst to data scientist and my salary doubled.
+
+![](./tile.png){fig-align="center"}
 
 :::{.callout-tip}
 A master's degree in Data Science is especially valuable to those who have never worked in data science before and do not have a STEM degree in undergrad. I found myself in this position which made a master's degree very valuable for me in my opinion.
