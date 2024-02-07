@@ -1,6 +1,6 @@
 ---
 title: "Do I Need A Master's Degree For Data Science?"
-date: '2024-02-08'
+date: '2024-02-07'
 categories: [Life Hacks, Commentary]
 image: https://www.lecole.edu.pk/wp-content/uploads/2021/01/Education-Pic.jpg
 title-block-banner: false
