@@ -28,7 +28,7 @@ import datetime
 # Load my Data
 prob_data = pd.read_csv('https://raw.githubusercontent.com/acbass49/Election2024/main/data/state_probabilities.csv')
 tracking_data = pd.read_csv("https://raw.githubusercontent.com/acbass49/Election2024/main/data/tracking_data.csv")
-
+simulation_data = pd.read_csv("https://raw.githubusercontent.com/acbass49/Election2024/main/data/simulation_data.csv")
 ```
 
 #### The Problem
@@ -53,7 +53,24 @@ This first figure represents today's simulation data. Everyday, I simulate the e
 These charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device. For example, the choropleth map will look small, but you still can hover it!
 :::
 
-![](https://github.com/acbass49/Election2024/blob/main/figures/simulations.png?raw=true){width=75% fig-align="center"}
+```{python}
+import plotly.express as px
+
+win_perc = sum(simulation_data['points']>=270)/simulation_data.shape[0]
+
+fig = px.histogram(simulation_data, x="points", color="winner")
+fig.update_layout(
+    showlegend=True,
+    plot_bgcolor='white',
+    title_text = f'Today Trump Won {round(win_perc*100,2)}% of the Election Simulations',
+    title_x=0.5,
+    xaxis_title="EC Votes Trump Wins",
+    yaxis_title="Simulation Wins"
+)
+
+config = {'displayModeBar': False, 'scrollZoom': False}
+fig.show(config=config)
+```
 
 :::{.callout-tip}
 Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
@@ -135,7 +152,7 @@ fig.update_layout(
         tickcolor='rgb(204, 204, 204)',
         tickformat= '%b %d',
         type='date',
-        dtick= 86400000.0,
+        #dtick= 86400000.0,
     ),
     showlegend=True,
     plot_bgcolor='white',
