@@ -49,8 +49,8 @@ I plan to update the charts below each day until the election. So check back soo
 
 This first figure represents today's simulation data. Everyday, I simulate the election 50,000 times and visualize the distribution of electoral votes below. The percentage in the graph title below is the probability Trump will win the election if the election were held today.
 
-:::{.callout-warning}
-These charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device. For example, the choropleth map will look small, but you still can hover it!
+:::{.callout-caution}
+These charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device. For example, the histogram may look a bit long and the choropleth map will look small, but you still can hover each chart for more info!
 :::
 
 ```{python}
@@ -62,7 +62,7 @@ fig = px.histogram(simulation_data, x="points", color="winner")
 fig.update_layout(
     showlegend=True,
     plot_bgcolor='white',
-    title_text = f'Today Trump Won {round(win_perc*100,2)}% of the Election Simulations',
+    title_text = f'Today Trump Won {round(win_perc*100,2)}% of Elections',
     title_x=0.5,
     xaxis_title="EC Votes Trump Wins",
     yaxis_title="Simulation Wins"
@@ -71,6 +71,9 @@ fig.update_layout(
 config = {'displayModeBar': False, 'scrollZoom': False}
 fig.show(config=config)
 ```
+:::{.callout-note}
+See how the histogram is more spikey than smooth? This is because some outcomes with even 1 EC point difference can be more likely given how state groupings naturally divide out.
+:::
 
 :::{.callout-tip}
 Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
@@ -217,6 +220,10 @@ config = {'displayModeBar': False, 'scrollZoom': False}
 fig.show(config=config)
 
 ```
+
+:::{.callout-note}
+To get a sense of the spread of win percentages each day, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure, but should provide a sense of possible win percentages day by day.
+:::
 
 Thanks for viewing this post! Check back soon for more updates. You can see when the data was last modified at the top. Feel free to share thoughts, comments, or your predictions below.
 
