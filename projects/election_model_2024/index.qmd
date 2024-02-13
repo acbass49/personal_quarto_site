@@ -40,7 +40,7 @@ Well, it may be the start of a tradition at this point since I did one [last pre
 My goal was to create a model that is based exclusively on **recent quality polling**, and that's it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can't possibly recreate the model. **Since I finished data science school within the last four years, I decided to take a more rigourous approach than last time which I write about [here](./methodology.pdf) and code up [here](https://github.com/acbass49/Election2024)**. Overall, the purpose is to give an educated guess of what would happen if the election were held each day. I also just like this kinda thing 😂.
 
 :::{.callout-note}
-I plan to update the charts below each day until the election. So check back soon! You can see when the charts were last updated by looking at the Date Modified information at the top of the webpage.
+The charts below are part of an automated data pipeline that updates each day until the election. So check back soon! You can see when the charts were last updated by looking at the Date Modified information at the top of the webpage.
 :::
 
 -----------------------------------
@@ -222,7 +222,7 @@ fig.show(config=config)
 ```
 
 :::{.callout-note}
-To get a sense of the spread of win percentages each day, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure, but should provide a sense of possible win percentages day by day.
+To get a sense of the spread of win percentages each day, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure for a confidence interval, but should provide a sense of possible win percentages day by day.
 :::
 
 Thanks for viewing this post! Check back soon for more updates. You can see when the data was last modified at the top. Feel free to share thoughts, comments, or your predictions below.
