@@ -65,7 +65,8 @@ fig.update_layout(
     title_text = f'Today Trump Won {round(win_perc*100,2)}% of Elections',
     title_x=0.5,
     xaxis_title="EC Votes Trump Wins",
-    yaxis_title="Simulation Wins"
+    yaxis_title="Simulation Wins",
+    height =350
 )
 
 config = {'displayModeBar': False, 'scrollZoom': False}
