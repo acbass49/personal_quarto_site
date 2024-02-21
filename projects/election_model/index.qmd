@@ -5,7 +5,11 @@ categories: [Dataviz, Stats, R]
 image: /./about_files/vote_graph.png
 title-block-banner: false
 ---
-*Last updated November 2, 2020*
+*Models last updated November 2, 2020*
+
+:::{.callout-note}
+I created another model for the latest 2024 presidential election [here](/./projects/election_model_2024/index.qmd)
+:::
 
 There are a lot of election models out there - [the Economist](https://projects.economist.com/us-2020-forecast/president), [FiveThirtyEight](https://projects.fivethirtyeight.com/2020-election-forecast/), and the [Cook Political Report](https://cookpolitical.com/sites/default/files/2020-09/EC%20Ratings.091720.3.pdf) to name a few. So what am I doing here?
 

@@ -68,6 +68,10 @@ Every career path is different and I'm sure there are dozens more ways social sc
 
 I am very happy to chat if you would like to talk more about any aspect of this or want more details. Also, I'll respond if you comment below.
 
+:::{.callout-note}
+I wrote a companion piece [here](/./posts/masters_degree/index.qmd) called 'Do I need a Master's for Data Science?' if you enjoyed reading this one 🙂
+:::
+
 <div id="disqus_thread"></div>
 <script>
     /**

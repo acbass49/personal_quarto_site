@@ -8,6 +8,10 @@ title-block-banner: false
 
 ![](https://www.lecole.edu.pk/wp-content/uploads/2021/01/Education-Pic.jpg){fig-align="center"}
 
+:::{.callout-note}
+After writing this article, it was shortly after published on the UVA data science blog [here](https://datascience.virginia.edu/news/alumni-perspective-do-i-need-masters-degree-data-science).
+:::
+
 In March of 2021, after researching for quite some time, I decided to do a Master's in Data Science. A little over two years later, I recieved my MS in Data Science from the University of Virginia. I hope to provide readers with some insight into benefits (and drawbacks) of pursuing a Master's Degree in the data science field.
 
 I'll break up my thoughts into three main sections:
@@ -72,6 +76,9 @@ If I were to do everything over again, I'm not sure I would change anything. But
 
 I hope this will help someone on their path with deciding whether to get more education or picking a progam. Please feel free to reach out if you want to chat. Also, if you feel like I missed something or you have something to share, comment below! I'd love to hear thoughts and ideas from others.
 
+:::{.callout-note}
+Check out my companion piece to this discussing [my path to data science](/./posts/path_to_datascience/index.qmd) from a social science background.
+:::
 
 <div id="disqus_thread"></div>
 <script>
