@@ -1,5 +1,5 @@
 ---
-title: Updating Quarto Post Daily with GitHub Actions
+title: Updating Quarto Website Daily with GitHub Actions
 date: '2023-09-07'
 categories: [CICD, Quarto]
 image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.adictosaltrabajo.com%2Fwp-content%2Fuploads%2F2020%2F10%2Fandroid-github-actions-setup-image-35b6a79fea4a7289acb6796cd4ad05b4.png&f=1&nofb=1&ipt=b02a4ecfb6e2d666f35916b643a6f3e9907e880252d1e19d3eda47521252e9c3&ipo=images
@@ -77,7 +77,7 @@ You'll notice when you navigate to a github repository, there is a tab entitled 
 
 I will paste my `.yml` file I used for my configuration. Feel free to copy, paste, and edit to your liking.
 
-```{yml}
+```{yaml}
 #| eval: false
 
 name: 'Update Stream Graphs'

@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2023-09-07">
 
-<title>alexbass.me - Updating Quarto Post Daily with GitHub Actions</title>
+<title>alexbass.me - Updating Quarto Website Daily with GitHub Actions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="alexbass.me - Updating Quarto Post Daily with GitHub Actions">
+<meta name="twitter:title" content="alexbass.me - Updating Quarto Website Daily with GitHub Actions">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.adictosaltrabajo.com%2Fwp-content%2Fuploads%2F2020%2F10%2Fandroid-github-actions-setup-image-35b6a79fea4a7289acb6796cd4ad05b4.png&amp;f=1&amp;nofb=1&amp;ipt=b02a4ecfb6e2d666f35916b643a6f3e9907e880252d1e19d3eda47521252e9c3&amp;ipo=images">
 <meta name="twitter:creator" content="@acbass49">
@@ -158,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Updating Quarto Post Daily with GitHub Actions</h1>
+<h1 class="title">Updating Quarto Website Daily with GitHub Actions</h1>
   <div class="quarto-categories">
     <div class="quarto-category">CICD</div>
     <div class="quarto-category">Quarto</div>
@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level4">
 <h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
 <p>For my friends who use Quarto, perhaps you need to update a particular blog post daily, weekly, or at some other time interval. You could redeploy your site manually every day, but this would be tedious and inefficient. Another option is to use GitHub actions to help you with this task. For high computational tasks using GitHub Actions can cost money, but rendering a small website and running a small script everything is free!</p>
-<p>For those curious, this problem has surfaced with two of my previous posts: <a href="../../projects/election_model/index.html">my election model</a> and <a href="../../posts/primary_stream/index.html">the google trends primary tracker</a>. For my election model, I used the tedious, inefficient approach back in 2020, but for the primary tracker, I have implemented an automated approach. Hopefully someone can benefit from this post!</p>
+<p>For those curious, this problem has surfaced with two of my previous posts: <a href="../../projects/election_model/index.html">my election model</a> and <a href="../../posts/primary_stream/index.html">the google trends primary tracker</a>. For my election model, I used the tedious, inefficient approach back in 2020 (manually running and updating a repository), but for the primary tracker, I have implemented an automated approach. Hopefully someone can benefit from this post!</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -260,7 +260,7 @@ Note
 <p>You’ll notice when you navigate to a github repository, there is a tab entitled <code>Actions</code>. After clicking on this tab, you should see some files that you can choose as starters. I don’t recall which template I used. I believe they had one for R which was the one that I used.</p>
 <p>I will paste my <code>.yml</code> file I used for my configuration. Feel free to copy, paste, and edit to your liking.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">'Update Stream Graphs'</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">'Update Stream Graphs'</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">schedule</span><span class="kw">:</span></span>
