@@ -9,15 +9,15 @@ freeze: true
 
 ![](/./about_files/primary_1.png){fig-align="center"}
 
+:::{.callout-warning}
+I've stopped the automated generation of charts in this post when the Republican Primaries started - January 15, 2024.
+:::
+
 ## Introduction
 
 Yes, I guess I'm on a bit of a google trends kick lately. The more I look into searches, the more I'm impressed by the interesting and vast amount of data avaiable.
 
 For example, i recently learned that Google Trends is quite effective in predicting large elections [here](https://journals.sagepub.com/doi/10.1177/0002764220975067) and [here](https://www.mdpi.com/2306-5729/7/11/143). I even went through the exercise of looking myself at the last 5 US elections. Excluding the 2020 election, the winning candidate had more search volume months leading up to the elections. The trend did not hold for Trump's last election, but maybe we chalk that up to Trump being a peculiar candidate or 2020 being a peculiar year.
-
-:::{.callout-warning}
-I've been seeing quite a few errors as I run this with the `gtrendsr` package via github actions. Pausing this automated process for further investigation. The automatic updates are stopped on 2 January 2024, but may proceed at a later date.
-:::
 
 ## Honing in on the GOP Primary Nomination
 
