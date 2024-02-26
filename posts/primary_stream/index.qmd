@@ -9,7 +9,7 @@ freeze: true
 
 ![](/./about_files/primary_1.png){fig-align="center"}
 
-:::{.callout-warning}
+:::{.callout-note}
 I've stopped the automated generation of charts in this post when the Republican Primaries started - January 15, 2024.
 :::
 
