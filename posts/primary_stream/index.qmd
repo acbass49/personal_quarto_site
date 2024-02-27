@@ -10,7 +10,7 @@ freeze: true
 ![](/./about_files/primary_1.png){fig-align="center"}
 
 :::{.callout-note}
-I've stopped the automated generation of charts in this post when the Republican Primaries started - January 15, 2024.
+I've stopped the automated generation of charts in this post on February 26, 2024. At this point it feels we have a clear primary winner who has won all the states so far.
 :::
 
 ## Introduction
