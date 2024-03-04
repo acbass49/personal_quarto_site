@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-12-31">
 
-<title>alexbass.me - My Projects</title>
+<title>alexbass.me - 2024 US Presidential Election Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./graph-up.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../graph-up.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,84 +68,27 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-categories','listing-author','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="alexbass.me - My Projects">
-<meta name="twitter:image" content="https://alexbass.me/about_files/site_photo.jpg">
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="alexbass.me - 2024 US Presidential Election Model">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://alexbass.me/posts/election_2024/nail.png">
 <meta name="twitter:creator" content="@acbass49">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./graph-up.svg" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../graph-up.svg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">alexbass.me</span>
     </a>
   </div>
@@ -157,19 +99,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./files/cv.pdf"> 
+    <a class="nav-link" href="../../files/cv.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -183,23 +125,38 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="CI/CD">CI/CD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Capstone">Capstone <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Dataviz">Dataviz <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Stats">Stats <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My Projects</h1>
-</div>
+<h1 class="title">2024 US Presidential Election Model</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Stats</div>
+    <div class="quarto-category">Dataviz</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 31, 2023</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 4, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -208,245 +165,72 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Python,Stats,Dataviz" data-listing-date-sort="1703998800000" data-listing-file-modified-sort="1709533307109" data-listing-date-modified-sort="1709528400000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1137">
-<a href="./projects/election_model_2024/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./projects/election_model_2024/nail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-2024 Presidential Election Model
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
+<p>There are a lot of election models out there - <a href="https://projects.fivethirtyeight.com/polls/president-general/">fivethirtyeight</a>, <a href="https://www.cookpolitical.com/ratings">The Cook Political Report</a>, and <a href="https://elections2024.thehill.com/national/biden_trump_general">Decision Desk</a> to name a few. So what am I doing here?</p>
+<p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&amp;f=1&amp;ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&amp;ipo=images" class="img-fluid" style="width:100.0%"></p>
+<section id="tldr" class="level4">
+<h4 class="anchored" data-anchor-id="tldr">TLDR</h4>
+<p>View my personal election model in my dashboard 👉👉 <a href="../../projects/election_model_2024/index.html">here</a> 👈👈</p>
+</section>
+<section id="the-problem" class="level4">
+<h4 class="anchored" data-anchor-id="the-problem">The Problem</h4>
+<p>Well, it may be the start of a tradition at this point since I did one <a href="../../projects/election_model/index.html">last presidential election</a> and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other’s models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information often isn’t available.</p>
+</section>
+<section id="what-i-did" class="level4">
+<h4 class="anchored" data-anchor-id="what-i-did">What I did</h4>
+<p>My goal was to create a model that is based exclusively on <strong>recent quality polling</strong>, and that’s it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can’t possibly recreate the model. <strong>Since I finished data science school within the last four years, I decided to take a more rigourous approach than last time which I write about <a href="./methodology.pdf">here</a> and code up <a href="https://github.com/acbass49/Election2024">here</a></strong>. Overall, the purpose is to give an educated guess of what would happen if the election were held each day. I also just like this kinda thing 😂.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Stats'); return false;">
-Stats
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Dataviz'); return false;">
-Dataviz
+<div class="callout-title-container flex-fill">
+Note
 </div>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Dec 31, 2023
+<div class="callout-body-container callout-body">
+<p>The dashboard is part of an automated data pipeline that updates each day until the election. So check back soon! Each day at around 5am, the charts are updated with the latest quality polling data.</p>
 </div>
 </div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Capstone,Python,Stats" data-listing-date-sort="1682917200000" data-listing-file-modified-sort="1696400410722" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="686">
-<a href="./projects/internet_archive/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="././about_files/ia_tile.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Entity Resolution with Gradient Boosted Trees
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Capstone'); return false;">
-Capstone
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Stats'); return false;">
-Stats
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+<hr>
+</section>
+<section id="miscellaneous-dashboard-and-election-notes" class="level4">
+<h4 class="anchored" data-anchor-id="miscellaneous-dashboard-and-election-notes">Miscellaneous Dashboard and Election Notes</h4>
+<ul>
+<li>I simulate the election 50,000 times each day based off of modeled probabilities of Trump winnin each state. The model isn’t necessarily a forecast because I am simulating the election as if it were held the present day.</li>
+<li>Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don’t count the other out!</li>
+<li>See how the histogram of daily EC vote distribution is more spikey than smooth? This is because some outcomes with even 1 EC point difference can be more likely given how state groupings naturally divide out.</li>
+<li>Watch states like Georgia and Arizona closely which had unexpected results last election. Also, keep an eye on light colored states where the winner is more uncertain!</li>
+<li>Districts from States using the <a href="https://en.wikipedia.org/wiki/United_States_Electoral_College#Congressional_district_method">congressional district method</a> are not included on the map, but they are included in the model!</li>
+<li>I decided to create a confidence interval around the final graph of win percentages per candidate tracked over time. To accomplish this, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure for a confidence interval, but should provide a sense of possible win percentages day by day.</li>
+</ul>
+<p>Thanks for viewing this post! Check back soon for more updates. You can see when the data was last modified at the top. Feel free to share thoughts, comments, or your predictions below.</p>
+<div id="disqus_thread">
 
 </div>
-<div class="listing-date">
-May 1, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Python,Stats,Dataviz" data-listing-date-sort="1660885200000" data-listing-file-modified-sort="1688953567658" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1918">
-<a href="./projects/bayesian_county/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./about_files/school_7.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Bayesian County-Level Analysis of School Shootings
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Stats'); return false;">
-Stats
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Dataviz'); return false;">
-Dataviz
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+    this.page.url = 'https://alexbass.me/posts/election_2024/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'election_2024'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alexbassc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async=""></script>
 
-</div>
-<div class="listing-date">
-Aug 19, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="CI/CD,R,Dataviz" data-listing-date-sort="1636347600000" data-listing-file-modified-sort="1688953705886" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="419">
-<a href="./projects/covid_update/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./about_files/covid.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-CI/CD Pipeline of Weekly COVID Email Update
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('CI/CD'); return false;">
-CI/CD
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Dataviz'); return false;">
-Dataviz
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
 
-</div>
-<div class="listing-date">
-Nov 8, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Dataviz,Stats,R" data-listing-date-sort="1600405200000" data-listing-file-modified-sort="1708496245880" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="382">
-<a href="./projects/election_model/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="././about_files/vote_graph.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-2020 US Presidential Election Model
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Dataviz'); return false;">
-Dataviz
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Stats'); return false;">
-Stats
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+</section>
 
-</div>
-<div class="listing-date">
-Sep 18, 2020
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="R,Shiny" data-listing-date-sort="1596171600000" data-listing-file-modified-sort="1688954007297" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="324">
-<a href="./projects/peanuts/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="././about_files/word_search_99.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Word Search Puzzle Generator
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
-Shiny
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Jul 31, 2020
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="Capstone,R,Stats" data-listing-date-sort="1587790800000" data-listing-file-modified-sort="1689571784506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1166">
-<a href="./projects/star_wars_capstone/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./about_files/sw_fig1.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Star Wars: Political Message Detection &amp; Likeability
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Capstone'); return false;">
-Capstone
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Stats'); return false;">
-Stats
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 25, 2020
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script></main> <!-- /main -->
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -843,17 +627,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../../index.html">
 <p>About Me</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./posts/masters_degree/index.html">
+    <a class="nav-link" href="../../posts/masters_degree/index.html">
 <p>Latest Post</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./projects/election_model_2024/index.html">
+    <a class="nav-link" href="../../projects/election_model_2024/index.html">
 <p>Latest Project</p>
 </a>
   </li>  

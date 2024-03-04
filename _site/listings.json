@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/masters_degree/index.html",
+      "/posts/election_2024/index.html",
       "/posts/path_to_datascience/index.html",
       "/posts/primary_stream/index.html",
       "/posts/cicd_primary/index.html",
@@ -20,7 +21,6 @@
   {
     "listing": "/projects.html",
     "items": [
-      "/projects/election_model_2024/dash.html",
       "/projects/election_model_2024/index.html",
       "/projects/internet_archive/index.html",
       "/projects/bayesian_county/index.html",

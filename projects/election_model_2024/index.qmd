@@ -1,20 +1,16 @@
 ---
-title: 2024 US Presidential Election Model
+title: "2024 Presidential Election Model"
 date: "2023-12-31"
 categories: [Python, Stats, Dataviz]
 image: ./nail.png
 title-block-banner: false
 date-modified: today
-freeze: false
-execute: 
-    echo: false
-    warning: false
-    output: true
+format: 
+  dashboard:
+    expandable: false
+    scrolling: true
 ---
 
-There are a lot of election models out there - [fivethirtyeight](https://projects.fivethirtyeight.com/polls/president-general/), [The Cook Political Report](https://www.cookpolitical.com/ratings), and [Decision Desk](https://elections2024.thehill.com/national/biden_trump_general) to name a few. So what am I doing here?
-
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&f=1&ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&ipo=images){width=100%}
 
 ```{python}
 # | output: false
@@ -24,73 +20,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import datetime
+import plotly.express as px
 
 # Load my Data
 prob_data = pd.read_csv('https://raw.githubusercontent.com/acbass49/Election2024/main/data/state_probabilities.csv')
 tracking_data = pd.read_csv("https://raw.githubusercontent.com/acbass49/Election2024/main/data/tracking_data.csv")
 simulation_data = pd.read_csv("https://raw.githubusercontent.com/acbass49/Election2024/main/data/simulation_data.csv")
-```
 
-#### TLDR
-
-View my personal election model in the graphs below or on my dashboard [here](/./projects/election_model_2024/dash.qmd)
-
-#### The Problem
-
-Well, it may be the start of a tradition at this point since I did one [last presidential election](/./projects/election_model/index.qmd) and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other's models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information isn't available.
-
-#### What I did
-
-My goal was to create a model that is based exclusively on **recent quality polling**, and that's it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can't possibly recreate the model. **Since I finished data science school within the last four years, I decided to take a more rigourous approach than last time which I write about [here](./methodology.pdf) and code up [here](https://github.com/acbass49/Election2024)**. Overall, the purpose is to give an educated guess of what would happen if the election were held each day. I also just like this kinda thing 😂.
-
-:::{.callout-note}
-The charts below are part of an automated data pipeline that updates each day until the election. So check back soon! You can see when the charts were last updated by looking at the Date Modified information at the top of the webpage.
-:::
-
------------------------------------
-
-#### Now for the model...
-
-This first figure represents today's simulation data. Everyday, I simulate the election 50,000 times and visualize the distribution of electoral votes below. The percentage in the graph title below is the probability Trump will win the election if the election were held today.
-
-:::{.callout-caution}
-These charts are designed to be viewed on Desktop. They may look a bit weird if viewing from a mobile device. For example, the choropleth map will look small, but you still can hover each chart for more info!
-:::
-
-```{python}
-import plotly.express as px
-
-win_perc = sum(simulation_data['points']>=270)/simulation_data.shape[0]
-
-simulation_data = simulation_data.rename(columns={'winner':'Winner'})
-
-fig = px.histogram(simulation_data, x="points", color="Winner",
-color_discrete_map={"Trump":"#ec543c", "Biden":"#636bfa"})
-fig.update_layout(
-    showlegend=True,
-    plot_bgcolor='white',
-    title_text = f'Today Trump Won {round(win_perc*100,2)}% of Elections',
-    title_x=0.5,
-    xaxis_title="EC Votes Trump Wins",
-    yaxis_title="Simulation Wins",
-    height=350
-)
-
-config = {'displayModeBar': False, 'scrollZoom': False}
-fig.show(config=config)
-```
-:::{.callout-note}
-See how the histogram is more spikey than smooth? This is because some outcomes with even 1 EC point difference can be more likely given how state groupings naturally divide out.
-:::
-
-:::{.callout-tip}
-Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
-:::
-
-In the figure below, you can see the probability Trump will win each state if the election were held today.
-
-```{python}
-
+# Figure 1
 fig = go.Figure(data=go.Choropleth(
     locations=prob_data['State'], # Spatial coordinates
     z = prob_data['Trump Win Prob.'].astype(float), # Data to be color-coded
@@ -100,27 +37,36 @@ fig = go.Figure(data=go.Choropleth(
     hovertemplate = "State: %{location}<br>Trump Win Probability: %{z}%<extra></extra>",
     showscale=False
 ))
-
+config = {'displayModeBar': False, 'scrollZoom': False}
 fig.update_layout(
-    title_text = 'Trump Win Probability By State<br>(hover chart for more info)',
+    #title_text = 'hover chart for more info',
     geo_scope='usa', # limite map scope to USA
     title_x=0.5
+);
+
+# Figure 2
+win_perc = sum(simulation_data['points']>=270)/simulation_data.shape[0]
+
+simulation_data = simulation_data.rename(columns={'winner':'Winner'})
+
+fig2 = px.histogram(simulation_data, x="points", color="Winner", height=350,
+color_discrete_map={"Trump":"#ec543c", "Biden":"#636bfa"},
+title='')
+fig2.update_layout(
+    showlegend=False,
+    plot_bgcolor='white',
+    xaxis_title="EC Votes Trump Wins",
+    yaxis_title="Simulation Wins",
+#     legend=dict(
+#         yanchor="top",
+#         y=0.99,
+#         xanchor="left",
+#         x=0.01
+# )
 )
-config = {'displayModeBar': False, 'scrollZoom': False}
-fig.show(config=config)
 
-```
+#Figure 3
 
-:::{.callout-tip}
-Watch states like Georgia and Arizona closely which had unexpected results last election. Also, keep an eye on light colored states where the winner is more uncertain!
-:::
-:::{.callout-note}
-Districts from States using the [congressional district method](https://en.wikipedia.org/wiki/United_States_Electoral_College#Congressional_district_method) are not included on the map, but they are included in the model!
-:::
-
-This last graph is a daily tracker of the percent of election simulations won over time by candidate. You can view how the win probabilities change as the election cycle churns on.
-
-```{python}
 from datetime import timedelta
 
 tracking_data = tracking_data \
@@ -132,9 +78,9 @@ tracking_data = tracking_data \
         UB = lambda x:round(x.UB*100,1),
     )
 
-fig = go.Figure()
+fig3 = go.Figure()
 
-fig.add_trace(
+fig3.add_trace(
     go.Scatter(
         x = tracking_data.query('Candidate == "Biden"')['Date'],
         y = tracking_data.query('Candidate == "Biden"')['Win_Percentage'],
@@ -143,7 +89,7 @@ fig.add_trace(
     )
 )
 
-fig.add_trace(
+fig3.add_trace(
     go.Scatter(
         x = tracking_data.query('Candidate == "Trump"')['Date'],
         y = tracking_data.query('Candidate == "Trump"')['Win_Percentage'],
@@ -152,7 +98,7 @@ fig.add_trace(
     )
 )
 
-fig.update_layout(
+fig3.update_layout(
     xaxis=dict(
         showline=True,
         showgrid=True,
@@ -165,15 +111,16 @@ fig.update_layout(
         type='date',
         #dtick= 86400000.0,
     ),
-    showlegend=True,
+    showlegend=False,
     plot_bgcolor='white',
-    title_text = 'Percent of Simulations Won Over Time<br>(hover chart for more info)',
-    title_x=0.5,
+    #title_x=0.5,
     xaxis_range=[tracking_data.Date.min()-timedelta(days=1),tracking_data.Date.max()+timedelta(days=1)],
     hovermode='x unified',
-    legend_title_text = 'Candidate',
-    margin={"l":100,"r":100,"t":130,"b":130},
+    #legend_title_text = 'Candidate',
+    #margin={"l":60,"r":120,"t":40,"b":40},
     yaxis_range=[0,100],
+    #width=500,
+    #height=200,
     annotations = [dict(xref='paper',
         yref='paper',
         x=1, y=-0.3,
@@ -181,15 +128,16 @@ fig.update_layout(
         text ='*confidence intervals contain 95% of sample means',
         font=dict(
             size=10,
-            ),)]
+            ),)],
+    autosize = True
 )
 
-fig.update_yaxes(
+fig3.update_yaxes(
     title_text = "Simulations Won(%)",
     ticksuffix="%"
 )
 
-fig.add_traces([go.Scatter(
+fig3.add_traces([go.Scatter(
         x = tracking_data.query('Candidate == "Trump"')['Date'], 
         y = tracking_data.query('Candidate == "Trump"')['UB'],
         name = "",
@@ -205,7 +153,7 @@ fig.add_traces([go.Scatter(
         hoverinfo = 'skip',
         showlegend = False)])
 
-fig.add_traces([go.Scatter(
+fig3.add_traces([go.Scatter(
         x = tracking_data.query('Candidate == "Biden"')['Date'], 
         y = tracking_data.query('Candidate == "Biden"')['UB'],
         name = "97.5 Win Perc",
@@ -224,33 +172,94 @@ fig.add_traces([go.Scatter(
         hoverinfo = 'skip',
         fill='tonexty', fillcolor = 'rgba(0, 0, 255, 0.2)')])
 
-config = {'displayModeBar': False, 'scrollZoom': False}
-fig.show(config=config)
-
 ```
 
-:::{.callout-note}
-To get a sense of the spread of win percentages each day, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure for a confidence interval, but should provide a sense of possible win percentages day by day.
-:::
+## Row
 
-Thanks for viewing this post! Check back soon for more updates. You can see when the data was last modified at the top. Feel free to share thoughts, comments, or your predictions below.
+I created this dashboard to visualize my 2024 Presidential Election Model data. **Hover over each chart for more information.** Read my blog write up [here](/./posts/election_2024/index.qmd), methodology [here](/./posts/election_2024/methodology.pdf), and view my code [here](https://github.com/acbass49/Election2024). **Please note that this dashboard is updated daily using the latest quality polls.**
 
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    var disqus_config = function () {
-    this.page.url = 'https://alexbass.me/posts/election_model_2024/';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'election_model_2024'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://alexbassc.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+## Row
 
-<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async></script>
+```{python}
+#| content: valuebox
+#| title: "Projected Winner"
+
+win_perc = sum(simulation_data['points']>=270)/simulation_data.shape[0]
+win_perc = round(win_perc*100,2)
+
+if win_perc>50:
+    color = 'red'
+    value = 'Trump'
+else:
+    color = 'blue'
+    value = 'Biden'
+
+dict(
+    icon = "trophy",
+    color = color,
+    value = value
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Sims Won Today"
+
+win_perc = sum(simulation_data['points']>=270)/simulation_data.shape[0]
+win_perc = round(win_perc*100,2)
+
+if win_perc < 50:
+    win_perc = 100 - win_perc
+
+dict(
+    icon = "percent",
+    color = "light",
+    value = win_perc,
+) 
+```
+
+
+```{python}
+#| content: valuebox
+#| title: "Days Until Election"
+
+import datetime
+
+current_date = datetime.datetime.now()
+election = datetime.datetime(year=2024,month=11,day=7)
+time_until_election = election - current_date
+days_until_election = str(time_until_election.days)
+
+dict(
+    icon = "calendar",
+    color = "light",
+    value = days_until_election,
+) 
+```
+
+## Row 
+
+### Column
+
+
+```{python}
+#| title: Trump Win Probability By State
+#| padding: 0
+fig.show(config=config)
+```
+
+
+### Column 
+
+
+```{python}
+#| title: Todays Simulations Won By Candidate
+fig2.show(config=config)
+```
+
+## Row
+
+```{python}
+#| title: Simulations Won Over Time
+fig3.show(config=config)
+```

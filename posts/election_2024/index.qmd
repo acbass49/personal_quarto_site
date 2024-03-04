@@ -1,0 +1,67 @@
+---
+title: 2024 US Presidential Election Model
+date: "2023-12-31"
+categories: [Python, Stats, Dataviz]
+image: ./nail.png
+title-block-banner: false
+date-modified: today
+freeze: false
+execute: 
+    echo: false
+    warning: false
+    output: true
+---
+
+There are a lot of election models out there - [fivethirtyeight](https://projects.fivethirtyeight.com/polls/president-general/), [The Cook Political Report](https://www.cookpolitical.com/ratings), and [Decision Desk](https://elections2024.thehill.com/national/biden_trump_general) to name a few. So what am I doing here?
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&f=1&ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&ipo=images){width=100%}
+
+#### TLDR
+
+View my personal election model in my dashboard 👉👉 [here](/./projects/election_model_2024/index.qmd) 👈👈
+
+#### The Problem
+
+Well, it may be the start of a tradition at this point since I did one [last presidential election](/./projects/election_model/index.qmd) and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other's models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information often isn't available.
+
+#### What I did
+
+My goal was to create a model that is based exclusively on **recent quality polling**, and that's it! No mysterious variables thrown into already complex models; no sensitive consumer data that feels like violations of privacy; and, no blindly trusting an invisible methodology where you can't possibly recreate the model. **Since I finished data science school within the last four years, I decided to take a more rigourous approach than last time which I write about [here](./methodology.pdf) and code up [here](https://github.com/acbass49/Election2024)**. Overall, the purpose is to give an educated guess of what would happen if the election were held each day. I also just like this kinda thing 😂.
+
+:::{.callout-note}
+The dashboard is part of an automated data pipeline that updates each day until the election. So check back soon! Each day at around 5am, the charts are updated with the latest quality polling data.
+:::
+
+-----------------------------------
+
+#### Miscellaneous Dashboard and Election Notes
+
+- I simulate the election 50,000 times each day based off of modeled probabilities of Trump winnin each state. The model isn't necessarily a forecast because I am simulating the election as if it were held the present day.
+- Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
+- See how the histogram of daily EC vote distribution is more spikey than smooth? This is because some outcomes with even 1 EC point difference can be more likely given how state groupings naturally divide out.
+- Watch states like Georgia and Arizona closely which had unexpected results last election. Also, keep an eye on light colored states where the winner is more uncertain!
+- Districts from States using the [congressional district method](https://en.wikipedia.org/wiki/United_States_Electoral_College#Congressional_district_method) are not included on the map, but they are included in the model!
+- I decided to create a confidence interval around the final graph of win percentages per candidate tracked over time. To accomplish this, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure for a confidence interval, but should provide a sense of possible win percentages day by day.
+
+Thanks for viewing this post! Check back soon for more updates. You can see when the data was last modified at the top. Feel free to share thoughts, comments, or your predictions below.
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+    this.page.url = 'https://alexbass.me/posts/election_2024/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'election_2024'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alexbassc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async></script>
