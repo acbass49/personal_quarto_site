@@ -1,5 +1,5 @@
 ---
-title: "2024 Presidential Election Model"
+title: "2024 Presidential Election Dashboard"
 date: "2023-12-31"
 categories: [Python, Stats, Dataviz]
 image: ./nail.png
@@ -177,7 +177,7 @@ fig3.add_traces([go.Scatter(
 
 ## Row
 
-I created this dashboard to visualize my 2024 Presidential Election Model data. **Hover over each chart for more information.** Read my blog write up [here](/./posts/election_2024/index.qmd), methodology [here](/./posts/election_2024/methodology.pdf), and view my code [here](https://github.com/acbass49/Election2024). **Please note that this dashboard is updated daily using the latest quality polls.**
+I created this dashboard to visualize my 2024 Presidential Election Model data. Each day, using the latest quality polling data, I estimate a model to predict the election and generate predictions. Read my blog write up [here](/./posts/election_2024/index.qmd), methodology [here](/./posts/election_2024/methodology.pdf), and view my code [here](https://github.com/acbass49/Election2024). **Hover over each chart for more information and remeber to check back soon!**
 
 ## Row
 
