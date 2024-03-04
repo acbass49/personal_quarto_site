@@ -31,6 +31,10 @@ tracking_data = pd.read_csv("https://raw.githubusercontent.com/acbass49/Election
 simulation_data = pd.read_csv("https://raw.githubusercontent.com/acbass49/Election2024/main/data/simulation_data.csv")
 ```
 
+#### TLDR
+
+View my personal election model in the graphs below or on my dashboard [here](/./projects/election_model_2024/dash.qmd)
+
 #### The Problem
 
 Well, it may be the start of a tradition at this point since I did one [last presidential election](/./projects/election_model/index.qmd) and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other's models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information isn't available.

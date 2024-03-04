@@ -20,6 +20,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/election_model_2024/dash.html",
       "/projects/election_model_2024/index.html",
       "/projects/internet_archive/index.html",
       "/projects/bayesian_county/index.html",
