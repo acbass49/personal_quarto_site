@@ -66,7 +66,8 @@ fig2.update_layout(
 #         x=0.01
 # )
 )
-
+fig2.update_yaxes(fixedrange=True)
+fig2.update_xaxes(fixedrange=True)
 #Figure 3
 
 from datetime import timedelta

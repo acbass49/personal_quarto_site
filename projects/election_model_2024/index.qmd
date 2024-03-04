@@ -44,6 +44,8 @@ fig.update_layout(
     geo_scope='usa', # limite map scope to USA
     title_x=0.5
 );
+fig.update_yaxes(fixedrange=True)
+fig.update_xaxes(fixedrange=True)
 
 # Figure 2
 win_perc = sum(simulation_data['points']>=270)/simulation_data.shape[0]
@@ -64,7 +66,8 @@ fig2.update_layout(
 #         x=0.01
 # )
 )
-
+fig2.update_yaxes(fixedrange=True)
+fig2.update_xaxes(fixedrange=True)
 #Figure 3
 
 from datetime import timedelta
@@ -136,6 +139,8 @@ fig3.update_yaxes(
     title_text = "Simulations Won(%)",
     ticksuffix="%"
 )
+fig3.update_yaxes(fixedrange=True)
+fig3.update_xaxes(fixedrange=True)
 
 fig3.add_traces([go.Scatter(
         x = tracking_data.query('Candidate == "Trump"')['Date'], 
