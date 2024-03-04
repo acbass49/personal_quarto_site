@@ -1,10 +1,9 @@
 ---
-title: 2024 US Presidential Election Model
-date: "2023-12-31"
+title: 2024 Presidential Election Model Writeup
+date: "2024-03-04"
 categories: [Python, Stats, Dataviz]
-image: ./nail.png
+image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&f=1&ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&ipo=images
 title-block-banner: false
-date-modified: today
 freeze: false
 execute: 
     echo: false
@@ -38,12 +37,18 @@ The dashboard is part of an automated data pipeline that updates each day until 
 
 - I simulate the election 50,000 times each day based off of modeled probabilities of Trump winnin each state. The model isn't necessarily a forecast because I am simulating the election as if it were held the present day.
 - Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
+
+##### Histogram Notes
 - See how the histogram of daily EC vote distribution is more spikey than smooth? This is because some outcomes with even 1 EC point difference can be more likely given how state groupings naturally divide out.
+
+##### Choropleth Map Notes
 - Watch states like Georgia and Arizona closely which had unexpected results last election. Also, keep an eye on light colored states where the winner is more uncertain!
 - Districts from States using the [congressional district method](https://en.wikipedia.org/wiki/United_States_Electoral_College#Congressional_district_method) are not included on the map, but they are included in the model!
+
+##### Win Perc. Over Time Graph Notes
 - I decided to create a confidence interval around the final graph of win percentages per candidate tracked over time. To accomplish this, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure for a confidence interval, but should provide a sense of possible win percentages day by day.
 
-Thanks for viewing this post! Check back soon for more updates. You can see when the data was last modified at the top. Feel free to share thoughts, comments, or your predictions below.
+Thanks for viewing this post! Check back soon for more updates [on the dashboard](/./projects/election_model_2024/index.qmd). Feel free to share thoughts, comments, or your predictions below.
 
 
 <div id="disqus_thread"></div>

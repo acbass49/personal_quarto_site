@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-12-31">
+<meta name="dcterms.date" content="2024-03-04">
 
-<title>alexbass.me - 2024 US Presidential Election Model</title>
+<title>alexbass.me - 2024 Presidential Election Model Writeup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="alexbass.me - 2024 US Presidential Election Model">
+<meta name="twitter:title" content="alexbass.me - 2024 Presidential Election Model Writeup">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://alexbass.me/posts/election_2024/nail.png">
+<meta name="twitter:image" content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&amp;f=1&amp;ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&amp;ipo=images">
 <meta name="twitter:creator" content="@acbass49">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">2024 US Presidential Election Model</h1>
+<h1 class="title">2024 Presidential Election Model Writeup</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Python</div>
     <div class="quarto-category">Stats</div>
@@ -147,16 +147,10 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 31, 2023</p>
+      <p class="date">March 4, 2024</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 4, 2024</p>
-    </div>
-  </div>
     
   </div>
   
@@ -198,12 +192,26 @@ Note
 <ul>
 <li>I simulate the election 50,000 times each day based off of modeled probabilities of Trump winnin each state. The model isn’t necessarily a forecast because I am simulating the election as if it were held the present day.</li>
 <li>Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don’t count the other out!</li>
+</ul>
+<section id="histogram-notes" class="level5">
+<h5 class="anchored" data-anchor-id="histogram-notes">Histogram Notes</h5>
+<ul>
 <li>See how the histogram of daily EC vote distribution is more spikey than smooth? This is because some outcomes with even 1 EC point difference can be more likely given how state groupings naturally divide out.</li>
+</ul>
+</section>
+<section id="choropleth-map-notes" class="level5">
+<h5 class="anchored" data-anchor-id="choropleth-map-notes">Choropleth Map Notes</h5>
+<ul>
 <li>Watch states like Georgia and Arizona closely which had unexpected results last election. Also, keep an eye on light colored states where the winner is more uncertain!</li>
 <li>Districts from States using the <a href="https://en.wikipedia.org/wiki/United_States_Electoral_College#Congressional_district_method">congressional district method</a> are not included on the map, but they are included in the model!</li>
+</ul>
+</section>
+<section id="win-perc.-over-time-graph-notes" class="level5">
+<h5 class="anchored" data-anchor-id="win-perc.-over-time-graph-notes">Win Perc. Over Time Graph Notes</h5>
+<ul>
 <li>I decided to create a confidence interval around the final graph of win percentages per candidate tracked over time. To accomplish this, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure for a confidence interval, but should provide a sense of possible win percentages day by day.</li>
 </ul>
-<p>Thanks for viewing this post! Check back soon for more updates. You can see when the data was last modified at the top. Feel free to share thoughts, comments, or your predictions below.</p>
+<p>Thanks for viewing this post! Check back soon for more updates <a href="../../projects/election_model_2024/index.html">on the dashboard</a>. Feel free to share thoughts, comments, or your predictions below.</p>
 <div id="disqus_thread">
 
 </div>
@@ -228,6 +236,7 @@ Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">
 <script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async=""></script>
 
 
+</section>
 </section>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script></main> <!-- /main -->

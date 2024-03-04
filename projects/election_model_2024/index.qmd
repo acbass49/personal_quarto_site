@@ -42,7 +42,8 @@ config = {'displayModeBar': False, 'scrollZoom': False}
 fig.update_layout(
     #title_text = 'hover chart for more info',
     geo_scope='usa', # limite map scope to USA
-    title_x=0.5
+    title_x=0.5,
+    dragmode = False
 );
 fig.update_yaxes(fixedrange=True)
 fig.update_xaxes(fixedrange=True)
