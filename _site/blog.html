@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -95,6 +102,33 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="alexbass.me - My Blog">
 <meta name="twitter:image" content="https://alexbass.me/about_files/site_photo.jpg">
@@ -106,9 +140,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./graph-up.svg" alt="" class="navbar-logo">
     </a>
@@ -123,25 +157,25 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./files/cv.pdf" rel="" target="">
- <span class="menu-text">CV</span></a>
+    <a class="nav-link" href="./files/cv.pdf"> 
+<span class="menu-text">CV</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -170,7 +204,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 
 
@@ -178,19 +214,19 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Life Hacks,Commentary" data-listing-date-sort="1707264000000" data-listing-file-modified-sort="1709036566715" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="quarto-post image-right" data-index="0" data-categories="Life Hacks,Commentary" data-listing-date-sort="1707282000000" data-listing-file-modified-sort="1708496106480" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1906">
 <div class="thumbnail">
-<p><a href="./posts/masters_degree/index.html"> <img src="https://www.lecole.edu.pk/wp-content/uploads/2021/01/Education-Pic.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/masters_degree/index.html" class="no-external"></a></p><a href="./posts/masters_degree/index.html" class="no-external">
+<p><img src="https://www.lecole.edu.pk/wp-content/uploads/2021/01/Education-Pic.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/masters_degree/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/masters_degree/index.html">
 <h3 class="no-anchor listing-title">
-Do I Need A Master’s Degree For Data Science?
+<a href="./posts/masters_degree/index.html" class="no-external">Do I Need A Master’s Degree For Data Science?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/masters_degree/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Life Hacks'); return false;">
 Life Hacks
@@ -199,29 +235,28 @@ Life Hacks
 Commentary
 </div>
 </div>
-<a href="./posts/masters_degree/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/masters_degree/index.html">
+<a href="./posts/masters_degree/index.html" class="no-external">
 <div class="listing-date">
 Feb 7, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Life Hacks,Commentary" data-listing-date-sort="1697760000000" data-listing-file-modified-sort="1709036566720" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="1" data-categories="Life Hacks,Commentary" data-listing-date-sort="1697778000000" data-listing-file-modified-sort="1708496330135" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1482">
 <div class="thumbnail">
-<p><a href="./posts/path_to_datascience/index.html"> <img src="./posts/path_to_datascience/tile.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/path_to_datascience/index.html" class="no-external"></a></p><a href="./posts/path_to_datascience/index.html" class="no-external">
+<p><img src="./posts/path_to_datascience/tile.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/path_to_datascience/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/path_to_datascience/index.html">
 <h3 class="no-anchor listing-title">
-My Path: Social Science to Data Science
+<a href="./posts/path_to_datascience/index.html" class="no-external">My Path: Social Science to Data Science</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/path_to_datascience/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Life Hacks'); return false;">
 Life Hacks
@@ -230,29 +265,28 @@ Life Hacks
 Commentary
 </div>
 </div>
-<a href="./posts/path_to_datascience/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/path_to_datascience/index.html">
+<a href="./posts/path_to_datascience/index.html" class="no-external">
 <div class="listing-date">
 Oct 20, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Google Trends,Data Journalism,Politics,CICD" data-listing-date-sort="1696377600000" data-listing-file-modified-sort="1709036566722" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="2" data-categories="Google Trends,Data Journalism,Politics,CICD" data-listing-date-sort="1696395600000" data-listing-file-modified-sort="1708992431336" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1398">
 <div class="thumbnail">
-<p><a href="./posts/primary_stream/index.html"> <img src="././about_files/primary_1.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/primary_stream/index.html" class="no-external"></a></p><a href="./posts/primary_stream/index.html" class="no-external">
+<p><img src="././about_files/primary_1.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/primary_stream/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/primary_stream/index.html">
 <h3 class="no-anchor listing-title">
-Primary Nomination Tracking with Google Trends and Stream Graphs
+<a href="./posts/primary_stream/index.html" class="no-external">Primary Nomination Tracking with Google Trends and Stream Graphs</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/primary_stream/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Google Trends'); return false;">
 Google Trends
@@ -267,29 +301,28 @@ Politics
 CICD
 </div>
 </div>
-<a href="./posts/primary_stream/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/primary_stream/index.html">
+<a href="./posts/primary_stream/index.html" class="no-external">
 <div class="listing-date">
 Oct 4, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="CICD,Quarto" data-listing-date-sort="1694044800000" data-listing-file-modified-sort="1709036566711" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="3" data-categories="CICD,Quarto" data-listing-date-sort="1694062800000" data-listing-file-modified-sort="1708826896283" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1407">
 <div class="thumbnail">
-<p><a href="./posts/cicd_primary/index.html"> <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.adictosaltrabajo.com%2Fwp-content%2Fuploads%2F2020%2F10%2Fandroid-github-actions-setup-image-35b6a79fea4a7289acb6796cd4ad05b4.png&amp;f=1&amp;nofb=1&amp;ipt=b02a4ecfb6e2d666f35916b643a6f3e9907e880252d1e19d3eda47521252e9c3&amp;ipo=images" class="thumbnail-image"> </a></p>
+<p><a href="./posts/cicd_primary/index.html" class="no-external"></a></p><a href="./posts/cicd_primary/index.html" class="no-external">
+<p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.adictosaltrabajo.com%2Fwp-content%2Fuploads%2F2020%2F10%2Fandroid-github-actions-setup-image-35b6a79fea4a7289acb6796cd4ad05b4.png&amp;f=1&amp;nofb=1&amp;ipt=b02a4ecfb6e2d666f35916b643a6f3e9907e880252d1e19d3eda47521252e9c3&amp;ipo=images" class="thumbnail-image"></p>
+</a><p><a href="./posts/cicd_primary/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/cicd_primary/index.html">
 <h3 class="no-anchor listing-title">
-Updating Quarto Website Daily with GitHub Actions
+<a href="./posts/cicd_primary/index.html" class="no-external">Updating Quarto Website Daily with GitHub Actions</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/cicd_primary/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('CICD'); return false;">
 CICD
@@ -298,29 +331,28 @@ CICD
 Quarto
 </div>
 </div>
-<a href="./posts/cicd_primary/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/cicd_primary/index.html">
+<a href="./posts/cicd_primary/index.html" class="no-external">
 <div class="listing-date">
 Sep 7, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Life Hacks,Quarto" data-listing-date-sort="1688601600000" data-listing-file-modified-sort="1709036566724" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="4" data-categories="Life Hacks,Quarto" data-listing-date-sort="1688619600000" data-listing-file-modified-sort="1688884981931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="540">
 <div class="thumbnail">
-<p><a href="./posts/simple_analytics/index.html"> <img src="./about_files/Simple_Analytics.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/simple_analytics/index.html" class="no-external"></a></p><a href="./posts/simple_analytics/index.html" class="no-external">
+<p><img src="./about_files/Simple_Analytics.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/simple_analytics/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/simple_analytics/index.html">
 <h3 class="no-anchor listing-title">
-Alternative to Google Analytics for Quarto Folks
+<a href="./posts/simple_analytics/index.html" class="no-external">Alternative to Google Analytics for Quarto Folks</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/simple_analytics/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Life Hacks'); return false;">
 Life Hacks
@@ -329,29 +361,28 @@ Life Hacks
 Quarto
 </div>
 </div>
-<a href="./posts/simple_analytics/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/simple_analytics/index.html">
+<a href="./posts/simple_analytics/index.html" class="no-external">
 <div class="listing-date">
 Jul 6, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Data Journalism,Google Trends,Politics" data-listing-date-sort="1687824000000" data-listing-file-modified-sort="1709036566713" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="5" data-categories="Data Journalism,Google Trends,Politics" data-listing-date-sort="1687842000000" data-listing-file-modified-sort="1688183490202" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1385">
 <div class="thumbnail">
-<p><a href="./posts/google_trends/index.html"> <img src="./about_files/byteman.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/google_trends/index.html" class="no-external"></a></p><a href="./posts/google_trends/index.html" class="no-external">
+<p><img src="./about_files/byteman.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/google_trends/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/google_trends/index.html">
 <h3 class="no-anchor listing-title">
-Google Trends Can Measure Discrimination?
+<a href="./posts/google_trends/index.html" class="no-external">Google Trends Can Measure Discrimination?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/google_trends/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
 Data Journalism
@@ -363,29 +394,28 @@ Google Trends
 Politics
 </div>
 </div>
-<a href="./posts/google_trends/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/google_trends/index.html">
+<a href="./posts/google_trends/index.html" class="no-external">
 <div class="listing-date">
 Jun 27, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Data Journalism,LDS,R" data-listing-date-sort="1675728000000" data-listing-file-modified-sort="1709036566714" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="6" data-categories="Data Journalism,LDS,R" data-listing-date-sort="1675746000000" data-listing-file-modified-sort="1708991343955" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="766">
 <div class="thumbnail">
-<p><a href="./posts/income_myth/index.html"> <img src="./about_files/LDS_myth_0.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/income_myth/index.html" class="no-external"></a></p><a href="./posts/income_myth/index.html" class="no-external">
+<p><img src="./about_files/LDS_myth_0.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/income_myth/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/income_myth/index.html">
 <h3 class="no-anchor listing-title">
-Myth of Latter-day Saint Prosperity
+<a href="./posts/income_myth/index.html" class="no-external">Myth of Latter-day Saint Prosperity</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/income_myth/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
 Data Journalism
@@ -397,29 +427,28 @@ LDS
 R
 </div>
 </div>
-<a href="./posts/income_myth/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/income_myth/index.html">
+<a href="./posts/income_myth/index.html" class="no-external">
 <div class="listing-date">
 Feb 7, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Life Hacks,Quarto" data-listing-date-sort="1662076800000" data-listing-file-modified-sort="1709036566723" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="7" data-categories="Life Hacks,Quarto" data-listing-date-sort="1662094800000" data-listing-file-modified-sort="1697860586451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="740">
 <div class="thumbnail">
-<p><a href="./posts/resume/index.html"> <img src="./about_files/resume_2.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/resume/index.html" class="no-external"></a></p><a href="./posts/resume/index.html" class="no-external">
+<p><img src="./about_files/resume_2.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/resume/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/resume/index.html">
 <h3 class="no-anchor listing-title">
-Resume Template with Quarto and LaTeX
+<a href="./posts/resume/index.html" class="no-external">Resume Template with Quarto and LaTeX</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/resume/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Life Hacks'); return false;">
 Life Hacks
@@ -428,29 +457,28 @@ Life Hacks
 Quarto
 </div>
 </div>
-<a href="./posts/resume/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/resume/index.html">
+<a href="./posts/resume/index.html" class="no-external">
 <div class="listing-date">
 Sep 2, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="Survey Research,Data Journalism,LDS" data-listing-date-sort="1646265600000" data-listing-file-modified-sort="1709036566702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="8" data-categories="Survey Research,Data Journalism,LDS" data-listing-date-sort="1646283600000" data-listing-file-modified-sort="1697077318240" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1395">
 <div class="thumbnail">
-<p><a href="./posts/7_facts/index.html"> <img src="https://www.ldstemple.pics/wp-content/uploads/washington-dc-temple-final-sunset-600x600.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/7_facts/index.html" class="no-external"></a></p><a href="./posts/7_facts/index.html" class="no-external">
+<p><img src="https://www.ldstemple.pics/wp-content/uploads/washington-dc-temple-final-sunset-600x600.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/7_facts/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/7_facts/index.html">
 <h3 class="no-anchor listing-title">
-7 Facts You May Not Know About Latter-Day Saints
+<a href="./posts/7_facts/index.html" class="no-external">7 Facts You May Not Know About Latter-Day Saints</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/7_facts/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Survey Research'); return false;">
 Survey Research
@@ -462,29 +490,28 @@ Data Journalism
 LDS
 </div>
 </div>
-<a href="./posts/7_facts/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/7_facts/index.html">
+<a href="./posts/7_facts/index.html" class="no-external">
 <div class="listing-date">
 Mar 3, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Data Journalism,R" data-listing-date-sort="1618012800000" data-listing-file-modified-sort="1709036566711" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="9" data-categories="Data Journalism,R" data-listing-date-sort="1618030800000" data-listing-file-modified-sort="1708991313178" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="844">
 <div class="thumbnail">
-<p><a href="./posts/facebook_data/index.html"> <img src="./about_files/fb_icon" class="thumbnail-image"> </a></p>
+<p><a href="./posts/facebook_data/index.html" class="no-external"></a></p><a href="./posts/facebook_data/index.html" class="no-external">
+<p><img src="./about_files/fb_icon" class="thumbnail-image"></p>
+</a><p><a href="./posts/facebook_data/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/facebook_data/index.html">
 <h3 class="no-anchor listing-title">
-My Facebook Data… EXPOSED
+<a href="./posts/facebook_data/index.html" class="no-external">My Facebook Data… EXPOSED</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/facebook_data/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
 Data Journalism
@@ -493,29 +520,28 @@ Data Journalism
 R
 </div>
 </div>
-<a href="./posts/facebook_data/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/facebook_data/index.html">
+<a href="./posts/facebook_data/index.html" class="no-external">
 <div class="listing-date">
 Apr 10, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Data Journalism,R,Survey Research,LDS,Politics" data-listing-date-sort="1607472000000" data-listing-file-modified-sort="1709036566714" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="10" data-categories="Data Journalism,R,Survey Research,LDS,Politics" data-listing-date-sort="1607490000000" data-listing-file-modified-sort="1708991236945" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1588">
 <div class="thumbnail">
-<p><a href="./posts/lds_gop/index.html"> <img src="./about_files/iu-3.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/lds_gop/index.html" class="no-external"></a></p><a href="./posts/lds_gop/index.html" class="no-external">
+<p><img src="./about_files/iu-3.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/lds_gop/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/lds_gop/index.html">
 <h3 class="no-anchor listing-title">
-Latter-Day Saints: Growing Pains In The GOP
+<a href="./posts/lds_gop/index.html" class="no-external">Latter-Day Saints: Growing Pains In The GOP</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/lds_gop/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
 Data Journalism
@@ -533,29 +559,28 @@ LDS
 Politics
 </div>
 </div>
-<a href="./posts/lds_gop/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/lds_gop/index.html">
+<a href="./posts/lds_gop/index.html" class="no-external">
 <div class="listing-date">
 Dec 9, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Data Journalism,R" data-listing-date-sort="1594339200000" data-listing-file-modified-sort="1709036566708" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="11" data-categories="Data Journalism,R" data-listing-date-sort="1594357200000" data-listing-file-modified-sort="1708991173140" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1469">
 <div class="thumbnail">
-<p><a href="./posts/cars/index.html"> <img src="https://media.giphy.com/media/rUE9CTmsYMbbOz2MqD/giphy.gif" class="thumbnail-image"> </a></p>
+<p><a href="./posts/cars/index.html" class="no-external"></a></p><a href="./posts/cars/index.html" class="no-external">
+<p><img src="https://media.giphy.com/media/rUE9CTmsYMbbOz2MqD/giphy.gif" class="thumbnail-image"></p>
+</a><p><a href="./posts/cars/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/cars/index.html">
 <h3 class="no-anchor listing-title">
-Ford, Toyota, Honda? Who Takes the Cake?
+<a href="./posts/cars/index.html" class="no-external">Ford, Toyota, Honda? Who Takes the Cake?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/cars/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
 Data Journalism
@@ -564,29 +589,28 @@ Data Journalism
 R
 </div>
 </div>
-<a href="./posts/cars/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/cars/index.html">
+<a href="./posts/cars/index.html" class="no-external">
 <div class="listing-date">
 Jul 10, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Data Journalism,R,Shiny" data-listing-date-sort="1591660800000" data-listing-file-modified-sort="1709036566717" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="12" data-categories="Data Journalism,R,Shiny" data-listing-date-sort="1591678800000" data-listing-file-modified-sort="1708991661540" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1350">
 <div class="thumbnail">
-<p><a href="./posts/mobility/index.html"> <img src="./about_files/iu-2.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/mobility/index.html" class="no-external"></a></p><a href="./posts/mobility/index.html" class="no-external">
+<p><img src="./about_files/iu-2.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/mobility/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/mobility/index.html">
 <h3 class="no-anchor listing-title">
-Mobility in the COVID-19 Era: Urban vs.&nbsp;Rural
+<a href="./posts/mobility/index.html" class="no-external">Mobility in the COVID-19 Era: Urban vs.&nbsp;Rural</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/mobility/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
 Data Journalism
@@ -598,10 +622,9 @@ R
 Shiny
 </div>
 </div>
-<a href="./posts/mobility/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/mobility/index.html">
+<a href="./posts/mobility/index.html" class="no-external">
 <div class="listing-date">
 Jun 9, 2020
 </div>
@@ -692,10 +715,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -705,8 +727,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -719,6 +750,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -762,6 +912,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -787,6 +938,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -855,13 +1032,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./index.html">About Me</a>
+    <a class="nav-link" href="./index.html">
+<p>About Me</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./posts/masters_degree/index.html">Latest Post</a>
+    <a class="nav-link" href="./posts/masters_degree/index.html">
+<p>Latest Post</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./projects/election_model_2024/index.html">Latest Project</a>
+    <a class="nav-link" href="./projects/election_model_2024/index.html">
+<p>Latest Project</p>
+</a>
   </li>  
 </ul>
     </div>
@@ -870,6 +1053,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 
