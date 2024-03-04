@@ -50,7 +50,7 @@ win_perc = sum(simulation_data['points']>=270)/simulation_data.shape[0]
 
 simulation_data = simulation_data.rename(columns={'winner':'Winner'})
 
-fig2 = px.histogram(simulation_data, x="points", color="Winner", height=350,
+fig2 = px.histogram(simulation_data, x="points", color="Winner",
 color_discrete_map={"Trump":"#ec543c", "Biden":"#636bfa"},
 title='')
 fig2.update_layout(
@@ -177,7 +177,7 @@ fig3.add_traces([go.Scatter(
 
 ## Row
 
-I created this dashboard to visualize my 2024 Presidential Election Model data. Each day, using the latest quality polling data, I estimate a model to predict the election and generate predictions. Read my blog write up [here](/./posts/election_2024/index.qmd), methodology [here](/./posts/election_2024/methodology.pdf), and view my code [here](https://github.com/acbass49/Election2024). **Hover over each chart for more information and remeber to check back soon!**
+I created this dashboard to visualize my 2024 Presidential Election Model data. Each day, using the latest quality polling data, I estimate a model to predict the election and generate predictions which you can view here. Read my blog write up [here](/./posts/election_2024/index.qmd), methodology [here](/./posts/election_2024/methodology.pdf), and view my code [here](https://github.com/acbass49/Election2024). **Hover over each chart for more information and remember to check back soon as things can change quickly!**
 
 ## Row
 
