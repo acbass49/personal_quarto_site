@@ -5,6 +5,7 @@ categories: [Python, Stats, Dataviz]
 image: ./nail.png
 title-block-banner: false
 date-modified: today
+freeze: false
 format: 
   dashboard:
     expandable: false
