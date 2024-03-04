@@ -1,5 +1,5 @@
 ---
-title: "2024 Presidential Election Dashboard"
+title: "2024 US Presidential Election Dashboard"
 date: "2023-12-31"
 categories: [Python, Stats, Dataviz, Dashboard]
 image: ./nail.png
