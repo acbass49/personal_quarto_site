@@ -193,7 +193,7 @@ import pytz
 eastern = pytz.timezone('US/Eastern')
 current_time_eastern = datetime.now(eastern)
 Markdown(
-f"""<center>*Data was last updated from [this repo](https://github.com/acbass49/Election2024) on {current_time_eastern.strftime("%B %d, %Y at %I:%M %p")} EST.*</center>""")
+f"""<center>*Data updates daily. It was last updated from [this repo](https://github.com/acbass49/Election2024) on {current_time_eastern.strftime("%B %d, %Y at %I:%M %p")} EST.*</center>""")
 ```
 
 ## Row
