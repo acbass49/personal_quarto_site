@@ -181,7 +181,7 @@ fig3.add_traces([go.Scatter(
 
 ## Row
 
-I created this dashboard to visualize my 2024 Presidential Election Model data. Each day, using the latest quality polling data, I estimate a model to predict the election and generate predictions which you can view here. Read my blog write up [here](/./posts/election_2024/index.qmd), methodology [here](/./posts/election_2024/methodology.pdf), and view my code [here](https://github.com/acbass49/Election2024). **Hover over each chart for more information and remember to check back soon as things can change quickly!**
+I created this dashboard to visualize my 2024 Presidential Election Model data. Each day, using the latest quality polling data, I estimate a model to predict the election and generate predictions which you can view below. Read my blog write up [here](/./posts/election_2024/index.qmd), methodology [here](/./posts/election_2024/methodology.pdf), and view my code [here](https://github.com/acbass49/Election2024) - everything is fully open source. **Hover over each chart for more information and remember to check back soon as things can change quickly!**
 
 ## Row
 
