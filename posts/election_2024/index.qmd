@@ -21,7 +21,7 @@ View my personal election model in my dashboard 👉👉 [here](/./projects/elec
 
 #### The Problem
 
-Well, it may be the start of a tradition at this point since I did one [last presidential election](/./projects/election_model/index.qmd) and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other's models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information often isn't available.
+Well, it may be the start of a tradition at this point since I did one [last US presidential election](/./projects/election_model/index.qmd) and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other's models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information is rarely available.
 
 #### What I did
 
@@ -31,9 +31,11 @@ My goal was to create a model that is based exclusively on **recent quality poll
 The dashboard is part of an automated data pipeline that updates each day until the election. So check back soon! Each day at around 5am, the charts are updated with the latest quality polling data.
 :::
 
+So, thanks for viewing this post! Check back soon for more updates [on the dashboard](/./projects/election_model_2024/index.qmd). Feel free to share thoughts, comments, or your predictions below in the comments section at the end of the page. Below, I included a few notes with more info on each graph in the dashboard in layman's terms.
+
 -----------------------------------
 
-#### Miscellaneous Dashboard and Election Notes
+#### Miscellaneous Technical and Graph Notes
 
 - I simulate the election 50,000 times each day based off of modeled probabilities of Trump winnin each state. The model isn't necessarily a forecast because I am simulating the election as if it were held the present day.
 - Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don't count the other out!
@@ -47,9 +49,6 @@ The dashboard is part of an automated data pipeline that updates each day until 
 
 ##### Win Perc. Over Time Graph Notes
 - I decided to create a confidence interval around the final graph of win percentages per candidate tracked over time. To accomplish this, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure for a confidence interval, but should provide a sense of possible win percentages day by day.
-
-Thanks for viewing this post! Check back soon for more updates [on the dashboard](/./projects/election_model_2024/index.qmd). Feel free to share thoughts, comments, or your predictions below.
-
 
 <div id="disqus_thread"></div>
 <script>

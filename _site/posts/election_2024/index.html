@@ -167,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-problem" class="level4">
 <h4 class="anchored" data-anchor-id="the-problem">The Problem</h4>
-<p>Well, it may be the start of a tradition at this point since I did one <a href="../../projects/election_model/index.html">last presidential election</a> and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other’s models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information often isn’t available.</p>
+<p>Well, it may be the start of a tradition at this point since I did one <a href="../../projects/election_model/index.html">last US presidential election</a> and I thought it actually performed quite well (election was close; my latest simulations also close). But, in the end, I created this because I felt like I was blindly trusting other’s models without understanding them. Many election model builders claim to use demographic patterns, previous election results, economic considerations, polls, etc.. But, beside polling numbers, what data exactly are they using and where does it come from? Also, what do their models actually look like? Ideally, I would want enough information to recreate the model myself to see what they actually did, but that information is rarely available.</p>
 </section>
 <section id="what-i-did" class="level4">
 <h4 class="anchored" data-anchor-id="what-i-did">What I did</h4>
@@ -185,10 +185,11 @@ Note
 <p>The dashboard is part of an automated data pipeline that updates each day until the election. So check back soon! Each day at around 5am, the charts are updated with the latest quality polling data.</p>
 </div>
 </div>
+<p>So, thanks for viewing this post! Check back soon for more updates <a href="../../projects/election_model_2024/index.html">on the dashboard</a>. Feel free to share thoughts, comments, or your predictions below in the comments section at the end of the page. Below, I included a few notes with more info on each graph in the dashboard in layman’s terms.</p>
 <hr>
 </section>
-<section id="miscellaneous-dashboard-and-election-notes" class="level4">
-<h4 class="anchored" data-anchor-id="miscellaneous-dashboard-and-election-notes">Miscellaneous Dashboard and Election Notes</h4>
+<section id="miscellaneous-technical-and-graph-notes" class="level4">
+<h4 class="anchored" data-anchor-id="miscellaneous-technical-and-graph-notes">Miscellaneous Technical and Graph Notes</h4>
 <ul>
 <li>I simulate the election 50,000 times each day based off of modeled probabilities of Trump winnin each state. The model isn’t necessarily a forecast because I am simulating the election as if it were held the present day.</li>
 <li>Notice that you still see both candidates win some simulations. Even though one outcome may be more likely, don’t count the other out!</li>
@@ -211,7 +212,6 @@ Note
 <ul>
 <li>I decided to create a confidence interval around the final graph of win percentages per candidate tracked over time. To accomplish this, I take 1000 samples of the simulations (n=100) and record the 2.5 and 97.5 percentile of the sample means. This is by no means a perfect measure for a confidence interval, but should provide a sense of possible win percentages day by day.</li>
 </ul>
-<p>Thanks for viewing this post! Check back soon for more updates <a href="../../projects/election_model_2024/index.html">on the dashboard</a>. Feel free to share thoughts, comments, or your predictions below.</p>
 <div id="disqus_thread">
 
 </div>
