@@ -4,6 +4,7 @@ project:
 website:
   title: "alexbass.me"
   page-navigation: true
+  margin-header: subscribe.html
   navbar:
     search: false
     left:
