@@ -7,6 +7,8 @@ website:
   comments: 
     giscus: 
       repo: acbass49/personal_quarto_site
+      reactions-enabled: true
+      input-position: bottom
   navbar:
     search: false
     left:
