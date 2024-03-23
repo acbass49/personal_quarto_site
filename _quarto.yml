@@ -18,8 +18,8 @@ website:
         text: Projects
       - href: blog.qmd
         text: Blog
-      - text: CV
-        href: files/cv.pdf
+      - text: Resume
+        href: files/resume.pdf
     logo: graph-up.svg
   favicon: graph-up.svg
   twitter-card:
