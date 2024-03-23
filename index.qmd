@@ -4,6 +4,7 @@ image: profile.jpg
 description-meta: Hi - I'm Alex. Check out my blog!
 twitter-card: 
   image: profile.jpg
+comments: false
 about:
   template: trestles
   links:

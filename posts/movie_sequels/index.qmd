@@ -1,18 +1,17 @@
 ---
-title: 7 Facts You May Not Know About Latter-Day Saints
-date: '2022-03-03'
-categories: [Survey Research, Data Journalism, LDS]
-image: https://www.ldstemple.pics/wp-content/uploads/washington-dc-temple-final-sunset-600x600.jpg
+title: How Successful Are Movie Sequels?
+date: '2024-03-16'
+categories: [Python, Data Journalism]
+image: https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png
 title-block-banner: false
+draft: true
 ---
 
-![](https://www.ldstemple.pics/wp-content/uploads/washington-dc-temple-final-sunset-600x600.jpg){fig-align="center"}
+![](https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png){fig-align="center"}
 
 #### Introduction
 
-Recently, I found myself reading a book by [Jana Riess](https://janariess.com) entitled [The Next Mormons](https://www.amazon.com/Next-Mormons-Millennials-Changing-Church/dp/0190885203). It challenged some of my thoughts, and I generally found it interesting, so I wanted to share some thoughts here. Feel free to comment at the bottom of the page in the chat box and share your thoughts too (I just figured out how to add those to the bottom of my posts, so try it out!).
-
-The premise of the book is describing findings from a survey of 1,156 Latter-day Saints and 540 former Latter-day Saints fielded September 8 - November 21, 2016 from an online panel (more methodology [here](https://thenextmormons.org/methodology/) if interested). I have shared data before from a more recent survey with Latter-day Saints, but this survey was unique because it was only a sample of Latter-day Saints and the survey questions were focused only on Latter-day Saints' experiences and specifically Millennials (yeah I know... I found my niche truly as I am a survey-analyst, Millennial, Latter-day Saint). It reads very academic and summarizes both quantitative figures in charts and qualitative in-person interviews in the written text. Although the survey took place what is now almost 5 years ago, I find the content relevant and interesting now. So if the only church numbers you hear are from the Church Audit Report around General Conference time, you may be in the same place as I was.
+I have been wanting to do this post for a while now. When I was younger, it seemed movies were more of a one - off thing. Now, it feels like almost every movie has a sequel. Lets look at some data to see what's going on here. 
 
 #### Fact 1 : The percent of Latter-day Saints who have served missions has increased
 

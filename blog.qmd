@@ -9,6 +9,7 @@ listing:
   filter-ui: false
   fields: [title, image, categories, author, date]
 page-layout: article
+comments: false
 twitter-card:
   image: /about_files/site_photo.jpg
 title-block-banner: false

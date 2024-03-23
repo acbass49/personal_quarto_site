@@ -4,6 +4,9 @@ project:
 website:
   title: "alexbass.me"
   page-navigation: true
+  comments: 
+    giscus: 
+      repo: acbass49/personal_quarto_site
   navbar:
     search: false
     left:

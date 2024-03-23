@@ -76,23 +76,3 @@ I worked really hard on this project and am honestly proud of the work I did. Ho
 2. It would have been good to use typical survey techniques to account for the non-representative nature of my sample. My sample skewed more interested in the news and more democratic than the US population which is typical of online samples. It would be interesting to experiment with **weighting** in the tabs I reported and perhaps in my statistical models as well. Using **quotas** when fielding would also help with the sample quality. These are things I wasn't thinking about at the time, but now dealing with surveys at my work for some time, this is where my mind goes.
 
 What do you think? Hopefully, you learned something about Star Wars and politics you didn't know before.
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    var disqus_config = function () {
-    this.page.url = 'https://alexbass.me/projects/star_wars_capstone/';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'star_wars_capstone'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://alexbassc.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-<script id="dsq-count-scr" src="//alexbassc.disqus.com/count.js" async></script>
