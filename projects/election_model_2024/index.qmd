@@ -75,7 +75,7 @@ from datetime import timedelta
 tracking_data = tracking_data \
     .rename(columns = {'Win Percentage':'Win_Percentage'}) \
     .assign(
-        Date = lambda x:pd.to_datetime(x.Date,format='%Y-%m-%d'),
+        Date = lambda x:pd.to_datetime(x.Date),
         Win_Percentage = lambda x:round(x.Win_Percentage*100,1),
         LB = lambda x:round(x.LB*100,1),
         UB = lambda x:round(x.UB*100,1),
