@@ -11,6 +11,7 @@
       "/posts/google_trends/index.html",
       "/posts/income_myth/index.html",
       "/posts/resume/index.html",
+      "/posts/bayesian_county/index.html",
       "/posts/7_facts/index.html",
       "/posts/facebook_data/index.html",
       "/posts/lds_gop/index.html",
@@ -23,7 +24,6 @@
     "items": [
       "/projects/election_model_2024/index.html",
       "/projects/internet_archive/index.html",
-      "/projects/bayesian_county/index.html",
       "/projects/covid_update/index.html",
       "/projects/election_model/index.html",
       "/projects/peanuts/index.html",

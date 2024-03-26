@@ -1,0 +1,12 @@
+{
+  "hash": "e65f93783297c94b200de6b280d64335",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: How Successful Are Movie Sequels?\ndate: '2024-03-16'\ncategories: [Python, Data Journalism]\nimage: https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png\ntitle-block-banner: false\ndraft: true\ntoc: true\ntoc-depth: 5\ntoc-title: Page Contents\n---\n\n![](https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png){fig-align=\"center\"}\n\n### Introduction\n\nI've wanted to do this post for a while now. When I was younger, it seemed movies were more of a one-off thing. Now, it feels like almost every movie has a sequel and sometimes many more. Lets look at some data to see what's going on here. For this analysis, I write down a series of questions and answer them one-by-one. Scroll down to see the questions ⬇️\n\n### Data\n\nFor the data, I used [a list created on IMDB](https://www.imdb.com/list/ls003495084/) containing around 1200 movies and sequels. It is not an exhaustive list, but it covers a lot of ground. Unfortunately, this list was missing a few things I wanted such as the movie's revenue, budget, language, production company, and other variables. I joined these in via the [TMBD API](https://developer.themoviedb.org/docs/getting-started). I am happy to share this data with others - just shoot me an email.\n\n:::{.callout-warning}\nThe data from TMDB is community based - meaning people self-report the revenue and some of the other data. Unfortunately, this means that there may be errors at times in the data. There is state-of-the-art data and APIs available, but only through paywalls and I'm not paying 😂\n:::\n\n### Questions\n\n\n##### Are There More Sequels Over Time?\n\n::: {#b810c822 .cell execution_count=2}\n\n::: {.cell-output .cell-output-display}\n![](index_files/figure-html/cell-3-output-1.png){width=585 height=475}\n:::\n:::\n\n\n##### Do Sequels Make More Than The Original?\n\n##### Are Sequels Rated Higher Than The Original?\n\n##### Are Sequels More Popular Than The Original?\n\n##### Do Sequels Typically Recieve Less Budget?\n\n##### Does Budget Affect The Success of Sequels?\n\n##### How Does Time Between a Film and Its Sequel Affect Its Success?\n\n##### Are Sequels Who Keep The Same Director More Or Less Successful?\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -125,7 +125,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Page Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul>
+  <li><a href="#are-there-more-sequels-over-time" id="toc-are-there-more-sequels-over-time" class="nav-link" data-scroll-target="#are-there-more-sequels-over-time">Are There More Sequels Over Time?</a></li>
+  <li><a href="#do-sequels-make-more-than-the-original" id="toc-do-sequels-make-more-than-the-original" class="nav-link" data-scroll-target="#do-sequels-make-more-than-the-original">Do Sequels Make More Than The Original?</a></li>
+  <li><a href="#are-sequels-rated-higher-than-the-original" id="toc-are-sequels-rated-higher-than-the-original" class="nav-link" data-scroll-target="#are-sequels-rated-higher-than-the-original">Are Sequels Rated Higher Than The Original?</a></li>
+  <li><a href="#are-sequels-more-popular-than-the-original" id="toc-are-sequels-more-popular-than-the-original" class="nav-link" data-scroll-target="#are-sequels-more-popular-than-the-original">Are Sequels More Popular Than The Original?</a></li>
+  <li><a href="#do-sequels-typically-recieve-less-budget" id="toc-do-sequels-typically-recieve-less-budget" class="nav-link" data-scroll-target="#do-sequels-typically-recieve-less-budget">Do Sequels Typically Recieve Less Budget?</a></li>
+  <li><a href="#does-budget-affect-the-success-of-sequels" id="toc-does-budget-affect-the-success-of-sequels" class="nav-link" data-scroll-target="#does-budget-affect-the-success-of-sequels">Does Budget Affect The Success of Sequels?</a></li>
+  <li><a href="#how-does-time-between-a-film-and-its-sequel-affect-its-success" id="toc-how-does-time-between-a-film-and-its-sequel-affect-its-success" class="nav-link" data-scroll-target="#how-does-time-between-a-film-and-its-sequel-affect-its-success">How Does Time Between a Film and Its Sequel Affect Its Success?</a></li>
+  <li><a href="#are-sequels-who-keep-the-same-director-more-or-less-successful" id="toc-are-sequels-who-keep-the-same-director-more-or-less-successful" class="nav-link" data-scroll-target="#are-sequels-who-keep-the-same-director-more-or-less-successful">Are Sequels Who Keep The Same Director More Or Less Successful?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -157,80 +177,67 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><div class="quarto-figure quarto-figure-center">
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<p>I have been wanting to do this post for a while now. When I was younger, it seemed movies were more of a one - off thing. Now, it feels like almost every movie has a sequel. Lets look at some data to see what’s going on here.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>I’ve wanted to do this post for a while now. When I was younger, it seemed movies were more of a one-off thing. Now, it feels like almost every movie has a sequel and sometimes many more. Lets look at some data to see what’s going on here. For this analysis, I write down a series of questions and answer them one-by-one. Scroll down to see the questions ⬇️</p>
 </section>
-<section id="fact-1-the-percent-of-latter-day-saints-who-have-served-missions-has-increased" class="level4">
-<h4 class="anchored" data-anchor-id="fact-1-the-percent-of-latter-day-saints-who-have-served-missions-has-increased">Fact 1 : The percent of Latter-day Saints who have served missions has increased</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/NMS post.001.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>For the data, I used <a href="https://www.imdb.com/list/ls003495084/">a list created on IMDB</a> containing around 1200 movies and sequels. It is not an exhaustive list, but it covers a lot of ground. Unfortunately, this list was missing a few things I wanted such as the movie’s revenue, budget, language, production company, and other variables. I joined these in via the <a href="https://developer.themoviedb.org/docs/getting-started">TMBD API</a>. I am happy to share this data with others - just shoot me an email.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>This particular fact wasn’t extremely surprising to me - especially the fact that many more millennial women have served missions because of the age change. I think the reason I wanted to point this one out is that I didn’t realize that a higher percentage of members in general serve missions nowadays. Keep in mind that the Boomer/Silent generation number includes those who have joined later in life who did not have the opportunity to serve as a young missionary; however, the Boomer/Silent generation may also include those who served later in life which younger Latter-day saints have not had the opportunity to.</p>
-<section id="fact-2-there-are-generational-divides-on-when-it-is-ok-to-not-wear-garments" class="level5">
-<h5 class="anchored" data-anchor-id="fact-2-there-are-generational-divides-on-when-it-is-ok-to-not-wear-garments">Fact 2 : There are generational divides on when it is ok to NOT wear garments</h5>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/NMS post.002.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+<div class="callout-title-container flex-fill">
+Warning
 </div>
-<p>To me, this is interesting because Millennials are less likely than Boomer/Silents to have exceptions for wearing the garments except for “When ill or when there is a medical reason.” This makes enough sense as older groups would be more likely to be in situations where they are ill or when there is a medical reason where as for younger folks the situation may not have come up yet. Another interesting tidbit here is that 1/5 millennials excuse wearing garments when sleeping and on vacation when Boomer/Silents do not which I wasn’t necessarily expecting. I was expecting this behavior, but didn’t think there would be generational divides.</p>
+</div>
+<div class="callout-body-container callout-body">
+<p>The data from TMDB is community based - meaning people self-report the revenue and some of the other data. Unfortunately, this means that there may be errors at times in the data. There is state-of-the-art data and APIs available, but only through paywalls and I’m not paying 😂</p>
+</div>
+</div>
 </section>
-<section id="fact-3-less-than-half-of-millennial-latter-day-saints-hold-current-temple-recommends" class="level5">
-<h5 class="anchored" data-anchor-id="fact-3-less-than-half-of-millennial-latter-day-saints-hold-current-temple-recommends">Fact 3 : Less than half of Millennial Latter-day Saints hold current temple recommends</h5>
-<div class="quarto-figure quarto-figure-center">
+<section id="questions" class="level3">
+<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+<section id="are-there-more-sequels-over-time" class="level5">
+<h5 class="anchored" data-anchor-id="are-there-more-sequels-over-time">Are There More Sequels Over Time?</h5>
+<div id="b810c822" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="../.././about_files/NMS post.003.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="index_files/figure-html/cell-3-output-1.png" width="585" height="475" class="figure-img"></p>
 </figure>
 </div>
-<p>There have been portions of my life when I haven’t held a temple recommend, but I think my perception here was that most people had temple recommends. If anything, this was comforting to me knowing that not only do many people not have temple recommends currently, but many people have never held a temple recommend. I think I am impressed by the many people who continue to participate in the religion while not having access to the temple which is probably one of the coolest and most unique aspects of the religion. I honestly wish I had access to the data in this case just to see different breaks here. Are there any differences in gender, Utah/nonUtah, convert/grew up in the church?</p>
+</div>
+</div>
 </section>
-<section id="fact-4-having-premarital-sexual-relations-are-just-as-likely-regardless-of-age-married" class="level5">
-<h5 class="anchored" data-anchor-id="fact-4-having-premarital-sexual-relations-are-just-as-likely-regardless-of-age-married">Fact 4 : Having premarital sexual relations are just as likely regardless of age married</h5>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/NMS post.004.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p>While access to data for nation wide trends is much more readily available for sexual habits / activity (for example, the CDC collects a bunch of data on this if anyone is interested), it is not so much available for small subgroups like Latter-day Saints. This is especially interesting because premarital sexual experience is considered sinful by the LDS church which may discourage members from sharing these things with others which means that it probably is especially difficult to get a sense of how prevalent these behaviors are among members of the church. For me, this breakdown of premarital sexual experience is not necessarily surprising; however, it is surprising that those who are never married and those who are currently married have nearly the same percentage of people in each group. There is an exception for masturbation which is higher among the Latter-day Saints who have never married.</p>
-<p>Latter-day Saints may be cautious reporting these behaviors since they are against church standards, but it is also an anonymous internet-based survey which would eliminate the interviewer effect and create a more open environment for sharing with candidness.</p>
+<section id="do-sequels-make-more-than-the-original" class="level5">
+<h5 class="anchored" data-anchor-id="do-sequels-make-more-than-the-original">Do Sequels Make More Than The Original?</h5>
 </section>
-<section id="fact-5-many-more-millennial-latter-day-saint-mothers-worked-outside-the-home-than-silentboomer-mothers" class="level5">
-<h5 class="anchored" data-anchor-id="fact-5-many-more-millennial-latter-day-saint-mothers-worked-outside-the-home-than-silentboomer-mothers">Fact 5 : Many more millennial Latter-day saint mothers worked outside the home than Silent/Boomer Mothers</h5>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/NMS post.005.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p>This was something that was surprising to me. While this trend is very clear in America - more American women work full-time now than ever before - it is also bleeding over into Latter-day Saint culture as well. More than 1/2 Millennial Latter-day saints grew up with a mother that worked. It would also be interesting to see whether more Latter-day Saint millennial parents were divorced than for other generations, but again, I am only limited to the data that is written about in the book. This is an interesting trend in Latter-day Saint culture and may suggest shifting in what a family means compared to what it was for Silent/Boomers.</p>
+<section id="are-sequels-rated-higher-than-the-original" class="level5">
+<h5 class="anchored" data-anchor-id="are-sequels-rated-higher-than-the-original">Are Sequels Rated Higher Than The Original?</h5>
 </section>
-<section id="fact-6-many-latter-day-saints-have-not-returned-to-the-temple-for-the-deceased-after-own-work-is-done" class="level5">
-<h5 class="anchored" data-anchor-id="fact-6-many-latter-day-saints-have-not-returned-to-the-temple-for-the-deceased-after-own-work-is-done">Fact 6 : Many Latter-day Saints have not returned to the temple for the deceased after own work is done</h5>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/NMS post.006.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p>This was also quite interesting to me. When I served my Latter-day Saint mission in Salt Lake City, Utah, I several people who never returned to the temple after receiving their endowments, but I wasn’t expecting more than 4 in 10 GenXers and Millennials not returning to the temple. Seeing that more Silent/Boomers have returned to the temple is not surprising as they both have more time to do it (being alive longer), may be retired with more time in the day, and I know many older Latter-day Saint folks who attend the temple regularly.</p>
+<section id="are-sequels-more-popular-than-the-original" class="level5">
+<h5 class="anchored" data-anchor-id="are-sequels-more-popular-than-the-original">Are Sequels More Popular Than The Original?</h5>
 </section>
-<section id="fact-7-general-demographic-profile-of-a-former-latter-day-saint" class="level5">
-<h5 class="anchored" data-anchor-id="fact-7-general-demographic-profile-of-a-former-latter-day-saint">Fact 7 : General demographic profile of a former Latter-day Saint</h5>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../.././about_files/NMS post.007.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p>Most of these things were not super interesting to me other than one group. It turns out that those who are less educated are more likely to leave the church. One prominent theory in political science literature is that as a society gets more educated, it will also become less religious and more secular. This trend is clearly seen in Europe, but the US has been interestingly resistant to this trend. And recently researchers are <a href="https://www.wsj.com/articles/theres-no-crisis-of-faith-on-campus-11645714717?st=zkubzj5qwrqf0ti&amp;reflink=desktopwebshare_twitter&amp;fbclid=IwAR0wpySp-wWX73sTW_sGee90_IW30T2TMeMtsimLyzfCXXO2cfbUG53LNHI">finding</a> that college going Americans aren’t necessarily led away from religion. An opposite effect is also found in the Next Mormons Survey where college goers are more likely to stay active.</p>
-<p>There were many more interesting facts in the book and I only included a small subset of things I found interesting here, so I would encourage you to check it out if you are interested in the changing landscape of the Church of Jesus Christ of Latter-day Saints in America. She also just funded a kick starter campaign for funding for another survey focused on <a href="https://www.kickstarter.com/projects/nmswave2/wave-2-of-the-next-mormons-survey?ref=user_menu">former Mormons and why they leave the church</a> which will also be interesting.</p>
-<p>Thanks for reading! Please comment below with thoughts 🙂</p>
+<section id="do-sequels-typically-recieve-less-budget" class="level5">
+<h5 class="anchored" data-anchor-id="do-sequels-typically-recieve-less-budget">Do Sequels Typically Recieve Less Budget?</h5>
+</section>
+<section id="does-budget-affect-the-success-of-sequels" class="level5">
+<h5 class="anchored" data-anchor-id="does-budget-affect-the-success-of-sequels">Does Budget Affect The Success of Sequels?</h5>
+</section>
+<section id="how-does-time-between-a-film-and-its-sequel-affect-its-success" class="level5">
+<h5 class="anchored" data-anchor-id="how-does-time-between-a-film-and-its-sequel-affect-its-success">How Does Time Between a Film and Its Sequel Affect Its Success?</h5>
+</section>
+<section id="are-sequels-who-keep-the-same-director-more-or-less-successful" class="level5">
+<h5 class="anchored" data-anchor-id="are-sequels-who-keep-the-same-director-more-or-less-successful">Are Sequels Who Keep The Same Director More Or Less Successful?</h5>
 
 
 </section>
