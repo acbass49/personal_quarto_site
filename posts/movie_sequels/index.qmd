@@ -8,6 +8,13 @@ draft: true
 toc: true
 toc-depth: 5
 toc-title: Page Contents
+code-links:
+  - text: Notebook
+    icon: code-slash
+    href: ./analysis.ipynb
+  - text: Data
+    icon: download
+    href: ./cleaned_data.csv
 ---
 
 ![](https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png){fig-align="center"}
