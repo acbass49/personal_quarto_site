@@ -19,11 +19,11 @@ code-links:
 
 ![](https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png){fig-align="center"}
 
-### Introduction
+## Introduction
 
 I've wanted to do this post for a while now. When I was younger, it seemed movies were more of a one-off thing. Now, it feels like almost every movie has a sequel and sometimes many more. Lets look at some data to see what's going on here. For this analysis, I write down a series of questions and answer them one-by-one. Scroll down to see the questions ⬇️
 
-### Data
+## Data
 
 For the data, I used [a list created on IMDB](https://www.imdb.com/list/ls003495084/) containing around 1200 movies and sequels. It is not an exhaustive list, but it covers a lot of ground. Unfortunately, this list was missing a few things I wanted such as the movie's revenue, budget, language, production company, and other variables. I joined these in via the [TMBD API](https://developer.themoviedb.org/docs/getting-started). I am happy to share this data with others - just shoot me an email.
 
@@ -31,7 +31,7 @@ For the data, I used [a list created on IMDB](https://www.imdb.com/list/ls003495
 The data from TMDB is community based - meaning people self-report the revenue and some of the other data. Unfortunately, this means that there may be errors at times in the data. There is state-of-the-art data and APIs available, but only through paywalls and I'm not paying 😂
 :::
 
-### Questions
+## Questions
 
 ```{python}
 # | include: false
@@ -44,41 +44,61 @@ import matplotlib.pyplot as plt
 data = pd.read_csv("./cleaned_data.csv")
 ```
 
-##### Are There More Sequels Over Time?
+#### Are There More Sequels Over Time?
 
 ```{python}
 # | echo: false
 # filter to sequels only
+to_join = pd.read_csv("./to_join.csv")
 sequels = data.query("sequel_num >= 2")
 
 # Scatter plot X: Time, Y: Count
 y = sequels.groupby("Year").agg('count')['Title'].to_list()
 x = sequels.groupby("Year").agg('count')['Title'].index.to_list()
 
-sns.lineplot(x=x, y=y)
-plt.title("Sequels Spiked Around 2010")
-plt.xlabel("Year")
-plt.ylabel("Sequel Count")
+#Joining in all movies
+sequels = pd.DataFrame({"Num_sequels":y,"Year":x})
+sequels = sequels.merge(to_join, on="Year", how="left")
+y2 = sequels["Movie_num"]
+
+fig, ax1 = plt.subplots()
+
+color = 'tab:red'
+ax1.set_xlabel('Year')
+ax1.set_ylabel('Sequel Count', color=color)
+ax1.plot(x, y, color=color)
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+ax2.set_ylabel('Movie Count', color=color)  # we already handled the x-label with ax1
+ax2.plot(x, y2, color=color)
+ax2.tick_params(axis='y', labelcolor=color)
+
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
 plt.annotate(
     "Source: IMBD/TMBD",
     xy=(0.7, -0.17),
     xycoords="axes fraction",
 )
+
+plt.title("Sequels Spiked Around 2010")
 plt.show()
 ```
 
 Add some commentary.
 
-##### Do Sequels Make More Than The Original?
+#### Do Sequels Make More Than The Original?
 
-##### Are Sequels Rated Higher Than The Original?
+#### Are Sequels Rated Higher Than The Original?
 
-##### Are Sequels More Popular Than The Original?
+#### Are Sequels More Popular Than The Original?
 
-##### Do Sequels Typically Recieve Less Budget?
+#### Do Sequels Typically Recieve Less Budget?
 
-##### Does Budget Affect The Success of Sequels?
+#### Does Budget Affect The Success of Sequels?
 
-##### How Does Time Between a Film and Its Sequel Affect Its Success?
+#### How Does Time Between a Film and Its Sequel Affect Its Success?
 
-##### Are Sequels Who Keep The Same Director More Or Less Successful?
+#### Are Sequels Who Keep The Same Director More Or Less Successful?
