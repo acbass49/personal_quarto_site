@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -131,6 +165,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#previous-studies" id="toc-previous-studies" class="nav-link" data-scroll-target="#previous-studies">Previous Studies</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
   <ul>
@@ -139,12 +174,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#are-sequels-rated-higher-than-the-original" id="toc-are-sequels-rated-higher-than-the-original" class="nav-link" data-scroll-target="#are-sequels-rated-higher-than-the-original">Are Sequels Rated Higher Than The Original?</a></li>
   <li><a href="#are-sequels-more-popular-than-the-original" id="toc-are-sequels-more-popular-than-the-original" class="nav-link" data-scroll-target="#are-sequels-more-popular-than-the-original">Are Sequels More Popular Than The Original?</a></li>
   <li><a href="#do-sequels-typically-recieve-less-budget" id="toc-do-sequels-typically-recieve-less-budget" class="nav-link" data-scroll-target="#do-sequels-typically-recieve-less-budget">Do Sequels Typically Recieve Less Budget?</a></li>
-  <li><a href="#does-budget-affect-the-success-of-sequels" id="toc-does-budget-affect-the-success-of-sequels" class="nav-link" data-scroll-target="#does-budget-affect-the-success-of-sequels">Does Budget Affect The Success of Sequels?</a></li>
-  <li><a href="#how-does-time-between-a-film-and-its-sequel-affect-its-success" id="toc-how-does-time-between-a-film-and-its-sequel-affect-its-success" class="nav-link" data-scroll-target="#how-does-time-between-a-film-and-its-sequel-affect-its-success">How Does Time Between a Film and Its Sequel Affect Its Success?</a></li>
-  <li><a href="#are-sequels-who-keep-the-same-director-more-or-less-successful" id="toc-are-sequels-who-keep-the-same-director-more-or-less-successful" class="nav-link" data-scroll-target="#are-sequels-who-keep-the-same-director-more-or-less-successful">Are Sequels Who Keep The Same Director More Or Less Successful?</a></li>
+  <li><a href="#which-are-the-most-popular-production-companies-for-making-sequels" id="toc-which-are-the-most-popular-production-companies-for-making-sequels" class="nav-link" data-scroll-target="#which-are-the-most-popular-production-companies-for-making-sequels">Which are the most popular production companies for making sequels?</a></li>
+  <li><a href="#what-predicts-the-success-of-films-revenue-imdb" id="toc-what-predicts-the-success-of-films-revenue-imdb" class="nav-link" data-scroll-target="#what-predicts-the-success-of-films-revenue-imdb">What Predicts The Success of Films (Revenue, IMDB)?</a></li>
+  <li><a href="#feature-how-does-time-between-a-film-and-its-sequel-affect-its-success" id="toc-feature-how-does-time-between-a-film-and-its-sequel-affect-its-success" class="nav-link" data-scroll-target="#feature-how-does-time-between-a-film-and-its-sequel-affect-its-success">FEATURE: How Does Time Between a Film and Its Sequel Affect Its Success?</a></li>
+  <li><a href="#feature-more-budget-bettr-movie" id="toc-feature-more-budget-bettr-movie" class="nav-link" data-scroll-target="#feature-more-budget-bettr-movie">FEATURE: More Budget Bettr Movie?</a></li>
+  <li><a href="#feautre-are-sequels-who-keep-the-same-director-more-or-less-successful" id="toc-feautre-are-sequels-who-keep-the-same-director-more-or-less-successful" class="nav-link" data-scroll-target="#feautre-are-sequels-who-keep-the-same-director-more-or-less-successful">FEAUTRE: Are Sequels Who Keep The Same Director More Or Less Successful?</a></li>
   </ul></li>
+  <li><a href="#questions-for-future-study" id="toc-questions-for-future-study" class="nav-link" data-scroll-target="#questions-for-future-study">Questions for Future Study</a></li>
   </ul>
-<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="./analysis.ipynb"><i class="bi bi-code-slash"></i>Notebook</a></li><li><a href="./cleaned_data.csv"><i class="bi bi-download"></i>Data</a></li></ul></div></nav>
+<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="./analysis.ipynb"><i class="bi bi-code-slash"></i>Notebook</a></li><li><a href="./cleaned_data_w_rev.xlsx"><i class="bi bi-download"></i>Data</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -187,9 +225,21 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>I’ve wanted to do this post for a while now. When I was younger, it seemed movies were more of a one-off thing. Now, it feels like almost every movie has a sequel and sometimes many more. Lets look at some data to see what’s going on here. For this analysis, I write down a series of questions and answer them one-by-one. Scroll down to see the questions ⬇️</p>
 </section>
+<section id="previous-studies" class="level2">
+<h2 class="anchored" data-anchor-id="previous-studies">Previous Studies</h2>
+<p>I started this analysis by looking at what others had done with movie sequels. I found loads of data movie analyses, but few about movie sequels. Here are a few of the links I found:</p>
+<ul>
+<li>I found a <a href="https://www.kaggle.com/code/orimeidler/are-sequel-movies-really-worse">kaggle project</a> looking at this question, and I followed a similar data preparation process (without using French Wikipedia). He looks at one question (Are movie sequels less quality) whereas I look across a series of questions.<br>
+</li>
+<li><a href="https://stephenfollows.com/hollywood-sequels-by-the-numbers/">This one</a> give a good overview of some of the assumptions that go into this type of analysis. For example, “how is a series defined?” and “What do we do with series that have changed significantly over time?”<br>
+</li>
+<li><a href="https://www.kdnuggets.com/2015/10/movie-sequels-better-data-science.html#comments">This one</a> looks interesting, but several of the figures wouldn’t render on my device which referenced the company silk.co. I am skeptical that this website/company still exists.</li>
+</ul>
+</section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>For the data, I used <a href="https://www.imdb.com/list/ls003495084/">a list created on IMDB</a> containing around 1200 movies and sequels. It is not an exhaustive list, but it covers a lot of ground. Unfortunately, this list was missing a few things I wanted such as the movie’s revenue, budget, language, production company, and other variables. I joined these in via the <a href="https://developer.themoviedb.org/docs/getting-started">TMBD API</a>. I am happy to share this data with others - just shoot me an email.</p>
+<p>For the data, I used <a href="https://www.imdb.com/list/ls003495084/">a list created on IMDB</a> containing around 1200 movies and sequels. It is not an exhaustive list, but it covers a lot of ground. Unfortunately, this list was missing a few things I wanted such as the movie’s revenue, budget, language, production company, and other variables. I joined these in via the <a href="https://developer.themoviedb.org/docs/getting-started">TMBD API</a>. The data is available for download on the link to the side.</p>
+<p>In the first chart, I also join in a non-commercial dataset from IMDB which can be accessed <a href="https://datasets.imdbws.com">here</a>.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -200,7 +250,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The data from TMDB is community based - meaning people self-report the revenue and some of the other data. Unfortunately, this means that there may be errors at times in the data. There is state-of-the-art data and APIs available, but only through paywalls and I’m not paying 😂</p>
+<p>The data from TMDB is community based - meaning people self-report the revenue and some of the other data. Unfortunately, this means that there may be errors at times in the data. There are state-of-the-art data and APIs available, but only through paywalls and I’m not paying 😂</p>
 </div>
 </div>
 </section>
@@ -208,7 +258,20 @@ Warning
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
 <section id="are-there-more-sequels-over-time" class="level4">
 <h4 class="anchored" data-anchor-id="are-there-more-sequels-over-time">Are There More Sequels Over Time?</h4>
-<div id="08dbe7e4" class="cell" data-execution_count="2">
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Upon manual inspection of the data, I noticed that the list did not include a lot of movie sequels after 2010 eventhough some exist. For example, my data includes the first 5 Tinker Bell Movies up until 2012, but does not include movies 6-8. <a href="https://www.imdb.com/list/ls063298470/">Yes, there are 8 Tinker Bell movies😂</a>. So, I would interpret the decrease in sequels after 2012 with caution.</p>
+</div>
+</div>
+<div id="012146ce" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -217,31 +280,138 @@ Warning
 </div>
 </div>
 </div>
-<p>Add some commentary.</p>
+<p><strong>Main Takeaway:</strong> It seems there was a spike in sequels after the year 2000. And, the spike in sequels may have come a little bit before the spike in movies, but, generally, sequel production has followed the movie production trend overall and <strong>increased over time</strong>.</p>
 </section>
 <section id="do-sequels-make-more-than-the-original" class="level4">
 <h4 class="anchored" data-anchor-id="do-sequels-make-more-than-the-original">Do Sequels Make More Than The Original?</h4>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I noticed that several movie revenues were missing, so I went through each missing value and looked up the revenue <a href="https://www.the-numbers.com">here</a> which is the recommended resource for TMDB contributors (read more in the <a href="https://www.themoviedb.org/bible/movie/59f3b16d9251414f20000001#59f73b759251416e71000007">TMDB Bible</a>). Originally, there were some significant movies that showed $0 such as Avatar (the blue people version), one of the best performing films ever. I added in all the latest numbers in the data that can be downloaded on the right.</p>
+<p>These number <em>are</em> inflation adjusted using the CPI.</p>
+<p>Below, I define “About the same” when the revenue of the sequel is the same as the original within a 10% margin (+/- 5%)</p>
+</div>
+</div>
+<div id="18cf2135" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-4-output-1.png" width="589" height="475" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Looking at a simple crosstab breakout above, we see that the original movie is likely to make more money than the sequel more than 60% of the time.</p>
+<div id="ee0cd9c9" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-5-output-1.png" width="585" height="475" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>However, if you look at the distributions between the original and the sequel, they look quite similar. There is an exception though: sequels are much more likely to make zero dollars.</p>
+<p><strong>Main Takeaway:</strong> More than 60% of the time, the original outperforms the sequel. If the sequel makes revenue, the sequel may perform similarly to the original in revenue.</p>
 </section>
 <section id="are-sequels-rated-higher-than-the-original" class="level4">
 <h4 class="anchored" data-anchor-id="are-sequels-rated-higher-than-the-original">Are Sequels Rated Higher Than The Original?</h4>
+<div id="7b631cd2" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-6-output-1.png" width="585" height="475" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The IMDB distributions for these are fairly gaussian bell-curve looking. As you can see, the Original is on average rated higher with a median rating of 6.9 whereas the sequel is on averate rated lower with a median of 6.1.</p>
+<p>We are just looking at the overall distributions here, but we can calculate the actual average difference in score which I do below.</p>
+<div id="7bf00b0f" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> imdb_diff(data_part):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  tmp <span class="op">=</span> data_part.sort_values(<span class="st">"sequel_num"</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> tmp.loc[<span class="dv">0</span>,<span class="st">"IMDb Rating"</span>] <span class="op">-</span> tmp.loc[<span class="dv">1</span>,<span class="st">"IMDb Rating"</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>diff <span class="op">=</span> data.query(<span class="st">"sequel_num in [1,2]"</span>) <span class="op">\</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  .groupby(<span class="st">"sequel_group"</span>) <span class="op">\</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  .<span class="bu">apply</span>(imdb_diff) <span class="op">\</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  .mean()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>diff <span class="op">=</span> <span class="bu">round</span>(diff,<span class="dv">2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"On average, the original is rated </span><span class="sc">{</span>diff<span class="sc">}</span><span class="ss"> points higher than its sequel"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>On average, the original is rated 0.77 points higher than its sequel</code></pre>
+</div>
+</div>
 </section>
 <section id="are-sequels-more-popular-than-the-original" class="level4">
 <h4 class="anchored" data-anchor-id="are-sequels-more-popular-than-the-original">Are Sequels More Popular Than The Original?</h4>
+<div id="3d972c49" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-8-output-1.png" width="585" height="475" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Discuss Popularity Score. On TMDB. link is <a href="https://developer.themoviedb.org/docs/popularity-and-trending">here</a>.</p>
 </section>
 <section id="do-sequels-typically-recieve-less-budget" class="level4">
 <h4 class="anchored" data-anchor-id="do-sequels-typically-recieve-less-budget">Do Sequels Typically Recieve Less Budget?</h4>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These number <em>are</em> inflation adjusted using the CPI.</p>
+</div>
+</div>
+<div id="cb613a76" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-9-output-1.png" width="576" height="475" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Takeaway:</strong> Lower numbers of sequels are more common (you can see the N-size decrease as the sequel number increases), but the trend is clear; sequels on average recieve a higher budget.</p>
 </section>
-<section id="does-budget-affect-the-success-of-sequels" class="level4">
-<h4 class="anchored" data-anchor-id="does-budget-affect-the-success-of-sequels">Does Budget Affect The Success of Sequels?</h4>
+<section id="which-are-the-most-popular-production-companies-for-making-sequels" class="level4">
+<h4 class="anchored" data-anchor-id="which-are-the-most-popular-production-companies-for-making-sequels">Which are the most popular production companies for making sequels?</h4>
 </section>
-<section id="how-does-time-between-a-film-and-its-sequel-affect-its-success" class="level4">
-<h4 class="anchored" data-anchor-id="how-does-time-between-a-film-and-its-sequel-affect-its-success">How Does Time Between a Film and Its Sequel Affect Its Success?</h4>
+<section id="what-predicts-the-success-of-films-revenue-imdb" class="level4">
+<h4 class="anchored" data-anchor-id="what-predicts-the-success-of-films-revenue-imdb">What Predicts The Success of Films (Revenue, IMDB)?</h4>
 </section>
-<section id="are-sequels-who-keep-the-same-director-more-or-less-successful" class="level4">
-<h4 class="anchored" data-anchor-id="are-sequels-who-keep-the-same-director-more-or-less-successful">Are Sequels Who Keep The Same Director More Or Less Successful?</h4>
+<section id="feature-how-does-time-between-a-film-and-its-sequel-affect-its-success" class="level4">
+<h4 class="anchored" data-anchor-id="feature-how-does-time-between-a-film-and-its-sequel-affect-its-success">FEATURE: How Does Time Between a Film and Its Sequel Affect Its Success?</h4>
+</section>
+<section id="feature-more-budget-bettr-movie" class="level4">
+<h4 class="anchored" data-anchor-id="feature-more-budget-bettr-movie">FEATURE: More Budget Bettr Movie?</h4>
+</section>
+<section id="feautre-are-sequels-who-keep-the-same-director-more-or-less-successful" class="level4">
+<h4 class="anchored" data-anchor-id="feautre-are-sequels-who-keep-the-same-director-more-or-less-successful">FEAUTRE: Are Sequels Who Keep The Same Director More Or Less Successful?</h4>
+</section>
+</section>
+<section id="questions-for-future-study" class="level2">
+<h2 class="anchored" data-anchor-id="questions-for-future-study">Questions for Future Study</h2>
+<p>Perhaps look into <a href="https://www.themoviedb.org/bible/collection#5a0b1dee9251416561000009">collections</a></p>
 
 
-</section>
 </section>
 
 <div id="mc_embed_shell">

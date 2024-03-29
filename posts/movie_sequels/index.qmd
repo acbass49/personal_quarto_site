@@ -14,7 +14,7 @@ code-links:
     href: ./analysis.ipynb
   - text: Data
     icon: download
-    href: ./cleaned_data.csv
+    href: ./cleaned_data_w_rev.xlsx
 ---
 
 ![](https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png){fig-align="center"}
@@ -23,12 +23,22 @@ code-links:
 
 I've wanted to do this post for a while now. When I was younger, it seemed movies were more of a one-off thing. Now, it feels like almost every movie has a sequel and sometimes many more. Lets look at some data to see what's going on here. For this analysis, I write down a series of questions and answer them one-by-one. Scroll down to see the questions ⬇️
 
+## Previous Studies
+
+I started this analysis by looking at what others had done with movie sequels. I found loads of data movie analyses, but few about movie sequels. Here are a few of the links I found: 
+
+- I found a [kaggle project](https://www.kaggle.com/code/orimeidler/are-sequel-movies-really-worse) looking at this question, and I followed a similar data preparation process (without using French Wikipedia). He looks at one question (Are movie sequels less quality) whereas I look across a series of questions.  
+- [This one](https://stephenfollows.com/hollywood-sequels-by-the-numbers/) give a good overview of some of the assumptions that go into this type of analysis. For example, "how is a series defined?" and "What do we do with series that have changed significantly over time?"  
+- [This one](https://www.kdnuggets.com/2015/10/movie-sequels-better-data-science.html#comments) looks interesting, but several of the figures wouldn't render on my device which referenced the company silk.co. I am skeptical that this website/company still exists.  
+
 ## Data
 
-For the data, I used [a list created on IMDB](https://www.imdb.com/list/ls003495084/) containing around 1200 movies and sequels. It is not an exhaustive list, but it covers a lot of ground. Unfortunately, this list was missing a few things I wanted such as the movie's revenue, budget, language, production company, and other variables. I joined these in via the [TMBD API](https://developer.themoviedb.org/docs/getting-started). I am happy to share this data with others - just shoot me an email.
+For the data, I used [a list created on IMDB](https://www.imdb.com/list/ls003495084/) containing around 1200 movies and sequels. It is not an exhaustive list, but it covers a lot of ground. Unfortunately, this list was missing a few things I wanted such as the movie's revenue, budget, language, production company, and other variables. I joined these in via the [TMBD API](https://developer.themoviedb.org/docs/getting-started). The data is available for download on the link to the side.
+
+In the first chart, I also join in a non-commercial dataset from IMDB which can be accessed [here](https://datasets.imdbws.com).
 
 :::{.callout-warning}
-The data from TMDB is community based - meaning people self-report the revenue and some of the other data. Unfortunately, this means that there may be errors at times in the data. There is state-of-the-art data and APIs available, but only through paywalls and I'm not paying 😂
+The data from TMDB is community based - meaning people self-report the revenue and some of the other data. Unfortunately, this means that there may be errors at times in the data. There are state-of-the-art data and APIs available, but only through paywalls and I'm not paying 😂
 :::
 
 ## Questions
@@ -41,10 +51,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #import my data
-data = pd.read_csv("./cleaned_data.csv")
+data = pd.read_excel("./cleaned_data_w_rev.xlsx")
 ```
 
 #### Are There More Sequels Over Time?
+
+:::{.callout-warning}
+Upon manual inspection of the data, I noticed that the list did not include a lot of movie sequels after 2010 eventhough some exist. For example, my data includes the first 5 Tinker Bell Movies up until 2012, but does not include movies 6-8. [Yes, there are 8 Tinker Bell movies😂](https://www.imdb.com/list/ls063298470/). So, I would interpret the decrease in sequels after 2012 with caution.
+:::
 
 ```{python}
 # | echo: false
@@ -63,7 +77,7 @@ y2 = sequels["Movie_num"]
 
 fig, ax1 = plt.subplots()
 
-color = 'tab:red'
+color = '#342bbb'
 ax1.set_xlabel('Year')
 ax1.set_ylabel('Sequel Count', color=color)
 ax1.plot(x, y, color=color)
@@ -71,7 +85,7 @@ ax1.tick_params(axis='y', labelcolor=color)
 
 ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
 
-color = 'tab:blue'
+color = '#BB3E18'
 ax2.set_ylabel('Movie Count', color=color)  # we already handled the x-label with ax1
 ax2.plot(x, y2, color=color)
 ax2.tick_params(axis='y', labelcolor=color)
@@ -87,18 +101,190 @@ plt.title("Sequels Spiked Around 2010")
 plt.show()
 ```
 
-Add some commentary.
+**Main Takeaway:** It seems there was a spike in sequels after the year 2000. And, the spike in sequels may have come a little bit before the spike in movies, but, generally, sequel production has followed the movie production trend overall and **increased over time**.
 
 #### Do Sequels Make More Than The Original?
 
+:::{.callout-note}
+I noticed that several movie revenues were missing, so I went through each missing value and looked up the revenue [here](https://www.the-numbers.com) which is the recommended resource for TMDB contributors (read more in the [TMDB Bible](https://www.themoviedb.org/bible/movie/59f3b16d9251414f20000001#59f73b759251416e71000007)). Originally, there were some significant movies that showed $0 such as Avatar (the blue people version), one of the best performing films ever. I added in all the latest numbers in the data that can be downloaded on the right.
+
+These number *are* inflation adjusted using the CPI.
+
+Below, I define "About the same" when the revenue of the sequel is the same as the original within a 10% margin (+/- 5%)
+:::
+
+```{python}
+# | echo: false
+
+def seq_diff(data_part):
+  tmp = data_part.sort_values("sequel_num").reset_index(drop=True)
+  val = tmp.loc[0,"adjusted_rev"] - tmp.loc[1,"adjusted_rev"]
+  within_5 = np.multiply(np.divide(tmp.loc[0,"adjusted_rev"],100),5)
+  if val > within_5:
+    r_val = "original made more"
+  elif val < -within_5:
+    r_val = "sequel made more"
+  else:
+    r_val = "about the same"
+  return r_val
+
+fig3_data = data.query("sequel_num in [1,2]") \
+  .groupby("sequel_group") \
+  .apply(seq_diff)
+
+cat_type = pd.api.types.CategoricalDtype(categories=["sequel made more", "about the same", "original made more"], ordered=True)
+
+fig3_data = fig3_data.astype(cat_type)
+
+p = sns.histplot(x=fig3_data, stat="proportion", shrink=.8, color='#251e83')#'#688311',
+plt.title("More Than 60% of the Time, The Original Made More \$\$")
+plt.ylabel("Proportion")
+plt.annotate(
+    "Source: IMBD/TMBD",
+    xy=(0.7, -0.17),
+    xycoords="axes fraction",
+)
+plt.show()
+```
+
+Looking at a simple crosstab breakout above, we see that the original movie is likely to make more money than the sequel more than 60% of the time.
+
+```{python}
+# | echo: false
+fig2_data = data.query("sequel_num in [1,2]") \
+  .assign(log_of_revenue = lambda x:np.log(x.adjusted_rev+1))
+
+p = sns.histplot(data=fig2_data, x="log_of_revenue", hue="sequel_num", element="step", palette = ['#688311', '#251e83'])
+sns.move_legend(p, "upper right", title='Movies', frameon=False)
+plt.title("Bimodal Distrbution at \$0 and e^19 ≈ \$180 Million")
+plt.ylabel("Movie Count")
+plt.xlabel("Log of Revenue")
+plt.annotate(
+    "Source: IMBD/TMBD",
+    xy=(0.7, -0.17),
+    xycoords="axes fraction",
+)
+plt.show()
+```
+
+However, if you look at the distributions between the original and the sequel, they look quite similar. There is an exception though: sequels are much more likely to make zero dollars.
+
+**Main Takeaway:** More than 60% of the time, the original outperforms the sequel. If the sequel makes revenue, the sequel may perform similarly to the original in revenue.
+
 #### Are Sequels Rated Higher Than The Original?
+
+```{python}
+# | echo: false
+fig_data = data.query("sequel_num in [1,2]") \
+  .assign(log_of_revenue = lambda x:np.log(x.revenue+1))
+
+p = sns.histplot(data=fig_data, x="IMDb Rating", hue="sequel_num", element="step", palette = ['#688311', '#251e83'])
+
+og_med = fig_data.query("sequel_num == 1")["IMDb Rating"].median()
+
+p.axvline(og_med, color='#688311', lw=4)
+
+p.text(x=7.2, y=60, s=f'Original Median:\n{og_med}', color='#688311')
+
+sql_med = fig_data.query("sequel_num == 2")["IMDb Rating"].median()
+
+p.axvline(sql_med, color='#251e83', lw=4)
+
+p.text(x=5.9, y=53, s=f'Sequel Median:\n{sql_med}', color='#251e83',
+horizontalalignment = "right")
+
+sns.move_legend(p, "upper left", title='Movies', frameon=False)
+plt.title("On Average, Originals Have Higher Ratings")
+plt.ylabel("Movie Count")
+plt.xlabel("IMDB Score")
+plt.annotate(
+    "Source: IMBD/TMBD",
+    xy=(0.7, -0.17),
+    xycoords="axes fraction",
+)
+plt.show()
+```
+
+The IMDB distributions for these are fairly gaussian bell-curve looking. As you can see, the Original is on average rated higher with a median rating of 6.9 whereas the sequel is on averate rated lower with a median of 6.1.
+
+We are just looking at the overall distributions here, but we can calculate the actual average difference in score which I do below.
+
+```{python}
+def imdb_diff(data_part):
+  tmp = data_part.sort_values("sequel_num").reset_index(drop=True)
+  return tmp.loc[0,"IMDb Rating"] - tmp.loc[1,"IMDb Rating"]
+
+diff = data.query("sequel_num in [1,2]") \
+  .groupby("sequel_group") \
+  .apply(imdb_diff) \
+  .mean()
+
+diff = round(diff,2)
+
+print(f"On average, the original is rated {diff} points higher than its sequel")
+```
 
 #### Are Sequels More Popular Than The Original?
 
+```{python}
+# | echo: false
+fig2_data = data.query("sequel_num in [1,2]") \
+  .assign(log_of_popularity = lambda x:np.log(x.popularity+1))
+
+p = sns.histplot(data=fig2_data, x="log_of_popularity", hue="sequel_num", element="step", palette = ['#688311', '#251e83'])
+sns.move_legend(p, "upper right", title='Movies', frameon=False)
+plt.title("Similar Popularity Scores; Originals Have Slight Edge")
+plt.ylabel("Movie Count")
+plt.xlabel("Log of Popularity")
+plt.annotate(
+    "Source: IMBD/TMBD",
+    xy=(0.7, -0.17),
+    xycoords="axes fraction",
+)
+plt.show()
+```
+
+Discuss Popularity Score. On TMDB. link is [here](https://developer.themoviedb.org/docs/popularity-and-trending).
+
 #### Do Sequels Typically Recieve Less Budget?
 
-#### Does Budget Affect The Success of Sequels?
+:::{.callout-note}
+These number *are* inflation adjusted using the CPI.
+:::
 
-#### How Does Time Between a Film and Its Sequel Affect Its Success?
+```{python}
+# | echo: false
+sequels12 = data.query("sequel_num in [1,2,3,4]")
+x = sequels12.groupby('sequel_num')['adjusted_budget'].agg("mean").index.to_list()
+y = sequels12.groupby('sequel_num')['adjusted_budget'].agg("mean").to_list()
+p = sns.barplot(x=x,y=y, color="#342bbb")
+plt.title("On Average, Sequels Seem to Get More Budget")
+p.text(x=-0.19, y=52_000_000, s="n=410", color = "white")
+p.text(x=0.8, y=57_000_000, s="n=410", color = "white")
+p.text(x=1.8, y=60_000_000, s="n=189", color = "white")
+p.text(x=2.85, y=68_000_000, s="n=77", color = "white")
+plt.ylabel("Budget $")
+plt.xlabel("Sequel Number")
+plt.annotate(
+    "Source: IMBD/TMBD",
+    xy=(0.7, -0.17),
+    xycoords="axes fraction",
+)
+plt.show()
+```
 
-#### Are Sequels Who Keep The Same Director More Or Less Successful?
+**Takeaway:** Lower numbers of sequels are more common (you can see the N-size decrease as the sequel number increases), but the trend is clear; sequels on average recieve a higher budget.
+
+#### Which are the most popular production companies for making sequels?
+
+#### What Predicts The Success of Films (Revenue, IMDB)?
+
+#### FEATURE: How Does Time Between a Film and Its Sequel Affect Its Success?
+
+#### FEATURE: More Budget Bettr Movie?
+
+#### FEAUTRE: Are Sequels Who Keep The Same Director More Or Less Successful?
+
+## Questions for Future Study
+
+Perhaps look into [collections](https://www.themoviedb.org/bible/collection#5a0b1dee9251416561000009)
