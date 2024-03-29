@@ -1,6 +1,7 @@
 ---
 title: How Successful Are Movie Sequels?
 date: '2024-03-16'
+subtitle: Find an overview of the movie sequel landscape looking at the past 100 years of film.
 categories: [Python, Data Journalism]
 image: https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png
 title-block-banner: false
@@ -9,7 +10,7 @@ toc: true
 toc-depth: 5
 toc-title: Page Contents
 code-links:
-  - text: Notebook
+  - text: Python Script
     icon: code-slash
     href: ./analysis.ipynb
   - text: Data
@@ -23,12 +24,14 @@ code-links:
 
 I've wanted to do this post for a while now. When I was younger, it seemed movies were more of a one-off thing. Now, it feels like almost every movie has a sequel and sometimes many more. Lets look at some data to see what's going on here. For this analysis, I write down a series of questions and answer them one-by-one. Scroll down to see the questions ⬇️
 
+This project was fun for me because I worked on it with [a friend "I can add a link here if you want"] who knows a lot more about film than I do. He studied film in school and provided a lot of insight into the post here. From picking interesting questions to ask to interpretting trends and patterns in the data where I was confused, his help was valuable!
+
 ## Previous Studies
 
-I started this analysis by looking at what others had done with movie sequels. I found loads of data movie analyses, but few about movie sequels. Here are a few of the links I found: 
+I started this analysis by looking at what others had done with movie sequels. I found loads of data movie analyses, but few about movie sequels. Here are a few interesting links I found specifically about sequels: 
 
-- I found a [kaggle project](https://www.kaggle.com/code/orimeidler/are-sequel-movies-really-worse) looking at this question, and I followed a similar data preparation process (without using French Wikipedia). He looks at one question (Are movie sequels less quality) whereas I look across a series of questions.  
-- [This one](https://stephenfollows.com/hollywood-sequels-by-the-numbers/) give a good overview of some of the assumptions that go into this type of analysis. For example, "how is a series defined?" and "What do we do with series that have changed significantly over time?"  
+- I found a [kaggle project](https://www.kaggle.com/code/orimeidler/are-sequel-movies-really-worse) looking at this question, and I followed a similar data preparation process (without using French Wikipedia). He takes an indepth look at the question.. Are movie sequels less quality?
+- [This one](https://stephenfollows.com/hollywood-sequels-by-the-numbers/) gives a good overview of some of the assumptions that go into this type of analysis. For example, "how is a series defined?" and "What do we do with series that have changed significantly over time?"  
 - [This one](https://www.kdnuggets.com/2015/10/movie-sequels-better-data-science.html#comments) looks interesting, but several of the figures wouldn't render on my device which referenced the company silk.co. I am skeptical that this website/company still exists.  
 
 ## Data
@@ -41,6 +44,10 @@ In the first chart, I also join in a non-commercial dataset from IMDB which can 
 The data from TMDB is community based - meaning people self-report the revenue and some of the other data. Unfortunately, this means that there may be errors at times in the data. There are state-of-the-art data and APIs available, but only through paywalls and I'm not paying 😂
 :::
 
+## Definition
+
+In this blog post, I primarily look at the first movie in a series and its immediate sequel. There's certainly a lot more to be explored in the dataset, but I choose to filter this way because of its simplicity. I won't have to worry about sparcity as sequel number increases and important differences between case1, original and sequel #1, vs case2, sequel #X and sequel #X+1.
+
 ## Questions
 
 ```{python}
@@ -49,9 +56,28 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import plotly.express as px
+import plotly.graph_objects as go
 
 #import my data
 data = pd.read_excel("./cleaned_data_w_rev.xlsx")
+
+#create a variable for popular production companies
+data.loc[data.production_company.isna(),"production_company"] = ""
+data['warner_bros'] = data.production_company.str.contains("Warner Bros.").astype("int")
+data['fox'] = data.production_company.str.contains("20th Century Fox").astype("int")
+data['mgm'] = data.production_company.str.contains("Metro-Goldwyn-Mayer").astype("int")
+data['universal'] = data.production_company.str.contains("Universal Pictures").astype("int")
+data['disney'] = data.production_company.str.contains("Disney").astype("int")
+data['paramount'] = data.production_company.str.contains("Paramount").astype("int")
+
+chart_later = data[['warner_bros', 'fox', 'mgm', 'universal', 'disney', 'paramount']].sum(axis=0).sort_values(ascending=False)
+
+data['prod_i'] = np.where(data['warner_bros'] == 1, 'Warner Bros',
+  np.where(data['fox'] == 1, 'Fox',
+    np.where(data['universal'] == 1,'Universal',
+      np.where(data['disney'] == 1, "Disney", "Other"))))
+
 ```
 
 #### Are There More Sequels Over Time?
@@ -171,6 +197,79 @@ However, if you look at the distributions between the original and the sequel, t
 
 **Main Takeaway:** More than 60% of the time, the original outperforms the sequel. If the sequel makes revenue, the sequel may perform similarly to the original in revenue.
 
+For fun, I included an interactive figure visualizing the revenue of the first and second films for each series below.
+
+:::{.callout-tip}
+You can hover to see more information about each point in the graph below. Use the toolbar to zoom in and out on certain parts of this graph for further exploration.
+:::
+
+```{python}
+# | echo: false
+fig2_data = data.query("sequel_num in [1,2]") \
+  .assign(log_of_revenue = lambda x:np.log(x.adjusted_rev+1))
+
+def get_rev_1(data_part):
+  tmp = data_part.sort_values("sequel_num").reset_index(drop=True)
+  return tmp.loc[0,"adjusted_rev"]
+
+def get_rev_2(data_part):
+  tmp = data_part.sort_values("sequel_num").reset_index(drop=True)
+  return tmp.loc[1,"adjusted_rev"]
+
+def get_title(data_part):
+  tmp = data_part.sort_values("sequel_num").reset_index(drop=True)
+  return tmp.loc[0,"Title"] + " Series"
+
+def get_prod(data_part):
+  tmp = data_part.sort_values("sequel_num").reset_index(drop=True)
+  return tmp.loc[0,"prod_i"]
+
+x = data.query("sequel_num in [1,2]") \
+  .groupby("sequel_group") \
+  .apply(get_rev_1)
+
+y = data.query("sequel_num in [1,2]") \
+  .groupby("sequel_group") \
+  .apply(get_rev_2)
+
+title = data.query("sequel_num in [1,2]") \
+  .groupby("sequel_group") \
+  .apply(get_title)
+
+prod = data.query("sequel_num in [1,2]") \
+  .groupby("sequel_group") \
+  .apply(get_prod)
+
+plot_data = pd.DataFrame(
+  {
+    'original_revenue':x,
+    'sequel_revenue':y,
+    'series':title,
+    'production_company':prod
+  }
+)
+
+fig = px.scatter(plot_data, x="original_revenue", y="sequel_revenue", color="production_company", hover_name="series", hover_data=[ "original_revenue", 'sequel_revenue','production_company'])
+fig.add_trace(go.Scatter(x=[0, 5_000_000_000], y=[0, 5_000_000_000], mode='lines', name='Profit Comparison Line'))
+fig.update_traces(line_color='black')
+fig.update_layout(
+  title='Original Film VS. First Sequel',
+  xaxis_title="First Film's Revenue (infl. adj.)",
+  yaxis_title="Second Film's Revenue (infl. adj.)",
+  yaxis_range=[0, 5_000_000_000],
+  xaxis_range=[0, 5_000_000_000]
+)
+fig.add_annotation(
+  text="Source: IMDB/TMDB",
+  xref="paper", yref="paper",
+  x=1.5, y=-0.2, showarrow=False)
+fig.update_yaxes(nticks=5)
+fig.show()
+```
+
+<br>
+You may be surprised to see Bambi as the highest original film box office in my sequel dataset. But, remember, this film was first released in 1942 [with a worldwide box office of $268 Million](https://www.the-numbers.com/custom-search?searchterm=bambi). In today's dollars, this is valued a lot higher!
+
 #### Are Sequels Rated Higher Than The Original?
 
 ```{python}
@@ -244,7 +343,11 @@ plt.annotate(
 plt.show()
 ```
 
-Discuss Popularity Score. On TMDB. link is [here](https://developer.themoviedb.org/docs/popularity-and-trending).
+The TMDB popularity score is intended to be a "lifetime popularity score" for movies. It is created by putting together website traffic and human interaction with each movie on TMDB. You can read a more indepth discussion of this metric [here](https://developer.themoviedb.org/docs/popularity-and-trending).
+
+**Takeaway:** According to TMDB's popularity metric, originals and sequels look similar in popularity with the originals perhaps having a slight edge.
+
+I was supprised when this variable was shockingly right skewed. I assumed the creators would have normalized their score, so that is why I log transform here.
 
 #### Do Sequels Typically Recieve Less Budget?
 
@@ -277,6 +380,23 @@ plt.show()
 
 #### Which are the most popular production companies for making sequels?
 
+```{python}
+# | echo: false
+fig, ax = plt.subplots()
+
+y_pos = np.arange(len(chart_later.index))
+ax.barh(y_pos, chart_later.values, align='center')
+ax.set_yticks(y_pos, labels=chart_later.index)
+ax.invert_yaxis()  # labels read top-to-bottom
+ax.set_xlabel('Number of Sequels Made')
+ax.set_title('Every Large Production Studio Makes Sequels')
+plt.show()
+```
+
+**Takeaway:** Of the companies listed, each one dips its fingers in the sequel game. But, according to our data, 20th Century Fox and Universal Studios have made the most sequels.
+
+*Future note: It would be interesting to see the total number of movies each company has made to compare the proportion.*
+
 #### What Predicts The Success of Films (Revenue, IMDB)?
 
 #### FEATURE: How Does Time Between a Film and Its Sequel Affect Its Success?
@@ -285,8 +405,16 @@ plt.show()
 
 #### FEAUTRE: Are Sequels Who Keep The Same Director More Or Less Successful?
 
-## Questions for Future Study
+## Notes for Future Study
 
-Im using [this](https://www.shutterstock.com/color/cayenne) color picker
+I have a few notes here in case any data folks are interested in looking into things further...
 
-Perhaps look into [collections](https://www.themoviedb.org/bible/collection#5a0b1dee9251416561000009)
+- For my analysis, I primarly looked at the original and the first sequel. However, my dataset contains a lot more than that! It would be interesting continuing this analysis looking at how adding more sequels after the first affects things like popularity, IMDB score, and revenue.
+
+- When I was finishing up the analysis I found that TMDB has a part of its API where you can access [collections which are functionally movie series](https://www.themoviedb.org/bible/collection#5a0b1dee9251416561000009). For researchers interested in a more exansive dataset than I compiled, this may be a good place to start.
+
+## Conclusion
+
+Thanks for reading. Feel free to use my code and dataset freely. If you end up using anything, shoot me a message. I'd love to see other analyses and ideas. 
+
+Also, if you enjoyed the read or have any questions about the analysis or other ideas, drop a comment below!
