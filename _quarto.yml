@@ -29,7 +29,7 @@ website:
       - text: "About Me"
         href: index.qmd
       - text: "Latest Post"
-        href: posts/election_2024/index.qmd
+        href: posts/movie_sequels/index.qmd
       - text: Latest Project
         href: projects/election_model_2024/index.qmd
   site-url: "https://alexbass.me"

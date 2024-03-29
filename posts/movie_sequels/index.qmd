@@ -271,6 +271,8 @@ fig.show()
 <br>
 You may be surprised to see Bambi as the highest original film box office in my sequel dataset. But, remember, this film was first released in 1942 [with a worldwide box office of $268 Million](https://www.the-numbers.com/custom-search?searchterm=bambi). In today's dollars, this is valued a lot higher!
 
+This figure also confirms our preliminary findings because more dots appear below the line meaning the original made more revenue more often than not.
+
 #### Are Sequels Rated Higher Than The Original?
 
 ```{python}
