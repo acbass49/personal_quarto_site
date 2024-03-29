@@ -89,6 +89,7 @@ Upon manual inspection of the data, I noticed that the list did not include a lo
 
 ```{python}
 # | echo: false
+# | panel: fill
 # filter to sequels only
 to_join = pd.read_csv("./to_join.csv")
 sequels = data.query("sequel_num >= 2")
@@ -142,6 +143,7 @@ Below, I define "About the same" when the revenue of the sequel is the same as t
 
 ```{python}
 # | echo: false
+# | panel: fill
 
 def seq_diff(data_part):
   tmp = data_part.sort_values("sequel_num").reset_index(drop=True)
@@ -178,6 +180,7 @@ Looking at a simple crosstab breakout above, we see that the original movie is l
 
 ```{python}
 # | echo: false
+# | panel: fill
 fig2_data = data.query("sequel_num in [1,2]") \
   .assign(log_of_revenue = lambda x:np.log(x.adjusted_rev+1))
 
@@ -206,6 +209,7 @@ You can hover to see more information about each point in the graph below. Use t
 
 ```{python}
 # | echo: false
+# | panel: fill
 fig2_data = data.query("sequel_num in [1,2]") \
   .assign(log_of_revenue = lambda x:np.log(x.adjusted_rev+1))
 
@@ -277,6 +281,7 @@ This figure also confirms our preliminary findings because more dots appear belo
 
 ```{python}
 # | echo: false
+# | panel: fill
 fig_data = data.query("sequel_num in [1,2]") \
   .assign(log_of_revenue = lambda x:np.log(x.revenue+1))
 
@@ -330,6 +335,7 @@ print(f"On average, the original is rated {diff} points higher than its sequel")
 
 ```{python}
 # | echo: false
+# | panel: fill
 fig2_data = data.query("sequel_num in [1,2]") \
   .assign(log_of_popularity = lambda x:np.log(x.popularity+1))
 
@@ -360,6 +366,7 @@ These number *are* inflation adjusted using the CPI.
 
 ```{python}
 # | echo: false
+# | panel: fill
 sequels12 = data.query("sequel_num in [1,2,3,4]")
 x = sequels12.groupby('sequel_num')['adjusted_budget'].agg("mean").index.to_list()
 y = sequels12.groupby('sequel_num')['adjusted_budget'].agg("mean").to_list()
@@ -385,6 +392,7 @@ plt.show()
 
 ```{python}
 # | echo: false
+# | panel: fill
 fig, ax = plt.subplots()
 
 y_pos = np.arange(len(chart_later.index))
