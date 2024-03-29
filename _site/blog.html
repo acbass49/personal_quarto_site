@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-image','listing-categories','listing-author','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -185,7 +185,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(16)</span></div><div class="category" data-category="CICD">CICD <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Commentary">Commentary <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Journalism">Data Journalism <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Dataviz">Dataviz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Google Trends">Google Trends <span class="quarto-category-count">(2)</span></div><div class="category" data-category="LDS">LDS <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Life Hacks">Life Hacks <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Politics">Politics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Stats">Stats <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Survey Research">Survey Research <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(16)</span></div><div class="category" data-category="CICD">CICD <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Commentary">Commentary <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Journalism">Data Journalism <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Dataviz">Dataviz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Google Trends">Google Trends <span class="quarto-category-count">(2)</span></div><div class="category" data-category="LDS">LDS <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Life Hacks">Life Hacks <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Politics">Politics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Stats">Stats <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Survey Research">Survey Research <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -214,22 +214,33 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1711434046400" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
+<div class="quarto-post image-right" data-index="0" data-categories="Python,Data Journalism" data-listing-date-sort="1711688400000" data-listing-file-modified-sort="1711753687155" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2089">
 <div class="thumbnail">
-<p><a href="./posts/movie_sequels/analysis.html" class="no-external"></a></p><a href="./posts/movie_sequels/analysis.html" class="no-external">
-<p class="card-img-top"><img src="posts/movie_sequels/analysis_files/figure-html/cell-12-output-2.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/movie_sequels/analysis.html" class="no-external"></a></p>
+<p><a href="./posts/movie_sequels/index.html" class="no-external"></a></p><a href="./posts/movie_sequels/index.html" class="no-external">
+<p><img src="https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/movie_sequels/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/movie_sequels/analysis.html" class="no-external">Movie Sequel Analysis</a>
+<a href="./posts/movie_sequels/index.html" class="no-external">How Successful Are Movie Sequels?</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/movie_sequels/analysis.html" class="no-external"></a>
+<a href="./posts/movie_sequels/index.html" class="no-external">Find an overview of the movie sequel landscape looking at the past 100 years of film.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Journalism'); return false;">
+Data Journalism
+</div>
 </div>
 </div>
 <div class="metadata">
-<p><a href="./posts/movie_sequels/analysis.html" class="no-external"></a></p><a href="./posts/movie_sequels/analysis.html" class="no-external">
+<a href="./posts/movie_sequels/index.html" class="no-external">
+<div class="listing-date">
+Mar 29, 2024
+</div>
 </a>
 </div>
 </div>

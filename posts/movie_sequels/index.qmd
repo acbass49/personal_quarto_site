@@ -1,30 +1,31 @@
 ---
 title: How Successful Are Movie Sequels?
-date: '2024-03-16'
+date: '2024-03-29'
 subtitle: Find an overview of the movie sequel landscape looking at the past 100 years of film.
 categories: [Python, Data Journalism]
 image: https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png
 title-block-banner: false
-draft: true
+draft: false
 toc: true
+freeze: true
 toc-depth: 5
 toc-title: Page Contents
 code-links:
   - text: Python Script
     icon: code-slash
-    href: ./analysis.ipynb
+    href: ./sequel_analysis.py
   - text: Data
-    icon: download
+    icon: database
     href: ./cleaned_data_w_rev.xlsx
 ---
 
-![](https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png){fig-align="center"}
+<center><img src="https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png" width="350" height="350" /></center> 
 
 ## Introduction
 
 I've wanted to do this post for a while now. When I was younger, it seemed movies were more of a one-off thing. Now, it feels like almost every movie has a sequel and sometimes many more. Lets look at some data to see what's going on here. For this analysis, I write down a series of questions and answer them one-by-one. Scroll down to see the questions ⬇️
 
-This project was fun for me because I worked on it with [a friend "I can add a link here if you want"] who knows a lot more about film than I do. He studied film in school and provided a lot of insight into the post here. From picking interesting questions to ask to interpretting trends and patterns in the data where I was confused, his help was valuable!
+This project was fun for me because I worked on it with [a friend](https://i0.wp.com/blog.biostarus.com/wp-content/uploads/2017/07/poop-header.jpg?resize=720%2C340&ssl=1) who knows a lot more about film than I do. He studied film in school and provided a lot of insight into the post here. From picking interesting questions to ask to interpretting trends and patterns in the data where I was confused, his help was valuable!
 
 ## Previous Studies
 
@@ -417,4 +418,4 @@ I have a few notes here in case any data folks are interested in looking into th
 
 Thanks for reading. Feel free to use my code and dataset freely. If you end up using anything, shoot me a message. I'd love to see other analyses and ideas. 
 
-Also, if you enjoyed the read or have any questions about the analysis or other ideas, drop a comment below!
+If you enjoyed the read or have any questions about the analysis or other ideas, drop a comment below!
