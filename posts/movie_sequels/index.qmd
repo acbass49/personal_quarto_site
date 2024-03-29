@@ -287,4 +287,6 @@ plt.show()
 
 ## Questions for Future Study
 
+Im using [this](https://www.shutterstock.com/color/cayenne) color picker
+
 Perhaps look into [collections](https://www.themoviedb.org/bible/collection#5a0b1dee9251416561000009)
