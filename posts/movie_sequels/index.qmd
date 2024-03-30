@@ -141,8 +141,6 @@ plt.savefig("./fig1.png")
 I noticed that several movie revenues were missing, so I went through each missing value and looked up the revenue [here](https://www.the-numbers.com) which is the recommended resource for TMDB contributors (read more in the [TMDB Bible](https://www.themoviedb.org/bible/movie/59f3b16d9251414f20000001#59f73b759251416e71000007)). Originally, there were some significant movies that showed $0 such as Avatar (the blue people version), one of the best performing films ever. I added in all the latest numbers in the data that can be downloaded on the right.
 
 These number *are* inflation adjusted using the CPI.
-
-Below, I define "About the same" when the revenue of the sequel is the same as the original within a 10% margin (+/- 5%)
 :::
 
 
@@ -256,6 +254,9 @@ plt.savefig("./fig2.png")
 ```
 
 ![](./fig2.png)
+:::{.callout-tip}
+Above, I define "About the same" when the revenue of the sequel is the same as the original within a 10% margin (+/- 5%)
+:::
 
 Looking at a simple crosstab breakout above, we see that the original movie is likely to make more money than the sequel more than 60% of the time.
 
