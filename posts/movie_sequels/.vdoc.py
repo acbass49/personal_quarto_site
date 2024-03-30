@@ -147,8 +147,6 @@ plt.savefig("./fig1.png")
 #
 #
 #
-#
-#
 # | echo: false
 # | panel: fill
 fig2_data = data.query("sequel_num in [1,2]") \
@@ -255,6 +253,10 @@ plt.annotate(
     xycoords="axes fraction",
 )
 plt.savefig("./fig2.png")
+#
+#
+#
+#
 #
 #
 #
@@ -411,7 +413,7 @@ plt.savefig("./fig6.png")
 fig, ax = plt.subplots()
 
 y_pos = np.arange(len(chart_later.index))
-ax.barh(y_pos, chart_later.values, align='center')
+ax.barh(y_pos, chart_later.values, align='center',color="#342bbb")
 ax.set_yticks(y_pos, labels=chart_later.index)
 ax.invert_yaxis()  # labels read top-to-bottom
 ax.set_xlabel('Number of Sequels Made')
