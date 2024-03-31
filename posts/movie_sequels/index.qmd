@@ -325,7 +325,7 @@ plt.savefig("./fig4.png")
 
 ![](./fig4.png)
 
-The IMDB distributions for these are fairly gaussian bell-curve looking. As you can see, the Original is on average rated higher with a median rating of 6.9 whereas the sequel is on averate rated lower with a median of 6.1.
+The IMDB distributions for these are fairly gaussian bell-curve looking. As you can see, the original is on average rated higher with a median rating of 6.9 whereas the sequel is on averate rated lower with a median of 6.1.
 
 We are just looking at the overall distributions here, but we can calculate the actual average difference in score which I do below.
 
@@ -718,7 +718,7 @@ I have a few notes here in case any data folks are interested in looking into th
 
 - I mainly focused on revenue as my primary dependent variable. Perhaps exploring IMDB score and popularity would also be interesting dependent variables.
 
-- When I was finishing up the analysis I found that TMDB has a part of its API where you can access [collections which are functionally movie series](https://www.themoviedb.org/bible/collection#5a0b1dee9251416561000009). For researchers interested in a more exansive dataset than I compiled, this may be a good place to start.
+- When I was finishing up the analysis I found that TMDB has a part of its API where you can access [collections which are functionally movie series](https://www.themoviedb.org/bible/collection#5a0b1dee9251416561000009). For researchers interested in a more expansive dataset than I compiled, this may be a good place to start.
 
 - It would be interesting to zoom in on a particular subset. For example, maybe a specific production company has meaningful differences to explore or a specific genre.
 
