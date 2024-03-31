@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import statsmodels.api as sm
+import scipy.stats as stats
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 #import my data
 data = pd.read_excel("./cleaned_data_w_rev.xlsx")
@@ -340,8 +342,6 @@ def rescale(col):
     ncol = col
   return ncol
 
-#data_to_model = data_to_model.apply(rescale)
-
 y = data_to_model.y.values
 X = data_to_model.reset_index() \
   .drop(columns = ['sequel_group', 'level_1', 'y'])
@@ -357,27 +357,118 @@ coef_table = coef_table.tables[1] \
 
 coef_table[['Coefficient', 'Significant']].to_html()
 
+
+############
+# Checking Regression Assumptions #
+############
+
+# 1. Plotting Residuals (Checking Linearity)
+fitted_values = results.fittedvalues
+residuals = results.resid
+plt.scatter(fitted_values, residuals)
+plt.axhline(y=0, color='r', linestyle='-')
+plt.xlabel("Fitted values")
+plt.ylabel("Residuals")
+plt.title("Residuals vs. Fitted")
+plt.show()
+# Things look decent here other than a few outliers.
+
+# 2. Checking Influential Observations
+influence = results.get_influence()
+cooks_distance = influence.cooks_distance
+threshold = 1
+g_x = [x for x in range(len(cooks_distance[0]))]
+g_y = cooks_distance[0]
+text = [[i,x] for i,x in enumerate(g_y) if x>threshold]
+for pair in text:
+  plt.text(x=pair[0]+1, y=pair[1], s=str(pair[0]))
+plt.stem(g_x, g_y, markerfmt=",", use_line_collection=True)
+plt.axhline(y=threshold, color='r', linestyle='-')
+plt.title("Cook's Distance Plot")
+plt.xlabel("Observation Number")
+plt.ylabel("Cook's Distance")
+plt.show()
+# Bambi is a very influential observation - Maybe remove?
+
+# 3. Residuals are Normally Distributed
+stats.probplot(residuals, dist="norm", plot=plt)
+plt.title("Normal Q-Q Plot")
+plt.show()
+#Showing an S-Shape which is indivative of Heavy Tails
+#Using Robust Standard Errors
+
+# 4. Multi-colinearity
+vif = pd.DataFrame()
+vif["Variable"] = X.columns
+vif["VIF"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+#Everything looks good here.
+
+# Given the checks, I'm going to try:
+# 1. Remove the outlier - Bambi
+# 2. Transform the 'Budget_diff' and 'Y' using yeojohnson transformation
+
+# I took this function from here: \/
+# https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PowerTransformer.html
+def yeojohnson_inv(X_trans, lambda_):
+  if X_trans >= 0 and lambda_ == 0:
+    X = np.exp(X_trans) - 1
+  elif X_trans >= 0 and lambda_ != 0:
+    X = (X_trans * lambda_ + 1) ** (1 / lambda_) - 1
+  elif X_trans < 0 and lambda_ != 2:
+    X = 1 - (-(2 - lambda_) * X_trans + 1) ** (1 / (2 - lambda_))
+  elif X_trans < 0 and lambda_ == 2:
+    X = 1 - np.exp(-X_trans)
+  return X
+
+data_to_model = data.query("sequel_num in [1,2]") \
+  .groupby("sequel_group") \
+  .apply(prepare_data)
+data_to_model['budget_diff'], lambda_value_bd =  \
+  stats.yeojohnson(data_to_model.budget_diff.values)
+data_to_model['y'], lambda_value_y =  \
+  stats.yeojohnson(data_to_model['y'])
+X = data_to_model.reset_index(drop=True)
+X = X.iloc[X.index.to_numpy().__ne__(94),:]
+y = X.y.values
+X = X.drop(columns = ['y'])
+X = sm.add_constant(X)
+
+model = sm.OLS(y, X)
+results = model.fit()
+robust_results = results.get_robustcov_results()
+
+coef_table = robust_results.summary2()
+coef_table = coef_table.tables[1] \
+  .assign(Significant = lambda x:x['P>|t|']<0.05) \
+  .rename(columns = {'Coef.':'Coefficient'})
+
+coef_table[['Coefficient', 'Significant']].to_html()
+
 ############
 # Figure 8 #
 ############
 
-rnge = np.array([0,5,10,15])
+rnge = np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
 
 X_varied = {k:[v for x in range(len(rnge))] for k,v in X.mean().to_dict().items()}
 X_varied = pd.DataFrame(X_varied)
 
 X_varied['time_between'] = rnge
 
-predictions = results.get_prediction(exog=X_varied)
+predictions = robust_results.get_prediction(exog=X_varied)
 predictions_summary = predictions.summary_frame(alpha=0.05)
+
+upper = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean_ci_upper']]
+lower = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean_ci_lower']]
+mns = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean']]
 
 plt.fill_between(
   x=rnge,
-  y1=predictions_summary['mean_ci_upper'],
-  y2=predictions_summary['mean_ci_lower'],
+  y1=upper,
+  y2=lower,
   alpha=0.25
 )
-plt.plot(rnge, predictions_summary['mean'])
+plt.plot(rnge, mns)
 plt.title("Bigger Time Gap, Bigger Revenue Loss")
 plt.ylabel("Predicted Revenue of Sequel - Original ($)")
 plt.xlabel("Years Between Original & Sequel")
@@ -387,23 +478,30 @@ plt.savefig("./fig8.png")
 # Figure 9 #
 ############
 
-rnge = np.array([-1_000_000,0,1_000_000])
+#Need to transform range
+#Invert results
+
+rnge = stats.yeojohnson(np.array([-1_000_000,0,1_000_000]),lambda_value_bd)
 
 X_varied = {k:[v for x in range(len(rnge))] for k,v in X.mean().to_dict().items()}
 X_varied = pd.DataFrame(X_varied)
 
 X_varied['budget_diff'] = rnge
 
-predictions = results.get_prediction(exog=X_varied)
+predictions = robust_results.get_prediction(exog=X_varied)
 predictions_summary = predictions.summary_frame(alpha=0.05)
+
+upper = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean_ci_upper']]
+lower = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean_ci_lower']]
+mns = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean']]
 
 plt.fill_between(
   x=rnge,
-  y1=predictions_summary['mean_ci_upper'],
-  y2=predictions_summary['mean_ci_lower'],
+  y1=upper,
+  y2=lower,
   alpha=0.25
 )
-plt.plot(rnge, predictions_summary['mean'])
+plt.plot(rnge, mns)
 plt.title("Budget Difference? - No Impact")
 plt.ylabel("Predicted Revenue of Sequel - Original ($)")
 plt.xlabel("Budget Sequel - Original ($)")
@@ -420,16 +518,20 @@ X_varied = pd.DataFrame(X_varied)
 
 X_varied['same_director'] = rnge
 
-predictions = results.get_prediction(exog=X_varied)
+predictions = robust_results.get_prediction(exog=X_varied)
 predictions_summary = predictions.summary_frame(alpha=0.05)
+
+upper = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean_ci_upper']]
+lower = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean_ci_lower']]
+mns = [yeojohnson_inv(x,lambda_value_y) for x in predictions_summary['mean']]
 
 plt.fill_between(
   x=rnge,
-  y1=predictions_summary['mean_ci_upper'],
-  y2=predictions_summary['mean_ci_lower'],
+  y1=upper,
+  y2=lower,
   alpha=0.25
 )
-plt.plot(rnge, predictions_summary['mean'])
+plt.plot(rnge, mns)
 plt.title("Same Director? - No Impact")
 plt.ylabel("Predicted Revenue of Sequel - Original ($)")
 plt.xlabel("0=Diff Director;1=Same Director")
