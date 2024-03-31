@@ -13,10 +13,10 @@ toc-title: Page Contents
 code-links:
   - text: Python Script
     icon: code-slash
-    href: ./sequel_analysis.py
+    href: /files/sequel_analysis.py
   - text: Data
     icon: database
-    href: ./cleaned_data_w_rev.xlsx
+    href: /files/cleaned_data_w_rev.xlsx
 ---
 
 <center><img src="https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png" width="350" height="350" /></center> 
@@ -724,6 +724,6 @@ I have a few notes here in case any data folks are interested in looking into th
 
 ## Conclusion
 
-Thanks for reading. Feel free to use my code and dataset freely. If you end up using anything, shoot me a message. I'd love to see other analyses and ideas. For technical questions, check the python script. I go in detail checking and validating the regression model used in this post.
+Thanks for reading. Feel free to use my code and dataset freely. If you end up using anything, shoot me a message. I'd love to see other analyses and ideas. For technical questions, check the [python script](/files/sequel_analysis.py) and [download the data](/files/cleaned_data_w_rev.xlsx). I go in detail checking and validating the regression model used in this post.
 
 If you enjoyed the read or have any questions about the analysis or other ideas, drop a comment below!
