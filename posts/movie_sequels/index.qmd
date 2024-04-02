@@ -218,10 +218,10 @@ fig.update_yaxes(nticks=5)
 # Create the button
 button = dict(
   type="buttons",
-  direction="down",
+  direction="right",
   active=0,
-  x=1.37,
-  y=0.5,
+  x=1.25,
+  y=1.15,
   buttons = list([
     dict(label='Unlogged Axes', method='relayout', args=[{'yaxis.type':'linear', 'xaxis.type':'linear'}]),
     dict(label='Logged Axes', method='relayout', args=[{'yaxis.type':'log', 'xaxis.type':'log'}])
