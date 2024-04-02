@@ -64,6 +64,7 @@ import plotly.graph_objects as go
 import statsmodels.api as sm
 import scipy.stats as stats
 from statsmodels.stats.outliers_influence import variance_inflation_factor
+from IPython.display import HTML
 
 #import my data
 data = pd.read_excel("./cleaned_data_w_rev.xlsx")
@@ -80,7 +81,7 @@ data['marvel'] = data.production_company.str.contains("Marvel").astype("int")
 
 chart_later = data[['warner_bros', 'fox', 'mgm', 'universal', 'disney', 'paramount']].sum(axis=0).sort_values(ascending=False)
 
-data['prod_i'] = np.where(data['warner_bros'] == 1, 'Warner Bros',
+data['prod_i'] = np.where(data['warner_bros'] == 1, 'Warner',
   np.where(data['fox'] == 1, 'Fox',
     np.where(data['universal'] == 1,'Universal',
       np.where(data['disney'] == 1, "Disney", "Other"))))
@@ -132,7 +133,7 @@ plt.annotate(
 )
 
 plt.title("Sequels Spiked Around 2010")
-plt.savefig("./fig1.png")
+plt.savefig("./fig1.png",bbox_inches='tight')
 #
 #
 #
@@ -195,8 +196,13 @@ plot_data = pd.DataFrame(
   }
 )
 
+plot_data = plot_data.assign(
+  original_revenue_log = lambda z:np.log(z.original_revenue+1),
+  sequel_revenue_log = lambda z:np.log(z.sequel_revenue+1)
+)
+
 fig = px.scatter(plot_data, x="original_revenue", y="sequel_revenue", color="production_company", hover_name="series", hover_data=[ "original_revenue", 'sequel_revenue','production_company'])
-fig.add_trace(go.Scatter(x=[0, 5_000_000_000], y=[0, 5_000_000_000], mode='lines', name='Profit Comparison Line'))
+fig.add_trace(go.Scatter(x=[0, 5_000_000_000], y=[0, 5_000_000_000], mode='lines', name='Profit Line'))
 fig.update_traces(line_color='black')
 fig.update_layout(
   title='Original Film VS. First Sequel',
@@ -208,8 +214,25 @@ fig.update_layout(
 fig.add_annotation(
   text="Source: IMDB/TMDB",
   xref="paper", yref="paper",
-  x=1.5, y=-0.2, showarrow=False)
+  x=3, y=-0.2, showarrow=False)
 fig.update_yaxes(nticks=5)
+
+# Create the button
+button = dict(
+  type="buttons",
+  direction="down",
+  active=0,
+  x=1.37,
+  y=0.5,
+  buttons = list([
+    dict(label='Unlogged Axis', method='relayout', args=[{'yaxis.type':'linear', 'yaxis.type':'linear'}]),
+    dict(label='Log Both Axis', method='relayout', args=[{'yaxis.type':'log'}])
+  ])
+)
+
+# Add the button to the layout
+fig.update_layout(updatemenus=[button])
+
 fig.show()
 ```
 #
@@ -349,6 +372,8 @@ print(f"On average, the original is rated {diff} points higher than its sequel")
 #
 #
 #
+#
+#
 # | echo: false
 # | include: false
 fig2_data = data.query("sequel_num in [1,2]") \
@@ -401,6 +426,10 @@ plt.annotate(
     xycoords="axes fraction",
 )
 plt.savefig("./fig6.png")
+#
+#
+#
+#
 #
 #
 #
@@ -586,14 +615,28 @@ coef_table = coef_table.tables[1] \
   .assign(Significant = lambda x:x['P>|t|']<0.05) \
   .rename(columns = {'Coef.':'Impact'})
 
-coef_table['Impact'] = np.where(coef_table['Coefficient']>0, '+', '-')
+coef_table['Impact'] = np.where(coef_table['Impact']>0, '+', '-')
 #
 #
 #
 # | echo: false
-# | tbl-cap: Model Summary
-from IPython.display import HTML
-coef_table = coef_table[['Coefficient', 'Significant']].iloc[1:,:]
+coef_table = coef_table[['Impact', 'Significant']].iloc[1:,:]
+coef_table = coef_table.rename(
+  {'same_director':'Original & sequel have the same director',
+  'time_between':'Time between original and sequel',
+  'imdb_diff':'Sequel IMDB score minus original',
+  'action':'Action movie',
+  'horror':'Horror movie',
+  'comedy':'Comedy movie',
+  'romance':'Romance movie',
+  'family':'Family movie',
+  'budget_diff':'Sequel budget minus original',
+  'warner_bros':'Warner Bros movie',
+  'fox':'Fox movie',
+  'disney':'Disney movie',
+  'universal':'Universal movie',
+  'marvel':'Marvel movie'}
+)
 HTML(coef_table.to_html(justify='center').replace('<td>', '<td align="center">'))
 #
 #
