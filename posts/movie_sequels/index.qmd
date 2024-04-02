@@ -235,7 +235,7 @@ fig.show()
 ```
 <br>
 
-**This chart is interactive.** Click or press the different points which each represent a different series. Use the toolbar to zoom in and out on certain parts of this graph for further exploration.
+**This chart is interactive.** Click or press the different points which each represent a different series. Use the toolbar to zoom in and out on certain parts of this graph for further exploration. Also, note there are buttons to log and unlog the axes to get a different view of the data.
 
 Notice how more dots are below the line then above the line, this indicates that the originals typically perform better than the sequels. But, lets look at a few other charts to confirm our thinking.
 
@@ -367,7 +367,7 @@ diff = round(diff,2)
 print(f"On average, the original is rated {diff} points higher than its sequel")
 ```
 
-**Takeaway:** According to our dataset, IMDB Scores are about 0.8 points higher for original movies than for their immediate sequels.
+**Main Takeaway:** According to our dataset, IMDB Scores are about 0.8 points higher for original movies than for their immediate sequels.
 
 #### Are Sequels More Popular Than The Original?
 
@@ -394,7 +394,7 @@ plt.savefig("./fig5.png")
 
 The TMDB popularity score is intended to be a "lifetime popularity score" for movies. It is created by putting together website traffic and human interaction with each movie on TMDB. You can read a more indepth discussion of this metric [here](https://developer.themoviedb.org/docs/popularity-and-trending).
 
-**Takeaway:** According to TMDB's popularity metric, originals and sequels look similar in popularity with the originals perhaps having a slight edge.
+**Main Takeaway:** According to TMDB's popularity metric, originals and sequels look similar in popularity with the originals perhaps having a slight edge.
 
 I was supprised when this variable was shockingly right skewed. I assumed the creators would have normalized their score, so that is why I log transform here.
 
@@ -432,7 +432,7 @@ plt.savefig("./fig6.png")
 For most the analysis, I use just the original and first sequel; however, for this chart and the next, we look include more sequels.
 :::
 
-**Takeaway:** Lower numbers of sequels are more common (you can see the N-size decrease as the sequel number increases), but the trend is clear; sequels on average recieve a higher budget.
+**Main Takeaway:** Lower numbers of sequels are more common (you can see the N-size decrease as the sequel number increases), but the trend is clear; sequels on average recieve a higher budget.
 
 #### Which Production Companies Make The Most Sequels?
 
@@ -452,7 +452,7 @@ plt.savefig("./fig7.png")
 
 ![](./fig7.png)
 
-**Takeaway:** Of the companies listed, each one dips its fingers in the sequel game. But, according to our data, 20th Century Fox and Universal Studios have made the most sequels.
+**Main Takeaway:** Of the companies listed, each one dips its fingers in the sequel game. But, according to our data, 20th Century Fox and Universal Studios have made the most sequels.
 
 *Future note: It would be interesting to see the total number of movies each company has made to compare the proportion.*
 
@@ -680,7 +680,7 @@ plt.savefig("./fig8.png")
 ```
 ![](./fig8.png)
 
-**Takeaway:** The answer? It's not good. In fact, our model predicts that for each additional year of waiting, the sequel will lose $10 Million on average.
+**Main Takeaway:** The answer? It's not good. In fact, our model predicts that for each additional year of waiting, the sequel will lose $10 Million on average.
 
 #### Do Sequels With More Budget Fair Better?
 
@@ -714,7 +714,7 @@ plt.savefig("./fig9.png")
 ```
 ![](./fig9.png)
 
-**Takeaway:** As you can see, the line is pretty flat meaning budget does not have a meaningful impact in our model. Though our model's best guess is budget having a positive impact on sequel revenue.
+**Main Takeaway:** As you can see, the line is pretty flat meaning budget does not have a meaningful impact in our model. Though our model's best guess is budget having a positive impact on sequel revenue.
 
 #### Are Sequels Who Keep The Same Director More Or Less Successful?
 
@@ -748,7 +748,7 @@ plt.savefig("./fig10.png")
 ```
 ![](./fig10.png)
 
-**Takeaway:** Our model doesn't find a statistically significant relationship between keeping directors. Interestingly, our model's best guess is a negative impact on sequel revenue when a director is kept.
+**Main Takeaway:** Our model doesn't find a statistically significant relationship between keeping directors. Interestingly, our model's best guess is a negative impact on sequel revenue when a director is kept.
 
 ## Notes for Future Study
 
