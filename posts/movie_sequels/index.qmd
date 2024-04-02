@@ -462,9 +462,7 @@ For this section, I created a statistical model to help answer the next few ques
 
 It is important to keep in mind that this model is predicting the difference in revenue from original to sequel and the factors that influence this difference.
 
-:::{.callout-note}
-You can view my modeling steps and process in my downloadable python script.
-:::
+Here is a table from our statistical model showing us the direction of each variable (Impact) positive or negative and whether the model was able to statistically differentiate the effect from zero (Significant). Generally, we just interpret the rows that are Significant because we are confident these are non-zero effects (either positive or negative).
 
 ```{python}
 # | echo: false
@@ -638,7 +636,9 @@ coef_table = coef_table.rename(
 HTML(coef_table.to_html(justify='center').replace('<td>', '<td align="center">'))
 ```
 
-Here is a table showing us the impact of each variable (Impact) positive or negative and whether the model was able to statistically differentiate the effect from zero (Significant).
+:::{.callout-note}
+You can view my modeling steps and process in my downloadable python script.
+:::
 
 I will note a few things here, but a few of the findings in this table relate to future questions. So will leave those parts for those sections.
 
