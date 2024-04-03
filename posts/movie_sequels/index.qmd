@@ -220,7 +220,7 @@ button = dict(
   type="buttons",
   direction="right",
   active=0,
-  x=0.48,
+  x=1,
   y=1,
   buttons = list([
     dict(label='Unlogged Axes', method='relayout', args=[{'yaxis.type':'linear', 'xaxis.type':'linear'}]),
