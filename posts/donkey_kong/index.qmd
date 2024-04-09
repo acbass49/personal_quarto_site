@@ -24,17 +24,17 @@ code-links:
 
 ![](https://upload.wikimedia.org/wikipedia/en/d/d4/Donkey_Kong_character.png){fig-align="center"}
 
-#### Introduction
+## Introduction
 
 So, a bit ago I was invited to one of those "powerpoint nights" where everyone makes a powerpoint about a topic of thier choice. Growing up, I played a lot of mario games including [Super Smash Bros](https://en.wikipedia.org/wiki/Super_Smash_Bros.) and I always thought Donkey Kong was a funny character, so I decided to do a little research and do my powerpoint on him.
 
-#### Data
+## Data
 
 You're probably wondering why there's a data section. Well, on brand as it were, I decided to look up some video game data and filter to Donkey Kong video games to see if I can make a couple data visualizations for it.
 
 I found [a dataset](https://www.kaggle.com/datasets/gregorut/videogamesales) on kaggle with records for over 16,500 games.
 
-#### DK Origins
+## DK Origins
 
 So, in this process I found out that Donkey Kong was inspired by [King Kong](https://en.wikipedia.org/wiki/King_Kong_(1933_film)) first released in 1933. Turns out, there have been more than a few King Kong films over the years.
 
@@ -46,7 +46,7 @@ Each red dot represents a different king kong movie. Also, I think there may hav
 
 Nintendo was aiming at appealing to a Western Audience and made a character after the hit King Kong franchise called Donkey Kong. They release the first Donkey Kong arcade game in 1981 which was a big hit! It was one of the first games to help Nintendo make its name.
 
-#### SUED!!
+## SUED!!
 
 ![](DKVG.png)
 
@@ -54,7 +54,7 @@ Originally, Donkey Kong looked more neutral like King King as depicted below. Bu
 
 ![](https://64.media.tumblr.com/fc3d0bc2c724c0e02e0782cb66c8f9bd/a2fac7e6e03f528f-d6/s500x750/2671a88124d394c73a281870d6dc0e383f5eba39.jpg){fig-align="center"}
 
-#### Donkey Kong Today
+## Donkey Kong Today
 
 Since that time, Nintendo has made several Donkey Kong video games, but in recent times there have not been as many - last stand alone game in 2014.
 
@@ -70,7 +70,7 @@ Our chart pretty clearly shows sales for other games seem to be a bit more popul
 
 Looking at sales over time, we see that sales have decreased over time hitting an all-time low in the early 2000s. However with the release of some of the later games sales increased significantly.
 
-#### Conclusion
+## Conclusion
 
 Eventhough, we may not see a stand alone DK game again, it's likely that we will see continue to see our king in games like Mario Party and Super Smash Bros.
 
