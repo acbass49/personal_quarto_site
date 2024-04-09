@@ -5,9 +5,8 @@ date: '2024-04-08'
 categories: [Data Journalism, R]
 image: https://upload.wikimedia.org/wikipedia/en/d/d4/Donkey_Kong_character.png
 title-block-banner: false
-draft: false
+draft: true
 toc: true
-freeze: true
 toc-depth: 5
 toc-title: Page Contents
 code-links:
