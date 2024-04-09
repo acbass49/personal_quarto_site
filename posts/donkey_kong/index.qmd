@@ -44,13 +44,13 @@ Each red dot represents a different king kong movie. Also, I think there may hav
 
 ![](kk_films.png)
 
-Nintendo was aiming at appealing to a Western Audience and made a character after the hit King Kong franchise called Donkey Kong. They release the first Donkey Kong arcade game in 1981 which was a big hit! It was one of the first games to help Nintendo make its name.
+Nintendo was aiming at appealing to a western audience and made a character after the hit King Kong franchise called Donkey Kong. They release the first Donkey Kong arcade game in 1981 which was a big hit! It was one of the first games to help Nintendo make its name.
 
 # SUED!!
 
 ![](DKVG.png)
 
-Originally, Donkey Kong looked more neutral like King King as depicted below. But, Universal Studios caught wind of Donkey Kong and its success, and they sued Nintendo in 1984. Fortunately, they won, but Donkey Kong's appearance changed into more of how we recognize him today. Nintendo later trademarked the phrase, "Its on like Donkey Kong!"
+Originally, Donkey Kong looked more neutral like King Kong as depicted below. But, Universal Studios caught wind of Donkey Kong and its success, and they sued Nintendo in 1984. Fortunately, they won, but Donkey Kong's appearance changed into more of how we recognize him today. Nintendo later trademarked the phrase, "Its on like Donkey Kong!"
 
 ![](https://64.media.tumblr.com/fc3d0bc2c724c0e02e0782cb66c8f9bd/a2fac7e6e03f528f-d6/s500x750/2671a88124d394c73a281870d6dc0e383f5eba39.jpg){fig-align="center"}
 
@@ -64,7 +64,7 @@ Since that time, Nintendo has made several Donkey Kong video games, but in recen
 Blue dots represent a stand-alone DK game released.
 :::
 
-Let's look at some data which may give us some hints as to why the slowing down. King Kong movies interestingly have been released just as consistently throughout this same time period which is an interesting contrast to the decrease in King Kong video games. Assuming that King Kong movie sales have stayed about the same over time, this could suggest that Nintendo's Donkey Kong and Universal's King Kong have become separate entities in customer's minds whereas before they may not have been. I know originally I didn't associate the two.
+Let's look at some data which may give us some hints as to why the slowing down. King Kong movies have been released just as consistently throughout this same time period which is an interesting contrast to the decrease in King Kong video games. Assuming that King Kong movie sales have stayed about over time, this could suggest that Nintendo's Donkey Kong and Universal's King Kong have become separate entities in customer's minds whereas before they may not have been. If this were true, it may affect sales on one entity and not the other. I know originally I didn't associate the two.
 
 ![](NintendoSales.png) 
 
