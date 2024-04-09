@@ -78,6 +78,8 @@ Thanks for reading. Feel free to use the data and code for your own purpose.
 
 Also, for fun, I attached the full slide deck I used in case you have your own powerpoint night coming up and haven't prepared.
 
+![](./King.pdf){fig-align="center"}
+
 :::{.callout-warning}
 Resources to download appear in a sidebar that typically does not show on mobile devices. To download these resources, please view website on Desktop.
 :::
