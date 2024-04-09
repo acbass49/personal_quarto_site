@@ -39,7 +39,7 @@ I found [a dataset](https://www.kaggle.com/datasets/gregorut/videogamesales) on 
 So, in this process I found out that Donkey Kong was originally inspired by [King Kong](https://en.wikipedia.org/wiki/King_Kong_(1933_film)) first released in 1933. Turns out, there have been more than a few King Kong films over the years.
 
 :::{.callout-tip}
-Each red dot represents a different king kong movie. Also, I think there may have been a film or two since 2021.
+Each red dot represents a different king kong movie. Also, I think there may have been a film or two since 2021. I made this pptx originally in 2022 I believe.
 :::
 
 ![](kk_films.png)
@@ -60,15 +60,19 @@ Since that time, Nintendo has made several Donkey Kong video games, but in recen
 
 ![](DK_timeline.png)
 
-Let's look at some data which may give us some hints as to why the slowing down. King Kong movies interestingly have been released just as consistently which is an interesting contrast.
+:::{.callout-tip}
+Blue dots represent a stand-alone DK game released.
+:::
+
+Let's look at some data which may give us some hints as to why the slowing down. King Kong movies interestingly have been released just as consistently throughout this same time period which is an interesting contrast to the decrease in King Kong video games. Assuming that King Kong movie sales have stayed about the same over time, this could suggest that Nintendo's Donkey Kong and Universal's King Kong have become separate entities in customer's minds whereas before they may not have been. I know originally I didn't associate the two.
 
 ![](NintendoSales.png) 
 
-Our chart pretty clearly shows sales for other games seem to be a bit more popular.
+Our chart pretty clearly shows sales for other games seem to be a bit more popular looking at all sales in the entire time period of our dataset.
 
 ![](NintendoSalesOverTime.png)
 
-Looking at sales over time, we see that sales have decreased over time hitting an all-time low in the early 2000s. However with the release of some of the later games sales increased significantly.
+Looking at sales over time, we see that sales have decreased over time hitting an all-time low in the early 2000s. However with the release of some of the later DK games sales increased significantly. It is important to note that they made a few stand-alone DK games in the later time period on smaller devices like the 3DS. The games for the smaller devices are a bit cheaper than games for the Wii which may suggest the final number on this chart for DK games is a bit inflated.
 
 # Conclusion
 
