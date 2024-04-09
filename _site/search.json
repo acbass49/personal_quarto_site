@@ -285,5 +285,47 @@
     "title": "Alex Bass",
     "section": "",
     "text": "Hi! My name is Alex Bass. I work as a data scientist at Dynata, a leading polling and market research firm. Recently, I graduated with my Master’s from the University of Virginia in Data Science.\nI find myself doing data analysis and programming projects in my free time, so I created this website for a place to write about data and share projects I work on off the clock.\nWould love to connect if you have any thoughts or comments on my work. Contact me via any of the links 🙂\n\n\n\n\n\n\n\n\n\n\nWant to be notified for new posts? Enter your email address below: *\n\n\n\n\n\n\n\n\n  /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */"
+  },
+  {
+    "objectID": "posts/donkey_kong/index.html#introduction",
+    "href": "posts/donkey_kong/index.html#introduction",
+    "title": "Donkey Kong: King of the Jungle",
+    "section": "Introduction",
+    "text": "Introduction\nSo, a bit ago I was invited to one of those “powerpoint nights” where everyone makes a powerpoint about a topic of thier choice. Growing up, I played a lot of mario games including Super Smash Bros and I always thought Donkey Kong was a funny character, so I decided to do a little research and do my powerpoint on him."
+  },
+  {
+    "objectID": "posts/donkey_kong/index.html#data",
+    "href": "posts/donkey_kong/index.html#data",
+    "title": "Donkey Kong: King of the Jungle",
+    "section": "Data",
+    "text": "Data\nYou’re probably wondering why there’s a data section. Well, on brand as it were, I decided to look up some video game data and filter to Donkey Kong video games to see if I can make a couple data visualizations for it.\nI found a dataset on kaggle with records for over 16,500 games."
+  },
+  {
+    "objectID": "posts/donkey_kong/index.html#dk-origins",
+    "href": "posts/donkey_kong/index.html#dk-origins",
+    "title": "Donkey Kong: King of the Jungle",
+    "section": "DK Origins",
+    "text": "DK Origins\nSo, in this process I found out that Donkey Kong was inspired by King Kong first released in 1933. Turns out, there have been more than a few King Kong films over the years.\n\n\n\n\n\n\nTip\n\n\n\nEach red dot represents a different king kong movie. Also, I think there may have been a film or two since 2021.\n\n\n\nNintendo was aiming at appealing to a Western Audience and made a character after the hit King Kong franchise called Donkey Kong. They release the first Donkey Kong arcade game in 1981 which was a big hit! It was one of the first games to help Nintendo make its name."
+  },
+  {
+    "objectID": "posts/donkey_kong/index.html#sued",
+    "href": "posts/donkey_kong/index.html#sued",
+    "title": "Donkey Kong: King of the Jungle",
+    "section": "SUED!!",
+    "text": "SUED!!\n\nOriginally, Donkey Kong looked more neutral like King King as depicted below. But, Universal Studios caught wind of Donkey Kong and its success, and they sued Nintendo in 1984. Fortunately, they won, but Donkey Kong’s appearance changed into more of how we recognize him today. Nintendo later trademarked the phrase, “Its on like Donkey Kong!”"
+  },
+  {
+    "objectID": "posts/donkey_kong/index.html#donkey-kong-today",
+    "href": "posts/donkey_kong/index.html#donkey-kong-today",
+    "title": "Donkey Kong: King of the Jungle",
+    "section": "Donkey Kong Today",
+    "text": "Donkey Kong Today\nSince that time, Nintendo has made several Donkey Kong video games, but in recent times there have not been as many - last stand alone game in 2014.\n\nLet’s look at some data which may give us some hints as to why the slowing down. King Kong movies interestingly have been released just as consistently which is an interesting contrast.\n\nOur chart pretty clearly shows sales for other games seem to be a bit more popular.\n\nLooking at sales over time, we see that sales have decreased over time hitting an all-time low in the early 2000s. However with the release of some of the later games sales increased significantly."
+  },
+  {
+    "objectID": "posts/donkey_kong/index.html#conclusion",
+    "href": "posts/donkey_kong/index.html#conclusion",
+    "title": "Donkey Kong: King of the Jungle",
+    "section": "Conclusion",
+    "text": "Conclusion\nEventhough, we may not see a stand alone DK game again, it’s likely that we will see continue to see our king in games like Mario Party and Super Smash Bros.\nThanks for reading. Feel free to use the data and code for your own purpose.\nAlso, for fun, I attached the full slide deck I used in case you have your own powerpoint night coming up and haven’t prepared.\n\n\n\n\n\n\nWarning\n\n\n\nResources to download appear in a sidebar that typically does not show on mobile devices. To download these resources, please view website on Desktop."
   }
 ]
