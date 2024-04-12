@@ -2,7 +2,7 @@
 title: How Successful Are Movie Sequels?
 date: '2024-03-29'
 subtitle: Find an overview of the movie sequel landscape looking at the past 100 years of film.
-categories: [Python, Data Journalism]
+categories: [Python, Data Journalism, Dataviz]
 image: https://cdn.pixabay.com/photo/2023/01/12/04/36/cinema-7713265_1280.png
 title-block-banner: false
 draft: false

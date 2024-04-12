@@ -1,7 +1,7 @@
 ---
 title: So Yep... I Made Another Election Model
 date: "2024-03-04"
-categories: [Python, Stats, Dataviz]
+categories: [Python, Stats, Dataviz, Politics]
 image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&f=1&ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&ipo=images
 title-block-banner: false
 freeze: false

@@ -1,7 +1,7 @@
 ---
 title: "My Facebook Data... EXPOSED"
 date: '2021-04-10'
-categories: [Data Journalism, R]
+categories: [Data Journalism, R, Dataviz]
 image: /about_files/fb_icon
 title-block-banner: false
 ---
