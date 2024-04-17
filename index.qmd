@@ -37,4 +37,4 @@ I find myself doing data analysis and programming projects in my free time, so I
 
 Would love to connect if you have any thoughts or comments on my work. Contact me via any of the links 🙂
 
-<a class="twitter-timeline" href="https://twitter.com/acbass49?ref_src=twsrc%5Etfw" data-post-limit="3">Tweets by acbass49</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/acbass49?ref_src=twsrc%5Etfw">Tweets by acbass49</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
