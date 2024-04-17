@@ -36,3 +36,10 @@ Hi! My name is Alex Bass. I work as a data scientist at [Dynata](https://www.dyn
 I find myself doing data analysis and programming projects in my free time, so I created this website for a place to [write about data](blog.qmd) and share [projects](projects.qmd) I work on off the clock.
 
 Would love to connect if you have any thoughts or comments on my work. Contact me via any of the links 🙂
+
+<a class="twitter-timeline"
+  href="https://twitter.com/acbass49"
+  data-tweet-limit="3"
+  data-width="300"
+  data-height="300">
+</a>
