@@ -1,7 +1,7 @@
 ---
 title: "Primary Nomination Tracking with Google Trends and Stream Graphs"
 date: '2023-10-04'
-categories: [Google Trends, Data Journalism, Politics, CICD, Dataviz]
+categories: [Data Journalism, Politics, Dataviz]
 image: /./about_files/primary_1.png
 title-block-banner: false
 freeze: true
