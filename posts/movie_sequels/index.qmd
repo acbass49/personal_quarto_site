@@ -204,8 +204,8 @@ fig.add_trace(go.Scatter(x=[0, 5_000_000_000], y=[0, 5_000_000_000], mode='lines
 fig.update_traces(line_color='black')
 fig.update_layout(
   title='Original Film VS. First Sequel',
-  xaxis_title="First Film's Revenue (infl. adj.)",
-  yaxis_title="Second Film's Revenue (infl. adj.)",
+  xaxis_title="Original Film's Revenue (infl. adj.)",
+  yaxis_title="Sequel Film's Revenue (infl. adj.)",
   yaxis_range=[0, 5_000_000_000],
   xaxis_range=[0, 5_000_000_000]
 )
