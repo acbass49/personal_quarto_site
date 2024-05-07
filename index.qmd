@@ -31,8 +31,8 @@ about:
       href: files/resume.pdf
 ---
 
-Hi! My name is Alex Bass. I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. Recently, I graduated with my Master's from the [University of Virginia in Data Science](https://datascience.virginia.edu/).
+Hi! My name is Alex Bass. I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. I also run the [Mormon Graphs Twitter/X account](https://twitter.com/LDSgraphs) where I post weekly data charts about Mormons and Religion.
 
-I find myself doing data analysis and programming projects in my free time, so I created this website for a place to [write about data](blog.qmd) and share [projects](projects.qmd) I work on off the clock.
+After [grad school](https://datascience.virginia.edu/), I found a lot more free time for personal projects. So, I created this website for a place to [write about data](blog.qmd) and share [projects](projects.qmd) I work on off the clock.
 
 Would love to connect if you have any thoughts or comments on my work. Contact me via any of the links 🙂
