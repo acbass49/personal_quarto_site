@@ -1,7 +1,7 @@
 ---
 title: "Donkey Kong: King of the Jungle"
 subtitle: "Look at the history of Nintendo's Donkey King with a little data sprinkled in"
-date: '2024-04-08'
+date: '2024-05-31'
 categories: [Data Journalism, R]
 image: https://upload.wikimedia.org/wikipedia/en/d/d4/Donkey_Kong_character.png
 title-block-banner: false
