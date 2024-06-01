@@ -1,0 +1,60 @@
+---
+title: "My Experience: Digital Nomad And Data Scientist"
+date: '2024-06-30'
+categories: [Life Hacks, Commentary]
+image: ./pic1.jpeg
+title-block-banner: false
+draft: true
+---
+
+![](./pic1.jpeg){fig-align="center"}
+
+Normally, I try to find weird cheesey stock photos, but this blog post one is special. For this one, there are no charts or graphs. I'll just share personal photos on my phone that I took throughout the last year or so of being a digital nomad.
+
+I'll break up my thoughts into three main sections:
+
+1. My travel path
+2. Commentary on my own experience
+3. Advice for aspiring Digital Nomads
+
+### The Travel Path
+
+![](./pic2.png){fig-align="center"}
+
+The picture above represents every place my wife and I lived from May 2023 to May 2024. 
+
+After spending a few years in Washington D.C., we first left for NYC and rented an AirBnB studio in Manhattan for $3,000. We probably spent more money living in NYC for one month than any other place (including the spots we stayed at for 3 months!)
+
+![](./pic3.jpeg){fig-align="center"}
+
+Other than the price, we found NYC to be an amazing experience with lots to do and a place that more than a few friends wanted to visit while we were there!
+
+We then ventured out of the country to Ecuador the first time while attempting to work remotely. It was scary for more than a few reasons. First, we were worried about stability and connection to the internet. Truthfully, this would be the furthest I had ever been from home and I was worried about connection speeds to the US. But, this fear quickly subsided after being there a few days with internet connection better than I had in both in my apartments in NYC and DC. The internet connection was strong and stable during our 2 month stay in Quito. 
+
+My next fear was how my work would react to everything. I had gotten approval from my manager to travel abroad while working, but I wondered whether IT would allow me to work in another country. When I arrived in Ecuador, my work computer access was throttled, but after emailing IT, they allowed me to work without blocking or further interuption.
+
+Overall, throughout my travels, things went smoothly with my managers, IT, and I didn't ever have any substantive internet issues during my travels.
+
+![](./pic4.jpeg){fig-align="center"}
+
+I highly recommend Ecuador as a place to visit and work as a digital nomad. From beautiful hikes to the bustling city of Quito to the Galapagos, it was an amazing experience.
+
+From Ecuador, we decided to spend a bit of time in the states in Charleston and SLC. We had a few family events to attend in both of these places at the time.
+
+![](./pic5.jpeg){fig-align="center"}
+
+Our next spot was Guatemala. We chose here because my wife's spanish teacher lived here and we wanted to visit.
+
+Side note: All of these places may seem a bit random, but my wife and I have a goal of becoming fluent in spanish and we were told that all these countries share a neutral spanish accent that would make picking up the language a bit easier.
+
+Guatemala proved to be a hidden gem with stunning beaches, active volcanos, and historic cities. I would highly recommend Antigua to spanish learners and digital nomads. It may be the place my wife and I fell in love with the most.
+
+![](./pic6.png){fig-align="center"}
+
+The last place we stayed was Colombia - another haven for digital nomads. The internet speed was excellent and the people were very kind. There were so many amazing things to see in Colombia including jungles, beaches, and beautiful national parks.
+
+![](./pic7.jpeg){fig-align="center"}
+
+### Commentary on Digital Nomad Life
+
+### Tips for Aspiring Nomads
