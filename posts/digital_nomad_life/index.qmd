@@ -7,9 +7,9 @@ title-block-banner: false
 draft: true
 ---
 
-![](./pic1.jpeg){fig-align="center"}
+![Figure 1: Near Quito, Ecuador](./pic1.jpeg){fig-align="center"}
 
-Normally, I try to find weird cheesey stock photos, but this blog post one is special. For this one, there are no charts or graphs. I'll just share personal photos on my phone that I took throughout the last year or so of being a digital nomad.
+Normally, I try to find weird cheesey stock photos here, but this blog post is special. For this one, there are no data, charts, or graphs. I'll just share personal photos on my phone that I took throughout the last year or so of being a digital nomad.
 
 I'll break up my thoughts into three main sections:
 
@@ -19,13 +19,11 @@ I'll break up my thoughts into three main sections:
 
 ### The Travel Path
 
-![](./pic2.png){fig-align="center"}
-
-The picture above represents every place my wife and I lived from May 2023 to May 2024. 
+![Figure 2: Every place my wife and I lived from May 2023 to May 2024](./pic2.png){fig-align="center"}
 
 After spending a few years in Washington D.C., we first left for NYC and rented an AirBnB studio in Manhattan for $3,000. We probably spent more money living in NYC for one month than any other place (including the spots we stayed at for 3 months!)
 
-![](./pic3.jpeg){fig-align="center"}
+![Figure 3: Central Park in New York City](./pic3.jpeg){fig-align="center"}
 
 Other than the price, we found NYC to be an amazing experience with lots to do and a place that more than a few friends wanted to visit while we were there!
 
@@ -35,13 +33,13 @@ My next fear was how my work would react to everything. I had gotten approval fr
 
 Overall, throughout my travels, things went smoothly with my managers, IT, and I didn't ever have any substantive internet issues during my travels.
 
-![](./pic4.jpeg){fig-align="center"}
+![Figure 4: Near Lake Quilotoa Ecuador](./pic4.jpeg){fig-align="center"}
 
 I highly recommend Ecuador as a place to visit and work as a digital nomad. From beautiful hikes to the bustling city of Quito to the Galapagos, it was an amazing experience.
 
 From Ecuador, we decided to spend a bit of time in the states in Charleston and SLC. We had a few family events to attend in both of these places at the time.
 
-![](./pic5.jpeg){fig-align="center"}
+![Figure 5: Arches National Park, Utah](./pic5.jpeg){fig-align="center"}
 
 Our next spot was Guatemala. We chose here because my wife's spanish teacher lived here and we wanted to visit.
 
@@ -49,12 +47,56 @@ Side note: All of these places may seem a bit random, but my wife and I have a g
 
 Guatemala proved to be a hidden gem with stunning beaches, active volcanos, and historic cities. I would highly recommend Antigua to spanish learners and digital nomads. It may be the place my wife and I fell in love with the most.
 
-![](./pic6.png){fig-align="center"}
+![Figure 6: Volcán Acatenango, Guatemala](./pic6.jpeg){fig-align="center"}
 
 The last place we stayed was Colombia - another haven for digital nomads. The internet speed was excellent and the people were very kind. There were so many amazing things to see in Colombia including jungles, beaches, and beautiful national parks.
 
-![](./pic7.jpeg){fig-align="center"}
+![Figure 7: Near Salento, Colombia](./pic7.jpeg){fig-align="center"}
 
 ### Commentary on Digital Nomad Life
 
+Recently, I have thought a lot about what I want out of my life and have a few thoughts to share.
+
+Human life has changed so much over the centuries from hunters and gathers to kings and castles to whatever is happening today. 
+
+Even in the past 100 years, so much has changed with today's internet, cellphones, airplanes, and AI. When I was young, I had a certain vision for my life. It was mostly this: you go to school, find a stable job, and follow that job. That's it. Following this path, if you are trying to maximize the returns on your job and school, you don't really choose where you live. You just go where the good/affordable school is or where the high paying job is. If you have a few options for good schools or good jobs, you'll then have a few choices of where you could live. But the fact remains, you aren't really choosing where you live.
+
+However, with new technologies like the internet and video calls, we now have remote workers who can decide where they live. This new flexibility opens up a seemingly infinite amount of choices of where you could live as so many places have internet. 
+
+Previously, so much time was spent loitering around the office where now you can have more flexibility at home, wherever you are.
+
+![Figure 8: El Paredon, Guatemala](./pic8.png){fig-align="center"}
+
+From my perspective this new liberty has a new weight, where you choose to live defines your priorities. For example, I could still follow the best school or the best job (if in person). Or, I could live next to my family. Or, I could live in a beautiful mountain range. Or, I could live next to the beach. Or, I could find the most affordable place to live, say Kansas or something. This weight has wore me a bit. Some places have multiple of these perks, but nowhere has everything I might want.
+
+This line of thinking is the reason I have been questioning my priorities of late and below I have a few decision I've made.
+
+![Figure 9: Bogotá, Colombia](./pic9.jpeg){fig-align="center"}
+
+Here is what I have decided for me (at least for now):
+
+- While work is important and I am fulfilled in my work as a data scientist, seeing the world and having these experiences with my wife is more important than trying to chase the heights of my profession. If I can help it, I want to minimize time in a cubical/zoom meeting and maximize experiences with those I love. 
+- Its important for me to keep ties with my home country and my family, for that reason, my wife and I have purchased a house with an ADU. We plan to rent out the house and live in the ADU from time to time in-between traveling and other experiences. 
+
+Certainly, for some people, living a bit closer to familiarity and following a job may be the best choice in their circumstances. But, what I realized for me is that I really care about learning. I learn in my job which I love, but learning languages and about different cultures has proven equally (or more) stimulating than learning in my job. So, I want to keep both of those in my life.
+
 ### Tips for Aspiring Nomads
+
+![Figure 10: Lake Atitlán, Guatemala](./pic10.jpeg){fig-align="center"}
+
+- One of my fears initially trying to do this was a fear about infrastructure. Did countries in Central and South America have robust and reliable internet connection? What I found is that YES, the internet works well. I only worked in cities then ventured out on the weekends to some remote parts, but as a rule of thumb, cities have strong internet and I didn't have any problems with a full-time remote job in any place I visited. But... Did I have places send me their internet speed before booking, yes!  
+- One thing to consider is that in my experience the pay will be less if you 1. go remote and 2. the company is fine with international digital nomading. This, for me, was a cost of being a digital nomad: less money. However, after reaching a certain point with my salary, I think the extra money has lost a lot of its appeal for me. As long as I have enough money to live comfortably, why would I want more?
+- One of the things that I missed was a community. There are so many people at hostels that are willing to connect with other travelers, but it just never is quite like living in one place and having friends and family you can consistently rely on. It makes for some lonely days and nights at times. Also, missing the comforts and comunity you are from can ware on you. I would try and stay for places over longer periods of times and try to make local friends. A great way to do this is taking language classes or getting involved in local culture. 
+- You can read about all of this and more online. There is so much knowledge and information on the internet. But, in the end, starting a digital nomad life is a scary ledge. You never know exactly whats going to happen or whats going to work for you. You just have to take the jump. 
+
+### Conclusion
+
+![Figure 11: Volcán Fuego, Guatemala](./pic11.jpeg){fig-align="center"}
+
+I hope you enjoyed the read if you made it this far. I am no expert photographer, but hopefully you've enjoyed a few of the photos I've shared. If anyone wants to talk more about anything written here or maybe are embarking on their own adventures soon, I am very happy to connect and lend what advice I might have. We can also just talk about travel destinations, too!
+
+Also, though I have not publisized it much, I started an email list where you can subscribe below. If you are interested in my data articles and the occasional life update, feel free to join the list.
+
+Ok, fine, I'll drop one last photo.
+
+![Figure 12: Jardín, Colombia](./pic12.jpeg){fig-align="center"}
