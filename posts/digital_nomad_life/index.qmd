@@ -1,6 +1,6 @@
 ---
 title: "My Experience: Digital Nomad And Data Scientist"
-date: '2024-06-30'
+date: '2024-06-06'
 categories: [Life Hacks, Commentary]
 image: ./pic1.jpeg
 title-block-banner: false
