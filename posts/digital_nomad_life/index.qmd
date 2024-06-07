@@ -4,7 +4,7 @@ date: '2024-06-30'
 categories: [Life Hacks, Commentary]
 image: ./pic1.jpeg
 title-block-banner: false
-draft: true
+draft: false
 ---
 
 ![Figure 1: Near Quito, Ecuador](./pic1.jpeg){fig-align="center"}
