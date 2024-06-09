@@ -2,6 +2,7 @@ project:
   type: website
 
 website:
+  google-analytics: G-KE805TGSHC
   title: "alexbass.me"
   page-navigation: true
   comments: 
