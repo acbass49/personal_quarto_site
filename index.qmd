@@ -15,8 +15,11 @@ about:
       text: Github
       href: https://github.com/acbass49
     - icon: pencil
-      text: Blog
+      text: Personal Blog
       href: blog.qmd
+    - icon: bar-chart-fill
+      text: Mormon Metrics
+      href: https://mormonmetrics.com
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
