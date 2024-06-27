@@ -2,7 +2,7 @@
 title: So Yep... I Made Another Election Model
 date: "2024-03-04"
 categories: [Python, Stats, Dataviz, Politics]
-image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&f=1&ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&ipo=images
+image: https://npr.brightspotcdn.com/a5/6b/3ef5cd86437ea4cf190b066d5c51/npr-elections-2024-logos-color-stacked.jpg
 title-block-banner: false
 freeze: false
 execute: 
@@ -13,7 +13,7 @@ execute:
 
 There are a lot of election models out there - [fivethirtyeight](https://projects.fivethirtyeight.com/polls/president-general/), [The Cook Political Report](https://www.cookpolitical.com/ratings), and [Decision Desk](https://elections2024.thehill.com/national/biden_trump_general) to name a few. So what am I doing here?
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sg4vA_XJdXeFFWVlG-RwQQHaEK%26pid%3DApi&f=1&ipt=0df12f5ec930c9f3754f2fd22f2b3787f72fdd6e8c850c3a5820c09b94b05233&ipo=images){width=100%}
+![](https://npr.brightspotcdn.com/a5/6b/3ef5cd86437ea4cf190b066d5c51/npr-elections-2024-logos-color-stacked.jpg){width=100%}
 
 #### TLDR
 
