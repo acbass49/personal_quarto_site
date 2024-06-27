@@ -11,7 +11,7 @@ execute:
     output: true
 ---
 
-There are a lot of election models out there - [fivethirtyeight](https://projects.fivethirtyeight.com/polls/president-general/), [The Cook Political Report](https://www.cookpolitical.com/ratings), and [Decision Desk](https://elections2024.thehill.com/national/biden_trump_general) to name a few. So what am I doing here?
+There are a lot of election models out there - [fivethirtyeight](https://projects.fivethirtyeight.com/2024-election-forecast/), [The Cook Political Report](https://www.cookpolitical.com/ratings/presidential-race-ratings), [Decision Desk](https://elections2024.thehill.com/national/biden_trump_general), and Nate Silver spun up his own model [here](https://www.natesilver.net/p/nate-silver-2024-president-election-polls-model) to name a few. So what am I doing here?
 
 ![](https://npr.brightspotcdn.com/a5/6b/3ef5cd86437ea4cf190b066d5c51/npr-elections-2024-logos-color-stacked.jpg){width=100%}
 
