@@ -19,7 +19,7 @@ about:
       href: blog.qmd
     - icon: bar-chart-fill
       text: Mormon Metrics
-      href: https://mormonmetrics.com
+      href: https://mormonmetrics.substack.com
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
@@ -34,7 +34,7 @@ about:
       href: files/resume.pdf
 ---
 
-Hi! My name is Alex Bass. I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. I also run the Mormon Metrics [blog](https://mormonmetrics.com) where I post weekly data charts about Mormons and Religion.
+Hi! My name is Alex Bass. I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. I also run the [Mormon Metrics blog](https://mormonmetrics.substack.com) where I post weekly data charts about Mormons and Religion.
 
 After [grad school](https://datascience.virginia.edu/), I found a lot more free time for personal projects. So, I created this website for a place to [write about data](blog.qmd) and share [projects](projects.qmd) I work on off the clock.
 
