@@ -25,6 +25,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/survey_tools/index.html",
       "/projects/election_model_2024/index.html",
       "/projects/internet_archive/index.html",
       "/projects/covid_update/index.html",

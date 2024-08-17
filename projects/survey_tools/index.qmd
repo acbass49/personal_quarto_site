@@ -1,0 +1,164 @@
+---
+date: '2024-08-15'
+title: "Python Package : `survey_tools`"
+categories: [Python, Software]
+image: ./survey_tools.png
+title-block-banner: false
+toc: true
+toc-title: Page Contents
+---
+
+![](./survey_tools.png){fig-align="center"}
+
+# Introduction
+
+Having worked with survey data for over 6 years, I wanted to put a few simple tools into a python package others could use. Some of these tools were inspired by functions in R, some were used in previous places of employment, and some of these tools were to smooth over my personal pain points.
+
+On 15 August 2024, I published the first official release on [PyPI](https://pypi.org/project/survey-tools/) and [github](https://github.com/acbass49/survey_tools) for `survey_tools`. Stars, feedback, and contributions welcome!
+
+# Quick Vignette
+
+### Installation
+
+First, let's install the package! In your terminal, you can easily install `survey_tools` through `pip`.
+
+```{python}
+#| eval: false
+python -m pip install survey_tools
+```
+
+### Import Packages + Load In Data
+
+For our purposes here, I'll load in a survey data set that I have worked on in the past called the [American Family Survey](https://csed.byu.edu/american-family-survey) which is publically available.
+
+```{python}
+import pandas as pd
+import numpy as np
+import survey_tools as st
+
+link = 'https://csed.byu.edu/00000183-a4c5-d2da-abe3-feed7be30001/2021data'
+data = pd.read_stata(link)
+print(data.shape)
+data.head()
+```
+
+### `get_names` Function
+
+Let's try to find the education demographic variable
+
+```{python}
+st.get_names(data, r'[Ee][Dd]')
+```
+
+Looks like we have several variables with ED, but there is an educ variables which is likely what we're after. This function is useful in selecting groups of variables based on regex for easier manipulation of data.
+
+### `tabs` Function for 1-way Summary
+
+Let's run a quick summary of this variable.
+
+```{python}
+st.tabs(data, 'educ', dropna=False)
+```
+
+This looks like what we are interested in. Note that `NaN` is included at the bottom of the table since we specified `dropna=False` showing up that there are no missing values for this variable.
+
+Note how we can also specify weights with the `wts` argument
+```{python}
+st.tabs(data, 'educ', dropna=False, wts="weight")
+```
+
+We can now see these as weighted counts. If you want to see them as percentages just specify it! In this case, we want to convert to percents column-wise
+
+```{python}
+st.tabs(data, 'educ', dropna=False, wts="weight", display='column')
+```
+
+### `recode` Function
+
+I want to collapse these groups into two categories: No Bachelor's Degree vs. Bachelors or Higher.
+
+```{python}
+data['educ_rc'] = st.recode(
+    data, 
+    'educ',
+    '"No HS"=0;'\
+    '"High school graduate"=0;'\
+    '"Some college"=0;'\
+    '"2-year"=0;'\
+    '"4-year"=1;'\
+    '"Post-grad"=1;'\
+)
+
+st.tabs(data, 'educ_rc')
+```
+
+Typically, the survey data I work with is represented by numbers for answers instead of strings. The recode function is much more convenient in this case (see below).
+
+```{python}
+data['educ_numbers'] = data.educ.cat.codes
+data['educ_rc'] = st.recode(
+    data, 
+    'educ_numbers',
+    '0:3="No B";4:5="B+"'
+)
+
+st.tabs(data, 'educ_rc')
+```
+
+:::{.callout-tip}
+The `recode` function has a few special keywords. For example, `lo` finds the lowest number `e.g. lo:10=1` and `hi` works the opposite way. Also, `NaN` is a key word selecting or setting missing values in your variables `e.g NaN=3`
+:::
+
+I'll quickly recode another variable, so we can compare.
+```{python}
+data['newsint'] = data.newsint.cat.codes
+data['newsint_rc'] = st.recode(data, 'newsint', "0='High';1:5='Low'")
+st.tabs(data, 'newsint_rc')
+```
+
+### `tabs` Function for 2-way Tabulation
+
+Let's look at a crosstab break of news interest by education.
+
+```{python}
+st.tabs(data, 'newsint_rc', 'educ_rc', wts = "weight", display='column')
+```
+
+From this, we can see those with a bachelor's degree or higher are more interested in the news than those without.
+
+:::{.callout-tip}
+Using the `display` argument, we could also summarize by `row` or `cell`
+:::
+
+### `rake_weight` Function
+
+This survey data is already weighted in the `weight` column we've been using, but if your data isn't already weighted use the `rake_weight` function.
+
+I'll show a simple example below.
+
+```{python}
+data['age'] = 2021 - data.birthyr
+data['age_rc'] = st.recode(data, 'age', '0:30=1;31:45=2;46:65=3;66:120=4')
+st.tabs(data, 'age_rc', display='column')
+```
+
+```{python}
+data['gender_rc'] = st.recode(data, 'gender', '"Male"=1;"Female"=2')
+st.tabs(data, 'gender_rc', display='column')
+```
+
+Above you can see the unweighted tabulations of age and gender. Let's weight them now.
+
+```{python}
+true_props = pd.DataFrame({
+    'Names':['gender','gender','age_rc','age_rc','age_rc','age_rc',],
+    'Levels':['Male', 'Female',1,2,3,4],
+    'Proportions':[0.5,0.5,0.2,0.25,0.35,0.2],
+})
+
+data_w_new_wts = st.rake_weight(data, true_props, weight_nm='new_weight')
+```
+
+The `rake_weight` function outputs a few statistics like max weight, min weight, and iterations. You can also see the weighted tabs to see how well your weights match up. You can also disable the summary setting `qa=False`
+
+As mentioned above, Stars, feedback, and contributions welcome for the `survey_tools` package!
