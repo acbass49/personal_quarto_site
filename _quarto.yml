@@ -32,7 +32,7 @@ website:
       - text: "Latest Post"
         href: posts/digital_nomad_life/index.qmd
       - text: Latest Project
-        href: projects/election_model_2024/index.qmd
+        href: projects/survey_tools/index.qmd
     right: 
       - text: "Made with Quarto & Netlify ❤️"
   site-url: "https://alexbass.me"

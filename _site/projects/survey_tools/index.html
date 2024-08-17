@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alex Bass">
 <meta name="dcterms.date" content="2024-08-15">
 
 <title>Python Package : survey_tools – alexbass.me</title>
@@ -209,6 +210,12 @@ gtag('config', 'G-KE805TGSHC', { 'anonymize_ip': true});
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alex Bass </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
@@ -233,21 +240,21 @@ gtag('config', 'G-KE805TGSHC', { 'anonymize_ip': true});
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>Having worked with survey data for over 6 years, I wanted to put a few simple tools into a python package others could use. Some of these tools were inspired by functions in R, some were used in previous places of employment, and some of these tools were to smooth over my personal pain points.</p>
-<p>On 15 August 2024, I published the first official release on <a href="https://pypi.org/project/survey-tools/">PyPI</a> and <a href="https://github.com/acbass49/survey_tools">github</a> for <code>survey_tools</code>. Stars, feedback, and contributions welcome!</p>
+<p>On 15 August 2024, I published the first official release on PyPI <a href="https://pypi.org/project/survey-tools/">[here]</a> and github for <code>survey_tools</code>. Stars, feedback, and contributions welcome on github <a href="https://github.com/acbass49/survey_tools">[here]</a>!</p>
 </section>
 <section id="quick-vignette" class="level1">
 <h1>Quick Vignette</h1>
 <section id="installation" class="level3">
 <h3 class="anchored" data-anchor-id="installation">Installation</h3>
 <p>First, let’s install the package! In your terminal, you can easily install <code>survey_tools</code> through <code>pip</code>.</p>
-<div id="b278dfcf" class="cell" data-execution_count="1">
+<div id="822a64ef" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>m pip install survey_tools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="import-packages-load-in-data" class="level3">
 <h3 class="anchored" data-anchor-id="import-packages-load-in-data">Import Packages + Load In Data</h3>
 <p>For our purposes here, I’ll load in a survey data set that I have worked on in the past called the <a href="https://csed.byu.edu/american-family-survey">American Family Survey</a> which is publically available.</p>
-<div id="0e0bc5b5" class="cell" data-execution_count="2">
+<div id="cb00a7d3" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> survey_tools <span class="im">as</span> st</span>
@@ -422,7 +429,7 @@ gtag('config', 'G-KE805TGSHC', { 'anonymize_ip': true});
 <section id="get_names-function" class="level3">
 <h3 class="anchored" data-anchor-id="get_names-function"><code>get_names</code> Function</h3>
 <p>Let’s try to find the education demographic variable</p>
-<div id="9cfbe1d5" class="cell" data-execution_count="3">
+<div id="3aa0fab5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>st.get_names(data, <span class="vs">r'[Ee][Dd]'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>['s21_EMP005_fed',
@@ -465,7 +472,7 @@ gtag('config', 'G-KE805TGSHC', { 'anonymize_ip': true});
 <section id="tabs-function-for-1-way-summary" class="level3">
 <h3 class="anchored" data-anchor-id="tabs-function-for-1-way-summary"><code>tabs</code> Function for 1-way Summary</h3>
 <p>Let’s run a quick summary of this variable.</p>
-<div id="c801b1f1" class="cell" data-execution_count="4">
+<div id="6cc4aaca" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>st.tabs(data, <span class="st">'educ'</span>, dropna<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>No HS                   137
@@ -480,7 +487,7 @@ dtype: int64</code></pre>
 </div>
 <p>This looks like what we are interested in. Note that <code>NaN</code> is included at the bottom of the table since we specified <code>dropna=False</code> showing up that there are no missing values for this variable.</p>
 <p>Note how we can also specify weights with the <code>wts</code> argument</p>
-<div id="78b093ed" class="cell" data-execution_count="5">
+<div id="00502e69" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>st.tabs(data, <span class="st">'educ'</span>, dropna<span class="op">=</span><span class="va">False</span>, wts<span class="op">=</span><span class="st">"weight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>No HS                   238.012949
@@ -494,7 +501,7 @@ dtype: float64</code></pre>
 </div>
 </div>
 <p>We can now see these as weighted counts. If you want to see them as percentages just specify it! In this case, we want to convert to percents column-wise</p>
-<div id="c238babd" class="cell" data-execution_count="6">
+<div id="bd2b40b2" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>st.tabs(data, <span class="st">'educ'</span>, dropna<span class="op">=</span><span class="va">False</span>, wts<span class="op">=</span><span class="st">"weight"</span>, display<span class="op">=</span><span class="st">'column'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>No HS                    7.9
@@ -511,7 +518,7 @@ dtype: float64</code></pre>
 <section id="recode-function" class="level3">
 <h3 class="anchored" data-anchor-id="recode-function"><code>recode</code> Function</h3>
 <p>I want to collapse these groups into two categories: No Bachelor’s Degree vs.&nbsp;Bachelors or Higher.</p>
-<div id="f67662f2" class="cell" data-execution_count="7">
+<div id="3f005d4f" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'educ_rc'</span>] <span class="op">=</span> st.recode(</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    data, </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'educ'</span>,</span>
@@ -537,7 +544,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>Typically, the survey data I work with is represented by numbers for answers instead of strings. The recode function is much more convenient in this case (see below).</p>
-<div id="0bc87908" class="cell" data-execution_count="8">
+<div id="01432796" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'educ_numbers'</span>] <span class="op">=</span> data.educ.cat.codes</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'educ_rc'</span>] <span class="op">=</span> st.recode(</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    data, </span>
@@ -572,7 +579,7 @@ Tip
 </div>
 </div>
 <p>I’ll quickly recode another variable, so we can compare.</p>
-<div id="630d8bc0" class="cell" data-execution_count="9">
+<div id="9271f7dd" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'newsint'</span>] <span class="op">=</span> data.newsint.cat.codes</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'newsint_rc'</span>] <span class="op">=</span> st.recode(data, <span class="st">'newsint'</span>, <span class="st">"0='High';1:5='Low'"</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>st.tabs(data, <span class="st">'newsint_rc'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -592,7 +599,7 @@ dtype: int64</code></pre>
 <section id="tabs-function-for-2-way-tabulation" class="level3">
 <h3 class="anchored" data-anchor-id="tabs-function-for-2-way-tabulation"><code>tabs</code> Function for 2-way Tabulation</h3>
 <p>Let’s look at a crosstab break of news interest by education.</p>
-<div id="612d4bd3" class="cell" data-execution_count="10">
+<div id="11da1a5f" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>st.tabs(data, <span class="st">'newsint_rc'</span>, <span class="st">'educ_rc'</span>, wts <span class="op">=</span> <span class="st">"weight"</span>, display<span class="op">=</span><span class="st">'column'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
@@ -642,7 +649,7 @@ Tip
 <h3 class="anchored" data-anchor-id="rake_weight-function"><code>rake_weight</code> Function</h3>
 <p>This survey data is already weighted in the <code>weight</code> column we’ve been using, but if your data isn’t already weighted use the <code>rake_weight</code> function.</p>
 <p>I’ll show a simple example below.</p>
-<div id="68b94f87" class="cell" data-execution_count="11">
+<div id="6d6bf18a" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'age'</span>] <span class="op">=</span> <span class="dv">2021</span> <span class="op">-</span> data.birthyr</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'age_rc'</span>] <span class="op">=</span> st.recode(data, <span class="st">'age'</span>, <span class="st">'0:30=1;31:45=2;46:65=3;66:120=4'</span>)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>st.tabs(data, <span class="st">'age_rc'</span>, display<span class="op">=</span><span class="st">'column'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -654,7 +661,7 @@ Tip
 dtype: float64</code></pre>
 </div>
 </div>
-<div id="e074839d" class="cell" data-execution_count="12">
+<div id="82fd6353" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'gender_rc'</span>] <span class="op">=</span> st.recode(data, <span class="st">'gender'</span>, <span class="st">'"Male"=1;"Female"=2'</span>)</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>st.tabs(data, <span class="st">'gender_rc'</span>, display<span class="op">=</span><span class="st">'column'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -670,7 +677,7 @@ dtype: float64</code></pre>
 </div>
 </div>
 <p>Above you can see the unweighted tabulations of age and gender. Let’s weight them now.</p>
-<div id="817916a9" class="cell" data-execution_count="13">
+<div id="b147dd88" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>true_props <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Names'</span>:[<span class="st">'gender'</span>,<span class="st">'gender'</span>,<span class="st">'age_rc'</span>,<span class="st">'age_rc'</span>,<span class="st">'age_rc'</span>,<span class="st">'age_rc'</span>,],</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Levels'</span>:[<span class="st">'Male'</span>, <span class="st">'Female'</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>],</span>

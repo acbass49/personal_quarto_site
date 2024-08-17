@@ -7,6 +7,7 @@ image: ./survey_tools.png
 title-block-banner: false
 toc: true
 toc-title: Page Contents
+author: Alex Bass
 freeze: true
 ---
 
@@ -16,7 +17,7 @@ freeze: true
 
 Having worked with survey data for over 6 years, I wanted to put a few simple tools into a python package others could use. Some of these tools were inspired by functions in R, some were used in previous places of employment, and some of these tools were to smooth over my personal pain points.
 
-On 15 August 2024, I published the first official release on [PyPI](https://pypi.org/project/survey-tools/) and [github](https://github.com/acbass49/survey_tools) for `survey_tools`. Stars, feedback, and contributions welcome!
+On 15 August 2024, I published the first official release on PyPI [[here]](https://pypi.org/project/survey-tools/) and github for `survey_tools`. Stars, feedback, and contributions welcome on github [[here]](https://github.com/acbass49/survey_tools)!
 
 # Quick Vignette
 
