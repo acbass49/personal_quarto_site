@@ -1,7 +1,7 @@
 ---
 date: '2024-08-15'
 title: "Python Package : `survey_tools`"
-subtitle: "Convenient tools for survey reseachers"
+subtitle: "Convenient tools for survey research data analysis"
 categories: [Python, Software]
 image: ./survey_tools.png
 title-block-banner: false
