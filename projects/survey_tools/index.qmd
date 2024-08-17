@@ -1,11 +1,13 @@
 ---
 date: '2024-08-15'
 title: "Python Package : `survey_tools`"
+subtitle: "Convenient tools for survey reseachers"
 categories: [Python, Software]
 image: ./survey_tools.png
 title-block-banner: false
 toc: true
 toc-title: Page Contents
+freeze: true
 ---
 
 ![](./survey_tools.png){fig-align="center"}
