@@ -15,7 +15,7 @@ freeze: true
 
 # Introduction
 
-Having worked with survey data for over 6 years, I wanted to put a few simple tools into a python package others could use. Some of these tools were inspired by functions in R, some were used in previous places of employment, and some of these tools were to smooth over my personal pain points.
+Having worked with survey data for over 6 years, I wanted to put a few simple tools into a python package others could use. Some of these tools were inspired by functions in R, some were inspired by software in previous places of employment, and some of these tools were to smooth over my personal pain points in survey data analysis.
 
 On 15 August 2024, I published the first official release for `survey_tools` on github [[here]](https://github.com/acbass49/survey_tools) and PyPI [[here]](https://pypi.org/project/survey-tools/). Stars, feedback, and contributions welcome on github!
 
