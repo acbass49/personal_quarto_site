@@ -17,7 +17,7 @@ freeze: true
 
 Having worked with survey data for over 6 years, I wanted to put a few simple tools into a python package others could use. Some of these tools were inspired by functions in R, some were used in previous places of employment, and some of these tools were to smooth over my personal pain points.
 
-On 15 August 2024, I published the first official release on PyPI [[here]](https://pypi.org/project/survey-tools/) and github for `survey_tools`. Stars, feedback, and contributions welcome on github [[here]](https://github.com/acbass49/survey_tools)!
+On 15 August 2024, I published the first official release for `survey_tools` on github [[here]](https://github.com/acbass49/survey_tools) and PyPI [[here]](https://pypi.org/project/survey-tools/). Stars, feedback, and contributions welcome on github!
 
 # Quick Vignette
 
@@ -53,7 +53,7 @@ Let's try to find the education demographic variable
 st.get_names(data, r'[Ee][Dd]')
 ```
 
-Looks like we have several variables with ED, but there is an educ variables which is likely what we're after. This function is useful in selecting groups of variables based on regex for easier manipulation of data.
+Looks like we have several variables with ED, but there is an `educ` variable which is likely what we're after. This function is useful for selecting groups of variables based on regex for easier manipulation of data.
 
 ### `tabs` Function for 1-way Summary
 
@@ -65,12 +65,12 @@ st.tabs(data, 'educ', dropna=False)
 
 This looks like what we are interested in. Note that `NaN` is included at the bottom of the table since we specified `dropna=False` showing up that there are no missing values for this variable.
 
-Note how we can also specify weights with the `wts` argument
+Note how we can also specify weights with the `wts` argument like below.
 ```{python}
 st.tabs(data, 'educ', dropna=False, wts="weight")
 ```
 
-We can now see these as weighted counts. If you want to see them as percentages just specify it! In this case, we want to convert to percents column-wise
+We can now see these as weighted counts. If you want to see them as percentages just specify it! In this case, we want to normalize by column.
 
 ```{python}
 st.tabs(data, 'educ', dropna=False, wts="weight", display='column')
@@ -78,7 +78,7 @@ st.tabs(data, 'educ', dropna=False, wts="weight", display='column')
 
 ### `recode` Function
 
-I want to collapse these groups into two categories: No Bachelor's Degree vs. Bachelors or Higher.
+I want to collapse these groups into two categories: No Bachelor's Degree vs. Bachelor's Degree or Higher.
 
 ```{python}
 data['educ_rc'] = st.recode(
