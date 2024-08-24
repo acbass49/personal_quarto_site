@@ -214,7 +214,7 @@ if win_perc>50:
     value = 'Trump'
 else:
     color = 'blue'
-    value = 'Biden'
+    value = 'Harris'
 
 dict(
     icon = "trophy",
