@@ -1,18 +1,20 @@
----
-title: "2024 US Presidential Election Dashboard"
-date: "2023-12-31"
-categories: [Python, Stats, Dataviz, Dashboard]
-image: ./nail.png
-title-block-banner: false
-date-modified: today
-freeze: false
-format: 
-  dashboard:
-    expandable: false
-    scrolling: true
----
-
-```{python}
+# type: ignore
+# flake8: noqa
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 # | output: false
 import seaborn as sns
 import pandas as pd
@@ -160,15 +162,15 @@ fig3.add_traces([go.Scatter(
 
 fig3.add_traces([go.Scatter(
         x = tracking_data.query('Candidate == "Harris"')['Date'], 
-        y = tracking_data.query('Candidate == "Harris"')['UB'],
+        y = tracking_data.query('Candidate == "Biden"')['UB'],
         name = "97.5 Win Perc",
         hovertext = None,
         showlegend = False,
         hoverinfo = 'skip',
         mode = 'lines', line_color = 'rgba(0,0,0,0)'),
     go.Scatter(
-        x = tracking_data.query('Candidate == "Harris"')['Date'], 
-        y = tracking_data.query('Candidate == "Harris"')['LB'],
+        x = tracking_data.query('Candidate == "Biden"')['Date'], 
+        y = tracking_data.query('Candidate == "Biden"')['LB'],
         name = "2.5 Win Perc.",
         hovertext = None,
         mode = 'lines', line_color = 'rgba(0,0,0,0)',
@@ -177,19 +179,19 @@ fig3.add_traces([go.Scatter(
         hoverinfo = 'skip',
         fill='tonexty', fillcolor = 'rgba(0, 0, 255, 0.2)')])
 
-```
-
-## Row
-
-I created this dashboard to visualize my 2024 Presidential Election Model data. Each day, using the latest quality polling data, I estimate a model to predict the election and generate predictions which you can view below. Read my blog write up [here](/./posts/election_2024/index.qmd), methodology [here](/./posts/election_2024/methodology.pdf), and view my code [here](https://github.com/acbass49/Election2024) - everything is fully open source. **Hover over each chart for more information and remember to check back soon as things can change quickly!**
-
-<!-- 100% privacy-first analytics -->
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
-
-## Row
-
-```{python}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 from IPython.display import Markdown
 from datetime import datetime
 import pytz
@@ -198,11 +200,11 @@ eastern = pytz.timezone('US/Eastern')
 current_time_eastern = datetime.now(eastern)
 Markdown(
 f"""<center>*Data updates daily. It was last updated from [this repo](https://github.com/acbass49/Election2024) on {current_time_eastern.strftime("%B %d, %Y at %I:%M %p")} EST.*</center>""")
-```
-
-## Row
-
-```{python}
+#
+#
+#
+#
+#
 #| content: valuebox
 #| title: "Projected Winner"
 
@@ -221,9 +223,9 @@ dict(
     color = color,
     value = value
 )
-```
-
-```{python}
+#
+#
+#
 #| content: valuebox
 #| title: "Sims Won Today"
 
@@ -238,10 +240,10 @@ dict(
     color = "light",
     value = win_perc,
 ) 
-```
-
-
-```{python}
+#
+#
+#
+#
 #| content: valuebox
 #| title: "Days Until Election"
 
@@ -257,31 +259,34 @@ dict(
     color = "light",
     value = days_until_election,
 ) 
-```
-
-## Row 
-
-### Column
-
-
-```{python}
+#
+#
+#
+#
+#
+#
+#
+#
 #| title: Trump Win Probability By State
 #| padding: 0
 fig.show(config=config)
-```
-
-
-### Column 
-
-
-```{python}
+#
+#
+#
+#
+#
+#
+#
 #| title: Todays Simulations Won By Candidate
 fig2.show(config=config)
-```
-
-## Row
-
-```{python}
+#
+#
+#
+#
+#
 #| title: Simulations Won Over Time
 fig3.show(config=config)
-```
+#
+#
+#
+#
