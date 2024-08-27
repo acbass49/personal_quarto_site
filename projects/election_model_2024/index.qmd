@@ -53,7 +53,7 @@ win_perc = sum(simulation_data['points']>=270)/simulation_data.shape[0]
 simulation_data = simulation_data.rename(columns={'winner':'Winner', 'points':'Trump_EC_votes'})
 
 fig2 = px.histogram(simulation_data, x="Trump_EC_votes", color="Winner",
-color_discrete_map={"Trump":"#ec543c", "Biden":"#636bfa"})
+color_discrete_map={"Trump":"#ec543c", "Harris":"#636bfa"})
 fig2.update_layout(
     showlegend=False,
     plot_bgcolor='white',
@@ -85,9 +85,9 @@ fig3 = go.Figure()
 
 fig3.add_trace(
     go.Scatter(
-        x = tracking_data.query('Candidate == "Biden"')['Date'],
-        y = tracking_data.query('Candidate == "Biden"')['Win_Percentage'],
-        name = 'Biden',
+        x = tracking_data.query('Candidate == "Harris"')['Date'],
+        y = tracking_data.query('Candidate == "Harris"')['Win_Percentage'],
+        name = 'Harris',
         line_shape='spline'
     )
 )

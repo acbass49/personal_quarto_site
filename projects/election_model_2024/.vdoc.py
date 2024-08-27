@@ -87,9 +87,9 @@ fig3 = go.Figure()
 
 fig3.add_trace(
     go.Scatter(
-        x = tracking_data.query('Candidate == "Biden"')['Date'],
+        x = tracking_data.query('Candidate == "Harris"')['Date'],
         y = tracking_data.query('Candidate == "Biden"')['Win_Percentage'],
-        name = 'Biden',
+        name = 'Harris',
         line_shape='spline'
     )
 )
@@ -162,15 +162,15 @@ fig3.add_traces([go.Scatter(
 
 fig3.add_traces([go.Scatter(
         x = tracking_data.query('Candidate == "Harris"')['Date'], 
-        y = tracking_data.query('Candidate == "Biden"')['UB'],
+        y = tracking_data.query('Candidate == "Harris"')['UB'],
         name = "97.5 Win Perc",
         hovertext = None,
         showlegend = False,
         hoverinfo = 'skip',
         mode = 'lines', line_color = 'rgba(0,0,0,0)'),
     go.Scatter(
-        x = tracking_data.query('Candidate == "Biden"')['Date'], 
-        y = tracking_data.query('Candidate == "Biden"')['LB'],
+        x = tracking_data.query('Candidate == "Harris"')['Date'], 
+        y = tracking_data.query('Candidate == "Harris"')['LB'],
         name = "2.5 Win Perc.",
         hovertext = None,
         mode = 'lines', line_color = 'rgba(0,0,0,0)',
