@@ -34,8 +34,8 @@ about:
       href: files/resume.pdf
 ---
 
-Hi! My name is Alex Bass. I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. I also run the [Mormon Metrics blog](https://mormonmetrics.substack.com) where I post weekly data charts about Mormons and Religion.
+Hi! My name is Alex Bass. I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. I am also the creator and maintainer of the open-source [python package `survey_tools`](https://github.com/acbass49/survey_tools).
 
-After [grad school](https://datascience.virginia.edu/), I found a lot more free time for personal projects. So, I created this website for a place to [write about data](blog.qmd) and share [projects](projects.qmd) I work on off the clock.
+After [grad school](https://datascience.virginia.edu/), I found a lot more free time for personal projects. So, I created this website for a place to share [projects](projects.qmd) and occasionally [write about data](blog.qmd).
 
 Would love to connect if you have any thoughts or comments on my work. Contact me via any of the links 🙂
