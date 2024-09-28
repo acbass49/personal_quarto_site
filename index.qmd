@@ -14,28 +14,22 @@ about:
     - icon: github
       text: Github
       href: https://github.com/acbass49
-    - icon: pencil
-      text: Personal Blog
-      href: blog.qmd
-    - icon: bar-chart-fill
-      text: Mormon Metrics
-      href: https://mormonmetrics.substack.com
+    - icon: envelope
+      text: Contact Me Here!
+      href: "mailto:hello@alexbass.me"
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
     - icon: twitter-x
       text: Twitter
       href: https://twitter.com/acbass49
-    - icon: envelope
-      text: Email
-      href: "mailto:acbass49@gmail.com"
-    - icon: file-text
-      text: Resume
-      href: files/resume.pdf
+    - icon: bar-chart-fill
+      text: Mormon Metrics
+      href: https://mormonmetrics.substack.com
 ---
 
-Hi! My name is Alex Bass (add email). I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. I am also the creator and maintainer of the open-source [python package `survey_tools`](https://github.com/acbass49/survey_tools).
+Hi! My name is Alex Bass. I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. I am also the creator and maintainer of the open-source [python package `survey_tools`](https://github.com/acbass49/survey_tools).
 
 After [grad school](https://datascience.virginia.edu/), I found a lot more free time for personal projects. So, I created this website for a place to share [projects](projects.qmd) and occasionally [write about data](blog.qmd).
 
-Would love to connect if you have any thoughts or comments on my work. Contact me via any of the links 🙂
+Please contact me at [hello@alexbass.me](mailto:hello@alexbass.me). Would love to connect about anything data, potential collaborations, or just to shoot the breeze 🙂
