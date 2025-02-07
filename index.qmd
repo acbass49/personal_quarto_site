@@ -20,16 +20,18 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
-    - icon: twitter-x
-      text: Twitter
-      href: https://twitter.com/acbass49
+    - icon: chat-right-text-fill
+      text: Bluesky
+      href: https://bsky.app/profile/acbass49.bsky.social
     - icon: bar-chart-fill
       text: Mormon Metrics
       href: https://mormonmetrics.substack.com
 ---
 
-Hi! My name is Alex Bass. I work as a data science contractor at [Meta](https://about.meta.com) analyzing their marketing data. I am also the creator and maintainer of the open-source [python package `survey_tools`](https://github.com/acbass49/survey_tools).
+Hi! My name is Alex Bass. 
 
-After [grad school](https://datascience.virginia.edu/), I found a lot more free time for personal projects. So, I created this website for a place to share [projects](projects.qmd) or write up [random thoughts and analyses](blog.qmd).
+I am a data scientist who specializes in surveys, experiments, and causal inference. Previously, I have worked at two political polling firms, a survey internet panel provider, and most recently Meta.
+
+I created this website to share [projects](projects.qmd) and to write up [random thoughts and analyses](blog.qmd).
 
 Please contact me at [hello@alexbass.me](mailto:hello@alexbass.me). Would love to connect about anything data, potential collaborations, or just to shoot the breeze 🍃
