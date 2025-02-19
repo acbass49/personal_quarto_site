@@ -20,7 +20,7 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
-    - icon: chat-right-text-fill
+    - icon: brightness-alt-high-fill
       text: Bluesky
       href: https://bsky.app/profile/acbass49.bsky.social
     - icon: bar-chart-fill
