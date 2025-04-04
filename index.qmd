@@ -23,7 +23,7 @@ about:
     - icon: brightness-alt-high
       text: Bluesky
       href: https://bsky.app/profile/acbass49.bsky.social
-    - icon: bar-chart-fill
+    - icon: substack
       text: Mormon Metrics
       href: https://mormonmetrics.substack.com
 ---
