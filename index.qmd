@@ -14,15 +14,9 @@ about:
     - icon: github
       text: Github
       href: https://github.com/acbass49
-    - icon: envelope
-      text: Email
-      href: "mailto:hello@alexbass.me"
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
-    - icon: brightness-alt-high
-      text: Bluesky
-      href: https://bsky.app/profile/acbass49.bsky.social
     - icon: substack
       text: Mormon Metrics
       href: https://mormonmetrics.substack.com
@@ -32,6 +26,6 @@ Hi! My name is Alex Bass.
 
 I am a data scientist who specializes in surveys, experiments, and causal inference. Previously, I have worked at two political polling firms, a survey internet panel provider, and most recently Meta.
 
-I created this website to share [projects](projects.qmd) and to write up [random thoughts and analyses](blog.qmd).
+I created this website to share [projects](projects.qmd) and to write up [random thoughts and analyses](blog.qmd). I publish my more recent work on Substack focusing on [a social science study of Mormons and Latter-day Saints](https://mormonmetrics.substack.com).
 
 Please contact me at [hello@alexbass.me](mailto:hello@alexbass.me). Would love to connect about anything data, potential collaborations, or just to shoot the breeze 🍃
