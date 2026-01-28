@@ -28,6 +28,6 @@ I am a data scientist who specializes in surveys, experiments, and causal infere
 
 I created this website to share [projects](projects.qmd) and to write up [random thoughts and analyses](blog.qmd). I publish my more recent work on Substack focusing on [social science study of Mormons and Latter-day Saints](https://mormonmetrics.substack.com). Subscribe below if that interests you!
 
-Please contact me at [alex@bassdatascience.com](mailto:alex@bassdatascience.com). Would love to connect about anything data, potential collaborations, or just to shoot the breeze 🍃
+Please contact me at [alex@bassempirical.com](mailto:alex@bassempirical.com). Would love to connect about anything data, potential collaborations, or just to shoot the breeze 🍃
 
 <iframe src="https://mormonmetrics.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
