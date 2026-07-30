@@ -8,9 +8,6 @@ comments: false
 about:
   template: trestles
   links:
-    - icon: code-slash
-      text: Projects
-      href: projects.qmd
     - icon: github
       text: Github
       href: https://github.com/acbass49
