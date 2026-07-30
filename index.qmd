@@ -17,7 +17,7 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alex-bass-4a7465161/
-    - icon: buildings
+    - icon: buildings-fill
       text: Bass Empirical
       href: https://bassempirical.com/
     - icon: substack
