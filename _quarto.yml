@@ -37,9 +37,8 @@ website:
       - text: "Made with Quarto & Netlify ❤️"
   site-url: "https://alexbass.me"
   body-header: |
-    <!-- 100% privacy-first analytics -->
-    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://alexbass.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 format:
   html:
     theme: litera
